@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dossiê Reforma Tributária</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--azul:#0057b8;--azul2:#3385d6;--txt:#1a1a1a;--txt2:#4a4a4a;--bg:#ffffff;--alt:#f7f7f7;--linha:#e2e2e2;--escuro:#1a1a1a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--txt);font-family:'DM Sans',system-ui,sans-serif;line-height:1.6;font-size:16px}
+h1,h2,h3{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;letter-spacing:.04em;text-transform:uppercase;line-height:1.05}
+.mono{font-family:'DM Mono',ui-monospace,monospace}
+a{color:var(--azul)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+section{padding:88px 0}
+section.alt{background:var(--alt)}
+.sec-titulo{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:40px;display:flex;align-items:center;gap:16px}
+.sec-titulo::before{content:"";width:6px;height:.9em;background:var(--azul)}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:#fff;border-bottom:2px solid var(--azul)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--txt)}
+.logo i{width:30px;height:30px;background:var(--azul);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);display:block;position:relative}
+.logo i::after{content:"";position:absolute;inset:9px;background:#fff;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.logo span{font-family:'Bebas Neue';font-size:1.5rem;letter-spacing:.08em}
+.links{display:flex;gap:22px;list-style:none}
+.links a{font-family:'DM Mono';font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;color:var(--txt2);text-decoration:none}
+.links a:hover{color:var(--azul)}
+.lang{display:flex;border:1px solid var(--azul);flex-shrink:0}
+.lang button{background:#fff;border:0;padding:6px 10px;font-family:'DM Mono';font-size:.75rem;cursor:pointer;color:var(--azul)}
+.lang button.on{background:var(--azul);color:#fff}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:110px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;left:max(16px,calc(50% - 600px));top:120px;bottom:80px;width:3px;background:linear-gradient(var(--azul),transparent)}
+.hero .wrap{padding-left:56px;width:100%}
+.kicker{font-family:'DM Mono';font-size:.8rem;text-transform:uppercase;letter-spacing:.15em;color:var(--azul);margin-bottom:20px}
+.hero h1{font-size:clamp(3.6rem,11vw,9rem)}
+.hero h1 span{display:block}
+.hero h1 .l2{color:var(--azul)}
+.hero h1 .l3{color:transparent;-webkit-text-stroke:2px var(--txt)}
+.hero p{max-width:620px;color:var(--txt2);font-size:1.15rem;margin:28px 0 36px}
+.countdown{display:inline-block;border-left:4px solid var(--azul);background:var(--alt);padding:16px 22px}
+.countdown small{display:block;font-family:'DM Mono';font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--txt2)}
+.countdown strong{display:block;font-weight:500;margin:4px 0 10px}
+.cd{display:flex;gap:18px}
+.cd div{text-align:center}
+.cd b{display:block;font-family:'Bebas Neue';font-size:2.6rem;color:var(--azul);line-height:1}
+.cd em{font-style:normal;font-family:'DM Mono';font-size:.68rem;text-transform:uppercase;color:var(--txt2)}
+.cd2{margin-top:10px;font-family:'DM Mono';font-size:.75rem;color:var(--txt2)}
+
+/* marquee */
+.marquee{background:var(--azul);color:#fff;overflow:hidden;white-space:nowrap;padding:12px 0}
+.marquee .trilho{display:inline-block;animation:rolar 70s linear infinite}
+.marquee:hover .trilho{animation-play-state:paused}
+.marquee span{font-family:'DM Mono';font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;margin-right:56px}
+.marquee span::before{content:"◆ ";color:#bcd6f3}
+@keyframes rolar{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* kpis */
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--linha);border:1px solid var(--linha)}
+.kpi{background:#fff;padding:30px 26px;position:relative}
+.kpi::before{content:"";position:absolute;top:0;left:0;height:3px;width:0;background:var(--azul);transition:width .4s}
+.kpi:hover::before{width:100%}
+.kpi b{font-family:'Bebas Neue';font-size:3rem;font-weight:400;color:var(--azul);display:block;line-height:1}
+.kpi h3{font-family:'DM Sans';text-transform:none;letter-spacing:0;font-size:1rem;font-weight:700;margin:10px 0 4px}
+.kpi p{font-size:.88rem;color:var(--txt2)}
+
+/* novidades */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{background:#fff;border-left:4px solid var(--azul);padding:24px 26px;box-shadow:0 1px 0 var(--linha);position:relative}
+.card .data{font-family:'DM Mono';font-size:.75rem;color:var(--azul)}
+.card h3{font-family:'DM Sans';text-transform:none;letter-spacing:0;font-size:1.12rem;font-weight:700;margin:6px 0 8px;padding-right:56px}
+.card p{color:var(--txt2);font-size:.95rem}
+.card .ato{display:inline-block;margin-top:12px;font-family:'DM Mono';font-size:.72rem;background:var(--alt);padding:3px 8px;color:var(--txt2)}
+.selo{position:absolute;top:18px;right:18px;background:var(--azul);color:#fff;font-family:'DM Mono';font-size:.65rem;padding:3px 8px;letter-spacing:.1em}
+
+/* timeline */
+.tl{position:relative;padding-left:40px}
+.tl::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:var(--linha)}
+.tl-item{position:relative;margin-bottom:22px;cursor:pointer}
+.tl-item::before{content:"";position:absolute;left:-35px;top:8px;width:14px;height:14px;border:2px solid var(--azul);background:#fff;border-radius:50%}
+.tl-item.atual::before{background:var(--azul);box-shadow:0 0 0 6px rgba(0,87,184,.15)}
+.tl-cab{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.tl-cab h3{font-size:2.2rem;color:var(--azul)}
+.tl-cab strong{font-weight:700}
+.badge{font-family:'DM Mono';font-size:.65rem;text-transform:uppercase;padding:2px 8px;border:1px solid currentColor}
+.badge.atual{background:var(--azul);color:#fff;border-color:var(--azul)}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.tag{font-family:'DM Mono';font-size:.68rem;padding:2px 8px;background:#e6eff9;color:var(--azul)}
+.tag.t1{background:#e8f4ea;color:#1d6b33}.tag.t2{background:#fff3df;color:#8a5a00}
+.tl-corpo{max-height:0;overflow:hidden;transition:max-height .4s}
+.tl-item.aberto .tl-corpo{max-height:400px}
+.tl-corpo ul{padding:12px 0 4px 18px;color:var(--txt2)}
+
+/* tabela */
+.tabela-wrap{overflow-x:auto;border:1px solid var(--linha)}
+table{width:100%;border-collapse:collapse;background:#fff;min-width:640px}
+th{font-family:'DM Mono';font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;text-align:left;background:var(--azul);color:#fff;padding:12px 16px}
+td{padding:13px 16px;border-top:1px solid var(--linha);font-size:.93rem;vertical-align:top}
+td:first-child{font-weight:700}
+tr:hover td{background:#f2f7fd}
+
+/* tributos e pilares */
+.trib{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:56px}
+.trib div{border:1px solid var(--linha);padding:28px;background:#fff}
+.trib b{font-family:'Bebas Neue';font-size:3.4rem;font-weight:400;color:var(--azul);line-height:1}
+.trib h3{font-family:'DM Sans';text-transform:none;letter-spacing:0;font-size:1.05rem;margin-top:6px}
+.trib small{display:block;font-family:'DM Mono';font-size:.72rem;color:var(--txt2);margin:4px 0 12px}
+.trib p{color:var(--txt2);font-size:.93rem}
+.pilares{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--linha);border:1px solid var(--linha)}
+.pilares div{background:#fff;padding:24px}
+.pilares h4{font-family:'DM Mono';font-size:.8rem;text-transform:uppercase;color:var(--azul);margin-bottom:6px}
+.pilares p{font-size:.92rem;color:var(--txt2)}
+
+/* impactos */
+.imp{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.imp div.c{background:#fff;padding:26px;border-top:3px solid var(--azul)}
+.imp h3{font-size:1.8rem}
+.imp p{color:var(--txt2);font-size:.94rem;margin:6px 0 16px}
+.urg small{font-family:'DM Mono';font-size:.7rem;text-transform:uppercase;color:var(--txt2);display:flex;justify-content:space-between}
+.barra{height:6px;background:var(--linha);margin-top:6px;overflow:hidden}
+.barra i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--azul2),var(--azul));transition:width 1.4s ease}
+
+/* citacao */
+.citacao{background:var(--escuro);color:#fff;padding:80px 0}
+.citacao blockquote{font-family:'Bebas Neue';font-size:clamp(1.9rem,4.5vw,3.2rem);letter-spacing:.03em;line-height:1.15;max-width:960px;border-left:4px solid var(--azul2);padding-left:28px}
+.citacao cite{display:block;margin-top:18px;font-family:'DM Mono';font-style:normal;font-size:.78rem;color:#9fb9d8;padding-left:32px}
+
+/* checklist */
+.prog{font-family:'DM Mono';font-size:.85rem;margin-bottom:18px;color:var(--azul)}
+.prog .barra{max-width:420px}
+.chk{list-style:none;border:1px solid var(--linha);background:#fff}
+.chk li{display:flex;gap:16px;align-items:center;padding:16px 20px;border-top:1px solid var(--linha);cursor:pointer;user-select:none}
+.chk li:first-child{border-top:0}
+.chk li:hover{background:#f2f7fd}
+.box{width:22px;height:22px;border:2px solid var(--azul);flex-shrink:0;display:grid;place-items:center;color:#fff;font-size:.8rem}
+.chk li.ok .box{background:var(--azul)}
+.chk li.ok .t{text-decoration:line-through;color:#999}
+.chk .t{flex:1}
+.chk .p{font-family:'DM Mono';font-size:.75rem;color:var(--txt2);white-space:nowrap}
+
+/* genomma */
+.intro{max-width:860px;color:var(--txt2);margin:-16px 0 32px}
+.gcards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.gcard{background:#fff;border:1px solid var(--linha);border-top:4px solid var(--azul);padding:26px;display:flex;flex-direction:column}
+.gcard:last-child:nth-child(odd){grid-column:1/-1}
+.g-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:6px}
+.g-cat{font-family:'Bebas Neue';font-size:1.9rem;letter-spacing:.04em;line-height:1}
+.g-st{font-family:'DM Mono';font-size:.64rem;text-transform:uppercase;letter-spacing:.06em;padding:3px 8px;white-space:nowrap;background:#e8f4ea;color:#1d6b33}
+.g-st.parcial{background:#fff3df;color:#8a5a00}
+.g-enq{font-weight:700;color:var(--azul);font-size:1.02rem}
+.g-base{font-family:'DM Mono';font-size:.72rem;color:var(--txt2);margin-bottom:10px}
+.g-ex{font-size:.86rem;color:var(--txt2);margin-bottom:8px}
+.g-ex b{font-weight:500;color:var(--txt)}
+.gcard>p.g-txt{font-size:.92rem;color:var(--txt2);flex:1}
+.g-dl{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--linha);margin:16px 0}
+.g-dl div{background:var(--alt);padding:10px 12px}
+.g-dl dt{font-family:'DM Mono';font-size:.66rem;text-transform:uppercase;color:var(--txt2)}
+.g-dl dd{font-family:'Bebas Neue';font-size:1.6rem;color:var(--azul);line-height:1.1}
+.transv{margin-top:48px;background:#fff;border-left:4px solid var(--azul);padding:26px 30px}
+.transv h3{font-size:1.6rem;margin-bottom:10px}
+.transv ul{padding-left:20px;color:var(--txt2)}
+.transv li{margin:6px 0}
+
+/* comex */
+.comex{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+.cx{background:#fff;border:1px solid var(--linha)}
+.cx h3{background:var(--azul);color:#fff;font-size:1.6rem;padding:12px 20px}
+.cx ul{list-style:none}
+.cx li{padding:14px 20px;border-top:1px solid var(--linha)}
+.cx li:first-child{border-top:0}
+.cx strong{display:block;font-size:.95rem}
+.cx p{font-size:.88rem;color:var(--txt2);margin-top:2px}
+.ac{display:inline-block;margin-left:6px;font-family:'DM Mono';font-size:.6rem;text-transform:uppercase;background:#fff3df;color:#8a5a00;padding:1px 6px;vertical-align:middle;font-weight:400}
+
+/* entidades */
+.ent{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-bottom:56px}
+.ent div{background:#fff;border:1px solid var(--linha);padding:20px;display:flex;flex-direction:column}
+.ent h3{font-size:1.5rem;color:var(--azul)}
+.ent small{font-family:'DM Mono';font-size:.68rem;color:var(--txt2);text-transform:uppercase;margin-bottom:8px}
+.ent p{font-size:.86rem;color:var(--txt2);flex:1}
+.ent a{font-family:'DM Mono';font-size:.72rem;margin-top:12px;text-transform:uppercase;text-decoration:none}
+
+/* fontes */
+.fontes{columns:2;column-gap:40px;list-style:none}
+.fontes li{break-inside:avoid;padding:10px 0;border-bottom:1px solid var(--linha);font-size:.92rem}
+.fontes a{text-decoration:none}.fontes a:hover{text-decoration:underline}
+
+footer{border-top:4px solid var(--azul);padding:40px 0;font-size:.85rem;color:var(--txt2)}
+footer .mono{font-size:.75rem;margin-top:10px}
+.print{position:fixed;right:22px;bottom:22px;z-index:40;background:var(--azul);color:#fff;border:0;padding:13px 18px;font-family:'DM Mono';font-size:.78rem;text-transform:uppercase;cursor:pointer;box-shadow:0 6px 18px rgba(0,87,184,.35)}
+.print:hover{background:var(--azul2)}
+
+/* animacao */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1180px){
+  .links{gap:14px}
+  .links a{font-size:.66rem}
+  .ent{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:1040px){ .links{display:none} }
+@media (max-width:900px){
+  .kpis,.trib,.pilares,.ent{grid-template-columns:repeat(2,1fr)}
+  .cards,.imp,.gcards,.comex{grid-template-columns:1fr}
+  .fontes{columns:1}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  .hero .wrap{padding-left:30px}
+  section{padding:60px 0}
+  .kpis,.trib,.pilares,.ent{grid-template-columns:1fr}
+  .g-dl{grid-template-columns:1fr}
+  .cd{gap:12px}.cd b{font-size:2rem}
+  .chk li{flex-wrap:wrap}
+  .print{right:12px;bottom:12px}
+}
+@media print{
+  nav,.print,.marquee,.lang{display:none!important}
+  .hero{min-height:auto;padding-top:20px}
+  section{padding:24px 0;break-inside:avoid-page}
+  .rv{opacity:1!important;transform:none!important}
+  .tl-corpo{max-height:none!important}
+  .citacao{background:#fff;color:#000}
+  .citacao blockquote{border-color:var(--azul)}
+  .barra i{width:var(--w)!important}
+  a{color:#000}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#topo"><i></i><span>Dossiê RT</span></a>
+  <ul class="links" id="nav-links"></ul>
+  <div class="lang"><button data-l="pt">🇧🇷 PT</button><button data-l="es">🇪🇸 ES</button></div>
+</div></nav>
+
+<header class="hero" id="topo"><div class="wrap">
+  <div class="kicker" id="kicker"></div>
+  <h1 id="hero-h1"></h1>
+  <p id="hero-p"></p>
+  <div class="countdown">
+    <small id="cd-rotulo"></small>
+    <strong id="cd-marco"></strong>
+    <div class="cd" id="cd"></div>
+    <div class="cd2" id="cd2"></div>
+  </div>
+</div></header>
+
+<div class="marquee"><div class="trilho" id="marquee"></div></div>
+
+<section><div class="wrap"><h2 class="sec-titulo rv" data-s="kpis"></h2><div class="kpis" id="kpis"></div></div></section>
+<section class="alt" id="novidades"><div class="wrap"><h2 class="sec-titulo rv" data-s="novidades"></h2><div class="cards" id="cards"></div></div></section>
+<section id="genomma"><div class="wrap">
+  <h2 class="sec-titulo rv" data-s="genomma"></h2><p class="intro rv" id="g-intro"></p>
+  <div class="gcards" id="gcards"></div>
+  <div class="transv rv"><h3 data-s="transversais"></h3><ul id="transv"></ul></div>
+</div></section>
+<section class="alt" id="cronograma"><div class="wrap"><h2 class="sec-titulo rv" data-s="cronograma"></h2><div class="tl" id="tl"></div></div></section>
+<section id="aliquotas"><div class="wrap"><h2 class="sec-titulo rv" data-s="aliquotas"></h2><div class="tabela-wrap rv"><table id="tab"></table></div></div></section>
+<section class="alt" id="tributos"><div class="wrap">
+  <h2 class="sec-titulo rv" data-s="tributos"></h2><div class="trib" id="trib"></div>
+  <h2 class="sec-titulo rv" data-s="mecanismos"></h2><div class="pilares" id="pilares"></div>
+</div></section>
+<section id="impactos"><div class="wrap"><h2 class="sec-titulo rv" data-s="impactos"></h2><div class="imp" id="imp"></div></div></section>
+<section class="alt" id="comex"><div class="wrap">
+  <h2 class="sec-titulo rv" data-s="comex"></h2><p class="intro rv" id="cx-intro"></p>
+  <div class="comex" id="cx"></div>
+</div></section>
+<div class="citacao"><div class="wrap"><blockquote id="cit"></blockquote><cite id="cit-a"></cite></div></div>
+<section id="checklist"><div class="wrap">
+  <h2 class="sec-titulo rv" data-s="checklist"></h2>
+  <div class="prog"><span id="prog-t"></span><div class="barra"><i id="prog-b"></i></div></div>
+  <ul class="chk" id="chk"></ul>
+</div></section>
+<section class="alt" id="fontes"><div class="wrap">
+  <h2 class="sec-titulo rv" data-s="entidades"></h2><div class="ent" id="ent"></div>
+  <h2 class="sec-titulo rv" data-s="fontes"></h2><ul class="fontes" id="fnt"></ul>
+</div></section>
+
+<footer><div class="wrap"><p id="disc"></p><p class="mono" id="rod"></p></div></footer>
+<button class="print" id="btn-print" onclick="window.print()"></button>
+
+<script type="application/json" id="dados">{
+  "pt": {
+    "meta": {
+      "lang": "pt-BR",
+      "titulo": "Dossiê Executivo — Reforma Tributária do Consumo",
+      "atualizacao": "03/11/2026",
+      "ultimaPublicacao": "Ato Técnico Conjunto RFB/SUFIS/CGIBS nº 10/2026 (DOU 29/10/2026)",
+      "marco": { "data": "2027-01-01T00:00:00-03:00", "rotulo": "Início da cobrança efetiva da CBS e extinção do PIS/Cofins", "fonte": "EC 132/2023 e LC 214/2025" },
+      "marcoSecundario": { "data": "2026-11-16T00:00:00-03:00", "rotulo": "Produção das NTs 2025.002 v1.53 e 2026.005/006/007/008 da NF-e" }
+    },
+    "ui": {
+      "nav": ["Novidades", "Genomma", "Cronograma", "Alíquotas", "Tributos", "Impactos", "Comex", "Checklist", "Fontes"],
+      "heroKicker": "Dossiê executivo financeiro · IBS · CBS · IS",
+      "heroLinhas": ["Reforma", "Tributária", "do Consumo"],
+      "heroTexto": "Panorama consolidado das normas, prazos e impactos da transição para o IVA dual brasileiro, atualizado até 03/11/2026.",
+      "contagemRotulo": "Faltam para o marco crítico",
+      "contagemUnid": ["dias", "horas", "min", "seg"],
+      "contagemPassou": "Marco atingido",
+      "secoes": {
+        "kpis": "Indicadores-chave",
+        "novidades": "Últimas novidades",
+        "cronograma": "Cronograma de transição",
+        "aliquotas": "Alíquotas e parâmetros",
+        "tributos": "Os novos tributos",
+        "mecanismos": "Pilares do novo modelo",
+        "impactos": "Impactos por segmento",
+        "checklist": "Checklist de conformidade",
+        "fontes": "Fontes consultadas",
+        "genomma": "Impacto no portfólio Genomma",
+        "transversais": "Pontos que valem para todo o portfólio",
+        "comex": "Importação e exportação",
+        "entidades": "Fontes setoriais monitoradas"
+      },
+      "g": { "cbs": "CBS 2027 estimada", "is": "Imposto Seletivo", "exemplos": "Exemplos", "status": { "confirmado": "Regra confirmada", "parcial": "Parte a confirmar" } },
+      "aConfirmar": "a confirmar",
+      "acompanhar": "O que acompanhar",
+      "acessar": "Acessar",
+      "novo": "NOVO",
+      "atual": "ATUAL",
+      "urgencia": "Urgência",
+      "prazo": "Prazo",
+      "contador": "{x} / {n} itens concluídos",
+      "tabela": ["Item", "2026", "2027", "Observação"],
+      "imprimir": "Imprimir",
+      "citacao": "A alíquota de referência é um parâmetro, e não necessariamente a alíquota que será cobrada.",
+      "citacaoAutor": "Tribunal de Contas da União — cálculo da CBS 2027 (paráfrase)",
+      "disclaimer": "Material informativo elaborado a partir de fontes públicas e notícias especializadas. Itens marcados como \"a confirmar\" dependem de publicação oficial. Não constitui parecer jurídico ou contábil.",
+      "rodapeAtualizacao": "Atualizado em"
+    },
+    "kpis": [
+      { "valor": "0,9%", "rotulo": "CBS em 2026 (teste)", "nota": "Recolhimento dispensado com obrigações acessórias cumpridas" },
+      { "valor": "0,1%", "rotulo": "IBS em 2026 (teste)", "nota": "Alíquota estadual de teste, compensável" },
+      { "valor": "11,3%", "rotulo": "CBS 2027 — referência TCU", "nota": "Cálculo de 28/10/2026; Senado fixa por resolução" },
+      { "valor": "R$ 41,9 bi", "rotulo": "IS previsto no PLOA 2027", "nota": "Alíquotas ainda não definidas" },
+      { "valor": "+1 milhão", "rotulo": "Optantes do regime regular", "nota": "Empresas do Simples, janela encerrada em 30/10/2026" },
+      { "valor": "2033", "rotulo": "Fim da transição", "nota": "Extinção de ICMS e ISS" }
+    ],
+    "novidades": [
+      { "data": "29/10/2026", "titulo": "Ato Técnico Conjunto 10/2026 aprova NTs e fixa produção em 16/11", "resumo": "Aprova documentação técnica de dez modelos de DF-e e unifica em 16/11/2026 a produção das NTs 2025.002 v1.53 e 2026.005 a 2026.008 da NF-e/NFC-e (antes previstas para 03/11).", "ato": "Ato Técnico Conjunto RFB/SUFIS/CGIBS nº 10/2026", "novo": true },
+      { "data": "28/10/2026", "titulo": "TCU calcula alíquota de referência da CBS 2027 em 11,3%", "resumo": "Cálculo (11,3468%, arredondado) supera a estimativa anterior de 9,21%. O Senado deve fixar a alíquota por resolução até dezembro; sem deliberação, vale o número do TCU.", "ato": "TC 006.529/2026-7", "novo": true },
+      { "data": "29/10/2026", "titulo": "Cooperativas: prazo do regime específico pode ir a 30/11", "resumo": "Receita e CGIBS discutem prorrogar de 31/10 para 30/11/2026 a opção pelo regime específico das cooperativas. Prorrogação a confirmar até publicação do ato.", "ato": "A confirmar", "novo": true },
+      { "data": "30/10/2026", "titulo": "Encerrada a opção do Simples pelo regime regular de IBS/CBS", "resumo": "Mais de 1 milhão de optantes. A opção pode ser cancelada, de forma irretratável, até o fim de novembro/2026. Nova janela prevista para 2027.", "ato": "Resolução CGSN nº 194/2026", "novo": true },
+      { "data": "Set/2026", "titulo": "Siscomex: sem cobrança de IBS/CBS na importação antes de 2027", "resumo": "Na importação, os campos de IBS/CBS existem só na DUIMP e a cobrança começa em 01/01/2027. Em 2026, PIS/Cofins-Importação seguem devidos integralmente.", "ato": "Notícia Siscomex · Ato Conjunto RFB/CGIBS nº 4/2026", "novo": false },
+      { "data": "01/10/2026", "titulo": "Novo DANFE com blocos de IBS, CBS e IS", "resumo": "NT 2026.010 inclui totais de CBS, IBS UF, IBS Município e IS, além do CRT e do cClassTrib por item. Produção prevista para 01/12/2026 (a confirmar).", "ato": "Ato Técnico Conjunto nº 8/2026", "novo": false },
+      { "data": "15/10/2026", "titulo": "Split payment entra em testes", "resumo": "Testes de integração da Plataforma Pública em ambiente controlado. Uso facultativo e gradual previsto para o 2º semestre de 2027; obrigatoriedade B2B prevista para 2028.", "ato": "Ato Conjunto RFB/CGIBS nº 2/2026", "novo": false },
+      { "data": "18/08/2026", "titulo": "ABIHPEC publica guia de CBS/IBS para cosméticos e HPPC", "resumo": "Redução de 60% só para os itens do Anexo VIII (sabonetes, dentifrícios, escovas, fraldas etc.), com NCM e descrição exatas. Cosméticos e perfumaria ficam com alíquota cheia. O guia traz checklist de ERP, ICMS-ST e caixa.", "ato": "LC 214/2025, art. 136 e Anexo VIII", "novo": false },
+      { "data": "31/07/2026", "titulo": "Campos IBS/CBS obrigatórios desde 03/08/2026, sem rejeição", "resumo": "Cronograma por ondas de documentos fiscais; NF-e passa a exigir IBS/CBS para fatos geradores a partir de 03/08/2026. A rejeição automática foi suspensa, mas a obrigação permanece.", "ato": "Ato Conjunto RFB/CGIBS nº 4/2026 e Ato Técnico Conjunto nº 1/2026", "novo": false },
+      { "data": "30/04/2026", "titulo": "Publicados os regulamentos da CBS e do IBS", "resumo": "Decreto 12.955/2026 (CBS) e Resolução CGIBS 6/2026 (IBS), com estrutura espelhada e livro de normas comuns. Dispensa de recolhimento da CBS em 2026 para quem cumprir as obrigações acessórias.", "ato": "Decreto nº 12.955/2026 · Resolução CGIBS nº 6/2026", "novo": false }
+    ],
+    "cronograma": [
+      { "ano": "2026", "titulo": "Ano de teste", "tags": ["Teste", "DF-e"], "itens": ["CBS 0,9% e IBS 0,1%, compensáveis", "Campos IBS/CBS obrigatórios na NF-e desde 03/08", "Regulamentos publicados em 30/04", "Split payment em testes desde 15/10"] },
+      { "ano": "2027", "titulo": "CBS plena e Imposto Seletivo", "tags": ["CBS", "IS", "Extinção"], "itens": ["Cobrança da CBS com alíquota de referência (TCU: 11,3%)", "Extinção de PIS/Cofins", "IPI zerado, exceto produtos com industrialização na ZFM", "Início do IS (alíquotas a definir)", "Cashback da CBS para famílias do CadÚnico", "Split payment facultativo no 2º semestre"] },
+      { "ano": "2028", "titulo": "Consolidação", "tags": ["Split payment"], "itens": ["Split payment obrigatório nas operações B2B (previsão)", "IBS segue em 0,1% (teste)"] },
+      { "ano": "2029–2032", "titulo": "Transição ICMS/ISS → IBS", "tags": ["IBS", "ICMS", "ISS"], "itens": ["Redução gradual de ICMS e ISS (90%, 80%, 70%, 60% das alíquotas)", "Aumento proporcional do IBS", "Cashback do IBS a partir de 2029"] },
+      { "ano": "2033", "titulo": "Modelo definitivo", "tags": ["IVA dual"], "itens": ["Extinção de ICMS e ISS", "IBS e CBS integralmente vigentes"] }
+    ],
+    "aliquotas": [
+      ["CBS", "0,9% (teste)", "11,3% (referência TCU, a fixar pelo Senado)", "Recolhimento dispensado em 2026 com obrigações acessórias"],
+      ["IBS (UF + Município)", "0,1% (teste)", "0,1% (teste)", "Alíquota cheia gradual a partir de 2029"],
+      ["Imposto Seletivo", "—", "A definir (lei/MP pendente)", "Noventena pode adiar a cobrança"],
+      ["PIS/Cofins", "Vigentes", "Extintos", "Substituídos pela CBS"],
+      ["IPI", "Vigente", "Zerado (exceto ZFM)", "Mantido para proteger a ZFM"],
+      ["Cesta Básica Nacional", "—", "Alíquota zero", "Anexo I da LC 214/2025"]
+    ],
+    "tributos": [
+      { "sigla": "CBS", "nome": "Contribuição sobre Bens e Serviços", "esfera": "Federal (Receita Federal)", "texto": "Substitui PIS e Cofins. Não cumulativa, base ampla, crédito financeiro. Regulamentada pelo Decreto 12.955/2026." },
+      { "sigla": "IBS", "nome": "Imposto sobre Bens e Serviços", "esfera": "Estados e Municípios (CGIBS)", "texto": "Substitui ICMS e ISS. Cobrança no destino, administração pelo Comitê Gestor criado pela LC 227/2026. Regulamentado pela Resolução CGIBS 6/2026." },
+      { "sigla": "IS", "nome": "Imposto Seletivo", "esfera": "Federal", "texto": "Incide sobre bens e serviços prejudiciais à saúde ou ao meio ambiente. Início em 2027; alíquotas ainda dependem de lei." }
+    ],
+    "mecanismos": [
+      { "titulo": "Split Payment", "texto": "Separação automática do tributo no momento do pagamento. Testes desde 15/10/2026." },
+      { "titulo": "Não cumulatividade plena", "texto": "Crédito de todo tributo pago nas aquisições, condicionado ao recolhimento." },
+      { "titulo": "Cobrança no destino", "texto": "IBS pertence ao ente onde ocorre o consumo." },
+      { "titulo": "Cashback", "texto": "Devolução a famílias do CadÚnico: CBS a partir de 2027, IBS a partir de 2029." },
+      { "titulo": "Cesta Básica Nacional", "texto": "Itens essenciais com alíquota zero de IBS e CBS." },
+      { "titulo": "DeRE e regimes específicos", "texto": "Declaração própria para regimes específicos (financeiro, seguros, imóveis etc.). Detalhes operacionais a confirmar." }
+    ],
+    "impactos": [
+      { "titulo": "Regime Regular", "texto": "Lucro Real e Presumido devem preencher IBS/CBS nos DF-e desde 03/08/2026 e ajustar ERPs às NTs com produção em 16/11/2026.", "urgencia": 90 },
+      { "titulo": "Simples Nacional", "texto": "Janela de opção pelo regime regular encerrada em 30/10. Cancelamento possível até o fim de novembro. Avaliar efeito no crédito dado aos clientes.", "urgencia": 75 },
+      { "titulo": "Financeiro e Seguros", "texto": "Regimes específicos com base própria; acompanhar DeRE e a alíquota de referência de 2027 para precificação.", "urgencia": 60 },
+      { "titulo": "Agro, ZFM e ICMS", "texto": "Cooperativas: prazo do regime específico possivelmente até 30/11 (a confirmar). ZFM mantém IPI como diferencial. ICMS só começa a cair em 2029.", "urgencia": 70 }
+    ],
+    "genomma": {
+      "intro": "Leitura preliminar do enquadramento das principais categorias comercializadas pela Genomma Lab no Brasil. O tratamento final depende da NCM, do registro na Anvisa e da descrição comercial de cada SKU. A CBS de 2027 foi estimada a partir da alíquota de referência calculada pelo TCU (11,3%), ainda pendente de resolução do Senado.",
+      "itens": [
+        { "categoria": "OTC / MIPs", "exemplos": "Antigripais, antiácidos, antimicóticos e analgésicos registrados como medicamento", "enquadramento": "Redução de 60% de IBS e CBS", "base": "LC 214/2025, art. 133", "texto": "A redução só vale se o produto seguir a sistemática de preços da CMED ou se a empresa firmar compromisso com a União e o CGIBS (art. 133, §2º). MIPs com preço liberado precisam desse compromisso; sem ele, pagam alíquota cheia. A alíquota zero (art. 146, alterado pela LC 227/2026) é restrita a linhas terapêuticas específicas e a compras públicas, o que é improvável para OTC.", "cbs": "≈ 4,5%", "is": "Não incide", "status": "confirmado", "urgencia": 95 },
+        { "categoria": "Dermocosméticos", "exemplos": "Linhas de skincare, antiacne, cuidados com a pele", "enquadramento": "Alíquota cheia", "base": "Fora do Anexo VIII da LC 214/2025", "texto": "Cosméticos e perfumaria não têm redução. Itens registrados na Anvisa como medicamento podem ter os 60% (validar SKU a SKU). O PIS/Cofins monofásico acaba em 2027, e o ICMS-ST de HPPC já foi encerrado em SP e em outros 7 estados desde 01/04/2026, com recuperação do ST de estoques em 12 parcelas.", "cbs": "≈ 11,3%", "is": "Não incide", "status": "confirmado", "urgencia": 80 },
+        { "categoria": "Sabonetes em barra e higiene básica", "exemplos": "Sabonetes de toucador e em barra, dentifrícios, escovas de dente, fraldas", "enquadramento": "Redução de 60% de IBS e CBS", "base": "LC 214/2025, art. 136 e Anexo VIII", "texto": "Exige coincidência exata entre a NCM (sabonete de toucador 3401.11.90; sabão em barra 3401.19.00), a descrição comercial e o texto do anexo. Qualquer divergência leva à alíquota cheia. Sabonetes líquidos e versões fora dessas NCMs tendem à alíquota cheia (a confirmar).", "cbs": "≈ 4,5%", "is": "Não incide", "status": "parcial", "urgencia": 70 },
+        { "categoria": "Hidroeletrolíticos (Suerox)", "exemplos": "Bebidas de reidratação com eletrólitos", "enquadramento": "Alíquota cheia, com risco de Imposto Seletivo", "base": "Sem previsão de redução; IS: LC 214/2025, Anexo XVII", "texto": "Classificado como bebida (NCM 2202), não tem redução. Se enquadrado como bebida açucarada, entra no Imposto Seletivo, cujas alíquotas ainda não foram definidas. Versões sem açúcar tendem a ficar fora do IS (a confirmar pela NCM). Produto registrado na Anvisa como medicamento, como sais de reidratação oral, poderia ter a redução de 60%.", "cbs": "≈ 11,3%", "is": "Risco, se açucarado", "status": "parcial", "urgencia": 85 },
+        { "categoria": "Fórmulas infantis (Novamil)", "exemplos": "Fórmulas para lactentes e de seguimento", "enquadramento": "Alíquota zero (Cesta Básica Nacional)", "base": "LC 214/2025, Anexo I, item 4", "texto": "Exige conformidade com a legislação sanitária específica e NCM 1901.10.10, 1901.10.90 ou 2106.90.90. Fórmulas para erros inatos do metabolismo têm redução de 60% (art. 133, §1º). A Genomma anunciou em 2025 o plano de lançar Novamil no Brasil; a situação atual está a confirmar.", "cbs": "0%", "is": "Não incide", "status": "parcial", "urgencia": 50 }
+      ],
+      "transversais": [
+        "Preço CMED: o novo modelo calcula CBS e IBS fora do preço-fábrica e os destaca na nota; as listas passam a mostrar o preço com e sem tributo. O Sindusfarma retomou com a CMED o grupo de trabalho da reforma.",
+        "Fim do PIS/Cofins monofásico em 2027: revisar CST e cClassTrib de todo o cadastro no ERP.",
+        "Crédito amplo nas compras, inclusive insumos importados, com ressarcimento de saldo credor. O crédito depende do recolhimento pelo fornecedor.",
+        "Split payment reduz o capital de giro a partir de 2027–2028: revisar prazos com redes de farmácia, atacado e distribuidores.",
+        "Amostras grátis sem contraprestação não são operação tributável (Decreto 12.955/2026, art. 6º, §4º)."
+      ]
+    },
+    "comex": {
+      "intro": "Principais mudanças para quem importa insumos e produtos acabados ou exporta. Na importação, a cobrança de IBS/CBS começa em 01/01/2027.",
+      "blocos": [
+        { "titulo": "Importação", "itens": [
+          { "t": "Cobrança a partir de 01/01/2027", "d": "Em 2026 não há recolhimento de IBS/CBS na importação. PIS/Cofins-Importação seguem devidos integralmente até a extinção.", "ok": true },
+          { "t": "IBS/CBS só na DUIMP", "d": "Os campos de IBS/CBS existem apenas na DUIMP; a DI não terá esses campos. Desligamento da DI previsto em etapas (31/08 e 01/12/2026).", "ok": false },
+          { "t": "Mesma alíquota do produto nacional", "d": "Tratamento nacional: o importado paga a mesma alíquota da operação interna, inclusive as reduções (ex.: 60% para medicamentos).", "ok": true },
+          { "t": "Base de cálculo", "d": "Valor aduaneiro acrescido de II, Imposto Seletivo, taxas e encargos aduaneiros. Se IPI e ICMS entram ou não na base é ponto em que as fontes divergem.", "ok": false },
+          { "t": "Momento do pagamento", "d": "Até a entrega da mercadoria despachada para consumo, com antecipação possível no registro da declaração. Operadores OEA podem pagar depois, nas hipóteses do regulamento.", "ok": true },
+          { "t": "Créditos", "d": "O importador do regime regular credita o IBS/CBS pago. Há crédito presumido de CBS sobre PIS/Cofins-Importação de estoques (apuração até jun/2027, em 12 parcelas).", "ok": false }
+        ] },
+        { "titulo": "Exportação", "itens": [
+          { "t": "Imunidade com manutenção de créditos", "d": "Exportações de bens e serviços não sofrem IBS/CBS, e os créditos das etapas anteriores são mantidos, para compensação ou ressarcimento (LC 214/2025, art. 79).", "ok": true },
+          { "t": "IBS e CBS segregados", "d": "Crédito de IBS não compensa débito de CBS, e vice-versa. Controlar os saldos separadamente.", "ok": true },
+          { "t": "Comercial exportadora", "d": "Suspensão na venda à trading, convertida em alíquota zero após a exportação. Exige requisitos cumulativos, como certificação OEA e patrimônio líquido mínimo (art. 82).", "ok": true },
+          { "t": "Exportação indireta em disputa", "d": "Decisão de 1ª instância (TJDFT, 08/05/2026, mandado de segurança do CECIEX) afastou os requisitos do art. 82 para o IBS. Não é definitiva.", "ok": false }
+        ] },
+        { "titulo": "Regimes aduaneiros especiais", "itens": [
+          { "t": "Drawback, Recof, Repetro, ZPE e ZFM", "d": "Incorporados pelo Decreto 12.955/2026 e pela Resolução CGIBS 6/2026, com suspensão de IBS/CBS como mecanismo de neutralidade, condicionada a controle e rastreabilidade.", "ok": true },
+          { "t": "Drawback suspensão", "d": "Há leituras divergentes sobre a extensão da suspensão ao IBS/CBS. Confirmar no regulamento antes de planejar operações.", "ok": false },
+          { "t": "Zona Franca de Manaus", "d": "IPI mantido para produtos industrializados na ZFM. Empresas na ZFM devem informar o número do processo Suframa na NF-e.", "ok": true }
+        ] }
+      ]
+    },
+    "entidades": [
+      { "nome": "Sindusfarma", "papel": "Indústria farmacêutica", "texto": "Grupo de trabalho com a CMED sobre a adaptação dos preços à reforma; nova Resolução CMED nº 3/25 em vigor desde 29/04/2026.", "url": "https://sindusfarma.org.br/noticias/indice/exibir/27681-nova-resolucao-da-cmed-e-reforma-tributaria-sindusfarma-reune-industria-para-esclarecer-regras-e-impactos" },
+      { "nome": "ABIHPEC", "papel": "Higiene pessoal, perfumaria e cosméticos", "texto": "Guia de CBS/IBS para HPPC (18/08/2026): Anexo VIII, fim do ICMS-ST, checklist de ERP e caixa.", "url": "https://abihpec.org.br/cbs-ibs-empresas-cosmeticos-2026/" },
+      { "nome": "ACESSA", "papel": "Autocuidado em saúde e MIPs", "texto": "Nenhum posicionamento público sobre a reforma foi localizado no site até 03/11/2026. Acompanhar a seção MIP & Autocuidado, especialmente o compromisso exigido para MIPs com preço liberado.", "url": "https://acessa.org.br/mip-autocuidado" },
+      { "nome": "Rayes & Fagundes", "papel": "Escritório de advocacia tributária", "texto": "Informativo sobre medicamentos: IBS/CBS na base do ICMS, PMC, ICMS-ST, compras públicas e contratos. Visto em publicação no LinkedIn; o texto original não pôde ser acessado automaticamente (a confirmar).", "url": "https://www.rayesfagundes.com.br" },
+      { "nome": "CMED / Anvisa", "papel": "Regulação de preços de medicamentos", "texto": "GT de Reforma Tributária: apresentação de 03/07/2026 com a proposta do novo modelo de preço-fábrica e escalonamento 2027/2029/2033.", "url": "https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/informes/ApresentaoGTdeReformaTributria03dejulhode2026.pdf" }
+    ],
+    "checklist": [
+      { "texto": "Homologar NF-e com NT 2025.002 v1.53 (regras de devolução)", "prazo": "09/11/2026" },
+      { "texto": "Entrar em produção com NTs 2026.005 a 2026.008", "prazo": "16/11/2026" },
+      { "texto": "Mapear NCM, registro Anvisa e cClassTrib de cada SKU (OTC, dermo, higiene, Suerox, Novamil)", "prazo": "Nov/2026" },
+      { "texto": "Cooperativas: formalizar opção pelo regime específico (prazo a confirmar)", "prazo": "30/11/2026" },
+      { "texto": "Simples: revisar/cancelar opção pelo regime regular, se necessário", "prazo": "30/11/2026" },
+      { "texto": "Adequar emissão ao novo DANFE (NT 2026.010) — data a confirmar", "prazo": "01/12/2026" },
+      { "texto": "Migrar todas as importações da DI para a DUIMP — data a confirmar", "prazo": "01/12/2026" },
+      { "texto": "OTC com preço liberado: avaliar compromisso com União/CGIBS para manter a redução de 60%", "prazo": "Dez/2026" },
+      { "texto": "Sabonetes em barra: validar NCM e descrição contra o Anexo VIII", "prazo": "Dez/2026" },
+      { "texto": "Suerox: confirmar NCM e exposição ao Imposto Seletivo", "prazo": "Dez/2026" },
+      { "texto": "Acompanhar resolução do Senado sobre a alíquota da CBS 2027", "prazo": "Dez/2026" },
+      { "texto": "Inventariar estoques em 31/12/2026 para crédito presumido de CBS", "prazo": "31/12/2026" },
+      { "texto": "Atualizar precificação e contratos para a CBS plena", "prazo": "01/01/2027" },
+      { "texto": "Apurar crédito presumido de CBS sobre PIS/Cofins-Importação de estoques", "prazo": "Jun/2027" },
+      { "texto": "Exportações: estruturar controle e pedido de ressarcimento de créditos", "prazo": "2027" },
+      { "texto": "Preparar tesouraria e sistemas para o split payment", "prazo": "2º sem./2027" }
+    ],
+    "fontes": [
+      { "titulo": "Receita Federal — CGSN define prazos de opção para 2027", "url": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/abril/cgsn-define-prazos-de-opcao-pelo-simples-nacional-e-pelo-regime-regular-do-ibs-e-da-cbs-para-2027" },
+      { "titulo": "CGIBS — Novos prazos de opção Simples / regime regular", "url": "https://www.cgibs.gov.br/embora-os-periodos-sejam-parecidos-tratam-de-escolhas-diferentes-por-isso-e-importante-entender-cada-situacao" },
+      { "titulo": "CGIBS — Ato Conjunto RFB/CGIBS nº 4/2026 (PDF)", "url": "https://www.cgibs.gov.br/upload/arquivos/202607/31091735-20260730-16h30-ato-conjunto-rfb-cgibs-na-c2-ba-4-260731-090909.pdf" },
+      { "titulo": "Senado Notícias — TCU calcula CBS em 11,3% para 2027", "url": "https://www12.senado.leg.br/noticias/materias/2026/10/28/reforma-tributaria-tcu-calcula-aliquota-da-cbs-em-11-3-para-2027" },
+      { "titulo": "Senado Notícias — Senado deve receber cálculo da CBS", "url": "https://www12.senado.leg.br/noticias/materias/2026/11/03/senado-deve-receber-calculo-da-cbs-na-proxima-terca-para-definir-aliquota" },
+      { "titulo": "Câmara — Lei Complementar nº 227/2026", "url": "https://www2.camara.leg.br/legin/fed/leicom/2026/leicomplementar-227-13-janeiro-2026-798657-norma-pl.html" },
+      { "titulo": "Normas Legais — Decreto nº 12.955/2026", "url": "https://www.normaslegais.com.br/legislacao/decreto12955-2026.htm" },
+      { "titulo": "Mattos Filho — Regulamentos do IBS e da CBS", "url": "https://www.mattosfilho.com.br/unico/regulamentos-ibs-cbs/" },
+      { "titulo": "DFS Pro — Ato Técnico Conjunto 10/2026", "url": "https://www.dfspro.com.br/blog/noticias-3/ato-tecnico-conjunto-10-2026-nts-da-nf-e-vao-de-03-11-a-16-11-218" },
+      { "titulo": "DFS Pro — Ato Técnico Conjunto 8/2026 (novo DANFE)", "url": "https://www.dfspro.com.br/blog/noticias-3/ato-tecnico-conjunto-8-2026-novo-danfe-com-ibs-cbs-e-is-215" },
+      { "titulo": "Comsefaz — Split payment em testes a partir de 15/10", "url": "https://comsefaz.org.br/novo/split-payment-entra-em-fase-de-testes-a-partir-de-15-de-outubro-saiba-o-que-muda/" },
+      { "titulo": "COAD — Prazo das cooperativas até 30/11 em discussão", "url": "https://coad.com.br/home/noticias-detalhe/140524/receita-federal-e-cgibs-discutem-ampliacao-do-prazo-de-opcao-pelo-regime-especifico-da-cbs-e-do-ibs-para-as-cooperativas-ate-30-de-novembro" },
+      { "titulo": "CRCSP — Imposto Seletivo com alíquotas indefinidas", "url": "https://crcsp.org.br/portal/noticias/noticia.asp?c=11012" },
+      { "titulo": "Taxcel — IBS/CBS na NF-e: obrigatório desde agosto, rejeição suspensa", "url": "https://taxcel.com.br/ibs-cbs-nota-fiscal-2026-obrigatorio-rejeicao" },
+      { "titulo": "Sindusfarma — Nova resolução da CMED e reforma tributária", "url": "https://sindusfarma.org.br/noticias/indice/exibir/27681-nova-resolucao-da-cmed-e-reforma-tributaria-sindusfarma-reune-industria-para-esclarecer-regras-e-impactos" },
+      { "titulo": "ABIHPEC — CBS e IBS para cosméticos: o que muda", "url": "https://abihpec.org.br/cbs-ibs-empresas-cosmeticos-2026/" },
+      { "titulo": "ACESSA — MIP & Autocuidado", "url": "https://acessa.org.br/mip-autocuidado" },
+      { "titulo": "Rayes & Fagundes Advogados", "url": "https://www.rayesfagundes.com.br" },
+      { "titulo": "Anvisa/CMED — Apresentação do GT de Reforma Tributária (03/07/2026)", "url": "https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/informes/ApresentaoGTdeReformaTributria03dejulhode2026.pdf" },
+      { "titulo": "Medicina S/A — Nova tributação dos medicamentos pelo IBS e pela CBS", "url": "https://medicinasa.com.br/seletividade-terapeutica/" },
+      { "titulo": "Simtax — Redução de 60% para medicamentos: quem entra e quem fica fora", "url": "https://simtax.com.br/reducao-60-medicamentos-ibs-cbs/" },
+      { "titulo": "Radar da Reforma — Imposto Seletivo sobre bebidas (álcool e açúcar)", "url": "https://radardareformatributaria.com/reforma-tributaria-bebidas-imposto-seletivo-alcool-acucar/" },
+      { "titulo": "IOB — Isenção da Cesta Básica (fórmulas infantis no Anexo I)", "url": "https://noticias.iob.com.br/reforma-tributaria-isencao-cesta-basica/" },
+      { "titulo": "El CEO — Genomma Lab: Suerox, Cicatricure e plano para Novamil", "url": "https://elceo.com/negocios/de-suerox-a-cicatricure-rodrigo-herrera-afina-la-formula-de-genomma-lab-para-crecer/" },
+      { "titulo": "ConJur — Importação, IBS e CBS: o que revela a regulamentação", "url": "https://www.conjur.com.br/2026-jun-16/importacao-ibs-e-cbs-o-que-revela-a-regulamentacao-da-reforma-tributaria/" },
+      { "titulo": "Fazcomex — Preenchimento da DI e DUIMP para a reforma em 2026", "url": "https://www.fazcomex.com.br/npi/preenchimento-da-di-e-duimp-para-a-reforma-tributaria-do-consumo-rtc-em-2026/" },
+      { "titulo": "Simtax — Imunidade do IBS e da CBS nas exportações", "url": "https://simtax.com.br/imunidade-ibs-cbs-exportacoes/" },
+      { "titulo": "Barbieri Advogados — Exportação indireta no IBS e na CBS", "url": "https://www.barbieriadvogados.com/exportacao-indireta/" },
+      { "titulo": "Planalto — Lei Complementar nº 214/2025 (texto compilado)", "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm" }
+    ]
+  },
+  "es": {
+    "meta": {
+      "lang": "es",
+      "titulo": "Dossier Ejecutivo — Reforma Tributaria del Consumo",
+      "atualizacao": "03/11/2026",
+      "ultimaPublicacao": "Acto Técnico Conjunto RFB/SUFIS/CGIBS n.º 10/2026 (DOU 29/10/2026)",
+      "marco": { "data": "2027-01-01T00:00:00-03:00", "rotulo": "Inicio del cobro efectivo de la CBS y extinción del PIS/Cofins", "fonte": "EC 132/2023 y LC 214/2025" },
+      "marcoSecundario": { "data": "2026-11-16T00:00:00-03:00", "rotulo": "Producción de las NT 2025.002 v1.53 y 2026.005/006/007/008 de la NF-e" }
+    },
+    "ui": {
+      "nav": ["Novedades", "Genomma", "Cronograma", "Alícuotas", "Tributos", "Impactos", "Comex", "Checklist", "Fuentes"],
+      "heroKicker": "Dossier ejecutivo financiero · IBS · CBS · IS",
+      "heroLinhas": ["Reforma", "Tributaria", "del Consumo"],
+      "heroTexto": "Panorama consolidado de normas, plazos e impactos de la transición al IVA dual brasileño, actualizado al 03/11/2026.",
+      "contagemRotulo": "Faltan para el hito crítico",
+      "contagemUnid": ["días", "horas", "min", "seg"],
+      "contagemPassou": "Hito alcanzado",
+      "secoes": {
+        "kpis": "Indicadores clave",
+        "novidades": "Últimas novedades",
+        "cronograma": "Cronograma de transición",
+        "aliquotas": "Alícuotas y parámetros",
+        "tributos": "Los nuevos tributos",
+        "mecanismos": "Pilares del nuevo modelo",
+        "impactos": "Impactos por segmento",
+        "checklist": "Checklist de cumplimiento",
+        "fontes": "Fuentes consultadas",
+        "genomma": "Impacto en el portafolio Genomma",
+        "transversais": "Puntos que aplican a todo el portafolio",
+        "comex": "Importación y exportación",
+        "entidades": "Fuentes sectoriales monitoreadas"
+      },
+      "g": { "cbs": "CBS 2027 estimada", "is": "Impuesto Selectivo", "exemplos": "Ejemplos", "status": { "confirmado": "Regla confirmada", "parcial": "Parte por confirmar" } },
+      "aConfirmar": "por confirmar",
+      "acompanhar": "Qué seguir",
+      "acessar": "Acceder",
+      "novo": "NUEVO",
+      "atual": "ACTUAL",
+      "urgencia": "Urgencia",
+      "prazo": "Plazo",
+      "contador": "{x} / {n} ítems completados",
+      "tabela": ["Ítem", "2026", "2027", "Observación"],
+      "imprimir": "Imprimir",
+      "citacao": "La alícuota de referencia es un parámetro y no necesariamente la alícuota que se cobrará.",
+      "citacaoAutor": "Tribunal de Cuentas de la Unión — cálculo de la CBS 2027 (paráfrasis)",
+      "disclaimer": "Material informativo elaborado a partir de fuentes públicas y noticias especializadas. Los ítems marcados como \"por confirmar\" dependen de publicación oficial. No constituye dictamen jurídico ni contable.",
+      "rodapeAtualizacao": "Actualizado el"
+    },
+    "kpis": [
+      { "valor": "0,9%", "rotulo": "CBS en 2026 (prueba)", "nota": "Pago dispensado si se cumplen las obligaciones accesorias" },
+      { "valor": "0,1%", "rotulo": "IBS en 2026 (prueba)", "nota": "Alícuota estadual de prueba, compensable" },
+      { "valor": "11,3%", "rotulo": "CBS 2027 — referencia TCU", "nota": "Cálculo del 28/10/2026; el Senado la fija por resolución" },
+      { "valor": "R$ 41,9 mil M", "rotulo": "IS previsto en el PLOA 2027", "nota": "Alícuotas aún no definidas" },
+      { "valor": "+1 millón", "rotulo": "Optantes del régimen regular", "nota": "Empresas del Simples, ventana cerrada el 30/10/2026" },
+      { "valor": "2033", "rotulo": "Fin de la transición", "nota": "Extinción del ICMS y del ISS" }
+    ],
+    "novidades": [
+      { "data": "29/10/2026", "titulo": "Acto Técnico Conjunto 10/2026 aprueba NT y fija producción el 16/11", "resumo": "Aprueba documentación técnica de diez modelos de DF-e y unifica el 16/11/2026 la producción de las NT 2025.002 v1.53 y 2026.005 a 2026.008 de NF-e/NFC-e (antes previstas para el 03/11).", "ato": "Acto Técnico Conjunto RFB/SUFIS/CGIBS n.º 10/2026", "novo": true },
+      { "data": "28/10/2026", "titulo": "El TCU calcula la alícuota de referencia de la CBS 2027 en 11,3%", "resumo": "El cálculo (11,3468%, redondeado) supera la estimación anterior de 9,21%. El Senado debe fijarla por resolución hasta diciembre; sin deliberación, rige la cifra del TCU.", "ato": "TC 006.529/2026-7", "novo": true },
+      { "data": "29/10/2026", "titulo": "Cooperativas: plazo del régimen específico podría ir al 30/11", "resumo": "Receita y CGIBS discuten prorrogar del 31/10 al 30/11/2026 la opción por el régimen específico de las cooperativas. Prórroga por confirmar hasta la publicación del acto.", "ato": "Por confirmar", "novo": true },
+      { "data": "30/10/2026", "titulo": "Cerrada la opción del Simples por el régimen regular de IBS/CBS", "resumo": "Más de 1 millón de optantes. La opción puede cancelarse, de forma irretractable, hasta fines de noviembre/2026. Nueva ventana prevista para 2027.", "ato": "Resolución CGSN n.º 194/2026", "novo": true },
+      { "data": "Sep/2026", "titulo": "Siscomex: sin cobro de IBS/CBS en la importación antes de 2027", "resumo": "En la importación, los campos de IBS/CBS existen solo en la DUIMP y el cobro empieza el 01/01/2027. En 2026, el PIS/Cofins-Importación sigue siendo debido íntegramente.", "ato": "Noticia Siscomex · Acto Conjunto RFB/CGIBS n.º 4/2026", "novo": false },
+      { "data": "01/10/2026", "titulo": "Nuevo DANFE con bloques de IBS, CBS e IS", "resumo": "La NT 2026.010 incluye totales de CBS, IBS UF, IBS Municipio e IS, además del CRT y el cClassTrib por ítem. Producción prevista para el 01/12/2026 (por confirmar).", "ato": "Acto Técnico Conjunto n.º 8/2026", "novo": false },
+      { "data": "15/10/2026", "titulo": "El split payment entra en pruebas", "resumo": "Pruebas de integración de la Plataforma Pública en ambiente controlado. Uso facultativo y gradual previsto para el 2.º semestre de 2027; obligatoriedad B2B prevista para 2028.", "ato": "Acto Conjunto RFB/CGIBS n.º 2/2026", "novo": false },
+      { "data": "18/08/2026", "titulo": "ABIHPEC publica guía de CBS/IBS para cosméticos e higiene personal", "resumo": "Reducción del 60% solo para los ítems del Anexo VIII (jabones, dentífricos, cepillos, pañales, etc.), con NCM y descripción exactas. Cosméticos y perfumería quedan con alícuota plena. La guía incluye checklist de ERP, ICMS-ST y caja.", "ato": "LC 214/2025, art. 136 y Anexo VIII", "novo": false },
+      { "data": "31/07/2026", "titulo": "Campos IBS/CBS obligatorios desde el 03/08/2026, sin rechazo", "resumo": "Cronograma por olas de documentos fiscales; la NF-e exige IBS/CBS para hechos generadores desde el 03/08/2026. El rechazo automático fue suspendido, pero la obligación se mantiene.", "ato": "Acto Conjunto RFB/CGIBS n.º 4/2026 y Acto Técnico Conjunto n.º 1/2026", "novo": false },
+      { "data": "30/04/2026", "titulo": "Publicados los reglamentos de la CBS y del IBS", "resumo": "Decreto 12.955/2026 (CBS) y Resolución CGIBS 6/2026 (IBS), con estructura espejo y libro de normas comunes. Dispensa del pago de la CBS en 2026 para quien cumpla las obligaciones accesorias.", "ato": "Decreto n.º 12.955/2026 · Resolución CGIBS n.º 6/2026", "novo": false }
+    ],
+    "cronograma": [
+      { "ano": "2026", "titulo": "Año de prueba", "tags": ["Prueba", "DF-e"], "itens": ["CBS 0,9% e IBS 0,1%, compensables", "Campos IBS/CBS obligatorios en la NF-e desde el 03/08", "Reglamentos publicados el 30/04", "Split payment en pruebas desde el 15/10"] },
+      { "ano": "2027", "titulo": "CBS plena e Impuesto Selectivo", "tags": ["CBS", "IS", "Extinción"], "itens": ["Cobro de la CBS con alícuota de referencia (TCU: 11,3%)", "Extinción del PIS/Cofins", "IPI en cero, salvo productos industrializados en la ZFM", "Inicio del IS (alícuotas por definir)", "Cashback de la CBS para familias del CadÚnico", "Split payment facultativo en el 2.º semestre"] },
+      { "ano": "2028", "titulo": "Consolidación", "tags": ["Split payment"], "itens": ["Split payment obligatorio en operaciones B2B (previsión)", "IBS sigue en 0,1% (prueba)"] },
+      { "ano": "2029–2032", "titulo": "Transición ICMS/ISS → IBS", "tags": ["IBS", "ICMS", "ISS"], "itens": ["Reducción gradual de ICMS e ISS (90%, 80%, 70%, 60% de las alícuotas)", "Aumento proporcional del IBS", "Cashback del IBS desde 2029"] },
+      { "ano": "2033", "titulo": "Modelo definitivo", "tags": ["IVA dual"], "itens": ["Extinción del ICMS y del ISS", "IBS y CBS plenamente vigentes"] }
+    ],
+    "aliquotas": [
+      ["CBS", "0,9% (prueba)", "11,3% (referencia TCU, a fijar por el Senado)", "Pago dispensado en 2026 con obligaciones accesorias"],
+      ["IBS (Estado + Municipio)", "0,1% (prueba)", "0,1% (prueba)", "Alícuota plena gradual desde 2029"],
+      ["Impuesto Selectivo", "—", "Por definir (ley/MP pendiente)", "La noventena puede aplazar el cobro"],
+      ["PIS/Cofins", "Vigentes", "Extinguidos", "Sustituidos por la CBS"],
+      ["IPI", "Vigente", "En cero (salvo ZFM)", "Se mantiene para proteger la ZFM"],
+      ["Canasta Básica Nacional", "—", "Alícuota cero", "Anexo I de la LC 214/2025"]
+    ],
+    "tributos": [
+      { "sigla": "CBS", "nome": "Contribución sobre Bienes y Servicios", "esfera": "Federal (Receita Federal)", "texto": "Sustituye al PIS y la Cofins. No acumulativa, base amplia, crédito financiero. Reglamentada por el Decreto 12.955/2026." },
+      { "sigla": "IBS", "nome": "Impuesto sobre Bienes y Servicios", "esfera": "Estados y Municipios (CGIBS)", "texto": "Sustituye al ICMS y al ISS. Cobro en destino, administrado por el Comité Gestor creado por la LC 227/2026. Reglamentado por la Resolución CGIBS 6/2026." },
+      { "sigla": "IS", "nome": "Impuesto Selectivo", "esfera": "Federal", "texto": "Grava bienes y servicios perjudiciales para la salud o el medio ambiente. Inicio en 2027; las alícuotas aún dependen de ley." }
+    ],
+    "mecanismos": [
+      { "titulo": "Split Payment", "texto": "Separación automática del tributo en el momento del pago. Pruebas desde el 15/10/2026." },
+      { "titulo": "No acumulatividad plena", "texto": "Crédito de todo tributo pagado en las adquisiciones, condicionado a su recaudación." },
+      { "titulo": "Cobro en destino", "texto": "El IBS pertenece al ente donde ocurre el consumo." },
+      { "titulo": "Cashback", "texto": "Devolución a familias del CadÚnico: CBS desde 2027, IBS desde 2029." },
+      { "titulo": "Canasta Básica Nacional", "texto": "Productos esenciales con alícuota cero de IBS y CBS." },
+      { "titulo": "DeRE y regímenes específicos", "texto": "Declaración propia para regímenes específicos (financiero, seguros, inmuebles, etc.). Detalles operativos por confirmar." }
+    ],
+    "impactos": [
+      { "titulo": "Régimen Regular", "texto": "Lucro Real y Presumido deben informar IBS/CBS en los DF-e desde el 03/08/2026 y ajustar ERP a las NT con producción el 16/11/2026.", "urgencia": 90 },
+      { "titulo": "Simples Nacional", "texto": "Ventana de opción por el régimen regular cerrada el 30/10. Cancelación posible hasta fines de noviembre. Evaluar el efecto en el crédito transferido a clientes.", "urgencia": 75 },
+      { "titulo": "Financiero y Seguros", "texto": "Regímenes específicos con base propia; seguir la DeRE y la alícuota de referencia de 2027 para la fijación de precios.", "urgencia": 60 },
+      { "titulo": "Agro, ZFM e ICMS", "texto": "Cooperativas: plazo del régimen específico posiblemente hasta el 30/11 (por confirmar). La ZFM mantiene el IPI como diferencial. El ICMS solo empieza a bajar en 2029.", "urgencia": 70 }
+    ],
+    "genomma": {
+      "intro": "Lectura preliminar del encuadre de las principales categorías que Genomma Lab comercializa en Brasil. El tratamiento final depende de la NCM, del registro en Anvisa y de la descripción comercial de cada SKU. La CBS 2027 se estimó con la alícuota de referencia calculada por el TCU (11,3%), aún pendiente de resolución del Senado.",
+      "itens": [
+        { "categoria": "OTC / MIP", "exemplos": "Antigripales, antiácidos, antimicóticos y analgésicos registrados como medicamento", "enquadramento": "Reducción del 60% de IBS y CBS", "base": "LC 214/2025, art. 133", "texto": "La reducción solo aplica si el producto sigue el sistema de precios de la CMED o si la empresa firma un compromiso con la Unión y el CGIBS (art. 133, §2). Los MIP con precio liberado necesitan ese compromiso; sin él, pagan alícuota plena. La alícuota cero (art. 146, modificado por la LC 227/2026) se limita a líneas terapéuticas específicas y compras públicas, algo improbable para OTC.", "cbs": "≈ 4,5%", "is": "No incide", "status": "confirmado", "urgencia": 95 },
+        { "categoria": "Dermocosméticos", "exemplos": "Líneas de skincare, antiacné, cuidado de la piel", "enquadramento": "Alícuota plena", "base": "Fuera del Anexo VIII de la LC 214/2025", "texto": "Cosméticos y perfumería no tienen reducción. Ítems registrados en Anvisa como medicamento pueden tener el 60% (validar SKU por SKU). El PIS/Cofins monofásico termina en 2027, y el ICMS-ST de higiene y cosméticos ya terminó en SP y otros 7 estados desde el 01/04/2026, con recuperación del ST de inventarios en 12 cuotas.", "cbs": "≈ 11,3%", "is": "No incide", "status": "confirmado", "urgencia": 80 },
+        { "categoria": "Jabones en barra e higiene básica", "exemplos": "Jabones de tocador y en barra, dentífricos, cepillos dentales, pañales", "enquadramento": "Reducción del 60% de IBS y CBS", "base": "LC 214/2025, art. 136 y Anexo VIII", "texto": "Exige coincidencia exacta entre la NCM (jabón de tocador 3401.11.90; jabón en barra 3401.19.00), la descripción comercial y el texto del anexo. Cualquier diferencia lleva a la alícuota plena. Los jabones líquidos y versiones fuera de esas NCM tienden a la alícuota plena (por confirmar).", "cbs": "≈ 4,5%", "is": "No incide", "status": "parcial", "urgencia": 70 },
+        { "categoria": "Hidroelectrolíticos (Suerox)", "exemplos": "Bebidas de rehidratación con electrolitos", "enquadramento": "Alícuota plena, con riesgo de Impuesto Selectivo", "base": "Sin reducción prevista; IS: LC 214/2025, Anexo XVII", "texto": "Clasificado como bebida (NCM 2202), no tiene reducción. Si se encuadra como bebida azucarada, entra en el Impuesto Selectivo, cuyas alícuotas aún no se definieron. Las versiones sin azúcar tienden a quedar fuera del IS (por confirmar según la NCM). Un producto registrado en Anvisa como medicamento, como las sales de rehidratación oral, podría tener la reducción del 60%.", "cbs": "≈ 11,3%", "is": "Riesgo, si es azucarado", "status": "parcial", "urgencia": 85 },
+        { "categoria": "Fórmulas infantiles (Novamil)", "exemplos": "Fórmulas para lactantes y de continuación", "enquadramento": "Alícuota cero (Canasta Básica Nacional)", "base": "LC 214/2025, Anexo I, ítem 4", "texto": "Exige conformidad con la legislación sanitaria específica y NCM 1901.10.10, 1901.10.90 o 2106.90.90. Las fórmulas para errores innatos del metabolismo tienen reducción del 60% (art. 133, §1). Genomma anunció en 2025 el plan de lanzar Novamil en Brasil; la situación actual está por confirmar.", "cbs": "0%", "is": "No incide", "status": "parcial", "urgencia": 50 }
+      ],
+      "transversais": [
+        "Precio CMED: el nuevo modelo calcula CBS e IBS fuera del precio de fábrica y los destaca en la factura; las listas muestran el precio con y sin tributo. Sindusfarma retomó con la CMED el grupo de trabajo de la reforma.",
+        "Fin del PIS/Cofins monofásico en 2027: revisar CST y cClassTrib de todo el catastro en el ERP.",
+        "Crédito amplio en las compras, incluidos insumos importados, con resarcimiento del saldo acreedor. El crédito depende de la recaudación por el proveedor.",
+        "El split payment reduce el capital de trabajo desde 2027–2028: revisar plazos con cadenas de farmacias, mayoristas y distribuidores.",
+        "Las muestras gratuitas sin contraprestación no son operación gravada (Decreto 12.955/2026, art. 6, §4)."
+      ]
+    },
+    "comex": {
+      "intro": "Principales cambios para quien importa insumos y productos terminados o exporta. En la importación, el cobro de IBS/CBS empieza el 01/01/2027.",
+      "blocos": [
+        { "titulo": "Importación", "itens": [
+          { "t": "Cobro desde el 01/01/2027", "d": "En 2026 no hay pago de IBS/CBS en la importación. El PIS/Cofins-Importación sigue siendo debido íntegramente hasta su extinción.", "ok": true },
+          { "t": "IBS/CBS solo en la DUIMP", "d": "Los campos de IBS/CBS existen solo en la DUIMP; la DI no los tendrá. Apagado de la DI previsto por etapas (31/08 y 01/12/2026).", "ok": false },
+          { "t": "Misma alícuota que el producto nacional", "d": "Trato nacional: el importado paga la misma alícuota de la operación interna, incluidas las reducciones (ej.: 60% para medicamentos).", "ok": true },
+          { "t": "Base de cálculo", "d": "Valor aduanero más II, Impuesto Selectivo, tasas y cargos aduaneros. Si el IPI y el ICMS integran o no la base es un punto en que las fuentes divergen.", "ok": false },
+          { "t": "Momento del pago", "d": "Hasta la entrega de la mercadería despachada para consumo, con anticipación posible en el registro de la declaración. Los operadores OEA pueden pagar después, en los casos del reglamento.", "ok": true },
+          { "t": "Créditos", "d": "El importador del régimen regular acredita el IBS/CBS pagado. Hay crédito presunto de CBS sobre el PIS/Cofins-Importación de inventarios (cálculo hasta jun/2027, en 12 cuotas).", "ok": false }
+        ] },
+        { "titulo": "Exportación", "itens": [
+          { "t": "Inmunidad con mantenimiento de créditos", "d": "Las exportaciones de bienes y servicios no soportan IBS/CBS, y se mantienen los créditos de etapas anteriores para compensación o resarcimiento (LC 214/2025, art. 79).", "ok": true },
+          { "t": "IBS y CBS segregados", "d": "El crédito de IBS no compensa débito de CBS, y viceversa. Controlar los saldos por separado.", "ok": true },
+          { "t": "Comercializadora exportadora", "d": "Suspensión en la venta a la trading, convertida en alícuota cero tras la exportación. Exige requisitos acumulativos, como certificación OEA y patrimonio neto mínimo (art. 82).", "ok": true },
+          { "t": "Exportación indirecta en disputa", "d": "Decisión de primera instancia (TJDFT, 08/05/2026, mandado de seguridad del CECIEX) apartó los requisitos del art. 82 para el IBS. No es definitiva.", "ok": false }
+        ] },
+        { "titulo": "Regímenes aduaneros especiales", "itens": [
+          { "t": "Drawback, Recof, Repetro, ZPE y ZFM", "d": "Incorporados por el Decreto 12.955/2026 y la Resolución CGIBS 6/2026, con suspensión de IBS/CBS como mecanismo de neutralidad, condicionada a control y trazabilidad.", "ok": true },
+          { "t": "Drawback suspensión", "d": "Hay lecturas divergentes sobre la extensión de la suspensión al IBS/CBS. Confirmar en el reglamento antes de planificar operaciones.", "ok": false },
+          { "t": "Zona Franca de Manaus", "d": "IPI mantenido para productos industrializados en la ZFM. Las empresas en la ZFM deben informar el número de proceso Suframa en la NF-e.", "ok": true }
+        ] }
+      ]
+    },
+    "entidades": [
+      { "nome": "Sindusfarma", "papel": "Industria farmacéutica", "texto": "Grupo de trabajo con la CMED sobre la adaptación de precios a la reforma; nueva Resolución CMED n.º 3/25 vigente desde el 29/04/2026.", "url": "https://sindusfarma.org.br/noticias/indice/exibir/27681-nova-resolucao-da-cmed-e-reforma-tributaria-sindusfarma-reune-industria-para-esclarecer-regras-e-impactos" },
+      { "nome": "ABIHPEC", "papel": "Higiene personal, perfumería y cosméticos", "texto": "Guía de CBS/IBS para el sector (18/08/2026): Anexo VIII, fin del ICMS-ST, checklist de ERP y caja.", "url": "https://abihpec.org.br/cbs-ibs-empresas-cosmeticos-2026/" },
+      { "nome": "ACESSA", "papel": "Autocuidado en salud y MIP", "texto": "No se localizó posicionamiento público sobre la reforma en el sitio hasta el 03/11/2026. Seguir la sección MIP & Autocuidado, en especial el compromiso exigido para MIP con precio liberado.", "url": "https://acessa.org.br/mip-autocuidado" },
+      { "nome": "Rayes & Fagundes", "papel": "Despacho de abogados tributarios", "texto": "Boletín sobre medicamentos: IBS/CBS en la base del ICMS, PMC, ICMS-ST, compras públicas y contratos. Visto en una publicación de LinkedIn; el texto original no pudo consultarse automáticamente (por confirmar).", "url": "https://www.rayesfagundes.com.br" },
+      { "nome": "CMED / Anvisa", "papel": "Regulación de precios de medicamentos", "texto": "GT de Reforma Tributaria: presentación del 03/07/2026 con la propuesta del nuevo modelo de precio de fábrica y escalonamiento 2027/2029/2033.", "url": "https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/informes/ApresentaoGTdeReformaTributria03dejulhode2026.pdf" }
+    ],
+    "checklist": [
+      { "texto": "Homologar NF-e con la NT 2025.002 v1.53 (reglas de devolución)", "prazo": "09/11/2026" },
+      { "texto": "Pasar a producción con las NT 2026.005 a 2026.008", "prazo": "16/11/2026" },
+      { "texto": "Mapear NCM, registro Anvisa y cClassTrib de cada SKU (OTC, dermo, higiene, Suerox, Novamil)", "prazo": "Nov/2026" },
+      { "texto": "Cooperativas: formalizar opción por el régimen específico (plazo por confirmar)", "prazo": "30/11/2026" },
+      { "texto": "Simples: revisar/cancelar la opción por el régimen regular, si corresponde", "prazo": "30/11/2026" },
+      { "texto": "Adecuar la emisión al nuevo DANFE (NT 2026.010) — fecha por confirmar", "prazo": "01/12/2026" },
+      { "texto": "Migrar todas las importaciones de la DI a la DUIMP — fecha por confirmar", "prazo": "01/12/2026" },
+      { "texto": "OTC con precio liberado: evaluar compromiso con la Unión/CGIBS para mantener la reducción del 60%", "prazo": "Dic/2026" },
+      { "texto": "Jabones en barra: validar NCM y descripción frente al Anexo VIII", "prazo": "Dic/2026" },
+      { "texto": "Suerox: confirmar NCM y exposición al Impuesto Selectivo", "prazo": "Dic/2026" },
+      { "texto": "Seguir la resolución del Senado sobre la alícuota de la CBS 2027", "prazo": "Dic/2026" },
+      { "texto": "Inventariar existencias al 31/12/2026 para crédito presunto de CBS", "prazo": "31/12/2026" },
+      { "texto": "Actualizar precios y contratos para la CBS plena", "prazo": "01/01/2027" },
+      { "texto": "Calcular el crédito presunto de CBS sobre el PIS/Cofins-Importación de inventarios", "prazo": "Jun/2027" },
+      { "texto": "Exportaciones: estructurar el control y la solicitud de resarcimiento de créditos", "prazo": "2027" },
+      { "texto": "Preparar tesorería y sistemas para el split payment", "prazo": "2.º sem./2027" }
+    ],
+    "fontes": []
+  }
+}</script>
+<script>
+(function(){
+  'use strict';
+  var D = JSON.parse(document.getElementById('dados').textContent);
+  var ids = ['novidades','genomma','cronograma','aliquotas','tributos','impactos','comex','checklist','fontes'];
+  var store = {
+    get: function(k){ try { return localStorage.getItem(k); } catch(e){ return null; } },
+    set: function(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+  };
+  var CHK_KEY = 'dossie-rt-checklist-v2';
+  var lang = store.get('dossie-rt-lang');
+  if (!D[lang]) lang = 'pt';
+  var feitos = {};
+  try { feitos = JSON.parse(store.get(CHK_KEY) || '{}') || {}; } catch(e){ feitos = {}; }
+
+  function $(id){ return document.getElementById(id); }
+  function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function parseBR(s){ var m = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(s); return m ? new Date(+m[3], +m[2]-1, +m[1]) : null; }
+
+  var timer = null;
+  function contagem(L){
+    var alvo = new Date(L.meta.marco.data), sec = new Date(L.meta.marcoSecundario.data), u = L.ui.contagemUnid;
+    function tick(){
+      var agora = new Date(), d = alvo - agora;
+      if (d <= 0) { $('cd').innerHTML = '<div><b>✓</b><em>' + esc(L.ui.contagemPassou) + '</em></div>'; }
+      else {
+        var v = [Math.floor(d/864e5), Math.floor(d/36e5)%24, Math.floor(d/6e4)%60, Math.floor(d/1e3)%60];
+        $('cd').innerHTML = v.map(function(n,i){ return '<div><b>' + (i ? String(n).padStart(2,'0') : n) + '</b><em>' + esc(u[i]) + '</em></div>'; }).join('');
+      }
+      var d2 = Math.ceil((sec - agora)/864e5);
+      $('cd2').textContent = d2 > 0 ? '→ ' + L.meta.marcoSecundario.rotulo + ': ' + d2 + ' ' + u[0] : '';
+    }
+    clearInterval(timer); tick(); timer = setInterval(tick, 1000);
+  }
+
+  function progresso(L){
+    var n = L.checklist.length, x = 0;
+    for (var i = 0; i < n; i++) if (feitos[i]) x++;
+    $('prog-t').textContent = L.ui.contador.replace('{x}', x).replace('{n}', n);
+    $('prog-b').style.width = (n ? x/n*100 : 0) + '%';
+  }
+
+  function render(){
+    var L = D[lang], ui = L.ui;
+    document.documentElement.lang = L.meta.lang;
+    document.title = L.meta.titulo;
+    document.querySelectorAll('.lang button').forEach(function(b){ b.classList.toggle('on', b.dataset.l === lang); });
+
+    $('nav-links').innerHTML = ui.nav.map(function(t,i){ return '<li><a href="#' + ids[i] + '">' + esc(t) + '</a></li>'; }).join('');
+    $('kicker').textContent = ui.heroKicker;
+    $('hero-h1').innerHTML = ui.heroLinhas.map(function(t,i){ return '<span class="l' + (i+1) + '">' + esc(t) + '</span>'; }).join('');
+    $('hero-p').textContent = ui.heroTexto;
+    $('cd-rotulo').textContent = ui.contagemRotulo;
+    $('cd-marco').textContent = L.meta.marco.rotulo + ' — ' + new Date(L.meta.marco.data).toLocaleDateString(L.meta.lang);
+    contagem(L);
+
+    document.querySelectorAll('[data-s]').forEach(function(h){ h.textContent = ui.secoes[h.dataset.s]; });
+
+    var mq = L.novidades.map(function(n){ return '<span>' + esc(n.data + ' · ' + n.titulo) + '</span>'; }).join('');
+    $('marquee').innerHTML = mq + mq;
+
+    $('kpis').innerHTML = L.kpis.map(function(k){ return '<div class="kpi rv"><b>' + esc(k.valor) + '</b><h3>' + esc(k.rotulo) + '</h3><p>' + esc(k.nota) + '</p></div>'; }).join('');
+
+    $('cards').innerHTML = L.novidades.map(function(n){
+      return '<article class="card rv">' + (n.novo ? '<span class="selo">' + esc(ui.novo) + '</span>' : '') +
+        '<div class="data">' + esc(n.data) + '</div><h3>' + esc(n.titulo) + '</h3><p>' + esc(n.resumo) + '</p><span class="ato">' + esc(n.ato) + '</span></article>';
+    }).join('');
+
+    var G = L.genomma, g = ui.g;
+    $('g-intro').textContent = G.intro;
+    $('gcards').innerHTML = G.itens.map(function(c){
+      return '<article class="gcard rv"><div class="g-top"><span class="g-cat">' + esc(c.categoria) + '</span><span class="g-st ' + esc(c.status) + '">' + esc(g.status[c.status]) + '</span></div>' +
+        '<div class="g-enq">' + esc(c.enquadramento) + '</div><div class="g-base">' + esc(c.base) + '</div>' +
+        '<p class="g-ex"><b>' + esc(g.exemplos) + ':</b> ' + esc(c.exemplos) + '</p><p class="g-txt">' + esc(c.texto) + '</p>' +
+        '<dl class="g-dl"><div><dt>' + esc(g.cbs) + '</dt><dd>' + esc(c.cbs) + '</dd></div><div><dt>' + esc(g.is) + '</dt><dd>' + esc(c.is) + '</dd></div></dl>' +
+        '<div class="urg"><small><span>' + esc(ui.urgencia) + '</span><span>' + c.urgencia + '%</span></small><div class="barra"><i data-w="' + c.urgencia + '" style="--w:' + c.urgencia + '%"></i></div></div></article>';
+    }).join('');
+    $('transv').innerHTML = G.transversais.map(function(t){ return '<li>' + esc(t) + '</li>'; }).join('');
+
+    $('cx-intro').textContent = L.comex.intro;
+    $('cx').innerHTML = L.comex.blocos.map(function(b){
+      return '<div class="cx rv"><h3>' + esc(b.titulo) + '</h3><ul>' + b.itens.map(function(i){
+        return '<li><strong>' + esc(i.t) + (i.ok ? '' : '<span class="ac">' + esc(ui.aConfirmar) + '</span>') + '</strong><p>' + esc(i.d) + '</p></li>';
+      }).join('') + '</ul></div>';
+    }).join('');
+
+    var ents = (L.entidades && L.entidades.length) ? L.entidades : D.pt.entidades;
+    $('ent').innerHTML = ents.map(function(e){
+      return '<div class="rv"><h3>' + esc(e.nome) + '</h3><small>' + esc(e.papel) + '</small><p>' + esc(e.texto) + '</p><a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(ui.acessar) + ' ↗</a></div>';
+    }).join('');
+
+    var anoAtual = new Date().getFullYear();
+    $('tl').innerHTML = L.cronograma.map(function(c){
+      var p = c.ano.split(/[–-]/).map(Number), atual = anoAtual >= p[0] && anoAtual <= (p[1] || p[0]);
+      return '<div class="tl-item rv' + (atual ? ' atual aberto' : '') + '"><div class="tl-cab"><h3>' + esc(c.ano) + '</h3><strong>' + esc(c.titulo) + '</strong>' +
+        (atual ? '<span class="badge atual">' + esc(ui.atual) + '</span>' : '') + '</div><div class="tags">' +
+        c.tags.map(function(t,i){ return '<span class="tag t' + (i%3) + '">' + esc(t) + '</span>'; }).join('') +
+        '</div><div class="tl-corpo"><ul>' + c.itens.map(function(i){ return '<li>' + esc(i) + '</li>'; }).join('') + '</ul></div></div>';
+    }).join('');
+    document.querySelectorAll('.tl-item').forEach(function(el){ el.addEventListener('click', function(){ el.classList.toggle('aberto'); }); });
+
+    $('tab').innerHTML = '<thead><tr>' + ui.tabela.map(function(h){ return '<th>' + esc(h) + '</th>'; }).join('') + '</tr></thead><tbody>' +
+      L.aliquotas.map(function(r){ return '<tr>' + r.map(function(c){ return '<td>' + esc(c) + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody>';
+
+    $('trib').innerHTML = L.tributos.map(function(t){ return '<div class="rv"><b>' + esc(t.sigla) + '</b><h3>' + esc(t.nome) + '</h3><small>' + esc(t.esfera) + '</small><p>' + esc(t.texto) + '</p></div>'; }).join('');
+    $('pilares').innerHTML = L.mecanismos.map(function(m){ return '<div class="rv"><h4>' + esc(m.titulo) + '</h4><p>' + esc(m.texto) + '</p></div>'; }).join('');
+
+    $('imp').innerHTML = L.impactos.map(function(m){
+      return '<div class="c rv"><h3>' + esc(m.titulo) + '</h3><p>' + esc(m.texto) + '</p><div class="urg"><small><span>' + esc(ui.urgencia) + '</span><span>' + m.urgencia + '%</span></small>' +
+        '<div class="barra"><i data-w="' + m.urgencia + '" style="--w:' + m.urgencia + '%"></i></div></div></div>';
+    }).join('');
+
+    $('cit').textContent = '“' + ui.citacao + '”';
+    $('cit-a').textContent = '— ' + ui.citacaoAutor;
+
+    var hoje = new Date(); hoje.setHours(0,0,0,0);
+    $('chk').innerHTML = L.checklist.map(function(c,i){
+      return '<li data-i="' + i + '" class="' + (feitos[i] ? 'ok' : '') + '"><span class="box">✓</span><span class="t">' + esc(c.texto) + '</span><span class="p">' + esc(ui.prazo) + ': ' + esc(c.prazo) + '</span></li>';
+    }).join('');
+    document.querySelectorAll('#chk li').forEach(function(li){
+      li.addEventListener('click', function(){
+        var i = li.dataset.i; feitos[i] = !feitos[i]; li.classList.toggle('ok', feitos[i]);
+        store.set(CHK_KEY, JSON.stringify(feitos)); progresso(D[lang]);
+      });
+    });
+    progresso(L);
+
+    var fontes = (L.fontes && L.fontes.length) ? L.fontes : D.pt.fontes;
+    $('fnt').innerHTML = fontes.map(function(f){ return '<li><a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.titulo) + ' ↗</a></li>'; }).join('');
+
+    $('disc').textContent = ui.disclaimer;
+    $('rod').textContent = ui.rodapeAtualizacao + ' ' + L.meta.atualizacao + ' · ' + L.meta.ultimaPublicacao;
+    $('btn-print').textContent = '⎙ ' + ui.imprimir;
+
+    observar();
+  }
+
+  var io = null;
+  function observar(){
+    var els = document.querySelectorAll('.rv:not(.in)');
+    if (!('IntersectionObserver' in window)) { els.forEach(mostrar); return; }
+    if (!io) io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ mostrar(e.target); io.unobserve(e.target); } }); }, {threshold:.12});
+    els.forEach(function(el){ io.observe(el); });
+  }
+  function mostrar(el){
+    el.classList.add('in');
+    el.querySelectorAll('.barra i[data-w]').forEach(function(b){ b.style.width = b.dataset.w + '%'; });
+  }
+
+  document.querySelectorAll('.lang button').forEach(function(b){
+    b.addEventListener('click', function(){ lang = b.dataset.l; store.set('dossie-rt-lang', lang); render(); });
+  });
+  window.addEventListener('beforeprint', function(){ document.querySelectorAll('.rv').forEach(mostrar); });
+  render();
+})();
+</script>
+</body>
+</html>
