@@ -58,34 +58,44 @@ Regras:
 ==================== ETAPA 2 — DADOS (JSON) ====================
 Estruture todo o conteúdo em um objeto JSON (fonte única de verdade) com chaves em duas línguas: { "pt": {...}, "es": {...} }.
 Salve também uma cópia em ${OUT_DIR}/dados-${DATA_REF}.json.
-Seções do JSON: meta (data de atualização, última publicação), kpis (6), novidades (cards com data, título, resumo, ato/norma), cronograma (2026, 2027, 2028, 2029–2032, 2033), aliquotas (tabela), tributos (CBS, IBS, IS), mecanismos (pilares), impactos (Regime Regular, Simples Nacional, Financeiro/Seguros, Agro/ZFM/ICMS), genomma (intro, itens por categoria com enquadramento, base legal, CBS estimada, Imposto Seletivo, status confirmado/parcial e urgência; pontos transversais), comex (blocos Importação, Exportação, Regimes aduaneiros especiais, com itens marcados "a confirmar"), entidades (Sindusfarma, ABIHPEC, ACESSA, Rayes & Fagundes, CMED/Anvisa: papel, última publicação relevante, URL), checklist (itens com prazo), fontes (título + URL).
+Seções do JSON: meta (data de atualização, última publicação), kpis (6), novidades (cards com data, título, resumo, ato/norma e "links": lista de {tipo: "oficial"|"fonte", rotulo, url}; o primeiro link oficial deve apontar para o TEXTO INTEGRAL do ato — PDF no cgibs.gov.br (páginas /atos-tecnicos-conjuntos e /atos-conjuntos), Planalto, DOU ou Receita — e o selo do ato no card deve ser clicável e abrir esse link), cronograma (2026, 2027, 2028, 2029–2032, 2033), aliquotas (tabela), tributos (CBS, IBS, IS), mecanismos (pilares), impactos (Regime Regular, Simples Nacional, Financeiro/Seguros, Agro/ZFM/ICMS), genomma (intro, itens por categoria com enquadramento, base legal, CBS estimada, Imposto Seletivo, status confirmado/parcial e urgência; pontos transversais), comex (blocos Importação, Exportação, Regimes aduaneiros especiais, com itens marcados "a confirmar"), entidades (Sindusfarma, ABIHPEC, ACESSA, Rayes & Fagundes, CMED/Anvisa: papel, última publicação relevante, URL), checklist (itens com prazo), fontes (título + URL).
+
+Inclua também, fora de "pt"/"es" (compartilhados):
+  - "refs": catálogo { id: { n: nome curto, u: URL } } de todas as normas e fontes usadas;
+  - "fontesItens": { "secao.indice": [ids de refs] } — TODO tópico/bullet (kpis, alíquotas, cronograma, tributos, mecanismos, impactos, genomma, transversais, comex, isipi) deve ter ao menos uma fonte;
+  - "prioridades": { "impactos.i" / "genomma.i": { p: alta|media|baixa, prazo: AAAA-MM-DD, marco: {pt, es} } };
+  - "legislacao": lista de normas { g: ec|lc|dec|res|ac|atc|proj, num, data, url (texto integral), desc: {pt, es} }.
+Seções adicionais em pt/es: "isipi" (blocos Imposto Seletivo e IPI: base legal, MP/alíquotas, noventena, art. 454 da LC 214/2025, decreto da lista, PEC, impacto no portfólio) e novidades específicas de IS e IPI.
 
 ==================== ETAPA 3 — HTML/CSS/JS ====================
 Gere UM único arquivo HTML autocontido (HTML + CSS + JavaScript + JSON embutido em <script type="application/json" id="dados">), que funcione offline (file://) sem fetch externo, exceto Google Fonts.
 
 LAYOUT (inspirado no site da Genomma Lab Internacional — genommalab.com/pt):
-  - Fundo branco (#ffffff), seções alternadas em cinza claro (#f7f7f7), texto #1a1a1a / #4a4a4a.
-  - Cor de destaque AZUL: #0057b8 (secundário #3385d6). NÃO usar rosa/magenta.
-  - Tipografia: títulos em 'Bebas Neue' (maiúsculas, letter-spacing), corpo 'DM Sans', dados/rótulos 'DM Mono'.
-  - Navegação fixa no topo, fundo branco, borda inferior azul de 2px, logo geométrico (clip-path) + links em caixa alta.
-  - Hero em tela cheia com linha vertical de destaque azul e título grande (3 linhas: normal / azul / contorno).
-  - Barra de alertas azul rolante (marquee) com os marcos e as novidades.
-  - Grid de KPIs com borda superior azul animada no hover.
-  - Cards de novidades com borda esquerda azul de 4px e selo "NOVO".
-  - Linha do tempo vertical interativa (2026→2033), tags coloridas, item atual destacado.
-  - Tabela de alíquotas, cards de tributos, grid de pilares, cards de impacto com barra de urgência animada.
-  - Bloco de citação em fundo escuro (#1a1a1a) como único contraste.
+  - Paleta do site genommalab.com: azul #3e8ede (escuro #2f6da4), ciano #45b8ea, azul de títulos #008cc4, hover #1b94d2, texto #231f20, seções alternadas #f3f8fd. Acento rosa #fa2891 só em detalhes (selos, marco crítico, item atual) e bolinhas de marca nas cores #fa2891 / #45b8ea / #ff7313 / #9ad858.
+  - Tipografia: 'Montserrat' (Google Fonts) em tudo; títulos em peso 900 e caixa alta, rótulos em 600–700.
+  - Cantos arredondados de 8px nos cards, botões e selos em pílula (border-radius 30px), sombras suaves; formas orgânicas (border-radius 250px 0 250px 0) como decoração.
+  - Navegação fixa no topo, fundo branco, faixa inferior de 5px em gradiente #45b8ea→#008cc4, logo com 4 bolinhas coloridas + links em caixa alta.
+  - Hero com fundo em gradiente claro, faixa inclinada (skew -20deg) em gradiente azul como kicker, título em 3 linhas (fina escura / azul 900 / gradiente ciano→rosa) e onda SVG azul na base.
+  - Barra de alertas rolante (marquee) em gradiente azul com marcadores rosa.
+  - Grid de KPIs em cards brancos com sombra, borda superior em gradiente animada no hover.
+  - Cards de novidades com borda esquerda azul de 5px e selo "NOVO" rosa em pílula.
+  - Linha do tempo vertical interativa (2026→2033) com tags em pílula, item atual destacado em rosa.
+  - Tabela de alíquotas com cabeçalho em gradiente azul, cards de tributos, pilares com bordas superiores coloridas, barras de urgência em gradiente ciano→rosa.
+  - Bloco de citação em gradiente azul com borda rosa; rodapé azul #3e8ede com texto branco.
   - Checklist interativo (clique marca como concluído) com contador "x / N itens concluídos".
-  - Rodapé com borda azul, disclaimer e data de atualização; botão flutuante de impressão; CSS de @media print.
+  - Rodapé com disclaimer e data de atualização; botão flutuante de impressão em pílula; CSS de @media print.
   - Responsivo (900px e 600px) e animações de entrada (IntersectionObserver).
 
 FUNCIONALIDADES JS:
   - Seletor de idioma 🇧🇷 PT | 🇪🇸 ES na navegação; renderiza TODO o conteúdo a partir do JSON embutido (nada fixo no HTML), inclusive title, lang do <html>, checklist e rodapé.
   - Contagem regressiva calculada em JavaScript até o marco crítico confirmado (usar new Date(), sem número fixo).
   - Persistir idioma e itens do checklist no localStorage (com try/catch).
+  - Aba "Legislação": grupos recolhíveis por tipo (EC, LC, Decretos, Resoluções, Atos Conjuntos, Atos Técnicos Conjuntos, Projetos), ordenados por data decrescente, com descrição, link para o texto integral e campo de busca.
+  - Links automáticos: toda menção a norma no texto (EC 132/2023, LC 214/2025, LC 227/2026, Decreto 12.955/2026, Resoluções, Atos) vira link para o texto integral.
+  - Cada tópico exibe chips "Fontes" com links. Nos cards de impacto e do portfólio, substituir a barra de "urgência" por: selo de prioridade, próximo prazo com contagem de dias, barra de proximidade do prazo (janela de 180 dias, cor por faixa) e botões de status (Não iniciado / Em andamento / Concluído) salvos no localStorage, com legenda explicativa.
 
 ==================== ETAPA 4 — VERIFICAÇÃO ====================
-  - Rode uma checagem (Bash) garantindo: arquivo existe e abre sem erros de sintaxe JS (ex.: node --check em trecho extraído, ou validação do JSON embutido com python -c json.loads); nenhuma ocorrência de #e8005a/rosa; presença dos dois idiomas; todos os links de fontes com https.
+  - Rode uma checagem (Bash) garantindo: arquivo existe e abre sem erros de sintaxe JS (ex.: node --check em trecho extraído, ou validação do JSON embutido com python -c json.loads); uso apenas da paleta definida (sem #e8005a); presença dos dois idiomas; todos os links de fontes com https.
   - Corrija o que falhar.
 
 ==================== SAÍDA FINAL ====================
