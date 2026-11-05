@@ -22,6 +22,7 @@ Instruções para o agente agendado (dias úteis, 08:00 BRT). Objetivo: manter o
    - **Prazos** (`prioridades`, `checklist`, `meta.marco`, `meta.marcoSecundario`, `cronograma`): ajuste quando houver nova data oficial. Quando um marco passar, aponte para o próximo.
    - **Glossário** (`glossario`): toda sigla nova que aparecer no texto deve ser incluída com explicação em PT e ES.
    - Não invente dados. Parafraseie, não copie textos longos. Mantenha PT e ES equivalentes.
+   - Nomes de marca: a bebida hidroeletrolítica da Genomma se chama **Sorox** no Brasil (use em `pt`) e **Suerox** em espanhol (use em `es`). Títulos de matérias externas mantêm o nome original.
 5. Rode `python3 dossie-reforma-tributaria/build.py`. Se falhar, corrija o JSON e rode de novo até passar.
 6. Faça commit apenas de `dossie-reforma-tributaria/dados-<HOJE>.json`, `dossie-reforma-tributaria/dossie-reforma-tributaria-<HOJE>.html`, `dossie-reforma-tributaria/dossie-reforma-tributaria-ATUAL.html` e `docs/` com a mensagem `Dossiê: atualização de <HOJE>` e um resumo das novidades no corpo. Envie (push) para a branch `main`.
 7. Termine com um resumo curto: novidades incluídas, normas novas, itens "a confirmar" resolvidos e prazos alterados.
