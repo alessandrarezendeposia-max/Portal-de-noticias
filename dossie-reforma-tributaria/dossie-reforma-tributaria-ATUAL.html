@@ -30,8 +30,12 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .logo i{display:flex;gap:3px}
 .logo i b{width:10px;height:10px;border-radius:50%;display:block}
 .logo span{font-weight:900;font-size:1.15rem;letter-spacing:.02em;text-transform:uppercase}
-.links{display:flex;gap:20px;list-style:none}
-.links a{font-size:.74rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--txt);text-decoration:none}
+.logo{flex-shrink:0;white-space:nowrap}
+.links{display:flex;gap:14px;list-style:none;flex:1;min-width:0;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;padding:0 6px;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12px,#000 calc(100% - 12px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 12px,#000 calc(100% - 12px),transparent 100%)}
+.links::-webkit-scrollbar{display:none}
+.links li{flex-shrink:0}
+.links li:first-child{margin-left:auto}.links li:last-child{margin-right:auto}
+.links a{display:block;white-space:nowrap;padding:6px 0;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.03em;color:var(--txt);text-decoration:none}
 .links a:hover{color:var(--hover)}
 .lang{display:flex;border:2px solid var(--azul);border-radius:30px;overflow:hidden;flex-shrink:0}
 .lang button{background:#fff;border:0;padding:6px 12px;font-family:'Montserrat';font-weight:600;font-size:.72rem;cursor:pointer;color:var(--azul)}
@@ -211,6 +215,19 @@ tr:hover td{background:#f3f8fd}
 .ent a{align-self:flex-start;font-size:.7rem;font-weight:700;margin-top:14px;text-transform:uppercase;text-decoration:none;color:#fff;background:var(--azul);padding:7px 16px;border-radius:30px}
 .ent a:hover{background:var(--hover);color:#fff}
 
+/* glossário */
+abbr.gl{text-decoration:none;border-bottom:1.5px dotted var(--azul2);cursor:help;outline:none}
+abbr.gl:hover,abbr.gl:focus{background:#e3f1fc;border-bottom-color:var(--azul3);border-radius:3px}
+#gl-tip{position:fixed;z-index:200;max-width:min(320px,calc(100vw - 24px));background:var(--txt);color:#fff;font-size:.78rem;line-height:1.45;padding:10px 14px;border-radius:var(--r);box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .15s;top:-999px;left:-999px}
+#gl-tip.on{opacity:1}
+#gl-tip b{display:block;color:var(--azul2);font-weight:800;margin-bottom:2px}
+.gloss{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gloss div{background:#fff;border-radius:var(--r);box-shadow:0 2px 10px rgba(0,0,0,.05);padding:14px 16px;border-left:4px solid var(--azul2)}
+.gloss dt{font-weight:900;color:var(--azul3);font-size:.95rem}
+.gloss dd{font-size:.82rem;color:var(--txt2);margin-top:2px}
+@media (max-width:900px){ .gloss{grid-template-columns:1fr 1fr} }
+@media (max-width:600px){ .gloss{grid-template-columns:1fr} }
+
 /* fontes por tópico e links de leis */
 a.lei{color:var(--azul3);font-weight:600;text-decoration:underline;text-decoration-color:rgba(0,140,196,.35);text-underline-offset:2px}
 a.lei:hover{color:var(--hover);text-decoration-color:currentColor}
@@ -278,11 +295,9 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
 .rv.in{opacity:1;transform:none}
 
 @media (max-width:1180px){
-  .links{gap:14px}
-  .links a{font-size:.66rem}
   .ent{grid-template-columns:repeat(3,1fr)}
 }
-@media (max-width:1040px){ .links{display:none} }
+@media (max-width:700px){ .links{display:none} }
 @media (max-width:900px){
   .kpis,.trib,.pilares,.ent{grid-template-columns:repeat(2,1fr)}
   .cards,.imp,.gcards,.comex,.comex.dois{grid-template-columns:1fr}
@@ -369,6 +384,10 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
   <input id="lg-busca" class="lg-busca" type="search" autocomplete="off">
   <div id="lg"></div>
 </div></section>
+<section id="glossario"><div class="wrap">
+  <h2 class="sec-titulo rv" data-s="glossario"></h2><p class="intro rv" id="gl-intro"></p>
+  <dl class="gloss" id="gl"></dl>
+</div></section>
 <div class="citacao"><div class="wrap"><blockquote id="cit"></blockquote><cite id="cit-a"></cite></div></div>
 <section id="checklist"><div class="wrap">
   <h2 class="sec-titulo rv" data-s="checklist"></h2>
@@ -388,16 +407,16 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
     "meta": {
       "lang": "pt-BR",
       "titulo": "Dossiê Executivo — Reforma Tributária do Consumo",
-      "atualizacao": "03/11/2026",
+      "atualizacao": "05/11/2026",
       "ultimaPublicacao": "Ato Técnico Conjunto RFB/SUFIS/CGIBS nº 10/2026 (DOU 29/10/2026)",
       "marco": { "data": "2027-01-01T00:00:00-03:00", "rotulo": "Início da cobrança efetiva da CBS e extinção do PIS/Cofins", "fonte": "EC 132/2023 e LC 214/2025" },
       "marcoSecundario": { "data": "2026-11-16T00:00:00-03:00", "rotulo": "Produção das NTs 2025.002 v1.53 e 2026.005/006/007/008 da NF-e" }
     },
     "ui": {
-      "nav": ["Novidades", "Genomma", "IS e IPI", "Cronograma", "Tributos", "Impactos", "Comex", "Legislação", "Checklist", "Fontes"],
+      "nav": ["Novidades", "Genomma", "IS e IPI", "Cronograma", "Tributos", "Impactos", "Comex", "Legislação", "Glossário", "Checklist", "Fontes"],
       "heroKicker": "Dossiê executivo financeiro · IBS · CBS · IS",
       "heroLinhas": ["Reforma", "Tributária", "do Consumo"],
-      "heroTexto": "Panorama consolidado das normas, prazos e impactos da transição para o IVA dual brasileiro, atualizado até 03/11/2026.",
+      "heroTexto": "Panorama consolidado das normas, prazos e impactos da transição para o IVA dual brasileiro, atualizado até 05/11/2026.",
       "contagemRotulo": "Faltam para o marco crítico",
       "contagemUnid": ["dias", "horas", "min", "seg"],
       "contagemPassou": "Marco atingido",
@@ -416,8 +435,10 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
         "comex": "Importação e exportação",
         "entidades": "Fontes setoriais monitoradas",
         "isipi": "Imposto Seletivo e IPI",
-        "legislacao": "Legislação"
+        "legislacao": "Legislação",
+        "glossario": "Glossário de siglas"
       },
+      "glossIntro": "Siglas e termos usados neste dossiê. No texto, as siglas sublinhadas com pontos mostram o significado ao passar o mouse ou tocar.",
       "g": { "cbs": "CBS 2027 estimada", "is": "Imposto Seletivo", "exemplos": "Exemplos", "status": { "confirmado": "Regra confirmada", "parcial": "Parte a confirmar" } },
       "aConfirmar": "a confirmar",
       "acompanhar": "O que acompanhar",
@@ -664,16 +685,16 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
     "meta": {
       "lang": "es",
       "titulo": "Dossier Ejecutivo — Reforma Tributaria del Consumo",
-      "atualizacao": "03/11/2026",
+      "atualizacao": "05/11/2026",
       "ultimaPublicacao": "Acto Técnico Conjunto RFB/SUFIS/CGIBS n.º 10/2026 (DOU 29/10/2026)",
       "marco": { "data": "2027-01-01T00:00:00-03:00", "rotulo": "Inicio del cobro efectivo de la CBS y extinción del PIS/Cofins", "fonte": "EC 132/2023 y LC 214/2025" },
       "marcoSecundario": { "data": "2026-11-16T00:00:00-03:00", "rotulo": "Producción de las NT 2025.002 v1.53 y 2026.005/006/007/008 de la NF-e" }
     },
     "ui": {
-      "nav": ["Novedades", "Genomma", "IS e IPI", "Cronograma", "Tributos", "Impactos", "Comex", "Legislación", "Checklist", "Fuentes"],
+      "nav": ["Novedades", "Genomma", "IS e IPI", "Cronograma", "Tributos", "Impactos", "Comex", "Legislación", "Glosario", "Checklist", "Fuentes"],
       "heroKicker": "Dossier ejecutivo financiero · IBS · CBS · IS",
       "heroLinhas": ["Reforma", "Tributaria", "del Consumo"],
-      "heroTexto": "Panorama consolidado de normas, plazos e impactos de la transición al IVA dual brasileño, actualizado al 03/11/2026.",
+      "heroTexto": "Panorama consolidado de normas, plazos e impactos de la transición al IVA dual brasileño, actualizado al 05/11/2026.",
       "contagemRotulo": "Faltan para el hito crítico",
       "contagemUnid": ["días", "horas", "min", "seg"],
       "contagemPassou": "Hito alcanzado",
@@ -692,8 +713,10 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
         "comex": "Importación y exportación",
         "entidades": "Fuentes sectoriales monitoreadas",
         "isipi": "Impuesto Selectivo e IPI",
-        "legislacao": "Legislación"
+        "legislacao": "Legislación",
+        "glossario": "Glosario de siglas"
       },
+      "glossIntro": "Siglas y términos usados en este dossier. En el texto, las siglas subrayadas con puntos muestran su significado al pasar el mouse o tocar.",
       "g": { "cbs": "CBS 2027 estimada", "is": "Impuesto Selectivo", "exemplos": "Ejemplos", "status": { "confirmado": "Regla confirmada", "parcial": "Parte por confirmar" } },
       "aConfirmar": "por confirmar",
       "acompanhar": "Qué seguir",
@@ -972,6 +995,75 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
     "genomma.3": { "p": "alta", "prazo": "2027-02-01", "marco": { "pt": "Início previsto do Imposto Seletivo (a confirmar)", "es": "Inicio previsto del Impuesto Selectivo (por confirmar)" } },
     "genomma.4": { "p": "baixa", "prazo": "2027-01-01", "marco": { "pt": "Início da CBS (alíquota zero)", "es": "Inicio de la CBS (alícuota cero)" } }
   },
+  "glossario": [
+    { "t": "PLOA", "pt": "Projeto de Lei Orçamentária Anual — proposta de orçamento federal do ano seguinte, enviada pelo governo ao Congresso.", "es": "Proyecto de Ley de Presupuesto Anual — propuesta de presupuesto federal del año siguiente que el Gobierno envía al Congreso." },
+    { "t": "CBS", "pt": "Contribuição sobre Bens e Serviços — tributo federal sobre o consumo que substitui PIS e Cofins (parte federal do IVA dual).", "es": "Contribución sobre Bienes y Servicios — tributo federal al consumo que sustituye al PIS y la Cofins (parte federal del IVA dual)." },
+    { "t": "IBS", "pt": "Imposto sobre Bens e Serviços — tributo de estados e municípios que substitui ICMS e ISS (parte subnacional do IVA dual).", "es": "Impuesto sobre Bienes y Servicios — tributo de estados y municipios que sustituye al ICMS y al ISS (parte subnacional del IVA dual)." },
+    { "t": "IS", "pt": "Imposto Seletivo — tributo federal sobre bens prejudiciais à saúde ou ao meio ambiente (\"imposto do pecado\"). Cobrado uma única vez, sem crédito.", "es": "Impuesto Selectivo — tributo federal sobre bienes perjudiciales para la salud o el medio ambiente (\"impuesto al pecado\"). Se cobra una sola vez, sin crédito." },
+    { "t": "IPI", "pt": "Imposto sobre Produtos Industrializados — tributo federal sobre a indústria. Zerado em 2027, exceto para proteger a Zona Franca de Manaus.", "es": "Impuesto sobre Productos Industrializados — tributo federal a la industria. En cero desde 2027, salvo para proteger la Zona Franca de Manaus." },
+    { "t": "ICMS-ST", "pt": "Substituição tributária do ICMS — um elo da cadeia (geralmente a indústria) recolhe antecipadamente o ICMS das etapas seguintes.", "es": "Sustitución tributaria del ICMS — un eslabón de la cadena (normalmente la industria) paga por anticipado el ICMS de las etapas siguientes." },
+    { "t": "ICMS", "pt": "Imposto sobre Circulação de Mercadorias e Serviços — tributo estadual sobre o consumo; extinto gradualmente até 2033.", "es": "Impuesto sobre Circulación de Mercaderías y Servicios — tributo estatal al consumo; se extingue gradualmente hasta 2033." },
+    { "t": "ISS", "pt": "Imposto sobre Serviços — tributo municipal; extinto gradualmente até 2033.", "es": "Impuesto sobre Servicios — tributo municipal; se extingue gradualmente hasta 2033." },
+    { "t": "ST", "pt": "Substituição tributária — regime em que um contribuinte recolhe o imposto devido pelos demais elos da cadeia.", "es": "Sustitución tributaria — régimen en el que un contribuyente paga el impuesto debido por los demás eslabones de la cadena." },
+    { "t": "PIS", "pt": "Programa de Integração Social — contribuição federal sobre o faturamento; extinta em 2027 e substituída pela CBS.", "es": "Programa de Integración Social — contribución federal sobre la facturación; se extingue en 2027 y la sustituye la CBS." },
+    { "t": "Cofins", "pt": "Contribuição para o Financiamento da Seguridade Social — contribuição federal sobre o faturamento; extinta em 2027 e substituída pela CBS.", "es": "Contribución para el Financiamiento de la Seguridad Social — contribución federal sobre la facturación; se extingue en 2027 y la sustituye la CBS." },
+    { "t": "IVA", "pt": "Imposto sobre Valor Agregado — tributo sobre o consumo com crédito em cada etapa. No Brasil, \"IVA dual\": CBS (federal) + IBS (estados e municípios).", "es": "Impuesto al Valor Agregado — tributo al consumo con crédito en cada etapa. En Brasil, \"IVA dual\": CBS (federal) + IBS (estados y municipios)." },
+    { "t": "II", "pt": "Imposto de Importação — tributo federal aduaneiro sobre bens importados.", "es": "Impuesto de Importación — tributo aduanero federal sobre bienes importados." },
+    { "t": "TCU", "pt": "Tribunal de Contas da União — órgão federal de controle externo; calcula a alíquota de referência da CBS.", "es": "Tribunal de Cuentas de la Unión — órgano federal de control externo; calcula la alícuota de referencia de la CBS." },
+    { "t": "CGIBS", "pt": "Comitê Gestor do IBS — entidade de estados e municípios que regulamenta, arrecada e distribui o IBS.", "es": "Comité Gestor del IBS — entidad de estados y municipios que reglamenta, recauda y distribuye el IBS." },
+    { "t": "RFB", "pt": "Receita Federal do Brasil — administração tributária federal (agência fiscal nacional).", "es": "Receita Federal de Brasil — administración tributaria federal (agencia fiscal nacional)." },
+    { "t": "SUFIS", "pt": "Subsecretaria de Fiscalização da Receita Federal — área que coassina os atos técnicos dos documentos fiscais.", "es": "Subsecretaría de Fiscalización de la Receita Federal — área que cofirma los actos técnicos de los documentos fiscales." },
+    { "t": "CGSN", "pt": "Comitê Gestor do Simples Nacional — define as regras do regime simplificado das pequenas empresas.", "es": "Comité Gestor del Simples Nacional — define las reglas del régimen simplificado de las pequeñas empresas." },
+    { "t": "Simples Nacional", "pt": "Regime tributário simplificado para micro e pequenas empresas, com pagamento unificado em uma guia.", "es": "Régimen tributario simplificado para micro y pequeñas empresas, con pago unificado en una sola guía." },
+    { "t": "LC", "pt": "Lei Complementar — lei que regulamenta a Constituição e exige maioria absoluta no Congresso.", "es": "Ley Complementaria — ley que reglamenta la Constitución y exige mayoría absoluta en el Congreso." },
+    { "t": "EC", "pt": "Emenda Constitucional — alteração do texto da Constituição Federal.", "es": "Enmienda Constitucional — modificación del texto de la Constitución Federal." },
+    { "t": "PEC", "pt": "Proposta de Emenda à Constituição — projeto que, se aprovado, vira Emenda Constitucional.", "es": "Propuesta de Enmienda a la Constitución — proyecto que, si se aprueba, se convierte en Enmienda Constitucional." },
+    { "t": "MP", "pt": "Medida Provisória — norma com força de lei editada pelo Presidente; vale 120 dias e precisa ser aprovada pelo Congresso.", "es": "Medida Provisional — norma con fuerza de ley dictada por el Presidente; vale 120 días y debe ser aprobada por el Congreso." },
+    { "t": "PLP", "pt": "Projeto de Lei Complementar — proposta em tramitação no Congresso.", "es": "Proyecto de Ley Complementaria — propuesta en trámite en el Congreso." },
+    { "t": "DOU", "pt": "Diário Oficial da União — publicação oficial onde as normas federais passam a valer.", "es": "Diario Oficial de la Unión — publicación oficial donde las normas federales entran en vigor." },
+    { "t": "ADCT", "pt": "Ato das Disposições Constitucionais Transitórias — parte da Constituição com regras de transição.", "es": "Acto de las Disposiciones Constitucionales Transitorias — parte de la Constitución con reglas de transición." },
+    { "t": "ADE", "pt": "Ato Declaratório Executivo — ato administrativo da Receita que declara ou interpreta uma situação.", "es": "Acto Declaratorio Ejecutivo — acto administrativo de la Receita que declara o interpreta una situación." },
+    { "t": "TIPI", "pt": "Tabela de Incidência do IPI — lista das alíquotas do IPI por código NCM.", "es": "Tabla de Incidencia del IPI — lista de alícuotas del IPI por código NCM." },
+    { "t": "NCM", "pt": "Nomenclatura Comum do Mercosul — código de 8 dígitos que classifica mercadorias (baseado no Sistema Harmonizado). Define o tratamento tributário do produto.", "es": "Nomenclatura Común del Mercosur — código de 8 dígitos que clasifica mercaderías (basado en el Sistema Armonizado). Define el tratamiento tributario del producto." },
+    { "t": "NFC-e", "pt": "Nota Fiscal de Consumidor eletrônica — versão da NF-e para vendas no varejo ao consumidor final.", "es": "Factura electrónica al Consumidor — versión de la NF-e para ventas minoristas al consumidor final." },
+    { "t": "NFS-e", "pt": "Nota Fiscal de Serviços eletrônica — documento fiscal digital da prestação de serviços.", "es": "Factura electrónica de Servicios — documento fiscal digital de la prestación de servicios." },
+    { "t": "NF-e", "pt": "Nota Fiscal eletrônica — documento fiscal digital obrigatório na venda de mercadorias entre empresas.", "es": "Factura electrónica — documento fiscal digital obligatorio en la venta de mercaderías entre empresas." },
+    { "t": "CT-e", "pt": "Conhecimento de Transporte eletrônico — documento fiscal do frete.", "es": "Conocimiento de Transporte electrónico — documento fiscal del flete." },
+    { "t": "DF-e", "pt": "Documentos Fiscais eletrônicos — termo genérico para NF-e, NFC-e, CT-e e similares.", "es": "Documentos Fiscales electrónicos — término genérico para NF-e, NFC-e, CT-e y similares." },
+    { "t": "DANFE", "pt": "Documento Auxiliar da NF-e — versão impressa ou em PDF da nota fiscal eletrônica.", "es": "Documento Auxiliar de la NF-e — versión impresa o en PDF de la factura electrónica." },
+    { "t": "NT", "pt": "Nota Técnica — especificação do layout e das regras de validação dos documentos fiscais eletrônicos.", "es": "Nota Técnica — especificación del formato y de las reglas de validación de los documentos fiscales electrónicos." },
+    { "t": "cClassTrib", "pt": "Código de Classificação Tributária — código informado na nota que indica o tratamento de IBS/CBS do item (ex.: redução de 60%).", "es": "Código de Clasificación Tributaria — código informado en la factura que indica el tratamiento de IBS/CBS del ítem (ej.: reducción del 60%)." },
+    { "t": "CST", "pt": "Código de Situação Tributária — código que indica na nota como o item é tributado.", "es": "Código de Situación Tributaria — código que indica en la factura cómo se grava el ítem." },
+    { "t": "CRT", "pt": "Código de Regime Tributário — indica na nota se o emissor é do Simples Nacional ou do regime normal.", "es": "Código de Régimen Tributario — indica en la factura si el emisor es del Simples Nacional o del régimen normal." },
+    { "t": "CNPJ", "pt": "Cadastro Nacional da Pessoa Jurídica — número de registro das empresas no Brasil.", "es": "Registro Nacional de Personas Jurídicas — número de registro de las empresas en Brasil." },
+    { "t": "DUIMP", "pt": "Declaração Única de Importação — nova declaração aduaneira eletrônica que substitui a DI; é onde IBS/CBS da importação serão informados.", "es": "Declaración Única de Importación — nueva declaración aduanera electrónica que sustituye a la DI; allí se informarán el IBS/CBS de la importación." },
+    { "t": "DI", "pt": "Declaração de Importação — declaração aduaneira antiga, em processo de desligamento.", "es": "Declaración de Importación — declaración aduanera antigua, en proceso de desactivación." },
+    { "t": "Siscomex", "pt": "Sistema Integrado de Comércio Exterior — portal do governo para registrar importações e exportações.", "es": "Sistema Integrado de Comercio Exterior — portal del Gobierno para registrar importaciones y exportaciones." },
+    { "t": "OEA", "pt": "Operador Econômico Autorizado — certificação aduaneira de empresas confiáveis (equivalente ao AEO internacional).", "es": "Operador Económico Autorizado — certificación aduanera de empresas confiables (equivalente al AEO internacional)." },
+    { "t": "ZFM", "pt": "Zona Franca de Manaus — área de livre comércio com incentivos fiscais no estado do Amazonas.", "es": "Zona Franca de Manaos — área de libre comercio con incentivos fiscales en el estado de Amazonas." },
+    { "t": "Suframa", "pt": "Superintendência da Zona Franca de Manaus — órgão que administra os incentivos da ZFM.", "es": "Superintendencia de la Zona Franca de Manaos — órgano que administra los incentivos de la ZFM." },
+    { "t": "ZPE", "pt": "Zona de Processamento de Exportação — área com tributos suspensos para empresas exportadoras.", "es": "Zona de Procesamiento de Exportación — área con tributos suspendidos para empresas exportadoras." },
+    { "t": "Recof", "pt": "Regime aduaneiro que suspende tributos na importação de insumos por indústrias com controle informatizado.", "es": "Régimen aduanero que suspende tributos en la importación de insumos por industrias con control informatizado." },
+    { "t": "Repetro", "pt": "Regime aduaneiro especial para bens usados na exploração de petróleo e gás.", "es": "Régimen aduanero especial para bienes usados en la exploración de petróleo y gas." },
+    { "t": "Drawback", "pt": "Regime que suspende ou isenta tributos na compra de insumos usados em produtos exportados.", "es": "Régimen que suspende o exime tributos en la compra de insumos usados en productos exportados." },
+    { "t": "drawback", "pt": "Regime que suspende ou isenta tributos na compra de insumos usados em produtos exportados.", "es": "Régimen que suspende o exime tributos en la compra de insumos usados en productos exportados." },
+    { "t": "noventena", "pt": "Prazo mínimo de 90 dias entre a publicação de norma que cria ou aumenta tributo e o início da cobrança.", "es": "Plazo mínimo de 90 días entre la publicación de una norma que crea o aumenta un tributo y el inicio del cobro." },
+    { "t": "CMED", "pt": "Câmara de Regulação do Mercado de Medicamentos — órgão que fixa os preços máximos dos medicamentos no Brasil.", "es": "Cámara de Regulación del Mercado de Medicamentos — órgano que fija los precios máximos de los medicamentos en Brasil." },
+    { "t": "Anvisa", "pt": "Agência Nacional de Vigilância Sanitária — registra e fiscaliza medicamentos, cosméticos e alimentos.", "es": "Agencia Nacional de Vigilancia Sanitaria — registra y fiscaliza medicamentos, cosméticos y alimentos." },
+    { "t": "PMC", "pt": "Preço Máximo ao Consumidor — teto de preço de cada medicamento, definido pela CMED.", "es": "Precio Máximo al Consumidor — techo de precio de cada medicamento, definido por la CMED." },
+    { "t": "MIP", "pt": "Medicamento Isento de Prescrição — vendido sem receita médica (equivalente a OTC).", "es": "Medicamento de venta libre (sin receta) — equivalente a OTC." },
+    { "t": "OTC", "pt": "Over the counter — medicamentos vendidos sem receita médica.", "es": "Over the counter — medicamentos de venta libre, sin receta." },
+    { "t": "HPPC", "pt": "Higiene Pessoal, Perfumaria e Cosméticos — setor representado pela ABIHPEC.", "es": "Higiene Personal, Perfumería y Cosméticos — sector representado por ABIHPEC." },
+    { "t": "ABIHPEC", "pt": "Associação Brasileira da Indústria de Higiene Pessoal, Perfumaria e Cosméticos.", "es": "Asociación Brasileña de la Industria de Higiene Personal, Perfumería y Cosméticos." },
+    { "t": "Sindusfarma", "pt": "Sindicato da Indústria de Produtos Farmacêuticos — principal entidade da indústria farmacêutica no Brasil.", "es": "Sindicato de la Industria de Productos Farmacéuticos — principal entidad de la industria farmacéutica en Brasil." },
+    { "t": "ACESSA", "pt": "Associação Brasileira da Indústria de Produtos para o Autocuidado em Saúde — representa fabricantes de MIPs.", "es": "Asociación Brasileña de la Industria de Productos para el Autocuidado en Salud — representa a fabricantes de MIP." },
+    { "t": "CadÚnico", "pt": "Cadastro Único — registro federal de famílias de baixa renda, usado em programas sociais e no cashback.", "es": "Registro Único — registro federal de familias de bajos ingresos, usado en programas sociales y en el cashback." },
+    { "t": "DeRE", "pt": "Declaração de Regimes Específicos — obrigação acessória de setores com regras próprias (financeiro, seguros, imóveis etc.).", "es": "Declaración de Regímenes Específicos — obligación accesoria de sectores con reglas propias (financiero, seguros, inmuebles, etc.)." },
+    { "t": "ERP", "pt": "Enterprise Resource Planning — sistema de gestão da empresa que emite notas e calcula tributos.", "es": "Enterprise Resource Planning — sistema de gestión de la empresa que emite facturas y calcula tributos." },
+    { "t": "B2B", "pt": "Business to business — operações entre empresas.", "es": "Business to business — operaciones entre empresas." },
+    { "t": "UF", "pt": "Unidade da Federação — estado brasileiro (ex.: \"IBS UF\" é a parcela estadual do IBS).", "es": "Unidad de la Federación — estado brasileño (ej.: \"IBS UF\" es la parte estatal del IBS)." },
+    { "t": "TJDFT", "pt": "Tribunal de Justiça do Distrito Federal e Territórios.", "es": "Tribunal de Justicia del Distrito Federal y Territorios." }
+  ],
   "legislacao": [
     { "g": "ec", "num": "Emenda Constitucional nº 132/2023", "data": "2023-12-20", "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm", "desc": { "pt": "Reforma tributária do consumo: cria IBS, CBS e Imposto Seletivo; extingue PIS, Cofins, ICMS e ISS ao longo da transição e reduz o IPI a zero a partir de 2027, exceto ZFM.", "es": "Reforma tributaria del consumo: crea IBS, CBS e Impuesto Selectivo; extingue PIS, Cofins, ICMS e ISS durante la transición y reduce el IPI a cero desde 2027, salvo ZFM." } },
     { "g": "lc", "num": "Lei Complementar nº 227/2026", "data": "2026-01-13", "url": "https://www2.camara.leg.br/legin/fed/leicom/2026/leicomplementar-227-13-janeiro-2026-798657-norma-pl.html", "desc": { "pt": "Institui o Comitê Gestor do IBS (CGIBS) e o contencioso administrativo; altera a LC 214/2025 (alíquota zero de medicamentos por destinação terapêutica, regimes aduaneiros).", "es": "Instituye el Comité Gestor del IBS (CGIBS) y el contencioso administrativo; modifica la LC 214/2025 (alícuota cero de medicamentos por destino terapéutico, regímenes aduaneros)." } },
@@ -1007,7 +1099,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
 (function(){
   'use strict';
   var D = JSON.parse(document.getElementById('dados').textContent);
-  var ids = ['novidades','genomma','isipi','cronograma','tributos','impactos','comex','legislacao','checklist','fontes'];
+  var ids = ['novidades','genomma','isipi','cronograma','tributos','impactos','comex','legislacao','glossario','checklist','fontes'];
   var store = {
     get: function(k){ try { return localStorage.getItem(k); } catch(e){ return null; } },
     set: function(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
@@ -1126,12 +1218,81 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
         return (l.num + ' ' + (l.desc[lang] || l.desc.pt) + ' ' + fmtData(l.data)).toLowerCase().indexOf(f) >= 0;
       }).sort(function(x, y){ return x.data < y.data ? 1 : (x.data > y.data ? -1 : 0); });
       if (!itens.length) return '';
-      return '<details class="lg rv in" open><summary><span>' + esc(ui.legisGrupos[g]) + '</span><em>' + esc(itens.length === 1 ? (ui.legisN1 || '1') : ui.legisN.replace('{n}', itens.length)) + '</em></summary><ul>' +
+      return '<details class="lg rv in" open><summary><span>' + esc(ui.legisGrupos[g]) + '</span><em>' + esc(ui.legisN.replace('{n}', itens.length)) + '</em></summary><ul>' +
         itens.map(function(l){
           return '<li class="g-' + g + '"><time>' + fmtData(l.data) + '</time><div>' + a(l.url, esc(l.num) + ' ↗', 'lg-num') + '<p>' + esc(l.desc[lang] || l.desc.pt) + '</p></div></li>';
         }).join('') + '</ul></details>';
     }).join('');
     $('lg').innerHTML = html || '<p class="lg-vazio">' + esc(ui.legisVazio) + '</p>';
+  }
+
+  /* ---- glossário: siglas com explicação ao passar o mouse/tocar ---- */
+  var GL = D.glossario || [], GLMAP = {}, GLRX = null;
+  (function(){
+    GL.forEach(function(g){ GLMAP[g.t] = g; });
+    var termos = GL.map(function(g){ return g.t; }).sort(function(x, y){ return y.length - x.length; })
+      .map(function(t){ return t.replace(/[.*+?^${}()|[\]\\\/-]/g, '\\$&'); });
+    if (termos.length) GLRX = new RegExp('(^|[^A-Za-zÀ-ÿ0-9])(' + termos.join('|') + ')(s?)(?![A-Za-zÀ-ÿ0-9])', 'g');
+  })();
+  var NAO_GLOSSAR = 'a,abbr,script,style,button,input,textarea,h1,.sec-titulo,.kpi b,dd,time,summary,nav,.marquee,#gl,#gl-tip,.g-cat,.trib b';
+  function glossar(raiz){
+    if (!GLRX || !raiz) return;
+    raiz._glv = {};
+    var w =document.createTreeWalker(raiz, NodeFilter.SHOW_TEXT, { acceptNode: function(n){
+      if (!n.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+      return n.parentNode.closest(NAO_GLOSSAR) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+    } });
+    var nos = []; while (w.nextNode()) nos.push(w.currentNode);
+    nos.forEach(function(n){
+      var s = n.nodeValue, m, ult = 0, achou = false, frag = document.createDocumentFragment();
+      var bloco = n.parentNode.closest('li, tr, .rv, .prio') || raiz;
+      var vistos = bloco._glv || (bloco._glv = {});
+      GLRX.lastIndex = 0;
+      while ((m = GLRX.exec(s))) {
+        if (vistos[m[2]]) continue;
+        vistos[m[2]] = 1;
+        achou = true;
+        var ini = m.index + m[1].length;
+        frag.appendChild(document.createTextNode(s.slice(ult, ini)));
+        var ab = document.createElement('abbr');
+        ab.className = 'gl'; ab.tabIndex = 0; ab.setAttribute('data-t', m[2]);
+        ab.textContent = m[2] + m[3];
+        frag.appendChild(ab);
+        ult = ini + m[2].length + m[3].length;
+        GLRX.lastIndex = ult;
+      }
+      if (!achou) return;
+      frag.appendChild(document.createTextNode(s.slice(ult)));
+      n.parentNode.replaceChild(frag, n);
+    });
+  }
+  var tip = document.createElement('div'); tip.id = 'gl-tip'; tip.setAttribute('role', 'tooltip'); document.body.appendChild(tip);
+  function mostrarTip(ab){
+    var g = GLMAP[ab.getAttribute('data-t')]; if (!g) return;
+    tip.innerHTML = '<b>' + esc(g.t) + '</b>' + esc(g[lang] || g.pt);
+    tip.classList.add('on');
+    var r = ab.getBoundingClientRect(), vw = document.documentElement.clientWidth;
+    var x = r.left + r.width / 2 - tip.offsetWidth / 2;
+    x = Math.max(12, Math.min(x, vw - tip.offsetWidth - 12));
+    var y = r.top - tip.offsetHeight - 10;
+    if (y < 80) y = r.bottom + 10;
+    tip.style.left = x + 'px'; tip.style.top = y + 'px';
+  }
+  function esconderTip(){ tip.classList.remove('on'); }
+  function abbrDe(e){ return e.target && e.target.closest ? e.target.closest('abbr.gl') : null; }
+  document.addEventListener('mouseover', function(e){ var ab = abbrDe(e); if (ab) mostrarTip(ab); });
+  document.addEventListener('mouseout', function(e){ if (abbrDe(e)) esconderTip(); });
+  document.addEventListener('focusin', function(e){ var ab = abbrDe(e); if (ab) mostrarTip(ab); });
+  document.addEventListener('focusout', function(e){ if (abbrDe(e)) esconderTip(); });
+  document.addEventListener('click', function(e){ var ab = abbrDe(e); if (ab) { mostrarTip(ab); e.stopPropagation(); } else esconderTip(); }, true);
+  window.addEventListener('scroll', esconderTip, { passive: true });
+
+  function glossarioSecao(ui){
+    $('gl-intro').textContent = ui.glossIntro || D.pt.ui.glossIntro;
+    var vistos = {};
+    $('gl').innerHTML = GL.filter(function(g){ var k = g.t.toLowerCase(); if (vistos[k]) return false; vistos[k] = 1; return true; })
+      .sort(function(x, y){ return x.t.localeCompare(y.t, 'pt'); })
+      .map(function(g){ return '<div><dt>' + esc(g.t) + '</dt><dd>' + esc(g[lang] || g.pt) + '</dd></div>'; }).join('');
   }
 
   var timer = null;
@@ -1254,6 +1415,8 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
     $('rod').textContent = ui.rodapeAtualizacao + ' ' + L.meta.atualizacao + ' · ' + L.meta.ultimaPublicacao;
     $('btn-print').textContent = '⎙ ' + ui.imprimir;
 
+    glossarioSecao(ui);
+    document.querySelectorAll('section, .citacao').forEach(glossar);
     observar();
   }
 
@@ -1269,7 +1432,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
     el.querySelectorAll('.barra i[data-w]').forEach(function(b){ b.style.width = b.dataset.w + '%'; });
   }
 
-  $('lg-busca').addEventListener('input', function(e){ filtroLegis = e.target.value; legislacao(D[lang].ui); });
+  $('lg-busca').addEventListener('input', function(e){ filtroLegis = e.target.value; legislacao(D[lang].ui); glossar($('lg')); });
   document.querySelectorAll('.lang button').forEach(function(b){
     b.addEventListener('click', function(){ lang = b.dataset.l; store.set('dossie-rt-lang', lang); render(); });
   });

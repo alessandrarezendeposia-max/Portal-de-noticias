@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dossiê Reforma Tributária</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--azul:#3e8ede;--azul2:#45b8ea;--azul3:#008cc4;--azulEsc:#2f6da4;--hover:#1b94d2;--rosa:#fa2891;--laranja:#ff7313;--verde:#007f3a;--lima:#9ad858;--amarelo:#f7e124;--txt:#231f20;--txt2:#5a5a5a;--bg:#ffffff;--alt:#f3f8fd;--linha:#e2e2e2;--escuro:#2f6da4;--r:8px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--bg);color:var(--txt);font-family:'Montserrat',verdana,sans-serif;line-height:1.6;font-size:15px}
+h1,h2,h3{font-family:'Montserrat',verdana,sans-serif;font-weight:900;line-height:1.1}
+.mono{font-family:'Montserrat',sans-serif}
+a{color:var(--azul3)}
+a:hover{color:var(--hover)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+section{padding:84px 0}
+section.alt{background:var(--alt)}
+.sec-titulo{font-size:clamp(1.7rem,3.6vw,2.4rem);color:var(--azul3);text-transform:uppercase;margin-bottom:40px;display:flex;align-items:center;gap:14px}
+.sec-titulo::before{content:"";width:14px;height:14px;border-radius:50%;background:var(--rosa);box-shadow:20px 0 0 var(--azul2),40px 0 0 var(--laranja);margin-right:44px;flex-shrink:0}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+nav::after{content:"";display:block;height:5px;background:linear-gradient(90deg,var(--azul2),var(--azul3))}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--azul3)}
+.logo i{display:flex;gap:3px}
+.logo i b{width:10px;height:10px;border-radius:50%;display:block}
+.logo span{font-weight:900;font-size:1.15rem;letter-spacing:.02em;text-transform:uppercase}
+.logo{flex-shrink:0;white-space:nowrap}
+.links{display:flex;gap:14px;list-style:none;flex:1;min-width:0;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;padding:0 6px;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12px,#000 calc(100% - 12px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 12px,#000 calc(100% - 12px),transparent 100%)}
+.links::-webkit-scrollbar{display:none}
+.links li{flex-shrink:0}
+.links li:first-child{margin-left:auto}.links li:last-child{margin-right:auto}
+.links a{display:block;white-space:nowrap;padding:6px 0;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.03em;color:var(--txt);text-decoration:none}
+.links a:hover{color:var(--hover)}
+.lang{display:flex;border:2px solid var(--azul);border-radius:30px;overflow:hidden;flex-shrink:0}
+.lang button{background:#fff;border:0;padding:6px 12px;font-family:'Montserrat';font-weight:600;font-size:.72rem;cursor:pointer;color:var(--azul)}
+.lang button.on{background:var(--azul);color:#fff}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding:130px 0 140px;position:relative;overflow:hidden;background:linear-gradient(120deg,#ffffff 0%,#eef6fd 55%,#dcecfb 100%)}
+.hero::before{content:"";position:absolute;right:-120px;top:90px;width:520px;height:520px;background:linear-gradient(135deg,var(--azul2),var(--azul3));border-radius:250px 0 250px 0;opacity:.14}
+.hero::after{content:"";position:absolute;right:220px;top:420px;width:180px;height:180px;background:var(--rosa);border-radius:0 0 180px 0;opacity:.12}
+.hero .wrap{width:100%;position:relative;z-index:1}
+.onda{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:110px;display:block}
+.kicker{display:inline-block;background:linear-gradient(90deg,var(--azul2),var(--hover));color:#fff;font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;padding:6px 22px;margin-bottom:24px;transform:skew(-20deg)}
+.kicker>*{display:inline-block;transform:skew(20deg)}
+.hero h1{font-size:clamp(2.8rem,8vw,6.2rem);text-transform:uppercase;letter-spacing:-.01em}
+.hero h1 span{display:block}
+.hero h1 .l1{color:var(--txt);font-weight:300}
+.hero h1 .l2{color:var(--azul3)}
+.hero h1 .l3{background:linear-gradient(90deg,var(--azul2),var(--rosa));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:620px;color:var(--txt2);font-size:1.08rem;margin:26px 0 34px}
+.countdown{display:inline-block;background:#fff;border-radius:var(--r);box-shadow:0 8px 30px rgba(0,120,180,.15);padding:18px 24px;border-left:6px solid var(--rosa)}
+.countdown small{display:block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--rosa)}
+.countdown strong{display:block;font-weight:600;margin:4px 0 10px}
+.cd{display:flex;gap:18px}
+.cd div{text-align:center}
+.cd b{display:block;font-weight:900;font-size:2.4rem;color:var(--azul3);line-height:1}
+.cd em{font-style:normal;font-size:.66rem;font-weight:600;text-transform:uppercase;color:var(--txt2)}
+.cd2{margin-top:10px;font-size:.76rem;color:var(--txt2)}
+
+/* marquee */
+.marquee{background:linear-gradient(90deg,var(--azul),var(--azulEsc));color:#fff;overflow:hidden;white-space:nowrap;padding:13px 0}
+.marquee .trilho{display:inline-block;animation:rolar 70s linear infinite}
+.marquee:hover .trilho{animation-play-state:paused}
+.marquee span{font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-right:56px}
+.marquee span::before{content:"● ";color:var(--rosa)}
+@keyframes rolar{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* kpis */
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.kpi{background:#fff;padding:28px 26px;position:relative;border-radius:var(--r);box-shadow:0 2px 14px rgba(0,0,0,.07);overflow:hidden;transition:transform .3s,box-shadow .3s}
+.kpi::before{content:"";position:absolute;top:0;left:0;height:5px;width:0;background:linear-gradient(90deg,var(--azul2),var(--azul3));transition:width .4s}
+.kpi:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(0,120,180,.18)}
+.kpi:hover::before{width:100%}
+.kpi b{font-weight:900;font-size:2.5rem;color:var(--azul3);display:block;line-height:1}
+.kpi h3{font-size:.98rem;font-weight:700;margin:10px 0 4px}
+.kpi p{font-size:.86rem;color:var(--txt2)}
+
+/* novidades */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{background:#fff;border-left:5px solid var(--azul);border-radius:var(--r);padding:24px 26px;box-shadow:0 2px 14px rgba(0,0,0,.06);position:relative}
+.card .data{font-size:.74rem;font-weight:700;color:var(--azul3);text-transform:uppercase}
+.card h3{font-size:1.06rem;font-weight:700;margin:6px 0 8px;padding-right:60px}
+.card p{color:var(--txt2);font-size:.92rem}
+.card .ato{display:inline-block;margin-top:12px;font-size:.7rem;font-weight:600;background:var(--alt);padding:4px 12px;border-radius:30px;color:var(--azulEsc)}
+a.ato{text-decoration:none;border:1px solid transparent;transition:border-color .2s,background .2s}
+a.ato:hover{border-color:var(--azul);background:#fff;color:var(--azul3)}
+.links-nov{list-style:none;margin-top:14px;padding-top:12px;border-top:1px dashed var(--linha);display:flex;flex-direction:column;gap:6px}
+.links-nov a{display:block;text-decoration:none;font-size:.82rem;font-weight:600;color:var(--azul3);line-height:1.35}
+.links-nov a:hover{color:var(--hover);text-decoration:underline}
+.links-nov em{display:inline-block;font-style:normal;font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:2px 8px;border-radius:30px;margin-right:8px;vertical-align:1px;background:#e3f1fc;color:var(--azul3)}
+.links-nov .fonte em{background:#f1f1f1;color:var(--txt2)}
+.links-nov .fonte a{color:var(--txt2);font-weight:500}
+.selo{position:absolute;top:18px;right:18px;background:var(--rosa);color:#fff;font-size:.62rem;font-weight:700;padding:4px 10px;border-radius:30px;letter-spacing:.06em}
+
+/* timeline */
+.tl{position:relative;padding-left:40px}
+.tl::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:3px;border-radius:3px;background:linear-gradient(var(--azul2),var(--azul3))}
+.tl-item{position:relative;margin-bottom:18px;cursor:pointer;background:#fff;border-radius:var(--r);padding:16px 20px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.tl-item::before{content:"";position:absolute;left:-36px;top:22px;width:16px;height:16px;border:3px solid var(--azul);background:#fff;border-radius:50%}
+.tl-item.atual::before{background:var(--rosa);border-color:var(--rosa);box-shadow:0 0 0 6px rgba(250,40,145,.15)}
+.tl-cab{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.tl-cab h3{font-size:1.8rem;color:var(--azul3)}
+.tl-cab strong{font-weight:700}
+.badge{font-size:.62rem;font-weight:700;text-transform:uppercase;padding:3px 10px;border-radius:30px;border:1px solid currentColor}
+.badge.atual{background:var(--rosa);color:#fff;border-color:var(--rosa)}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.tag{font-size:.66rem;font-weight:600;padding:3px 10px;border-radius:30px;background:#e3f1fc;color:var(--azul3)}
+.tag.t1{background:#e6f4ec;color:var(--verde)}.tag.t2{background:#fff0e6;color:#c25200}
+.tl-corpo{max-height:0;overflow:hidden;transition:max-height .4s}
+.tl-item.aberto .tl-corpo{max-height:400px}
+.tl-corpo ul{padding:12px 0 4px 18px;color:var(--txt2)}
+
+/* tabela */
+.tabela-wrap{overflow-x:auto;border-radius:var(--r);box-shadow:0 2px 14px rgba(0,0,0,.06)}
+table{width:100%;border-collapse:collapse;background:#fff;min-width:640px}
+th{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;text-align:left;background:transparent;color:#fff;padding:14px 16px}
+thead tr{background:linear-gradient(90deg,var(--azul),var(--azulEsc))}
+td{padding:13px 16px;border-top:1px solid var(--linha);font-size:.9rem;vertical-align:top}
+td:first-child{font-weight:700;color:var(--azul3)}
+tr:hover td{background:#f3f8fd}
+
+/* tributos e pilares */
+.trib{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:56px}
+.trib div{border-radius:var(--r);padding:28px;background:#fff;box-shadow:0 2px 14px rgba(0,0,0,.06)}
+.trib b{font-weight:900;font-size:3rem;color:var(--azul3);line-height:1}
+.trib h3{font-size:1rem;font-weight:700;margin-top:6px}
+.trib small{display:block;font-size:.72rem;font-weight:600;color:var(--rosa);text-transform:uppercase;margin:4px 0 12px}
+.trib p{color:var(--txt2);font-size:.9rem}
+.pilares{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pilares div{background:#fff;padding:24px;border-radius:var(--r);box-shadow:0 2px 10px rgba(0,0,0,.05);border-top:4px solid var(--azul2)}
+.pilares div:nth-child(3n+2){border-top-color:var(--rosa)}
+.pilares div:nth-child(3n){border-top-color:var(--laranja)}
+.pilares h4{font-size:.86rem;font-weight:800;text-transform:uppercase;color:var(--azul3);margin-bottom:6px}
+.pilares p{font-size:.9rem;color:var(--txt2)}
+
+/* impactos */
+.imp{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.imp div.c{background:#fff;padding:26px;border-radius:var(--r);box-shadow:0 2px 14px rgba(0,0,0,.06);border-top:5px solid var(--azul)}
+.imp h3{font-size:1.3rem;color:var(--azul3)}
+.imp p{color:var(--txt2);font-size:.92rem;margin:6px 0 16px}
+.urg small{font-size:.68rem;font-weight:700;text-transform:uppercase;color:var(--txt2);display:flex;justify-content:space-between}
+.barra{height:8px;background:var(--linha);border-radius:8px;margin-top:6px;overflow:hidden}
+.barra i{display:block;height:100%;width:0;border-radius:8px;background:linear-gradient(90deg,var(--azul2),var(--rosa));transition:width 1.4s ease}
+
+/* citacao */
+.citacao{background:linear-gradient(90deg,var(--azul),var(--azulEsc));color:#fff;padding:80px 0;position:relative;overflow:hidden}
+.citacao::before{content:"";position:absolute;left:-80px;bottom:-80px;width:260px;height:260px;border-radius:0 250px 0 0;background:rgba(255,255,255,.08)}
+.citacao blockquote{font-weight:800;font-size:clamp(1.4rem,3.2vw,2.3rem);line-height:1.25;max-width:960px;border-left:6px solid var(--rosa);padding-left:28px;position:relative}
+.citacao cite{display:block;margin-top:18px;font-style:normal;font-size:.8rem;font-weight:600;color:#cfe5fa;padding-left:34px}
+
+/* checklist */
+.prog{font-size:.85rem;font-weight:700;margin-bottom:18px;color:var(--azul3)}
+.prog .barra{max-width:420px}
+.chk{list-style:none;background:#fff;border-radius:var(--r);box-shadow:0 2px 14px rgba(0,0,0,.06);overflow:hidden}
+.chk li{display:flex;gap:16px;align-items:center;padding:15px 20px;border-top:1px solid var(--linha);cursor:pointer;user-select:none}
+.chk li:first-child{border-top:0}
+.chk li:hover{background:#f3f8fd}
+.box{width:22px;height:22px;border:2px solid var(--azul);border-radius:6px;flex-shrink:0;display:grid;place-items:center;color:#fff;font-size:.8rem}
+.chk li.ok .box{background:var(--azul)}
+.chk li.ok .t{text-decoration:line-through;color:#999}
+.chk .t{flex:1}
+.chk .p{font-size:.72rem;font-weight:700;color:var(--azulEsc);background:var(--alt);padding:3px 10px;border-radius:30px;white-space:nowrap}
+
+/* genomma */
+.intro{max-width:860px;color:var(--txt2);margin:-16px 0 32px}
+.gcards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.gcard{background:#fff;border-radius:var(--r);box-shadow:0 2px 14px rgba(0,0,0,.07);border-top:5px solid var(--azul);padding:26px;display:flex;flex-direction:column}
+.gcard:nth-child(2){border-top-color:var(--rosa)}
+.gcard:nth-child(3){border-top-color:var(--azul2)}
+.gcard:nth-child(4){border-top-color:var(--laranja)}
+.gcard:nth-child(5){border-top-color:var(--lima)}
+.gcard:last-child:nth-child(odd){grid-column:1/-1}
+.g-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:6px}
+.g-cat{font-weight:900;font-size:1.25rem;text-transform:uppercase;color:var(--txt);line-height:1.15}
+.g-st{font-size:.62rem;font-weight:700;text-transform:uppercase;padding:4px 10px;border-radius:30px;white-space:nowrap;background:#e6f4ec;color:var(--verde)}
+.g-st.parcial{background:#fff0e6;color:#c25200}
+.g-enq{font-weight:800;color:var(--azul3);font-size:1rem}
+.g-base{font-size:.72rem;font-weight:600;color:var(--txt2);margin-bottom:10px}
+.g-ex{font-size:.84rem;color:var(--txt2);margin-bottom:8px}
+.g-ex b{font-weight:700;color:var(--txt)}
+.gcard>p.g-txt{font-size:.9rem;color:var(--txt2);flex:1}
+.g-dl{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+.g-dl div{background:var(--alt);padding:10px 14px;border-radius:var(--r)}
+.g-dl dt{font-size:.64rem;font-weight:700;text-transform:uppercase;color:var(--txt2)}
+.g-dl dd{font-weight:900;font-size:1.3rem;color:var(--azul3);line-height:1.2}
+.transv{margin-top:44px;background:#fff;border-radius:var(--r);box-shadow:0 2px 14px rgba(0,0,0,.06);border-left:6px solid var(--rosa);padding:26px 30px}
+.transv h3{font-size:1.15rem;text-transform:uppercase;color:var(--azul3);margin-bottom:10px}
+.transv ul{padding-left:20px;color:var(--txt2)}
+.transv li{margin:6px 0}
+
+/* comex */
+.comex{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+.cx{background:#fff;border-radius:var(--r);box-shadow:0 2px 14px rgba(0,0,0,.06);overflow:hidden}
+.cx h3{background:linear-gradient(90deg,var(--azul2),var(--azul3));color:#fff;font-size:1.05rem;text-transform:uppercase;padding:14px 20px}
+.cx ul{list-style:none}
+.cx li{padding:14px 20px;border-top:1px solid var(--linha)}
+.cx li:first-child{border-top:0}
+.cx strong{display:block;font-size:.92rem}
+.cx p{font-size:.86rem;color:var(--txt2);margin-top:2px}
+.ac{display:inline-block;margin-left:6px;font-size:.58rem;font-weight:700;text-transform:uppercase;background:#ffe3f1;color:#c0136b;padding:2px 8px;border-radius:30px;vertical-align:middle}
+
+/* entidades */
+.ent{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-bottom:56px}
+.ent div{background:#fff;border-radius:var(--r);box-shadow:0 2px 12px rgba(0,0,0,.06);padding:20px;display:flex;flex-direction:column}
+.ent h3{font-size:1.05rem;color:var(--azul3)}
+.ent small{font-size:.66rem;font-weight:700;color:var(--rosa);text-transform:uppercase;margin-bottom:8px}
+.ent p{font-size:.84rem;color:var(--txt2);flex:1}
+.ent a{align-self:flex-start;font-size:.7rem;font-weight:700;margin-top:14px;text-transform:uppercase;text-decoration:none;color:#fff;background:var(--azul);padding:7px 16px;border-radius:30px}
+.ent a:hover{background:var(--hover);color:#fff}
+
+/* glossário */
+abbr.gl{text-decoration:none;border-bottom:1.5px dotted var(--azul2);cursor:help;outline:none}
+abbr.gl:hover,abbr.gl:focus{background:#e3f1fc;border-bottom-color:var(--azul3);border-radius:3px}
+#gl-tip{position:fixed;z-index:200;max-width:min(320px,calc(100vw - 24px));background:var(--txt);color:#fff;font-size:.78rem;line-height:1.45;padding:10px 14px;border-radius:var(--r);box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .15s;top:-999px;left:-999px}
+#gl-tip.on{opacity:1}
+#gl-tip b{display:block;color:var(--azul2);font-weight:800;margin-bottom:2px}
+.gloss{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gloss div{background:#fff;border-radius:var(--r);box-shadow:0 2px 10px rgba(0,0,0,.05);padding:14px 16px;border-left:4px solid var(--azul2)}
+.gloss dt{font-weight:900;color:var(--azul3);font-size:.95rem}
+.gloss dd{font-size:.82rem;color:var(--txt2);margin-top:2px}
+@media (max-width:900px){ .gloss{grid-template-columns:1fr 1fr} }
+@media (max-width:600px){ .gloss{grid-template-columns:1fr} }
+
+/* fontes por tópico e links de leis */
+a.lei{color:var(--azul3);font-weight:600;text-decoration:underline;text-decoration-color:rgba(0,140,196,.35);text-underline-offset:2px}
+a.lei:hover{color:var(--hover);text-decoration-color:currentColor}
+.srcs{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:10px;font-size:.66rem}
+.srcs span{font-weight:700;text-transform:uppercase;color:var(--txt2);letter-spacing:.04em}
+.srcs a{text-decoration:none;background:var(--alt);color:var(--azulEsc);font-weight:600;padding:2px 9px;border-radius:30px;border:1px solid #d7e8f7;white-space:nowrap}
+.srcs a:hover{background:var(--azul);color:#fff;border-color:var(--azul)}
+.td-src .srcs{margin-top:0}
+.comex.dois{grid-template-columns:repeat(2,1fr)}
+.trib{grid-template-columns:repeat(4,1fr)}
+
+/* prioridade e status */
+.prio{margin-top:14px;padding-top:12px;border-top:1px dashed var(--linha)}
+.prio-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:4px}
+.pbadge{font-size:.62rem;font-weight:800;text-transform:uppercase;padding:3px 10px;border-radius:30px}
+.pbadge.alta{background:#ffe3f1;color:#c0136b}.pbadge.media{background:#fff0e6;color:#c25200}.pbadge.baixa{background:#e6f4ec;color:var(--verde)}
+.pdias{font-size:.78rem;font-weight:800}
+.pdias.c-rosa{color:#c0136b}.pdias.c-laranja{color:#c25200}.pdias.c-verde{color:var(--verde)}
+.prio small{display:block;font-size:.76rem;color:var(--txt2)}
+.prio small b{color:var(--txt)}
+.barra i.c-rosa{background:linear-gradient(90deg,#ff7fb8,var(--rosa))}
+.barra i.c-laranja{background:linear-gradient(90deg,#ffb37a,var(--laranja))}
+.barra i.c-verde{background:linear-gradient(90deg,var(--lima),var(--verde))}
+.status{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+.status button{font-family:'Montserrat';font-size:.66rem;font-weight:700;padding:5px 12px;border-radius:30px;border:1px solid var(--linha);background:#fff;color:var(--txt2);cursor:pointer}
+.status button:hover{border-color:var(--azul);color:var(--azul)}
+.status button.on.s0{background:#efefef;border-color:#cfcfcf;color:var(--txt)}
+.status button.on.s1{background:var(--laranja);border-color:var(--laranja);color:#fff}
+.status button.on.s2{background:var(--verde);border-color:var(--verde);color:#fff}
+.legenda{margin-top:18px;font-size:.8rem;color:var(--txt2);background:#fff;border-left:4px solid var(--azul2);border-radius:var(--r);padding:12px 16px;max-width:980px}
+
+/* legislação */
+.lg-busca{width:100%;max-width:520px;font-family:'Montserrat';font-size:.9rem;padding:12px 18px;border:2px solid var(--azul);border-radius:30px;margin-bottom:24px;outline:none;background:#fff}
+.lg-busca:focus{box-shadow:0 0 0 4px rgba(62,142,222,.18)}
+.lg{background:#fff;border-radius:var(--r);box-shadow:0 2px 14px rgba(0,0,0,.06);margin-bottom:16px;overflow:hidden}
+.lg summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;padding:16px 22px;background:linear-gradient(90deg,var(--azul2),var(--azul3));color:#fff;font-weight:800;text-transform:uppercase;font-size:.92rem}
+.lg summary::-webkit-details-marker{display:none}
+.lg summary::after{content:"▾";margin-left:12px;transition:transform .2s}
+.lg:not([open]) summary::after{transform:rotate(-90deg)}
+.lg summary em{font-style:normal;font-size:.68rem;font-weight:700;background:rgba(255,255,255,.22);padding:3px 10px;border-radius:30px;margin-left:auto}
+.lg ul{list-style:none}
+.lg li{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:14px 22px;border-top:1px solid var(--linha)}
+.lg li:first-child{border-top:0}
+.lg time{font-weight:800;font-size:.8rem;color:var(--azul3);padding-top:2px}
+.lg-num{font-weight:800;font-size:.95rem;text-decoration:none;color:var(--txt)}
+.lg-num:hover{color:var(--hover);text-decoration:underline}
+.lg li p{font-size:.86rem;color:var(--txt2);margin-top:2px}
+.lg li.g-proj .lg-num{color:#c25200}
+.lg-vazio{color:var(--txt2);font-style:italic}
+
+/* fontes */
+.fontes{columns:2;column-gap:40px;list-style:none}
+.fontes li{break-inside:avoid;padding:10px 0;border-bottom:1px solid var(--linha);font-size:.88rem}
+.fontes a{text-decoration:none;font-weight:500}.fontes a:hover{text-decoration:underline}
+
+footer{background:var(--azul);color:#fff;padding:0 0 40px;font-size:.85rem}
+footer::before{content:"";display:block;height:5px;background:linear-gradient(90deg,var(--azulEsc),var(--azul2));margin-bottom:36px}
+footer p{color:#eaf4fd}
+footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
+.print{position:fixed;right:22px;bottom:22px;z-index:40;background:var(--azul);color:#fff;border:0;border-radius:30px;padding:13px 22px;font-family:'Montserrat';font-weight:700;font-size:.76rem;text-transform:uppercase;cursor:pointer;box-shadow:0 6px 18px rgba(0,120,180,.35)}
+.print:hover{background:var(--hover)}
+
+/* animacao */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1180px){
+  .ent{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:700px){ .links{display:none} }
+@media (max-width:900px){
+  .kpis,.trib,.pilares,.ent{grid-template-columns:repeat(2,1fr)}
+  .cards,.imp,.gcards,.comex,.comex.dois{grid-template-columns:1fr}
+  .trib{grid-template-columns:repeat(2,1fr)}
+  .lg li{grid-template-columns:1fr;gap:4px}
+  .fontes{columns:1}
+  .hero::before{width:320px;height:320px;right:-140px}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  section{padding:60px 0}
+  .kpis,.trib,.pilares,.ent{grid-template-columns:1fr}
+  .g-dl{grid-template-columns:1fr}
+  .trib{grid-template-columns:1fr}
+  .cd{gap:12px}.cd b{font-size:1.9rem}
+  .chk li{flex-wrap:wrap}
+  .print{right:12px;bottom:12px}
+  .hero::after{display:none}
+  .hero{min-height:auto;padding:110px 0 120px}
+  .hero::before{top:60px;width:220px;height:220px;right:-90px}
+}
+@media print{
+  nav,.print,.marquee,.lang,.onda{display:none!important}
+  .hero{min-height:auto;padding-top:20px;background:#fff}
+  .hero::before,.hero::after{display:none}
+  section{padding:24px 0;break-inside:avoid-page}
+  .rv{opacity:1!important;transform:none!important}
+  .tl-corpo{max-height:none!important}
+  .citacao{background:#fff;color:#000}
+  .barra i{width:var(--w)!important}
+  footer{background:#fff;color:#000}footer p,footer .mono{color:#000}
+  a{color:#000}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#topo"><i><b style="background:#fa2891"></b><b style="background:#45b8ea"></b><b style="background:#ff7313"></b><b style="background:#9ad858"></b></i><span>Dossiê RT</span></a>
+  <ul class="links" id="nav-links"></ul>
+  <div class="lang"><button data-l="pt">🇧🇷 PT</button><button data-l="es">🇪🇸 ES</button></div>
+</div></nav>
+
+<header class="hero" id="topo"><div class="wrap">
+  <div class="kicker" id="kicker"></div>
+  <h1 id="hero-h1"></h1>
+  <p id="hero-p"></p>
+  <div class="countdown">
+    <small id="cd-rotulo"></small>
+    <strong id="cd-marco"></strong>
+    <div class="cd" id="cd"></div>
+    <div class="cd2" id="cd2"></div>
+  </div>
+</div>
+<svg class="onda" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true"><path d="M0,60 C240,110 480,10 720,50 C960,90 1200,20 1440,55 L1440,110 L0,110 Z" fill="#3e8ede" opacity=".18"/><path d="M0,80 C300,40 560,110 840,75 C1080,45 1260,90 1440,70 L1440,110 L0,110 Z" fill="#3e8ede"/></svg>
+</header>
+
+<div class="marquee"><div class="trilho" id="marquee"></div></div>
+
+<section><div class="wrap"><h2 class="sec-titulo rv" data-s="kpis"></h2><div class="kpis" id="kpis"></div></div></section>
+<section class="alt" id="novidades"><div class="wrap"><h2 class="sec-titulo rv" data-s="novidades"></h2><div class="cards" id="cards"></div></div></section>
+<section id="genomma"><div class="wrap">
+  <h2 class="sec-titulo rv" data-s="genomma"></h2><p class="intro rv" id="g-intro"></p>
+  <div class="gcards" id="gcards"></div>
+  <p class="legenda rv" id="g-leg"></p>
+  <div class="transv rv"><h3 data-s="transversais"></h3><ul id="transv"></ul></div>
+</div></section>
+<section class="alt" id="isipi"><div class="wrap">
+  <h2 class="sec-titulo rv" data-s="isipi"></h2><p class="intro rv" id="ii-intro"></p>
+  <div class="comex dois" id="ii"></div>
+</div></section>
+<section id="cronograma"><div class="wrap"><h2 class="sec-titulo rv" data-s="cronograma"></h2><div class="tl" id="tl"></div></div></section>
+<section class="alt" id="aliquotas"><div class="wrap"><h2 class="sec-titulo rv" data-s="aliquotas"></h2><div class="tabela-wrap rv"><table id="tab"></table></div></div></section>
+<section id="tributos"><div class="wrap">
+  <h2 class="sec-titulo rv" data-s="tributos"></h2><div class="trib" id="trib"></div>
+  <h2 class="sec-titulo rv" data-s="mecanismos"></h2><div class="pilares" id="pilares"></div>
+</div></section>
+<section class="alt" id="impactos"><div class="wrap"><h2 class="sec-titulo rv" data-s="impactos"></h2><div class="imp" id="imp"></div><p class="legenda rv" id="imp-leg"></p></div></section>
+<section id="comex"><div class="wrap">
+  <h2 class="sec-titulo rv" data-s="comex"></h2><p class="intro rv" id="cx-intro"></p>
+  <div class="comex" id="cx"></div>
+</div></section>
+<section class="alt" id="legislacao"><div class="wrap">
+  <h2 class="sec-titulo rv" data-s="legislacao"></h2><p class="intro rv" id="lg-intro"></p>
+  <input id="lg-busca" class="lg-busca" type="search" autocomplete="off">
+  <div id="lg"></div>
+</div></section>
+<section id="glossario"><div class="wrap">
+  <h2 class="sec-titulo rv" data-s="glossario"></h2><p class="intro rv" id="gl-intro"></p>
+  <dl class="gloss" id="gl"></dl>
+</div></section>
+<div class="citacao"><div class="wrap"><blockquote id="cit"></blockquote><cite id="cit-a"></cite></div></div>
+<section id="checklist"><div class="wrap">
+  <h2 class="sec-titulo rv" data-s="checklist"></h2>
+  <div class="prog"><span id="prog-t"></span><div class="barra"><i id="prog-b"></i></div></div>
+  <ul class="chk" id="chk"></ul>
+</div></section>
+<section class="alt" id="fontes"><div class="wrap">
+  <h2 class="sec-titulo rv" data-s="entidades"></h2><div class="ent" id="ent"></div>
+  <h2 class="sec-titulo rv" data-s="fontes"></h2><ul class="fontes" id="fnt"></ul>
+</div></section>
+
+<footer><div class="wrap"><p id="disc"></p><p class="mono" id="rod"></p></div></footer>
+<button class="print" id="btn-print" onclick="window.print()"></button>
+
+<script type="application/json" id="dados">__DADOS__</script>
+<script>
+(function(){
+  'use strict';
+  var D = JSON.parse(document.getElementById('dados').textContent);
+  var ids = ['novidades','genomma','isipi','cronograma','tributos','impactos','comex','legislacao','glossario','checklist','fontes'];
+  var store = {
+    get: function(k){ try { return localStorage.getItem(k); } catch(e){ return null; } },
+    set: function(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+  };
+  var CHK_KEY = 'dossie-rt-checklist-v3', ST_KEY = 'dossie-rt-status';
+  var lang = store.get('dossie-rt-lang');
+  if (!D[lang]) lang = 'pt';
+  var feitos = {}, status = {};
+  try { feitos = JSON.parse(store.get(CHK_KEY) || '{}') || {}; } catch(e){ feitos = {}; }
+  try { status = JSON.parse(store.get(ST_KEY) || '{}') || {}; } catch(e){ status = {}; }
+  var REFS = D.refs || {}, FI = D.fontesItens || {}, PR = D.prioridades || {}, LEG = D.legislacao || [];
+  var filtroLegis = '';
+
+  function $(id){ return document.getElementById(id); }
+  function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function fmtData(iso){ var p = iso.split('-'); return p[2] + '/' + p[1] + '/' + p[0]; }
+  function a(url, txt, cls){ return '<a' + (cls ? ' class="' + cls + '"' : '') + ' href="' + esc(url) + '" target="_blank" rel="noopener">' + txt + '</a>'; }
+
+  /* ---- links automáticos para as normas citadas no texto ---- */
+  function legUrl(prefixo, n){
+    var alvo = (prefixo + ' nº ' + n + '/').toLowerCase();
+    for (var i = 0; i < LEG.length; i++) if (LEG[i].num.toLowerCase().indexOf(alvo) === 0) return LEG[i].url;
+    return null;
+  }
+  var NUM = '(?:n(?:º|\\.º)\\s*)?';
+  var RX = new RegExp([
+    '(EC\\s*' + NUM + '132\\/2023)',
+    '((?:LC|Lei Complementar|Ley Complementaria)\\s*' + NUM + '(214\\/2025|227\\/2026))',
+    '(Decreto\\s*' + NUM + '12\\.955\\/2026)',
+    '(Resolu(?:ção|ción)\\s*CGIBS\\s*' + NUM + '6\\/2026)',
+    '(Resolu(?:ção|ción)\\s*CGSN\\s*' + NUM + '(194|186)\\/2026)',
+    '((?:Ato|Acto)\\s+Técnico\\s+Conjunto\\s*(?:RFB\\/SUFIS\\/CGIBS\\s*)?' + NUM + '(\\d+)\\/2026)',
+    '((?:Ato|Acto)\\s+Conjunto\\s+RFB\\/CGIBS\\s*' + NUM + '(\\d+)\\/2026)',
+    '(PLP\\s*42\\/2026)'
+  ].join('|'), 'g');
+  function linkify(texto){
+    return esc(texto).replace(RX, function(m, ec, lc, lcN, dec, res6, cgsn, cgsnN, atc, atcN, ac, acN, plp){
+      var u = null;
+      if (ec) u = REFS.ec132.u;
+      else if (lc) u = lcN.indexOf('214') === 0 ? REFS.lc214.u : REFS.lc227.u;
+      else if (dec) u = REFS.dec12955.u;
+      else if (res6) u = REFS.res6.u;
+      else if (cgsn) u = legUrl('Resolução CGSN', cgsnN);
+      else if (atc) u = legUrl('Ato Técnico Conjunto', atcN);
+      else if (ac) u = legUrl('Ato Conjunto RFB/CGIBS', acN);
+      else if (plp) u = REFS.plp42.u;
+      return u ? a(u, m, 'lei') : m;
+    });
+  }
+
+  /* ---- fontes de cada tópico ---- */
+  function fontes(key, ui){
+    var lst = FI[key]; if (!lst || !lst.length) return '';
+    return '<div class="srcs"><span>' + esc(ui.fontesLbl) + ':</span>' + lst.map(function(id){
+      var r = REFS[id]; return r ? a(r.u, esc(r.n) + ' ↗') : '';
+    }).join('') + '</div>';
+  }
+
+  /* ---- prioridade + prazo + status ---- */
+  function prioridade(key, ui){
+    var p = PR[key]; if (!p) return '';
+    var hoje = new Date(); hoje.setHours(0,0,0,0);
+    var pz = p.prazo.split('-'), dt = new Date(+pz[0], +pz[1]-1, +pz[2]);
+    var dias = Math.round((dt - hoje) / 864e5);
+    var txt = dias > 0 ? ui.faltam.replace('{d}', dias) : (dias === 0 ? ui.hoje : ui.vencido.replace('{d}', -dias));
+    var fill = Math.max(0, Math.min(100, Math.round((1 - dias / 180) * 100)));
+    var cor = dias < 30 ? 'c-rosa' : (dias < 90 ? 'c-laranja' : 'c-verde');
+    var st = status[key] || 0;
+    return '<div class="prio">' +
+      '<div class="prio-top"><span class="pbadge ' + p.p + '">' + esc(ui.prio[p.p]) + '</span><span class="pdias ' + cor + '">' + esc(txt) + '</span></div>' +
+      '<small>' + esc(ui.proxPrazo) + ': <b>' + fmtData(p.prazo) + '</b> — ' + esc(p.marco[lang] || p.marco.pt) + '</small>' +
+      '<div class="barra"><i class="' + cor + '" data-w="' + fill + '" style="--w:' + fill + '%"></i></div>' +
+      '<div class="status" data-k="' + key + '">' + ui.statusOpts.map(function(o, i){
+        return '<button type="button" data-v="' + i + '" class="s' + i + (st === i ? ' on' : '') + '">' + esc(o) + '</button>';
+      }).join('') + '</div></div>';
+  }
+  function ligarStatus(){
+    document.querySelectorAll('.status button').forEach(function(b){
+      b.addEventListener('click', function(){
+        var box = b.parentNode, k = box.dataset.k, v = +b.dataset.v;
+        status[k] = v; store.set(ST_KEY, JSON.stringify(status));
+        box.querySelectorAll('button').forEach(function(x){ x.classList.toggle('on', +x.dataset.v === v); });
+      });
+    });
+  }
+
+  function linksNovidade(n, ui){
+    var ls = n.links || [];
+    var principal = ls.filter(function(l){ return l.tipo === 'oficial'; })[0] || ls[0];
+    var selo = principal
+      ? '<a class="ato" href="' + esc(principal.url) + '" target="_blank" rel="noopener" title="' + esc(principal.rotulo) + '">' + esc(n.ato) + ' ↗</a>'
+      : '<span class="ato">' + esc(n.ato) + '</span>';
+    if (!ls.length) return selo;
+    var lista = ls.map(function(l){
+      var tit = (ui.linksTit && ui.linksTit[l.tipo]) || '';
+      return '<li class="lk ' + esc(l.tipo) + '"><a href="' + esc(l.url) + '" target="_blank" rel="noopener"><em>' + esc(tit) + '</em>' + esc(l.rotulo) + ' ↗</a></li>';
+    }).join('');
+    return selo + '<ul class="links-nov">' + lista + '</ul>';
+  }
+
+  function blocos(el, dados, prefixo, ui){
+    $(el).innerHTML = dados.blocos.map(function(b, bi){
+      return '<div class="cx rv"><h3>' + esc(b.titulo) + '</h3><ul>' + b.itens.map(function(i, ii){
+        return '<li><strong>' + esc(i.t) + (i.ok ? '' : '<span class="ac">' + esc(ui.aConfirmar) + '</span>') + '</strong><p>' + linkify(i.d) + '</p>' + fontes(prefixo + '.' + bi + '.' + ii, ui) + '</li>';
+      }).join('') + '</ul></div>';
+    }).join('');
+  }
+
+  function legislacao(ui){
+    var f = filtroLegis.toLowerCase().trim();
+    var ordem = ['ec','lc','dec','res','ac','atc','proj'];
+    var html = ordem.map(function(g){
+      var itens = LEG.filter(function(l){
+        if (l.g !== g) return false;
+        if (!f) return true;
+        return (l.num + ' ' + (l.desc[lang] || l.desc.pt) + ' ' + fmtData(l.data)).toLowerCase().indexOf(f) >= 0;
+      }).sort(function(x, y){ return x.data < y.data ? 1 : (x.data > y.data ? -1 : 0); });
+      if (!itens.length) return '';
+      return '<details class="lg rv in" open><summary><span>' + esc(ui.legisGrupos[g]) + '</span><em>' + esc(ui.legisN.replace('{n}', itens.length)) + '</em></summary><ul>' +
+        itens.map(function(l){
+          return '<li class="g-' + g + '"><time>' + fmtData(l.data) + '</time><div>' + a(l.url, esc(l.num) + ' ↗', 'lg-num') + '<p>' + esc(l.desc[lang] || l.desc.pt) + '</p></div></li>';
+        }).join('') + '</ul></details>';
+    }).join('');
+    $('lg').innerHTML = html || '<p class="lg-vazio">' + esc(ui.legisVazio) + '</p>';
+  }
+
+  /* ---- glossário: siglas com explicação ao passar o mouse/tocar ---- */
+  var GL = D.glossario || [], GLMAP = {}, GLRX = null;
+  (function(){
+    GL.forEach(function(g){ GLMAP[g.t] = g; });
+    var termos = GL.map(function(g){ return g.t; }).sort(function(x, y){ return y.length - x.length; })
+      .map(function(t){ return t.replace(/[.*+?^${}()|[\]\\\/-]/g, '\\$&'); });
+    if (termos.length) GLRX = new RegExp('(^|[^A-Za-zÀ-ÿ0-9])(' + termos.join('|') + ')(s?)(?![A-Za-zÀ-ÿ0-9])', 'g');
+  })();
+  var NAO_GLOSSAR = 'a,abbr,script,style,button,input,textarea,h1,.sec-titulo,.kpi b,dd,time,summary,nav,.marquee,#gl,#gl-tip,.g-cat,.trib b';
+  function glossar(raiz){
+    if (!GLRX || !raiz) return;
+    raiz._glv = {};
+    var w =document.createTreeWalker(raiz, NodeFilter.SHOW_TEXT, { acceptNode: function(n){
+      if (!n.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+      return n.parentNode.closest(NAO_GLOSSAR) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+    } });
+    var nos = []; while (w.nextNode()) nos.push(w.currentNode);
+    nos.forEach(function(n){
+      var s = n.nodeValue, m, ult = 0, achou = false, frag = document.createDocumentFragment();
+      var bloco = n.parentNode.closest('li, tr, .rv, .prio') || raiz;
+      var vistos = bloco._glv || (bloco._glv = {});
+      GLRX.lastIndex = 0;
+      while ((m = GLRX.exec(s))) {
+        if (vistos[m[2]]) continue;
+        vistos[m[2]] = 1;
+        achou = true;
+        var ini = m.index + m[1].length;
+        frag.appendChild(document.createTextNode(s.slice(ult, ini)));
+        var ab = document.createElement('abbr');
+        ab.className = 'gl'; ab.tabIndex = 0; ab.setAttribute('data-t', m[2]);
+        ab.textContent = m[2] + m[3];
+        frag.appendChild(ab);
+        ult = ini + m[2].length + m[3].length;
+        GLRX.lastIndex = ult;
+      }
+      if (!achou) return;
+      frag.appendChild(document.createTextNode(s.slice(ult)));
+      n.parentNode.replaceChild(frag, n);
+    });
+  }
+  var tip = document.createElement('div'); tip.id = 'gl-tip'; tip.setAttribute('role', 'tooltip'); document.body.appendChild(tip);
+  function mostrarTip(ab){
+    var g = GLMAP[ab.getAttribute('data-t')]; if (!g) return;
+    tip.innerHTML = '<b>' + esc(g.t) + '</b>' + esc(g[lang] || g.pt);
+    tip.classList.add('on');
+    var r = ab.getBoundingClientRect(), vw = document.documentElement.clientWidth;
+    var x = r.left + r.width / 2 - tip.offsetWidth / 2;
+    x = Math.max(12, Math.min(x, vw - tip.offsetWidth - 12));
+    var y = r.top - tip.offsetHeight - 10;
+    if (y < 80) y = r.bottom + 10;
+    tip.style.left = x + 'px'; tip.style.top = y + 'px';
+  }
+  function esconderTip(){ tip.classList.remove('on'); }
+  function abbrDe(e){ return e.target && e.target.closest ? e.target.closest('abbr.gl') : null; }
+  document.addEventListener('mouseover', function(e){ var ab = abbrDe(e); if (ab) mostrarTip(ab); });
+  document.addEventListener('mouseout', function(e){ if (abbrDe(e)) esconderTip(); });
+  document.addEventListener('focusin', function(e){ var ab = abbrDe(e); if (ab) mostrarTip(ab); });
+  document.addEventListener('focusout', function(e){ if (abbrDe(e)) esconderTip(); });
+  document.addEventListener('click', function(e){ var ab = abbrDe(e); if (ab) { mostrarTip(ab); e.stopPropagation(); } else esconderTip(); }, true);
+  window.addEventListener('scroll', esconderTip, { passive: true });
+
+  function glossarioSecao(ui){
+    $('gl-intro').textContent = ui.glossIntro || D.pt.ui.glossIntro;
+    var vistos = {};
+    $('gl').innerHTML = GL.filter(function(g){ var k = g.t.toLowerCase(); if (vistos[k]) return false; vistos[k] = 1; return true; })
+      .sort(function(x, y){ return x.t.localeCompare(y.t, 'pt'); })
+      .map(function(g){ return '<div><dt>' + esc(g.t) + '</dt><dd>' + esc(g[lang] || g.pt) + '</dd></div>'; }).join('');
+  }
+
+  var timer = null;
+  function contagem(L){
+    var alvo = new Date(L.meta.marco.data), sec = new Date(L.meta.marcoSecundario.data), u = L.ui.contagemUnid;
+    function tick(){
+      var agora = new Date(), d = alvo - agora;
+      if (d <= 0) { $('cd').innerHTML = '<div><b>✓</b><em>' + esc(L.ui.contagemPassou) + '</em></div>'; }
+      else {
+        var v = [Math.floor(d/864e5), Math.floor(d/36e5)%24, Math.floor(d/6e4)%60, Math.floor(d/1e3)%60];
+        $('cd').innerHTML = v.map(function(n,i){ return '<div><b>' + (i ? String(n).padStart(2,'0') : n) + '</b><em>' + esc(u[i]) + '</em></div>'; }).join('');
+      }
+      var d2 = Math.ceil((sec - agora)/864e5);
+      $('cd2').textContent = d2 > 0 ? '→ ' + L.meta.marcoSecundario.rotulo + ': ' + d2 + ' ' + u[0] : '';
+    }
+    clearInterval(timer); tick(); timer = setInterval(tick, 1000);
+  }
+
+  function progresso(L){
+    var n = L.checklist.length, x = 0;
+    for (var i = 0; i < n; i++) if (feitos[i]) x++;
+    $('prog-t').textContent = L.ui.contador.replace('{x}', x).replace('{n}', n);
+    $('prog-b').style.width = (n ? x/n*100 : 0) + '%';
+  }
+
+  function render(){
+    var L = D[lang], ui = L.ui;
+    ['fontesLbl','legisIntro','legisBusca','legisVazio','legisGrupos','legisN','prio','proxPrazo','faltam','hoje','vencido','statusOpts','prioLegenda','linksTit','aConfirmar'].forEach(function(k){ if (ui[k] === undefined) ui[k] = D.pt.ui[k]; });
+    document.documentElement.lang = L.meta.lang;
+    document.title = L.meta.titulo;
+    document.querySelectorAll('.lang button').forEach(function(b){ b.classList.toggle('on', b.dataset.l === lang); });
+
+    $('nav-links').innerHTML = ui.nav.map(function(t,i){ return '<li><a href="#' + ids[i] + '">' + esc(t) + '</a></li>'; }).join('');
+    $('kicker').innerHTML = '<span>' + esc(ui.heroKicker) + '</span>';
+    $('hero-h1').innerHTML = ui.heroLinhas.map(function(t,i){ return '<span class="l' + (i+1) + '">' + esc(t) + '</span>'; }).join('');
+    $('hero-p').textContent = ui.heroTexto;
+    $('cd-rotulo').textContent = ui.contagemRotulo;
+    $('cd-marco').textContent = L.meta.marco.rotulo + ' — ' + new Date(L.meta.marco.data).toLocaleDateString(L.meta.lang);
+    contagem(L);
+
+    document.querySelectorAll('[data-s]').forEach(function(h){ h.textContent = ui.secoes[h.dataset.s]; });
+
+    var mq = L.novidades.map(function(n){ return '<span>' + esc(n.data + ' · ' + n.titulo) + '</span>'; }).join('');
+    $('marquee').innerHTML = mq + mq;
+
+    $('kpis').innerHTML = L.kpis.map(function(k, i){ return '<div class="kpi rv"><b>' + esc(k.valor) + '</b><h3>' + esc(k.rotulo) + '</h3><p>' + linkify(k.nota) + '</p>' + fontes('kpis.' + i, ui) + '</div>'; }).join('');
+
+    $('cards').innerHTML = L.novidades.map(function(n){
+      return '<article class="card rv">' + (n.novo ? '<span class="selo">' + esc(ui.novo) + '</span>' : '') +
+        '<div class="data">' + esc(n.data) + '</div><h3>' + esc(n.titulo) + '</h3><p>' + linkify(n.resumo) + '</p>' + linksNovidade(n, ui) + '</article>';
+    }).join('');
+
+    var G = L.genomma, g = ui.g;
+    $('g-intro').textContent = G.intro;
+    $('gcards').innerHTML = G.itens.map(function(c, i){
+      return '<article class="gcard rv"><div class="g-top"><span class="g-cat">' + esc(c.categoria) + '</span><span class="g-st ' + esc(c.status) + '">' + esc(g.status[c.status]) + '</span></div>' +
+        '<div class="g-enq">' + esc(c.enquadramento) + '</div><div class="g-base">' + linkify(c.base) + '</div>' +
+        '<p class="g-ex"><b>' + esc(g.exemplos) + ':</b> ' + esc(c.exemplos) + '</p><p class="g-txt">' + linkify(c.texto) + '</p>' +
+        '<dl class="g-dl"><div><dt>' + esc(g.cbs) + '</dt><dd>' + esc(c.cbs) + '</dd></div><div><dt>' + esc(g.is) + '</dt><dd>' + esc(c.is) + '</dd></div></dl>' +
+        prioridade('genomma.' + i, ui) + fontes('genomma.' + i, ui) + '</article>';
+    }).join('');
+    $('g-leg').textContent = ui.prioLegenda;
+    $('transv').innerHTML = G.transversais.map(function(t, i){ return '<li>' + linkify(t) + fontes('transv.' + i, ui) + '</li>'; }).join('');
+
+    $('ii-intro').textContent = L.isipi.intro;
+    blocos('ii', L.isipi, 'isipi', ui);
+
+    $('cx-intro').textContent = L.comex.intro;
+    blocos('cx', L.comex, 'comex', ui);
+
+    $('lg-intro').textContent = ui.legisIntro;
+    $('lg-busca').placeholder = ui.legisBusca;
+    legislacao(ui);
+
+    var ents = (L.entidades && L.entidades.length) ? L.entidades : D.pt.entidades;
+    $('ent').innerHTML = ents.map(function(e){
+      return '<div class="rv"><h3>' + esc(e.nome) + '</h3><small>' + esc(e.papel) + '</small><p>' + esc(e.texto) + '</p><a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(ui.acessar) + ' ↗</a></div>';
+    }).join('');
+
+    var anoAtual = new Date().getFullYear();
+    $('tl').innerHTML = L.cronograma.map(function(c, ci){
+      var p = c.ano.split(/[–-]/).map(Number), atual = anoAtual >= p[0] && anoAtual <= (p[1] || p[0]);
+      return '<div class="tl-item rv' + (atual ? ' atual aberto' : '') + '"><div class="tl-cab"><h3>' + esc(c.ano) + '</h3><strong>' + esc(c.titulo) + '</strong>' +
+        (atual ? '<span class="badge atual">' + esc(ui.atual) + '</span>' : '') + '</div><div class="tags">' +
+        c.tags.map(function(t,i){ return '<span class="tag t' + (i%3) + '">' + esc(t) + '</span>'; }).join('') +
+        '</div><div class="tl-corpo"><ul>' + c.itens.map(function(i){ return '<li>' + linkify(i) + '</li>'; }).join('') + '</ul>' + fontes('cronograma.' + ci, ui) + '</div></div>';
+    }).join('');
+    document.querySelectorAll('.tl-item').forEach(function(el){ el.addEventListener('click', function(ev){ if (ev.target.closest('a')) return; el.classList.toggle('aberto'); }); });
+
+    $('tab').innerHTML = '<thead><tr>' + ui.tabela.map(function(h){ return '<th>' + esc(h) + '</th>'; }).join('') + '<th>' + esc(ui.fontesLbl) + '</th></tr></thead><tbody>' +
+      L.aliquotas.map(function(r, ri){ return '<tr>' + r.map(function(c){ return '<td>' + linkify(c) + '</td>'; }).join('') + '<td class="td-src">' + fontes('aliquotas.' + ri, ui).replace(/<span>[^<]*<\/span>/, '') + '</td></tr>'; }).join('') + '</tbody>';
+
+    $('trib').innerHTML = L.tributos.map(function(t, i){ return '<div class="rv"><b>' + esc(t.sigla) + '</b><h3>' + esc(t.nome) + '</h3><small>' + esc(t.esfera) + '</small><p>' + linkify(t.texto) + '</p>' + fontes('tributos.' + i, ui) + '</div>'; }).join('');
+    $('pilares').innerHTML = L.mecanismos.map(function(m, i){ return '<div class="rv"><h4>' + esc(m.titulo) + '</h4><p>' + linkify(m.texto) + '</p>' + fontes('mecanismos.' + i, ui) + '</div>'; }).join('');
+
+    $('imp').innerHTML = L.impactos.map(function(m, i){
+      return '<div class="c rv"><h3>' + esc(m.titulo) + '</h3><p>' + linkify(m.texto) + '</p>' + prioridade('impactos.' + i, ui) + fontes('impactos.' + i, ui) + '</div>';
+    }).join('');
+    $('imp-leg').textContent = ui.prioLegenda;
+    ligarStatus();
+
+    $('cit').textContent = '“' + ui.citacao + '”';
+    $('cit-a').textContent = '— ' + ui.citacaoAutor;
+
+    $('chk').innerHTML = L.checklist.map(function(c,i){
+      return '<li data-i="' + i + '" class="' + (feitos[i] ? 'ok' : '') + '"><span class="box">✓</span><span class="t">' + esc(c.texto) + '</span><span class="p">' + esc(ui.prazo) + ': ' + esc(c.prazo) + '</span></li>';
+    }).join('');
+    document.querySelectorAll('#chk li').forEach(function(li){
+      li.addEventListener('click', function(){
+        var i = li.dataset.i; feitos[i] = !feitos[i]; li.classList.toggle('ok', feitos[i]);
+        store.set(CHK_KEY, JSON.stringify(feitos)); progresso(D[lang]);
+      });
+    });
+    progresso(L);
+
+    var fts = (L.fontes && L.fontes.length) ? L.fontes : D.pt.fontes;
+    $('fnt').innerHTML = fts.map(function(f){ return '<li><a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.titulo) + ' ↗</a></li>'; }).join('');
+
+    $('disc').textContent = ui.disclaimer;
+    $('rod').textContent = ui.rodapeAtualizacao + ' ' + L.meta.atualizacao + ' · ' + L.meta.ultimaPublicacao;
+    $('btn-print').textContent = '⎙ ' + ui.imprimir;
+
+    glossarioSecao(ui);
+    document.querySelectorAll('section, .citacao').forEach(glossar);
+    observar();
+  }
+
+  var io = null;
+  function observar(){
+    var els = document.querySelectorAll('.rv:not(.in)');
+    if (!('IntersectionObserver' in window)) { els.forEach(mostrar); return; }
+    if (!io) io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ mostrar(e.target); io.unobserve(e.target); } }); }, {threshold:.12});
+    els.forEach(function(el){ io.observe(el); });
+  }
+  function mostrar(el){
+    el.classList.add('in');
+    el.querySelectorAll('.barra i[data-w]').forEach(function(b){ b.style.width = b.dataset.w + '%'; });
+  }
+
+  $('lg-busca').addEventListener('input', function(e){ filtroLegis = e.target.value; legislacao(D[lang].ui); glossar($('lg')); });
+  document.querySelectorAll('.lang button').forEach(function(b){
+    b.addEventListener('click', function(){ lang = b.dataset.l; store.set('dossie-rt-lang', lang); render(); });
+  });
+  window.addEventListener('beforeprint', function(){ document.querySelectorAll('.rv').forEach(mostrar); });
+  render();
+})();
+</script>
+</body>
+</html>
