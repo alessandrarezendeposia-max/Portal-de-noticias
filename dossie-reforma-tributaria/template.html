@@ -377,7 +377,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
   <h2 class="sec-titulo rv" data-s="tributos"></h2><div class="trib" id="trib"></div>
   <h2 class="sec-titulo rv" data-s="mecanismos"></h2><div class="pilares" id="pilares"></div>
 </div></section>
-<section class="alt" id="impactos"><div class="wrap"><h2 class="sec-titulo rv" data-s="impactos"></h2><div class="imp" id="imp"></div><p class="legenda rv" id="imp-leg"></p></div></section>
+<section class="alt" id="impactos"><div class="wrap"><h2 class="sec-titulo rv" data-s="impactos"></h2><div class="imp" id="imp"></div></div></section>
 <section id="comex"><div class="wrap">
   <h2 class="sec-titulo rv" data-s="comex"></h2><p class="intro rv" id="cx-intro"></p>
   <div class="comex" id="cx"></div>
@@ -700,10 +700,8 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
     $('pilares').innerHTML = L.mecanismos.map(function(m, i){ return '<div class="rv"><h4>' + esc(m.titulo) + '</h4><p>' + linkify(m.texto) + '</p>' + fontes('mecanismos.' + i, ui) + '</div>'; }).join('');
 
     $('imp').innerHTML = L.impactos.map(function(m, i){
-      return '<div class="c rv"><h3>' + esc(m.titulo) + '</h3><p>' + linkify(m.texto) + '</p>' + prioridade('impactos.' + i, ui) + fontes('impactos.' + i, ui) + '</div>';
+      return '<div class="c rv"><h3>' + esc(m.titulo) + '</h3><p>' + linkify(m.texto) + '</p>' + fontes('impactos.' + i, ui) + '</div>';
     }).join('');
-    $('imp-leg').textContent = ui.prioLegenda;
-    ligarStatus();
 
     $('cit').textContent = '“' + ui.citacao + '”';
     $('cit-a').textContent = '— ' + ui.citacaoAutor;

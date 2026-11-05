@@ -19,7 +19,8 @@ Instruções para o agente agendado (dias úteis, 08:00 BRT). Objetivo: manter o
    - **Legislação** (`legislacao`): inclua toda norma nova (grupo `ec|lc|mp|dec|res|ac|atc|proj` — `mp` = Medidas Provisórias, `num`, `data` AAAA-MM-DD, `url` do texto integral, `desc.pt` e `desc.es`). Quando uma medida "em tramitação" (`proj`) for publicada, mova-a para o grupo certo com o link oficial.
    - **"A confirmar"**: revise todos os itens marcados como a confirmar (`ok: false`, status `parcial`, textos com "a confirmar"/"por confirmar"). Se a fonte oficial confirmar, atualize o texto, marque `ok: true` e cite a fonte.
    - **Fontes**: todo dado novo precisa de fonte. Cadastre a fonte em `refs` (id curto, `n` nome curto, `u` URL https) e associe em `fontesItens` (chave `secao.indice`, ex.: `isipi.0.2`, `comex.1.0`, `genomma.3`, `impactos.2`).
-   - **Prazos** (`prioridades` — usado só nos cards de "Impactos por segmento", chaves `impactos.N`; os cards do portfólio Genomma não exibem prioridade/status, `checklist`, `meta.marco`, `meta.marcoSecundario`, `cronograma`): ajuste quando houver nova data oficial. Quando um marco passar, aponte para o próximo.
+   - Não use mais a seção `prioridades` (o painel de prioridade/prazo/status foi retirado dos cards).
+   - **Prazos** (`checklist`, `meta.marco`, `meta.marcoSecundario`, `cronograma`): ajuste quando houver nova data oficial. Quando um marco passar, aponte para o próximo.
    - **Glossário** (`glossario`): toda sigla nova que aparecer no texto deve ser incluída com explicação em PT e ES.
    - Não invente dados. Parafraseie, não copie textos longos. Mantenha PT e ES equivalentes.
    - Nomes de marca: a bebida hidroeletrolítica da Genomma se chama **Sorox** no Brasil (use em `pt`) e **Suerox** em espanhol (use em `es`). Títulos de matérias externas mantêm o nome original.
