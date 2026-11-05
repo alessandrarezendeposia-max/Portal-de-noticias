@@ -110,7 +110,6 @@
         { "tipo": "oficial", "rotulo": "Ato Conjunto RFB/CGIBS nº 2/2026 — íntegra (PDF, CGIBS)", "url": "https://www.cgibs.gov.br/upload/arquivos/202606/03111600-ato-conjunto-rfb-e-cibs-2827-05-29-assinado.pdf" },
         { "tipo": "fonte", "rotulo": "Comsefaz — split payment em testes", "url": "https://comsefaz.org.br/novo/split-payment-entra-em-fase-de-testes-a-partir-de-15-de-outubro-saiba-o-que-muda/" } ] },
       { "data": "25/08/2026", "titulo": "Governo anuncia decreto com a lista do IPI zerado em 2027", "resumo": "O decreto não cria a alíquota zero (prevista na EC 132/2023 e no art. 454 da LC 214/2025): apenas divulga a lista de produtos que zeram e dos que seguem tributados por concorrerem com a Zona Franca de Manaus. Publicação a confirmar.", "ato": "Decreto (a publicar)", "novo": false, "links": [
-        { "tipo": "fonte", "rotulo": "Contmatic — IPI zerado em 2027: o que muda", "url": "https://simplifique.contmatic.com.br/blogs/ipi-zerado-2027-decreto-governo-o-que-muda" },
         { "tipo": "oficial", "rotulo": "LC 214/2025 — art. 454 (Planalto)", "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm" } ] },
       { "data": "18/08/2026", "titulo": "ABIHPEC publica guia de CBS/IBS para cosméticos e HPPC", "resumo": "Redução de 60% só para os itens do Anexo VIII (sabonetes, dentifrícios, escovas, fraldas etc.), com NCM e descrição exatas. Cosméticos e perfumaria ficam com alíquota cheia. O guia traz checklist de ERP, ICMS-ST e caixa.", "ato": "LC 214/2025, art. 136 e Anexo VIII", "novo": false, "links": [
         { "tipo": "oficial", "rotulo": "ABIHPEC — guia completo", "url": "https://abihpec.org.br/cbs-ibs-empresas-cosmeticos-2026/" },
@@ -269,7 +268,6 @@
       { "titulo": "Anvisa/CMED — Apresentação do GT de Reforma Tributária (03/07/2026)", "url": "https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/informes/ApresentaoGTdeReformaTributria03dejulhode2026.pdf" },
       { "titulo": "Medicina S/A — Nova tributação dos medicamentos pelo IBS e pela CBS", "url": "https://medicinasa.com.br/seletividade-terapeutica/" },
       { "titulo": "Simtax — Redução de 60% para medicamentos: quem entra e quem fica fora", "url": "https://simtax.com.br/reducao-60-medicamentos-ibs-cbs/" },
-      { "titulo": "Radar da Reforma — Imposto Seletivo sobre bebidas (álcool e açúcar)", "url": "https://radardareformatributaria.com/reforma-tributaria-bebidas-imposto-seletivo-alcool-acucar/" },
       { "titulo": "IOB — Isenção da Cesta Básica (fórmulas infantis no Anexo I)", "url": "https://noticias.iob.com.br/reforma-tributaria-isencao-cesta-basica/" },
       { "titulo": "El CEO — Genomma Lab: Suerox, Cicatricure e plano para Novamil", "url": "https://elceo.com/negocios/de-suerox-a-cicatricure-rodrigo-herrera-afina-la-formula-de-genomma-lab-para-crecer/" },
       { "titulo": "ConJur — Importação, IBS e CBS: o que revela a regulamentação", "url": "https://www.conjur.com.br/2026-jun-16/importacao-ibs-e-cbs-o-que-revela-a-regulamentacao-da-reforma-tributaria/" },
@@ -388,7 +386,6 @@
         { "tipo": "oficial", "rotulo": "Acto Conjunto RFB/CGIBS n.º 2/2026 — texto completo (PDF, CGIBS)", "url": "https://www.cgibs.gov.br/upload/arquivos/202606/03111600-ato-conjunto-rfb-e-cibs-2827-05-29-assinado.pdf" },
         { "tipo": "fonte", "rotulo": "Comsefaz — split payment en pruebas", "url": "https://comsefaz.org.br/novo/split-payment-entra-em-fase-de-testes-a-partir-de-15-de-outubro-saiba-o-que-muda/" } ] },
       { "data": "25/08/2026", "titulo": "El Gobierno anuncia decreto con la lista del IPI en cero en 2027", "resumo": "El decreto no crea la alícuota cero (prevista en la EC 132/2023 y en el art. 454 de la LC 214/2025): solo divulga la lista de productos que pasan a cero y de los que siguen gravados por competir con la Zona Franca de Manaus. Publicación por confirmar.", "ato": "Decreto (por publicar)", "novo": false, "links": [
-        { "tipo": "fonte", "rotulo": "Contmatic — IPI en cero en 2027: qué cambia", "url": "https://simplifique.contmatic.com.br/blogs/ipi-zerado-2027-decreto-governo-o-que-muda" },
         { "tipo": "oficial", "rotulo": "LC 214/2025 — art. 454 (Planalto)", "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm" } ] },
       { "data": "18/08/2026", "titulo": "ABIHPEC publica guía de CBS/IBS para cosméticos e higiene personal", "resumo": "Reducción del 60% solo para los ítems del Anexo VIII (jabones, dentífricos, cepillos, pañales, etc.), con NCM y descripción exactas. Cosméticos y perfumería quedan con alícuota plena. La guía incluye checklist de ERP, ICMS-ST y caja.", "ato": "LC 214/2025, art. 136 y Anexo VIII", "novo": false, "links": [
         { "tipo": "oficial", "rotulo": "ABIHPEC — guía completa", "url": "https://abihpec.org.br/cbs-ibs-empresas-cosmeticos-2026/" },
@@ -548,8 +545,6 @@
     "cmed_gt": { "n": "CMED/Anvisa (GT)", "u": "https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/informes/ApresentaoGTdeReformaTributria03dejulhode2026.pdf" },
     "medicinasa": { "n": "Medicina S/A", "u": "https://medicinasa.com.br/seletividade-terapeutica/" },
     "simtax_med": { "n": "Simtax (medicamentos)", "u": "https://simtax.com.br/reducao-60-medicamentos-ibs-cbs/" },
-    "radar_is": { "n": "Radar da Reforma (IS bebidas)", "u": "https://radardareformatributaria.com/reforma-tributaria-bebidas-imposto-seletivo-alcool-acucar/" },
-    "radar_is419": { "n": "Radar da Reforma (IS R$ 41,9 bi)", "u": "https://radardareformatributaria.com/imposto-seletivo-419-bilhoes-2027-aliquotas-noventena/" },
     "crcsp_is": { "n": "CRCSP (IS)", "u": "https://crcsp.org.br/portal/noticias/noticia.asp?c=11012" },
     "iob_cesta": { "n": "IOB (Cesta Básica)", "u": "https://noticias.iob.com.br/reforma-tributaria-isencao-cesta-basica/" },
     "cashback": { "n": "Valor Final (cashback)", "u": "https://valorfinal.com.br/guia/reforma-tributaria-cesta-basica-e-cashback" },
@@ -566,18 +561,18 @@
     "taxcel": { "n": "Taxcel (NF-e)", "u": "https://taxcel.com.br/ibs-cbs-nota-fiscal-2026-obrigatorio-rejeicao" },
     "tagd": { "n": "TAGD Advogados (IS/IPI)", "u": "https://tagdlaw.com.br/governo-prepara-aliquotas-do-imposto-seletivo-e-estuda-manter-ipi-em-janeiro-de-2027/" },
     "tribuna_is": { "n": "Tribuna do Sertão (MP do IS)", "u": "https://www.tribunadosertao.com.br/financas/2026/11/03/1012710-governo-adia-medida-provisoria-com-aliquotas-do-imposto-seletivo" },
-    "contmatic_ipi": { "n": "Contmatic (IPI 2027)", "u": "https://simplifique.contmatic.com.br/blogs/ipi-zerado-2027-decreto-governo-o-que-muda" },
     "mp1399": { "n": "MP 1.399/2026", "u": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/mpv/mpv1399.htm" },
     "casacivil_is": { "n": "Casa Civil (MP do IS)", "u": "https://www.gov.br/casacivil/pt-br/assuntos/noticias/2026/outubro/governo-federal-define-aliquotas-do-imposto-seletivo-para-2027-por-meio-de-medida-provisoria" },
     "infomoney_is": { "n": "InfoMoney (alíquotas do IS)", "u": "https://www.infomoney.com.br/politica/confira-as-aliquotas-do-imposto-seletivo-que-entrarao-em-vigor-em-fevereiro/" },
     "ncm_is": { "n": "Buscador NCM (bens do IS)", "u": "https://buscadorncm.com.br/reforma/imposto-seletivo" },
+    "folhas_is": { "n": "Brasil em Folhas (MP do IS)", "u": "https://brasilemfolhas.com.br/2026/11/governo-publica-medida-que-define-aliquotas-do-imposto-seletivo/" },
     "plp42": { "n": "PLP 42/2026 (PDF)", "u": "https://www.reformatributaria.com/wp-content/uploads/2026/03/PLP-42-2026.pdf" }
   },
   "fontesItens": {
-    "kpis.0": ["dec12955", "contabeis_dec"], "kpis.1": ["res6", "taxgroup"], "kpis.2": ["senado_tcu"], "kpis.3": ["radar_is419"], "kpis.4": ["mercado_sn", "cgibs_sn"], "kpis.5": ["ec132", "lc214"],
-    "aliquotas.0": ["dec12955", "senado_tcu"], "aliquotas.1": ["res6", "lc214"], "aliquotas.2": ["mp1399", "infomoney_is"], "aliquotas.3": ["ec132", "lc214"], "aliquotas.4": ["ec132", "contmatic_ipi"], "aliquotas.5": ["lc214", "iob_cesta"],
+    "kpis.0": ["dec12955", "contabeis_dec"], "kpis.1": ["res6", "taxgroup"], "kpis.2": ["senado_tcu"], "kpis.3": ["folhas_is"], "kpis.4": ["mercado_sn", "cgibs_sn"], "kpis.5": ["ec132", "lc214"],
+    "aliquotas.0": ["dec12955", "senado_tcu"], "aliquotas.1": ["res6", "lc214"], "aliquotas.2": ["mp1399", "infomoney_is"], "aliquotas.3": ["ec132", "lc214"], "aliquotas.4": ["ec132", "lc214"], "aliquotas.5": ["lc214", "iob_cesta"],
     "cronograma.0": ["ac4", "dec12955", "comsefaz"], "cronograma.1": ["senado_tcu", "ec132", "mp1399", "contabeis_split"], "cronograma.2": ["contabeis_split"], "cronograma.3": ["ec132", "lc214"], "cronograma.4": ["ec132"],
-    "tributos.0": ["dec12955", "lc214"], "tributos.1": ["res6", "lc227"], "tributos.2": ["ec132", "lc214", "mp1399"], "tributos.3": ["ec132", "lc214", "contmatic_ipi"],
+    "tributos.0": ["dec12955", "lc214"], "tributos.1": ["res6", "lc227"], "tributos.2": ["ec132", "lc214", "mp1399"], "tributos.3": ["ec132", "lc214"],
     "mecanismos.0": ["ac2", "comsefaz"], "mecanismos.1": ["lc214"], "mecanismos.2": ["ec132", "lc214"], "mecanismos.3": ["lc214", "cashback"], "mecanismos.4": ["lc214", "iob_cesta"], "mecanismos.5": ["lc214"],
     "impactos.0": ["ac4", "atc10", "taxcel"], "impactos.1": ["cgibs_sn", "receita_cgsn"], "impactos.2": ["lc214", "senado_tcu"], "impactos.3": ["coad_coop", "ec132"],
     "genomma.0": ["lc214", "lc227", "simtax_med", "medicinasa", "sindusfarma"], "genomma.1": ["abihpec", "lc214"], "genomma.2": ["abihpec", "lc214"], "genomma.3": ["mp1399", "lc214", "ncm_is"], "genomma.4": ["lc214", "iob_cesta", "elceo"],
@@ -585,8 +580,8 @@
     "comex.0.0": ["fazcomex", "ac4"], "comex.0.1": ["fazcomex"], "comex.0.2": ["conjur_imp", "lc214"], "comex.0.3": ["lc214", "conjur_imp"], "comex.0.4": ["conjur_imp"], "comex.0.5": ["lc214"],
     "comex.1.0": ["lc214", "simtax_exp"], "comex.1.1": ["simtax_exp"], "comex.1.2": ["lc214", "barbieri_exp"], "comex.1.3": ["barbieri_exp"],
     "comex.2.0": ["conjur_imp", "apet_reg"], "comex.2.1": ["apet_reg"], "comex.2.2": ["ec132", "abihpec"],
-    "isipi.0.0": ["ec132", "lc214"], "isipi.0.1": ["lc214", "radar_is"], "isipi.0.2": ["mp1399", "infomoney_is"], "isipi.0.3": ["mp1399", "casacivil_is"], "isipi.0.4": ["mp1399", "casacivil_is", "radar_is419"], "isipi.0.5": ["plp42"], "isipi.0.6": ["mp1399", "lc214", "ncm_is"],
-    "isipi.1.0": ["ec132"], "isipi.1.1": ["lc214", "contmatic_ipi"], "isipi.1.2": ["contmatic_ipi"], "isipi.1.3": ["casacivil_is"], "isipi.1.4": ["contmatic_ipi"], "isipi.1.5": ["contmatic_ipi"]
+    "isipi.0.0": ["ec132", "lc214"], "isipi.0.1": ["lc214", "mp1399"], "isipi.0.2": ["mp1399", "infomoney_is"], "isipi.0.3": ["mp1399", "casacivil_is"], "isipi.0.4": ["mp1399", "casacivil_is", "folhas_is"], "isipi.0.5": ["plp42"], "isipi.0.6": ["mp1399", "lc214", "ncm_is"],
+    "isipi.1.0": ["ec132"], "isipi.1.1": ["lc214"], "isipi.1.2": ["lc214"], "isipi.1.3": ["casacivil_is"], "isipi.1.4": ["lc214"], "isipi.1.5": ["ec132", "lc214"]
   },
   "glossario": [
     { "t": "PLOA", "pt": "Projeto de Lei Orçamentária Anual — proposta de orçamento federal do ano seguinte, enviada pelo governo ao Congresso.", "es": "Proyecto de Ley de Presupuesto Anual — propuesta de presupuesto federal del año siguiente que el Gobierno envía al Congreso." },
@@ -684,7 +679,7 @@
     { "g": "atc", "num": "Ato Técnico Conjunto nº 1/2026", "data": "2026-07-31", "url": "https://www.cgibs.gov.br/upload/arquivos/202608/01153321-am-ato-tecnico-conjunto-rfb-e-cgibs-ratificacao-nts-dfes-revisao-assinado.pdf", "desc": { "pt": "Ratifica as NTs dos DF-e e suspende a rejeição de documentos emitidos sem IBS/CBS, mantida a obrigação de preenchimento.", "es": "Ratifica las NT de los DF-e y suspende el rechazo de documentos emitidos sin IBS/CBS, manteniendo la obligación de completarlos." } },
     { "g": "mp", "num": "Medida Provisória nº 1.399/2026", "data": "2026-11-04", "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/mpv/mpv1399.htm", "desc": { "pt": "Alíquotas do Imposto Seletivo para 2027 em regime de implementação gradual (IPI atual × fatores de conversão), com efeitos a partir de 02/02/2027. Bebidas açucaradas 2,6%; prognósticos 0,5%; minerais zero até 31/12/2027. Projeto das alíquotas de 2028 até 31/05/2027. Depende de conversão em lei pelo Congresso.", "es": "Alícuotas del Impuesto Selectivo para 2027 en régimen de implementación gradual (IPI actual × factores de conversión), con efectos desde el 02/02/2027. Bebidas azucaradas 2,6%; pronósticos 0,5%; minerales cero hasta el 31/12/2027. Proyecto de las alícuotas de 2028 hasta el 31/05/2027. Depende de su conversión en ley por el Congreso." } },
     { "g": "proj", "num": "PEC do IPI até o início do IS", "data": "2026-11-04", "url": "https://tagdlaw.com.br/governo-prepara-aliquotas-do-imposto-seletivo-e-estuda-manter-ipi-em-janeiro-de-2027/", "desc": { "pt": "Em estudo: manter o IPI em janeiro de 2027 nos setores sujeitos ao IS.", "es": "En estudio: mantener el IPI en enero de 2027 en los sectores sujetos al IS." } },
-    { "g": "proj", "num": "Decreto da lista do IPI zerado (art. 454, §3º, LC 214/2025)", "data": "2026-08-25", "url": "https://simplifique.contmatic.com.br/blogs/ipi-zerado-2027-decreto-governo-o-que-muda", "desc": { "pt": "Anunciado em 25/08/2026 para divulgar os produtos com IPI zero e os mantidos por concorrência com a ZFM. Publicação a confirmar.", "es": "Anunciado el 25/08/2026 para divulgar los productos con IPI cero y los mantenidos por competir con la ZFM. Publicación por confirmar." } },
+    { "g": "proj", "num": "Decreto da lista do IPI zerado (art. 454, §3º, LC 214/2025)", "data": "2026-08-25", "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm", "desc": { "pt": "Anunciado em 25/08/2026 para divulgar os produtos com IPI zero e os mantidos por concorrência com a ZFM. Publicação a confirmar.", "es": "Anunciado el 25/08/2026 para divulgar los productos con IPI cero y los mantenidos por competir con la ZFM. Publicación por confirmar." } },
     { "g": "proj", "num": "PLP 42/2026", "data": "2026-03-01", "url": "https://www.reformatributaria.com/wp-content/uploads/2026/03/PLP-42-2026.pdf", "desc": { "pt": "Projeto que limita as alíquotas do Imposto Seletivo entre 0% e 5%. Em tramitação.", "es": "Proyecto que limita las alícuotas del Impuesto Selectivo entre 0% y 5%. En trámite." } }
   ]
 }

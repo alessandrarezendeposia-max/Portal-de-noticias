@@ -52,6 +52,7 @@ Regras:
   - Se rfb.gov.br ou cgibs.gov.br bloquearem acesso automatizado (robots), NÃO tente contornar: use os resultados de busca/snippets e portais espelho oficiais (gov.br, Ministério da Fazenda, DOU).
   - Cubra: regulamentos (Decreto da CBS, Resolução CGIBS do IBS, LC 214/2025, LC 227/2026), cronograma 2026–2033, Split Payment, DeRE, FCBF, Cashback, Cesta Básica, Simples Nacional, NF-e/CT-e/BP-e/NFS-e (campos IBS/CBS), prazos e marcos críticos, atos conjuntos RFB/CGIBS, notas técnicas.
   - Confirme datas críticas em mais de uma fonte (ex.: início da obrigatoriedade/rejeição dos campos IBS/CBS em agosto/2026 — verifique se é 01/08 ou 03/08 e use a data confirmada).
+  - Não use Contmatic nem Radar da Reforma Tributária (radardareformatributaria.com) como fonte.
   - Não invente dados. Se algo não for confirmado, sinalize como "a confirmar".
   - Não reproduza textos longos das fontes: parafraseie.
 

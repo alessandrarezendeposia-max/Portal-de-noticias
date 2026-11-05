@@ -22,6 +22,7 @@ Instruções para o agente agendado (dias úteis, 08:00 BRT). Objetivo: manter o
    - Não use mais a seção `prioridades` (o painel de prioridade/prazo/status foi retirado dos cards).
    - **Prazos** (`checklist`, `meta.marco`, `meta.marcoSecundario`, `cronograma`): ajuste quando houver nova data oficial. Quando um marco passar, aponte para o próximo.
    - **Glossário** (`glossario`): toda sigla nova que aparecer no texto deve ser incluída com explicação em PT e ES.
+   - **Fontes vetadas:** não use Contmatic (contmatic.com.br) nem Radar da Reforma Tributária (radardareformatributaria.com) como fonte, em nenhuma seção.
    - Não invente dados. Parafraseie, não copie textos longos. Mantenha PT e ES equivalentes.
    - Nomes de marca: a bebida hidroeletrolítica da Genomma se chama **Sorox** no Brasil (use em `pt`) e **Suerox** em espanhol (use em `es`). Títulos de matérias externas mantêm o nome original.
 5. Rode `python3 dossie-reforma-tributaria/build.py`. Se falhar, corrija o JSON e rode de novo até passar.
