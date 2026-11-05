@@ -9,9 +9,9 @@
       "marcoSecundario": { "data": "2026-11-16T00:00:00-03:00", "rotulo": "Produção das NTs 2025.002 v1.53 e 2026.005/006/007/008 da NF-e" }
     },
     "ui": {
-      "nav": ["Novidades", "Genomma", "IS e IPI", "Cronograma", "Tributos", "Impactos", "Comex", "Legislação", "Glossário", "Checklist", "Fontes"],
+      "nav": ["Genomma", "Novidades", "IS e IPI", "Cronograma", "Tributos", "Impactos", "Comex", "Legislação", "Glossário", "Checklist", "Fontes"],
       "logo": ["Portal de Notícias", "Reforma Tributária Genomma"],
-      "heroKicker": "Dossiê executivo financeiro · IBS · CBS · IS",
+      "heroKicker": "Atualizado em {data} · IBS · CBS · IS · IPI",
       "heroLinhas": ["Reforma", "Tributária", "do Consumo"],
       "heroTexto": "Panorama consolidado das normas, prazos e impactos da transição para o IVA dual brasileiro, atualizado até 05/11/2026.",
       "contagemRotulo": "Faltam para o marco crítico",
@@ -287,9 +287,9 @@
       "marcoSecundario": { "data": "2026-11-16T00:00:00-03:00", "rotulo": "Producción de las NT 2025.002 v1.53 y 2026.005/006/007/008 de la NF-e" }
     },
     "ui": {
-      "nav": ["Novedades", "Genomma", "IS e IPI", "Cronograma", "Tributos", "Impactos", "Comex", "Legislación", "Glosario", "Checklist", "Fuentes"],
+      "nav": ["Genomma", "Novedades", "IS e IPI", "Cronograma", "Tributos", "Impactos", "Comex", "Legislación", "Glosario", "Checklist", "Fuentes"],
       "logo": ["Portal de Noticias", "Reforma Tributaria Genomma"],
-      "heroKicker": "Dossier ejecutivo financiero · IBS · CBS · IS",
+      "heroKicker": "Actualizado el {data} · IBS · CBS · IS · IPI",
       "heroLinhas": ["Reforma", "Tributaria", "del Consumo"],
       "heroTexto": "Panorama consolidado de normas, plazos e impactos de la transición al IVA dual brasileño, actualizado al 05/11/2026.",
       "contagemRotulo": "Faltan para el hito crítico",

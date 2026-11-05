@@ -361,12 +361,12 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
 <div class="marquee"><div class="trilho" id="marquee"></div></div>
 
 <section><div class="wrap"><h2 class="sec-titulo rv" data-s="kpis"></h2><div class="kpis" id="kpis"></div></div></section>
-<section class="alt" id="novidades"><div class="wrap"><h2 class="sec-titulo rv" data-s="novidades"></h2><div class="cards" id="cards"></div></div></section>
-<section id="genomma"><div class="wrap">
+<section class="alt" id="genomma"><div class="wrap">
   <h2 class="sec-titulo rv" data-s="genomma"></h2><p class="intro rv" id="g-intro"></p>
   <div class="gcards" id="gcards"></div>
   <div class="transv rv"><h3 data-s="transversais"></h3><ul id="transv"></ul></div>
 </div></section>
+<section id="novidades"><div class="wrap"><h2 class="sec-titulo rv" data-s="novidades"></h2><div class="cards" id="cards"></div></div></section>
 <section class="alt" id="isipi"><div class="wrap">
   <h2 class="sec-titulo rv" data-s="isipi"></h2><p class="intro rv" id="ii-intro"></p>
   <div class="comex dois" id="ii"></div>
@@ -416,9 +416,9 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
       "marcoSecundario": { "data": "2026-11-16T00:00:00-03:00", "rotulo": "Produção das NTs 2025.002 v1.53 e 2026.005/006/007/008 da NF-e" }
     },
     "ui": {
-      "nav": ["Novidades", "Genomma", "IS e IPI", "Cronograma", "Tributos", "Impactos", "Comex", "Legislação", "Glossário", "Checklist", "Fontes"],
+      "nav": ["Genomma", "Novidades", "IS e IPI", "Cronograma", "Tributos", "Impactos", "Comex", "Legislação", "Glossário", "Checklist", "Fontes"],
       "logo": ["Portal de Notícias", "Reforma Tributária Genomma"],
-      "heroKicker": "Dossiê executivo financeiro · IBS · CBS · IS",
+      "heroKicker": "Atualizado em {data} · IBS · CBS · IS · IPI",
       "heroLinhas": ["Reforma", "Tributária", "do Consumo"],
       "heroTexto": "Panorama consolidado das normas, prazos e impactos da transição para o IVA dual brasileiro, atualizado até 05/11/2026.",
       "contagemRotulo": "Faltam para o marco crítico",
@@ -694,9 +694,9 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
       "marcoSecundario": { "data": "2026-11-16T00:00:00-03:00", "rotulo": "Producción de las NT 2025.002 v1.53 y 2026.005/006/007/008 de la NF-e" }
     },
     "ui": {
-      "nav": ["Novedades", "Genomma", "IS e IPI", "Cronograma", "Tributos", "Impactos", "Comex", "Legislación", "Glosario", "Checklist", "Fuentes"],
+      "nav": ["Genomma", "Novedades", "IS e IPI", "Cronograma", "Tributos", "Impactos", "Comex", "Legislación", "Glosario", "Checklist", "Fuentes"],
       "logo": ["Portal de Noticias", "Reforma Tributaria Genomma"],
-      "heroKicker": "Dossier ejecutivo financiero · IBS · CBS · IS",
+      "heroKicker": "Actualizado el {data} · IBS · CBS · IS · IPI",
       "heroLinhas": ["Reforma", "Tributaria", "del Consumo"],
       "heroTexto": "Panorama consolidado de normas, plazos e impactos de la transición al IVA dual brasileño, actualizado al 05/11/2026.",
       "contagemRotulo": "Faltan para el hito crítico",
@@ -1094,7 +1094,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
 (function(){
   'use strict';
   var D = JSON.parse(document.getElementById('dados').textContent);
-  var ids = ['novidades','genomma','isipi','cronograma','tributos','impactos','comex','legislacao','glossario','checklist','fontes'];
+  var ids = ['genomma','novidades','isipi','cronograma','tributos','impactos','comex','legislacao','glossario','checklist','fontes'];
   var store = {
     get: function(k){ try { return localStorage.getItem(k); } catch(e){ return null; } },
     set: function(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
@@ -1322,7 +1322,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
     document.querySelectorAll('.lang button').forEach(function(b){ b.classList.toggle('on', b.dataset.l === lang); });
 
     $('nav-links').innerHTML = ui.nav.map(function(t,i){ return '<li><a href="#' + ids[i] + '">' + esc(t) + '</a></li>'; }).join('');
-    $('kicker').innerHTML = '<span>' + esc(ui.heroKicker) + '</span>';
+    $('kicker').innerHTML = '<span>' + esc(ui.heroKicker.replace('{data}', L.meta.atualizacao)) + '</span>';
     $('hero-h1').innerHTML = ui.heroLinhas.map(function(t,i){ return '<span class="l' + (i+1) + '">' + esc(t) + '</span>'; }).join('');
     $('hero-p').textContent = ui.heroTexto;
     $('cd-rotulo').textContent = ui.contagemRotulo;
