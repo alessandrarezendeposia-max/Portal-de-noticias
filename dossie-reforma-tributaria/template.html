@@ -365,7 +365,6 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
 <section id="genomma"><div class="wrap">
   <h2 class="sec-titulo rv" data-s="genomma"></h2><p class="intro rv" id="g-intro"></p>
   <div class="gcards" id="gcards"></div>
-  <p class="legenda rv" id="g-leg"></p>
   <div class="transv rv"><h3 data-s="transversais"></h3><ul id="transv"></ul></div>
 </div></section>
 <section class="alt" id="isipi"><div class="wrap">
@@ -665,9 +664,8 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
         '<div class="g-enq">' + esc(c.enquadramento) + '</div><div class="g-base">' + linkify(c.base) + '</div>' +
         '<p class="g-ex"><b>' + esc(g.exemplos) + ':</b> ' + esc(c.exemplos) + '</p><p class="g-txt">' + linkify(c.texto) + '</p>' +
         '<dl class="g-dl"><div><dt>' + esc(g.cbs) + '</dt><dd>' + esc(c.cbs) + '</dd></div><div><dt>' + esc(g.is) + '</dt><dd>' + esc(c.is) + '</dd></div></dl>' +
-        prioridade('genomma.' + i, ui) + fontes('genomma.' + i, ui) + '</article>';
+        fontes('genomma.' + i, ui) + '</article>';
     }).join('');
-    $('g-leg').textContent = ui.prioLegenda;
     $('transv').innerHTML = G.transversais.map(function(t, i){ return '<li>' + linkify(t) + fontes('transv.' + i, ui) + '</li>'; }).join('');
 
     $('ii-intro').textContent = L.isipi.intro;

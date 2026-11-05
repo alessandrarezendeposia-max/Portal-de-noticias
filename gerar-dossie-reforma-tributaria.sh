@@ -63,7 +63,7 @@ Seções do JSON: meta (data de atualização, última publicação), kpis (6), 
 Inclua também, fora de "pt"/"es" (compartilhados):
   - "refs": catálogo { id: { n: nome curto, u: URL } } de todas as normas e fontes usadas;
   - "fontesItens": { "secao.indice": [ids de refs] } — TODO tópico/bullet (kpis, alíquotas, cronograma, tributos, mecanismos, impactos, genomma, transversais, comex, isipi) deve ter ao menos uma fonte;
-  - "prioridades": { "impactos.i" / "genomma.i": { p: alta|media|baixa, prazo: AAAA-MM-DD, marco: {pt, es} } };
+  - "prioridades": { "impactos.i" (somente os cards de Impactos por segmento; os cards do portfólio Genomma não têm prioridade): { p: alta|media|baixa, prazo: AAAA-MM-DD, marco: {pt, es} } };
   - "legislacao": lista de normas { g: ec|lc|dec|res|ac|atc|proj, num, data, url (texto integral), desc: {pt, es} }.
 Seções adicionais em pt/es: "isipi" (blocos Imposto Seletivo e IPI: base legal, MP/alíquotas, noventena, art. 454 da LC 214/2025, decreto da lista, PEC, impacto no portfólio) e novidades específicas de IS e IPI.
 
@@ -92,7 +92,7 @@ FUNCIONALIDADES JS:
   - Persistir idioma e itens do checklist no localStorage (com try/catch).
   - Aba "Legislação": grupos recolhíveis por tipo (EC, LC, Decretos, Resoluções, Atos Conjuntos, Atos Técnicos Conjuntos, Projetos), ordenados por data decrescente, com descrição, link para o texto integral e campo de busca.
   - Links automáticos: toda menção a norma no texto (EC 132/2023, LC 214/2025, LC 227/2026, Decreto 12.955/2026, Resoluções, Atos) vira link para o texto integral.
-  - Cada tópico exibe chips "Fontes" com links. Nos cards de impacto e do portfólio, substituir a barra de "urgência" por: selo de prioridade, próximo prazo com contagem de dias, barra de proximidade do prazo (janela de 180 dias, cor por faixa) e botões de status (Não iniciado / Em andamento / Concluído) salvos no localStorage, com legenda explicativa.
+  - Cada tópico exibe chips "Fontes" com links. Nos cards de impacto (não nos do portfólio), substituir a barra de "urgência" por: selo de prioridade, próximo prazo com contagem de dias, barra de proximidade do prazo (janela de 180 dias, cor por faixa) e botões de status (Não iniciado / Em andamento / Concluído) salvos no localStorage, com legenda explicativa.
 
 ==================== ETAPA 4 — VERIFICAÇÃO ====================
   - Rode uma checagem (Bash) garantindo: arquivo existe e abre sem erros de sintaxe JS (ex.: node --check em trecho extraído, ou validação do JSON embutido com python -c json.loads); uso apenas da paleta definida (sem #e8005a); presença dos dois idiomas; todos os links de fontes com https.

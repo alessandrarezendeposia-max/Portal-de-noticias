@@ -365,7 +365,6 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
 <section id="genomma"><div class="wrap">
   <h2 class="sec-titulo rv" data-s="genomma"></h2><p class="intro rv" id="g-intro"></p>
   <div class="gcards" id="gcards"></div>
-  <p class="legenda rv" id="g-leg"></p>
   <div class="transv rv"><h3 data-s="transversais"></h3><ul id="transv"></ul></div>
 </div></section>
 <section class="alt" id="isipi"><div class="wrap">
@@ -1000,12 +999,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
     "impactos.0": { "p": "alta", "prazo": "2026-11-16", "marco": { "pt": "Produção das NTs da NF-e", "es": "Producción de las NT de la NF-e" } },
     "impactos.1": { "p": "alta", "prazo": "2026-11-30", "marco": { "pt": "Último dia para cancelar a opção pelo regime regular", "es": "Último día para cancelar la opción por el régimen regular" } },
     "impactos.2": { "p": "media", "prazo": "2027-01-01", "marco": { "pt": "Início da CBS plena", "es": "Inicio de la CBS plena" } },
-    "impactos.3": { "p": "media", "prazo": "2026-11-30", "marco": { "pt": "Prazo das cooperativas (a confirmar)", "es": "Plazo de las cooperativas (por confirmar)" } },
-    "genomma.0": { "p": "alta", "prazo": "2027-01-01", "marco": { "pt": "CBS plena: compromisso CMED para MIPs com preço liberado", "es": "CBS plena: compromiso CMED para MIP con precio liberado" } },
-    "genomma.1": { "p": "media", "prazo": "2027-01-01", "marco": { "pt": "Fim do PIS/Cofins monofásico", "es": "Fin del PIS/Cofins monofásico" } },
-    "genomma.2": { "p": "media", "prazo": "2026-12-31", "marco": { "pt": "Validar NCM contra o Anexo VIII", "es": "Validar NCM frente al Anexo VIII" } },
-    "genomma.3": { "p": "media", "prazo": "2027-01-01", "marco": { "pt": "CBS plena, sem redução para a NCM 2202.99.00 (IS não incide)", "es": "CBS plena, sin reducción para la NCM 2202.99.00 (el IS no incide)" } },
-    "genomma.4": { "p": "baixa", "prazo": "2027-01-01", "marco": { "pt": "Início da CBS (alíquota zero)", "es": "Inicio de la CBS (alícuota cero)" } }
+    "impactos.3": { "p": "media", "prazo": "2026-11-30", "marco": { "pt": "Prazo das cooperativas (a confirmar)", "es": "Plazo de las cooperativas (por confirmar)" } }
   },
   "glossario": [
     { "t": "PLOA", "pt": "Projeto de Lei Orçamentária Anual — proposta de orçamento federal do ano seguinte, enviada pelo governo ao Congresso.", "es": "Proyecto de Ley de Presupuesto Anual — propuesta de presupuesto federal del año siguiente que el Gobierno envía al Congreso." },
@@ -1365,9 +1359,8 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
         '<div class="g-enq">' + esc(c.enquadramento) + '</div><div class="g-base">' + linkify(c.base) + '</div>' +
         '<p class="g-ex"><b>' + esc(g.exemplos) + ':</b> ' + esc(c.exemplos) + '</p><p class="g-txt">' + linkify(c.texto) + '</p>' +
         '<dl class="g-dl"><div><dt>' + esc(g.cbs) + '</dt><dd>' + esc(c.cbs) + '</dd></div><div><dt>' + esc(g.is) + '</dt><dd>' + esc(c.is) + '</dd></div></dl>' +
-        prioridade('genomma.' + i, ui) + fontes('genomma.' + i, ui) + '</article>';
+        fontes('genomma.' + i, ui) + '</article>';
     }).join('');
-    $('g-leg').textContent = ui.prioLegenda;
     $('transv').innerHTML = G.transversais.map(function(t, i){ return '<li>' + linkify(t) + fontes('transv.' + i, ui) + '</li>'; }).join('');
 
     $('ii-intro').textContent = L.isipi.intro;
