@@ -16,7 +16,7 @@ Instruções para o agente agendado (dias úteis, 08:00 BRT). Objetivo: manter o
 4. Se houve mudança, copie o JSON para `dados-<HOJE>.json` (data de hoje, fuso America/Sao_Paulo) e edite **somente esse novo arquivo**:
    - `pt.meta.atualizacao` e `es.meta.atualizacao` = hoje (DD/MM/AAAA); atualize também a data em `pt.ui.heroTexto` e `es.ui.heroTexto` e `meta.ultimaPublicacao`.
    - **Novidades**: inclua as novas no topo de `pt.novidades` e `es.novidades` (mesma ordem e quantidade nos dois idiomas), com `novo: true` e `links` (o primeiro link `oficial` deve ser o **texto integral** do ato: PDF do cgibs.gov.br, Planalto, DOU, Receita). Mude para `novo: false` as que tiverem mais de 15 dias. Mantenha no máximo 16 novidades (remova as mais antigas).
-   - **Legislação** (`legislacao`): inclua toda norma nova (grupo `ec|lc|dec|res|ac|atc|proj`, `num`, `data` AAAA-MM-DD, `url` do texto integral, `desc.pt` e `desc.es`). Quando uma medida "em tramitação" (`proj`) for publicada, mova-a para o grupo certo com o link oficial.
+   - **Legislação** (`legislacao`): inclua toda norma nova (grupo `ec|lc|mp|dec|res|ac|atc|proj` — `mp` = Medidas Provisórias, `num`, `data` AAAA-MM-DD, `url` do texto integral, `desc.pt` e `desc.es`). Quando uma medida "em tramitação" (`proj`) for publicada, mova-a para o grupo certo com o link oficial.
    - **"A confirmar"**: revise todos os itens marcados como a confirmar (`ok: false`, status `parcial`, textos com "a confirmar"/"por confirmar"). Se a fonte oficial confirmar, atualize o texto, marque `ok: true` e cite a fonte.
    - **Fontes**: todo dado novo precisa de fonte. Cadastre a fonte em `refs` (id curto, `n` nome curto, `u` URL https) e associe em `fontesItens` (chave `secao.indice`, ex.: `isipi.0.2`, `comex.1.0`, `genomma.3`, `impactos.2`).
    - **Prazos** (`prioridades`, `checklist`, `meta.marco`, `meta.marcoSecundario`, `cronograma`): ajuste quando houver nova data oficial. Quando um marco passar, aponte para o próximo.
@@ -27,6 +27,10 @@ Instruções para o agente agendado (dias úteis, 08:00 BRT). Objetivo: manter o
 7. Termine com um resumo curto: novidades incluídas, normas novas, itens "a confirmar" resolvidos e prazos alterados.
 
 ## Fontes a verificar
+
+Atenção a publicações em **edição extra do DOU à noite** (como a MP 1.399/2026, publicada às 22h de 04/11/2026): sempre confira as notícias da Casa Civil e as medidas provisórias recentes no Planalto (https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/mpv/) desde a última atualização.
+
+- Casa Civil — notícias: https://www.gov.br/casacivil/pt-br/assuntos/noticias
 
 - Comitê Gestor do IBS: https://cgibs.gov.br/atos-tecnicos-conjuntos e https://cgibs.gov.br/atos-conjuntos (comparar com `legislacao`; atos novos entram com o PDF)
 - Receita Federal — Reforma Tributária do Consumo e notícias: https://www.gov.br/receitafederal/pt-br/assuntos/noticias

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dossiê Reforma Tributária</title>
+<title>Portal de Notícias — Reforma Tributária Genomma</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -29,7 +29,11 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--azul3)}
 .logo i{display:flex;gap:3px}
 .logo i b{width:10px;height:10px;border-radius:50%;display:block}
-.logo span{font-weight:900;font-size:1.15rem;letter-spacing:.02em;text-transform:uppercase}
+.logo span{display:flex;flex-direction:column;line-height:1.05;text-transform:uppercase}
+.logo span small{font-weight:600;font-size:.6rem;letter-spacing:.12em;color:var(--txt2)}
+.logo span b{font-weight:900;font-size:.82rem;letter-spacing:.01em}
+nav .wrap{max-width:1480px;padding:0 24px}
+nav .links{gap:12px}
 .logo{flex-shrink:0;white-space:nowrap}
 .links{display:flex;gap:14px;list-style:none;flex:1;min-width:0;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;padding:0 6px;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12px,#000 calc(100% - 12px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 12px,#000 calc(100% - 12px),transparent 100%)}
 .links::-webkit-scrollbar{display:none}
@@ -335,7 +339,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
 </head>
 <body>
 <nav><div class="wrap">
-  <a class="logo" href="#topo"><i><b style="background:#fa2891"></b><b style="background:#45b8ea"></b><b style="background:#ff7313"></b><b style="background:#9ad858"></b></i><span>Dossiê RT</span></a>
+  <a class="logo" href="#topo"><i><b style="background:#fa2891"></b><b style="background:#45b8ea"></b><b style="background:#ff7313"></b><b style="background:#9ad858"></b></i><span><small id="logo1">Portal de Notícias</small><b id="logo2">Reforma Tributária Genomma</b></span></a>
   <ul class="links" id="nav-links"></ul>
   <div class="lang"><button data-l="pt">🇧🇷 PT</button><button data-l="es">🇪🇸 ES</button></div>
 </div></nav>
@@ -518,7 +522,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
 
   function legislacao(ui){
     var f = filtroLegis.toLowerCase().trim();
-    var ordem = ['ec','lc','dec','res','ac','atc','proj'];
+    var ordem = ['ec','lc','mp','dec','res','ac','atc','proj'];
     var html = ordem.map(function(g){
       var itens = LEG.filter(function(l){
         if (l.g !== g) return false;
@@ -631,6 +635,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
     ['fontesLbl','legisIntro','legisBusca','legisVazio','legisGrupos','legisN','prio','proxPrazo','faltam','hoje','vencido','statusOpts','prioLegenda','linksTit','aConfirmar'].forEach(function(k){ if (ui[k] === undefined) ui[k] = D.pt.ui[k]; });
     document.documentElement.lang = L.meta.lang;
     document.title = L.meta.titulo;
+    if (ui.logo) { $('logo1').textContent = ui.logo[0]; $('logo2').textContent = ui.logo[1]; }
     document.querySelectorAll('.lang button').forEach(function(b){ b.classList.toggle('on', b.dataset.l === lang); });
 
     $('nav-links').innerHTML = ui.nav.map(function(t,i){ return '<li><a href="#' + ids[i] + '">' + esc(t) + '</a></li>'; }).join('');

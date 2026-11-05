@@ -20,7 +20,7 @@ BASE = pathlib.Path(__file__).resolve().parent
 DOCS = BASE.parent / "docs"
 SECOES = ("meta", "ui", "kpis", "novidades", "genomma", "isipi", "cronograma",
           "aliquotas", "tributos", "mecanismos", "impactos", "comex", "checklist")
-GRUPOS = ("ec", "lc", "dec", "res", "ac", "atc", "proj")
+GRUPOS = ("ec", "lc", "mp", "dec", "res", "ac", "atc", "proj")
 
 
 def data_iso(valor):

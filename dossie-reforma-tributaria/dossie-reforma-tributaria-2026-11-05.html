@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dossiê Reforma Tributária</title>
+<title>Portal de Notícias — Reforma Tributária Genomma</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -29,7 +29,11 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--azul3)}
 .logo i{display:flex;gap:3px}
 .logo i b{width:10px;height:10px;border-radius:50%;display:block}
-.logo span{font-weight:900;font-size:1.15rem;letter-spacing:.02em;text-transform:uppercase}
+.logo span{display:flex;flex-direction:column;line-height:1.05;text-transform:uppercase}
+.logo span small{font-weight:600;font-size:.6rem;letter-spacing:.12em;color:var(--txt2)}
+.logo span b{font-weight:900;font-size:.82rem;letter-spacing:.01em}
+nav .wrap{max-width:1480px;padding:0 24px}
+nav .links{gap:12px}
 .logo{flex-shrink:0;white-space:nowrap}
 .links{display:flex;gap:14px;list-style:none;flex:1;min-width:0;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;padding:0 6px;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12px,#000 calc(100% - 12px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 12px,#000 calc(100% - 12px),transparent 100%)}
 .links::-webkit-scrollbar{display:none}
@@ -335,7 +339,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
 </head>
 <body>
 <nav><div class="wrap">
-  <a class="logo" href="#topo"><i><b style="background:#fa2891"></b><b style="background:#45b8ea"></b><b style="background:#ff7313"></b><b style="background:#9ad858"></b></i><span>Dossiê RT</span></a>
+  <a class="logo" href="#topo"><i><b style="background:#fa2891"></b><b style="background:#45b8ea"></b><b style="background:#ff7313"></b><b style="background:#9ad858"></b></i><span><small id="logo1">Portal de Notícias</small><b id="logo2">Reforma Tributária Genomma</b></span></a>
   <ul class="links" id="nav-links"></ul>
   <div class="lang"><button data-l="pt">🇧🇷 PT</button><button data-l="es">🇪🇸 ES</button></div>
 </div></nav>
@@ -406,14 +410,15 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
   "pt": {
     "meta": {
       "lang": "pt-BR",
-      "titulo": "Dossiê Executivo — Reforma Tributária do Consumo",
+      "titulo": "Portal de Notícias — Reforma Tributária Genomma",
       "atualizacao": "05/11/2026",
-      "ultimaPublicacao": "Ato Técnico Conjunto RFB/SUFIS/CGIBS nº 10/2026 (DOU 29/10/2026)",
+      "ultimaPublicacao": "Medida Provisória nº 1.399/2026 — Imposto Seletivo (DOU extra 04/11/2026)",
       "marco": { "data": "2027-01-01T00:00:00-03:00", "rotulo": "Início da cobrança efetiva da CBS e extinção do PIS/Cofins", "fonte": "EC 132/2023 e LC 214/2025" },
       "marcoSecundario": { "data": "2026-11-16T00:00:00-03:00", "rotulo": "Produção das NTs 2025.002 v1.53 e 2026.005/006/007/008 da NF-e" }
     },
     "ui": {
       "nav": ["Novidades", "Genomma", "IS e IPI", "Cronograma", "Tributos", "Impactos", "Comex", "Legislação", "Glossário", "Checklist", "Fontes"],
+      "logo": ["Portal de Notícias", "Reforma Tributária Genomma"],
       "heroKicker": "Dossiê executivo financeiro · IBS · CBS · IS",
       "heroLinhas": ["Reforma", "Tributária", "do Consumo"],
       "heroTexto": "Panorama consolidado das normas, prazos e impactos da transição para o IVA dual brasileiro, atualizado até 05/11/2026.",
@@ -450,7 +455,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
       "legisIntro": "Normas da reforma agrupadas por tipo, da mais recente para a mais antiga. Clique no número para abrir o texto integral.",
       "legisBusca": "Filtrar por número, assunto ou palavra-chave…",
       "legisVazio": "Nenhuma norma encontrada para este filtro.",
-      "legisGrupos": { "ec": "Emendas Constitucionais", "lc": "Leis Complementares", "dec": "Decretos", "res": "Resoluções", "ac": "Atos Conjuntos RFB/CGIBS", "atc": "Atos Técnicos Conjuntos RFB/SUFIS/CGIBS", "proj": "Projetos e medidas em tramitação" },
+      "legisGrupos": { "ec": "Emendas Constitucionais", "lc": "Leis Complementares", "mp": "Medidas Provisórias", "dec": "Decretos", "res": "Resoluções", "ac": "Atos Conjuntos RFB/CGIBS", "atc": "Atos Técnicos Conjuntos RFB/SUFIS/CGIBS", "proj": "Projetos e medidas em tramitação" },
       "legisN": "{n} normas",
       "legisN1": "1 norma",
       "prio": { "alta": "Prioridade alta", "media": "Prioridade média", "baixa": "Prioridade baixa" },
@@ -481,11 +486,12 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
       { "valor": "2033", "rotulo": "Fim da transição", "nota": "Extinção de ICMS e ISS" }
     ],
     "novidades": [
-      { "data": "03/11/2026", "titulo": "Governo anuncia MP com as alíquotas do Imposto Seletivo", "resumo": "A Fazenda anunciou a medida provisória que fixa as alíquotas do IS. Pela noventena, a cobrança deve começar só em fevereiro de 2027. Em 2027 as alíquotas devem reproduzir a carga atual do IPI; aumentos ficam para 2028. A MP vale 120 dias e precisa ser aprovada pelo Congresso. Publicação no DOU a confirmar.", "ato": "Medida provisória (a confirmar)", "novo": true, "links": [
-        { "tipo": "fonte", "rotulo": "TAGD Advogados — MP do IS e PEC do IPI", "url": "https://tagdlaw.com.br/governo-prepara-aliquotas-do-imposto-seletivo-e-estuda-manter-ipi-em-janeiro-de-2027/" },
-        { "tipo": "fonte", "rotulo": "Tribuna do Sertão — governo adia publicação da MP", "url": "https://www.tribunadosertao.com.br/financas/2026/11/03/1012710-governo-adia-medida-provisoria-com-aliquotas-do-imposto-seletivo" },
-        { "tipo": "oficial", "rotulo": "LC 214/2025 — Imposto Seletivo e Anexo XVII (Planalto)", "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm" } ] },
-      { "data": "03/11/2026", "titulo": "Fazenda estuda PEC para manter o IPI em janeiro de 2027", "resumo": "Como o IS só deve ser cobrado a partir de fevereiro, o governo avalia uma PEC para manter o IPI em janeiro de 2027 apenas nos setores sujeitos ao IS, evitando antecipação de compras. Depende de aprovação no Congresso até o fim do ano.", "ato": "PEC (em estudo)", "novo": true, "links": [
+      { "data": "04/11/2026", "titulo": "Publicada a MP 1.399/2026 com as alíquotas do Imposto Seletivo", "resumo": "A Medida Provisória nº 1.399/2026 (DOU extra de 04/11) fixa as alíquotas do IS para 2027, com efeitos a partir de 02/02/2027, quando o IPI desses bens vai a zero. Até 31/12/2027 as alíquotas reproduzem o IPI atual, multiplicado por fatores de conversão. Bebidas açucaradas (NCM 2202.10.00): 2,6%. Cerveja: 4,2%. Destilados: 20% a 24%. Concursos de prognósticos: 0,5%. Bens minerais: zero. O governo deve enviar até 31/05/2027 o projeto com as alíquotas de 2028. A MP precisa ser aprovada pelo Congresso.", "ato": "Medida Provisória nº 1.399/2026", "novo": true, "links": [
+        { "tipo": "oficial", "rotulo": "MP nº 1.399/2026 — íntegra (Planalto)", "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/mpv/mpv1399.htm" },
+        { "tipo": "oficial", "rotulo": "Casa Civil — governo define alíquotas do IS por MP", "url": "https://www.gov.br/casacivil/pt-br/assuntos/noticias/2026/outubro/governo-federal-define-aliquotas-do-imposto-seletivo-para-2027-por-meio-de-medida-provisoria" },
+        { "tipo": "fonte", "rotulo": "InfoMoney — alíquotas do IS por produto", "url": "https://www.infomoney.com.br/politica/confira-as-aliquotas-do-imposto-seletivo-que-entrarao-em-vigor-em-fevereiro/" } ] },
+      { "data": "04/11/2026", "titulo": "Governo apresentará PEC para manter o IPI até o IS valer plenamente", "resumo": "Junto com a MP 1.399/2026, o governo anunciou uma PEC para prorrogar o IPI sobre os bens sujeitos ao IS até o início pleno do novo imposto (02/02/2027), evitando um mês sem tributação em janeiro de 2027. Depende de aprovação no Congresso.", "ato": "PEC (a apresentar)", "novo": true, "links": [
+        { "tipo": "oficial", "rotulo": "Casa Civil — MP do IS e PEC do IPI", "url": "https://www.gov.br/casacivil/pt-br/assuntos/noticias/2026/outubro/governo-federal-define-aliquotas-do-imposto-seletivo-para-2027-por-meio-de-medida-provisoria" },
         { "tipo": "fonte", "rotulo": "TAGD Advogados — governo estuda manter IPI em janeiro", "url": "https://tagdlaw.com.br/governo-prepara-aliquotas-do-imposto-seletivo-e-estuda-manter-ipi-em-janeiro-de-2027/" },
         { "tipo": "oficial", "rotulo": "EC 132/2023 — texto integral (Planalto)", "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm" } ] },
       { "data": "29/10/2026", "titulo": "Ato Técnico Conjunto 10/2026 aprova NTs e fixa produção em 16/11", "resumo": "Aprova documentação técnica de dez modelos de DF-e e unifica em 16/11/2026 a produção das NTs 2025.002 v1.53 e 2026.005 a 2026.008 da NF-e/NFC-e (antes previstas para 03/11).", "ato": "Ato Técnico Conjunto RFB/SUFIS/CGIBS nº 10/2026", "novo": true, "links": [
@@ -528,7 +534,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
     ],
     "cronograma": [
       { "ano": "2026", "titulo": "Ano de teste", "tags": ["Teste", "DF-e"], "itens": ["CBS 0,9% e IBS 0,1%, compensáveis", "Campos IBS/CBS obrigatórios na NF-e desde 03/08", "Regulamentos publicados em 30/04", "Split payment em testes desde 15/10"] },
-      { "ano": "2027", "titulo": "CBS plena e Imposto Seletivo", "tags": ["CBS", "IS", "Extinção"], "itens": ["Cobrança da CBS com alíquota de referência (TCU: 11,3%)", "Extinção de PIS/Cofins", "IPI zerado, exceto produtos com industrialização na ZFM", "Início do IS (alíquotas a definir)", "Cashback da CBS para famílias do CadÚnico", "Split payment facultativo no 2º semestre"] },
+      { "ano": "2027", "titulo": "CBS plena e Imposto Seletivo", "tags": ["CBS", "IS", "Extinção"], "itens": ["Cobrança da CBS com alíquota de referência (TCU: 11,3%)", "Extinção de PIS/Cofins", "IPI zerado, exceto produtos com industrialização na ZFM", "Início do IS em 02/02/2027 (MP 1.399/2026), com IPI zerado nos mesmos bens", "Cashback da CBS para famílias do CadÚnico", "Split payment facultativo no 2º semestre"] },
       { "ano": "2028", "titulo": "Consolidação", "tags": ["Split payment"], "itens": ["Split payment obrigatório nas operações B2B (previsão)", "IBS segue em 0,1% (teste)"] },
       { "ano": "2029–2032", "titulo": "Transição ICMS/ISS → IBS", "tags": ["IBS", "ICMS", "ISS"], "itens": ["Redução gradual de ICMS e ISS (90%, 80%, 70%, 60% das alíquotas)", "Aumento proporcional do IBS", "Cashback do IBS a partir de 2029"] },
       { "ano": "2033", "titulo": "Modelo definitivo", "tags": ["IVA dual"], "itens": ["Extinção de ICMS e ISS", "IBS e CBS integralmente vigentes"] }
@@ -536,7 +542,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
     "aliquotas": [
       ["CBS", "0,9% (teste)", "11,3% (referência TCU, a fixar pelo Senado)", "Recolhimento dispensado em 2026 com obrigações acessórias"],
       ["IBS (UF + Município)", "0,1% (teste)", "0,1% (teste)", "Alíquota cheia gradual a partir de 2029"],
-      ["Imposto Seletivo", "—", "A definir (lei/MP pendente)", "Noventena pode adiar a cobrança"],
+      ["Imposto Seletivo", "—", "Desde 02/02/2027: bebidas açucaradas 2,6%; cerveja 4,2%; destilados 20–24%; prognósticos 0,5%; minerais 0%", "MP 1.399/2026; demais itens = IPI atual × fatores de conversão"],
       ["PIS/Cofins", "Vigentes", "Extintos", "Substituídos pela CBS"],
       ["IPI", "Vigente", "Zerado (exceto ZFM)", "Mantido para proteger a ZFM"],
       ["Cesta Básica Nacional", "—", "Alíquota zero", "Anexo I da LC 214/2025"]
@@ -544,7 +550,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
     "tributos": [
       { "sigla": "CBS", "nome": "Contribuição sobre Bens e Serviços", "esfera": "Federal (Receita Federal)", "texto": "Substitui PIS e Cofins. Não cumulativa, base ampla, crédito financeiro. Regulamentada pelo Decreto 12.955/2026." },
       { "sigla": "IBS", "nome": "Imposto sobre Bens e Serviços", "esfera": "Estados e Municípios (CGIBS)", "texto": "Substitui ICMS e ISS. Cobrança no destino, administração pelo Comitê Gestor criado pela LC 227/2026. Regulamentado pela Resolução CGIBS 6/2026." },
-      { "sigla": "IS", "nome": "Imposto Seletivo", "esfera": "Federal", "texto": "Incide uma única vez sobre bens prejudiciais à saúde ou ao meio ambiente, sem gerar crédito. Instituído pela EC 132/2023 e pela LC 214/2025. Início em 2027; alíquotas dependem de MP/lei ainda não publicada." },
+      { "sigla": "IS", "nome": "Imposto Seletivo", "esfera": "Federal", "texto": "Incide uma única vez sobre bens prejudiciais à saúde ou ao meio ambiente, sem gerar crédito. Instituído pela EC 132/2023 e pela LC 214/2025. Alíquotas de 2027 fixadas pela MP 1.399/2026, com efeitos a partir de 02/02/2027." },
       { "sigla": "IPI", "nome": "Imposto sobre Produtos Industrializados", "esfera": "Federal (residual)", "texto": "Alíquota zero a partir de 2027, exceto para produtos com industrialização incentivada na Zona Franca de Manaus (EC 132/2023 e art. 454 da LC 214/2025). Não é extinto: segue como instrumento de proteção da ZFM." }
     ],
     "isipi": {
@@ -553,17 +559,17 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
         { "titulo": "Imposto Seletivo (IS)", "itens": [
           { "t": "Base legal", "d": "EC 132/2023 (art. 153, VIII, da Constituição) e LC 214/2025, que institui o IS e lista os bens tributados no Anexo XVII. Incide uma única vez na cadeia e não gera crédito.", "ok": true },
           { "t": "O que é tributado", "d": "Veículos, embarcações e aeronaves; cigarros e fumígenos; bebidas alcoólicas; bebidas açucaradas; bens minerais; concursos de prognósticos e fantasy sport.", "ok": true },
-          { "t": "Alíquotas por medida provisória", "d": "A Fazenda anunciou em 03/11/2026 a MP com as alíquotas. A publicação no DOU, o número da MP e as alíquotas por produto estão a confirmar.", "ok": false },
-          { "t": "Noventena e início da cobrança", "d": "Entre a publicação e a cobrança são exigidos 90 dias, então o IS deve começar em fevereiro de 2027. A MP vale 120 dias e precisa ser convertida em lei pelo Congresso.", "ok": false },
-          { "t": "Calibragem e arrecadação", "d": "Em 2027 as alíquotas devem reproduzir a carga atual do IPI; aumentos para desestimular o consumo ficam para 2028 em diante. O PLOA 2027 prevê R$ 41,9 bilhões.", "ok": false },
+          { "t": "MP 1.399/2026: alíquotas de 2027", "d": "Publicada no DOU extra de 04/11/2026. Até 31/12/2027 a alíquota é o IPI atual multiplicado por fatores de conversão (Anexos IV e V). Bebidas açucaradas 2,6%; cerveja 4,2%; vinhos 8%; destilados 20% a 24%; concursos de prognósticos 0,5%; bens minerais 0%. Importados podem ter fator de ajuste (1,45 para bebidas).", "ok": true },
+          { "t": "Início em 02/02/2027", "d": "Pela noventena, a MP produz efeitos a partir de 02/02/2027, quando o IPI desses bens vai a zero. A MP vale 60 dias, prorrogáveis por mais 60, e precisa ser convertida em lei pelo Congresso.", "ok": true },
+          { "t": "Calibragem e 2028", "d": "Em 2027 o IS reproduz a carga atual do IPI (regime de implementação gradual). O governo deve enviar ao Congresso até 31/05/2027 o projeto com as alíquotas a partir de 2028. O PLOA 2027 prevê R$ 41,9 bilhões.", "ok": true },
           { "t": "PLP 42/2026", "d": "Projeto de deputados do Novo propõe limitar as alíquotas do IS entre 0% e 5%. Em tramitação, sem aprovação.", "ok": true },
-          { "t": "Impacto no portfólio", "d": "Bebidas hidroeletrolíticas como o Suerox entram no IS se forem enquadradas como bebidas açucaradas (NCM 2202). Versões sem açúcar tendem a ficar fora.", "ok": false }
+          { "t": "Impacto no portfólio", "d": "Suerox: IS de 2,6% se classificado como bebida açucarada (NCM 2202.10.00), a partir de 02/02/2027. Versões sem açúcar adicionado tendem a ficar fora — confirmar a NCM de cada SKU.", "ok": false }
         ] },
         { "titulo": "IPI", "itens": [
           { "t": "Alíquota zero em 2027", "d": "A EC 132/2023 (ADCT, art. 126) reduz a zero as alíquotas do IPI a partir de 2027, exceto para produtos com industrialização incentivada na Zona Franca de Manaus.", "ok": true },
           { "t": "Critério da LC 214/2025 (art. 454)", "d": "Zeram os produtos com alíquota inferior a 6,5% na TIPI de 31/12/2023, observadas condições ligadas à ZFM (industrialização na ZFM em 2024 ou projeto aprovado pela Suframa). Parte da doutrina vê conflito entre esse corte e o texto constitucional.", "ok": false },
           { "t": "Decreto com a lista de produtos", "d": "Anunciado em 25/08/2026 para divulgar quais produtos zeram e quais seguem tributados (art. 454, §3º). Publicação a confirmar.", "ok": false },
-          { "t": "PEC para janeiro de 2027", "d": "Em estudo: manter o IPI em janeiro de 2027 só nos setores sujeitos ao IS, cobrindo o intervalo até o início da cobrança do IS.", "ok": false },
+          { "t": "PEC para janeiro de 2027", "d": "Anunciada junto com a MP 1.399/2026: prorroga o IPI sobre os bens sujeitos ao IS até 02/02/2027, cobrindo janeiro. Depende de aprovação no Congresso.", "ok": false },
           { "t": "Créditos acumulados", "d": "Não há regra de transição específica para saldos credores de IPI, diferente do que existe para PIS/Cofins. Avaliar o aproveitamento antes de 2027.", "ok": false },
           { "t": "Impacto no portfólio", "d": "Medicamentos já têm, em geral, IPI zero. Itens de HPPC com alíquota de 6,5% ou mais na TIPI podem seguir tributados se concorrerem com produção da ZFM — conferir NCM a NCM quando a lista for publicada.", "ok": false }
         ] }
@@ -589,7 +595,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
         { "categoria": "OTC / MIPs", "exemplos": "Antigripais, antiácidos, antimicóticos e analgésicos registrados como medicamento", "enquadramento": "Redução de 60% de IBS e CBS", "base": "LC 214/2025, art. 133", "texto": "A redução só vale se o produto seguir a sistemática de preços da CMED ou se a empresa firmar compromisso com a União e o CGIBS (art. 133, §2º). MIPs com preço liberado precisam desse compromisso; sem ele, pagam alíquota cheia. A alíquota zero (art. 146, alterado pela LC 227/2026) é restrita a linhas terapêuticas específicas e a compras públicas, o que é improvável para OTC.", "cbs": "≈ 4,5%", "is": "Não incide", "status": "confirmado", "urgencia": 95 },
         { "categoria": "Dermocosméticos", "exemplos": "Linhas de skincare, antiacne, cuidados com a pele", "enquadramento": "Alíquota cheia", "base": "Fora do Anexo VIII da LC 214/2025", "texto": "Cosméticos e perfumaria não têm redução. Itens registrados na Anvisa como medicamento podem ter os 60% (validar SKU a SKU). O PIS/Cofins monofásico acaba em 2027, e o ICMS-ST de HPPC já foi encerrado em SP e em outros 7 estados desde 01/04/2026, com recuperação do ST de estoques em 12 parcelas.", "cbs": "≈ 11,3%", "is": "Não incide", "status": "confirmado", "urgencia": 80 },
         { "categoria": "Sabonetes em barra e higiene básica", "exemplos": "Sabonetes de toucador e em barra, dentifrícios, escovas de dente, fraldas", "enquadramento": "Redução de 60% de IBS e CBS", "base": "LC 214/2025, art. 136 e Anexo VIII", "texto": "Exige coincidência exata entre a NCM (sabonete de toucador 3401.11.90; sabão em barra 3401.19.00), a descrição comercial e o texto do anexo. Qualquer divergência leva à alíquota cheia. Sabonetes líquidos e versões fora dessas NCMs tendem à alíquota cheia (a confirmar).", "cbs": "≈ 4,5%", "is": "Não incide", "status": "parcial", "urgencia": 70 },
-        { "categoria": "Hidroeletrolíticos (Suerox)", "exemplos": "Bebidas de reidratação com eletrólitos", "enquadramento": "Alíquota cheia, com risco de Imposto Seletivo", "base": "Sem previsão de redução; IS: LC 214/2025, Anexo XVII", "texto": "Classificado como bebida (NCM 2202), não tem redução. Se enquadrado como bebida açucarada, entra no Imposto Seletivo, cujas alíquotas ainda não foram definidas. Versões sem açúcar tendem a ficar fora do IS (a confirmar pela NCM). Produto registrado na Anvisa como medicamento, como sais de reidratação oral, poderia ter a redução de 60%.", "cbs": "≈ 11,3%", "is": "Risco, se açucarado", "status": "parcial", "urgencia": 85 },
+        { "categoria": "Hidroeletrolíticos (Suerox)", "exemplos": "Bebidas de reidratação com eletrólitos", "enquadramento": "Alíquota cheia + Imposto Seletivo de 2,6% se for bebida açucarada", "base": "IS: MP 1.399/2026 (Anexo IV) e LC 214/2025, Anexo XVII", "texto": "Classificado como bebida (NCM 2202), não tem redução de IBS/CBS. A MP 1.399/2026 fixou o IS de 2,6% para bebidas açucaradas da NCM 2202.10.00, a partir de 02/02/2027 (importadas podem ter fator de ajuste maior). Versões sem açúcar adicionado tendem a ficar fora do IS — confirmar a NCM de cada SKU. Produto registrado na Anvisa como medicamento, como sais de reidratação oral, poderia ter a redução de 60%.", "cbs": "≈ 11,3%", "is": "2,6% (NCM 2202.10.00)", "status": "parcial", "urgencia": 85 },
         { "categoria": "Fórmulas infantis (Novamil)", "exemplos": "Fórmulas para lactentes e de seguimento", "enquadramento": "Alíquota zero (Cesta Básica Nacional)", "base": "LC 214/2025, Anexo I, item 4", "texto": "Exige conformidade com a legislação sanitária específica e NCM 1901.10.10, 1901.10.90 ou 2106.90.90. Fórmulas para erros inatos do metabolismo têm redução de 60% (art. 133, §1º). A Genomma anunciou em 2025 o plano de lançar Novamil no Brasil; a situação atual está a confirmar.", "cbs": "0%", "is": "Não incide", "status": "parcial", "urgencia": 50 }
       ],
       "transversais": [
@@ -684,14 +690,15 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
   "es": {
     "meta": {
       "lang": "es",
-      "titulo": "Dossier Ejecutivo — Reforma Tributaria del Consumo",
+      "titulo": "Portal de Noticias — Reforma Tributaria Genomma",
       "atualizacao": "05/11/2026",
-      "ultimaPublicacao": "Acto Técnico Conjunto RFB/SUFIS/CGIBS n.º 10/2026 (DOU 29/10/2026)",
+      "ultimaPublicacao": "Medida Provisional n.º 1.399/2026 — Impuesto Selectivo (DOU extra 04/11/2026)",
       "marco": { "data": "2027-01-01T00:00:00-03:00", "rotulo": "Inicio del cobro efectivo de la CBS y extinción del PIS/Cofins", "fonte": "EC 132/2023 y LC 214/2025" },
       "marcoSecundario": { "data": "2026-11-16T00:00:00-03:00", "rotulo": "Producción de las NT 2025.002 v1.53 y 2026.005/006/007/008 de la NF-e" }
     },
     "ui": {
       "nav": ["Novedades", "Genomma", "IS e IPI", "Cronograma", "Tributos", "Impactos", "Comex", "Legislación", "Glosario", "Checklist", "Fuentes"],
+      "logo": ["Portal de Noticias", "Reforma Tributaria Genomma"],
       "heroKicker": "Dossier ejecutivo financiero · IBS · CBS · IS",
       "heroLinhas": ["Reforma", "Tributaria", "del Consumo"],
       "heroTexto": "Panorama consolidado de normas, plazos e impactos de la transición al IVA dual brasileño, actualizado al 05/11/2026.",
@@ -726,7 +733,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
       "legisIntro": "Normas de la reforma agrupadas por tipo, de la más reciente a la más antigua. Haga clic en el número para abrir el texto completo.",
       "legisBusca": "Filtrar por número, asunto o palabra clave…",
       "legisVazio": "Ninguna norma encontrada para este filtro.",
-      "legisGrupos": { "ec": "Enmiendas Constitucionales", "lc": "Leyes Complementarias", "dec": "Decretos", "res": "Resoluciones", "ac": "Actos Conjuntos RFB/CGIBS", "atc": "Actos Técnicos Conjuntos RFB/SUFIS/CGIBS", "proj": "Proyectos y medidas en trámite" },
+      "legisGrupos": { "ec": "Enmiendas Constitucionales", "lc": "Leyes Complementarias", "mp": "Medidas Provisionales", "dec": "Decretos", "res": "Resoluciones", "ac": "Actos Conjuntos RFB/CGIBS", "atc": "Actos Técnicos Conjuntos RFB/SUFIS/CGIBS", "proj": "Proyectos y medidas en trámite" },
       "legisN": "{n} normas",
       "legisN1": "1 norma",
       "prio": { "alta": "Prioridad alta", "media": "Prioridad media", "baixa": "Prioridad baja" },
@@ -757,11 +764,12 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
       { "valor": "2033", "rotulo": "Fin de la transición", "nota": "Extinción del ICMS y del ISS" }
     ],
     "novidades": [
-      { "data": "03/11/2026", "titulo": "El Gobierno anuncia MP con las alícuotas del Impuesto Selectivo", "resumo": "Hacienda anunció la medida provisional que fija las alícuotas del IS. Por la noventena, el cobro debería empezar recién en febrero de 2027. En 2027 las alícuotas deben reproducir la carga actual del IPI; los aumentos quedan para 2028. La MP vale 120 días y necesita aprobación del Congreso. Publicación en el DOU por confirmar.", "ato": "Medida provisional (por confirmar)", "novo": true, "links": [
-        { "tipo": "fonte", "rotulo": "TAGD Advogados — MP del IS y PEC del IPI", "url": "https://tagdlaw.com.br/governo-prepara-aliquotas-do-imposto-seletivo-e-estuda-manter-ipi-em-janeiro-de-2027/" },
-        { "tipo": "fonte", "rotulo": "Tribuna do Sertão — el Gobierno aplaza la MP", "url": "https://www.tribunadosertao.com.br/financas/2026/11/03/1012710-governo-adia-medida-provisoria-com-aliquotas-do-imposto-seletivo" },
-        { "tipo": "oficial", "rotulo": "LC 214/2025 — Impuesto Selectivo y Anexo XVII (Planalto)", "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm" } ] },
-      { "data": "03/11/2026", "titulo": "Hacienda estudia una PEC para mantener el IPI en enero de 2027", "resumo": "Como el IS solo se cobraría desde febrero, el Gobierno evalúa una PEC para mantener el IPI en enero de 2027 solo en los sectores sujetos al IS, evitando compras anticipadas. Depende de aprobación del Congreso antes de fin de año.", "ato": "PEC (en estudio)", "novo": true, "links": [
+      { "data": "04/11/2026", "titulo": "Publicada la MP 1.399/2026 con las alícuotas del Impuesto Selectivo", "resumo": "La Medida Provisional n.º 1.399/2026 (DOU extra del 04/11) fija las alícuotas del IS para 2027, con efectos desde el 02/02/2027, cuando el IPI de esos bienes pasa a cero. Hasta el 31/12/2027 las alícuotas reproducen el IPI actual, multiplicado por factores de conversión. Bebidas azucaradas (NCM 2202.10.00): 2,6%. Cerveza: 4,2%. Destilados: 20% a 24%. Concursos de pronósticos: 0,5%. Bienes minerales: cero. El Gobierno debe enviar hasta el 31/05/2027 el proyecto con las alícuotas de 2028. La MP debe ser aprobada por el Congreso.", "ato": "Medida Provisional n.º 1.399/2026", "novo": true, "links": [
+        { "tipo": "oficial", "rotulo": "MP n.º 1.399/2026 — texto completo (Planalto)", "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/mpv/mpv1399.htm" },
+        { "tipo": "oficial", "rotulo": "Casa Civil — el Gobierno define las alícuotas del IS por MP", "url": "https://www.gov.br/casacivil/pt-br/assuntos/noticias/2026/outubro/governo-federal-define-aliquotas-do-imposto-seletivo-para-2027-por-meio-de-medida-provisoria" },
+        { "tipo": "fonte", "rotulo": "InfoMoney — alícuotas del IS por producto", "url": "https://www.infomoney.com.br/politica/confira-as-aliquotas-do-imposto-seletivo-que-entrarao-em-vigor-em-fevereiro/" } ] },
+      { "data": "04/11/2026", "titulo": "El Gobierno presentará una PEC para mantener el IPI hasta que el IS rija plenamente", "resumo": "Junto con la MP 1.399/2026, el Gobierno anunció una PEC para prorrogar el IPI sobre los bienes sujetos al IS hasta el inicio pleno del nuevo impuesto (02/02/2027), evitando un mes sin tributación en enero de 2027. Depende de aprobación del Congreso.", "ato": "PEC (por presentar)", "novo": true, "links": [
+        { "tipo": "oficial", "rotulo": "Casa Civil — MP del IS y PEC del IPI", "url": "https://www.gov.br/casacivil/pt-br/assuntos/noticias/2026/outubro/governo-federal-define-aliquotas-do-imposto-seletivo-para-2027-por-meio-de-medida-provisoria" },
         { "tipo": "fonte", "rotulo": "TAGD Advogados — el Gobierno estudia mantener el IPI en enero", "url": "https://tagdlaw.com.br/governo-prepara-aliquotas-do-imposto-seletivo-e-estuda-manter-ipi-em-janeiro-de-2027/" },
         { "tipo": "oficial", "rotulo": "EC 132/2023 — texto completo (Planalto)", "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm" } ] },
       { "data": "29/10/2026", "titulo": "Acto Técnico Conjunto 10/2026 aprueba NT y fija producción el 16/11", "resumo": "Aprueba documentación técnica de diez modelos de DF-e y unifica el 16/11/2026 la producción de las NT 2025.002 v1.53 y 2026.005 a 2026.008 de NF-e/NFC-e (antes previstas para el 03/11).", "ato": "Acto Técnico Conjunto RFB/SUFIS/CGIBS n.º 10/2026", "novo": true, "links": [
@@ -804,7 +812,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
     ],
     "cronograma": [
       { "ano": "2026", "titulo": "Año de prueba", "tags": ["Prueba", "DF-e"], "itens": ["CBS 0,9% e IBS 0,1%, compensables", "Campos IBS/CBS obligatorios en la NF-e desde el 03/08", "Reglamentos publicados el 30/04", "Split payment en pruebas desde el 15/10"] },
-      { "ano": "2027", "titulo": "CBS plena e Impuesto Selectivo", "tags": ["CBS", "IS", "Extinción"], "itens": ["Cobro de la CBS con alícuota de referencia (TCU: 11,3%)", "Extinción del PIS/Cofins", "IPI en cero, salvo productos industrializados en la ZFM", "Inicio del IS (alícuotas por definir)", "Cashback de la CBS para familias del CadÚnico", "Split payment facultativo en el 2.º semestre"] },
+      { "ano": "2027", "titulo": "CBS plena e Impuesto Selectivo", "tags": ["CBS", "IS", "Extinción"], "itens": ["Cobro de la CBS con alícuota de referencia (TCU: 11,3%)", "Extinción del PIS/Cofins", "IPI en cero, salvo productos industrializados en la ZFM", "Inicio del IS el 02/02/2027 (MP 1.399/2026), con IPI en cero en los mismos bienes", "Cashback de la CBS para familias del CadÚnico", "Split payment facultativo en el 2.º semestre"] },
       { "ano": "2028", "titulo": "Consolidación", "tags": ["Split payment"], "itens": ["Split payment obligatorio en operaciones B2B (previsión)", "IBS sigue en 0,1% (prueba)"] },
       { "ano": "2029–2032", "titulo": "Transición ICMS/ISS → IBS", "tags": ["IBS", "ICMS", "ISS"], "itens": ["Reducción gradual de ICMS e ISS (90%, 80%, 70%, 60% de las alícuotas)", "Aumento proporcional del IBS", "Cashback del IBS desde 2029"] },
       { "ano": "2033", "titulo": "Modelo definitivo", "tags": ["IVA dual"], "itens": ["Extinción del ICMS y del ISS", "IBS y CBS plenamente vigentes"] }
@@ -812,7 +820,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
     "aliquotas": [
       ["CBS", "0,9% (prueba)", "11,3% (referencia TCU, a fijar por el Senado)", "Pago dispensado en 2026 con obligaciones accesorias"],
       ["IBS (Estado + Municipio)", "0,1% (prueba)", "0,1% (prueba)", "Alícuota plena gradual desde 2029"],
-      ["Impuesto Selectivo", "—", "Por definir (ley/MP pendiente)", "La noventena puede aplazar el cobro"],
+      ["Impuesto Selectivo", "—", "Desde el 02/02/2027: bebidas azucaradas 2,6%; cerveza 4,2%; destilados 20–24%; pronósticos 0,5%; minerales 0%", "MP 1.399/2026; demás ítems = IPI actual × factores de conversión"],
       ["PIS/Cofins", "Vigentes", "Extinguidos", "Sustituidos por la CBS"],
       ["IPI", "Vigente", "En cero (salvo ZFM)", "Se mantiene para proteger la ZFM"],
       ["Canasta Básica Nacional", "—", "Alícuota cero", "Anexo I de la LC 214/2025"]
@@ -820,7 +828,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
     "tributos": [
       { "sigla": "CBS", "nome": "Contribución sobre Bienes y Servicios", "esfera": "Federal (Receita Federal)", "texto": "Sustituye al PIS y la Cofins. No acumulativa, base amplia, crédito financiero. Reglamentada por el Decreto 12.955/2026." },
       { "sigla": "IBS", "nome": "Impuesto sobre Bienes y Servicios", "esfera": "Estados y Municipios (CGIBS)", "texto": "Sustituye al ICMS y al ISS. Cobro en destino, administrado por el Comité Gestor creado por la LC 227/2026. Reglamentado por la Resolución CGIBS 6/2026." },
-      { "sigla": "IS", "nome": "Impuesto Selectivo", "esfera": "Federal", "texto": "Grava una sola vez bienes perjudiciales para la salud o el medio ambiente, sin generar crédito. Instituido por la EC 132/2023 y la LC 214/2025. Inicio en 2027; las alícuotas dependen de una MP/ley aún no publicada." },
+      { "sigla": "IS", "nome": "Impuesto Selectivo", "esfera": "Federal", "texto": "Grava una sola vez bienes perjudiciales para la salud o el medio ambiente, sin generar crédito. Instituido por la EC 132/2023 y la LC 214/2025. Alícuotas de 2027 fijadas por la MP 1.399/2026, con efectos desde el 02/02/2027." },
       { "sigla": "IPI", "nome": "Impuesto sobre Productos Industrializados", "esfera": "Federal (residual)", "texto": "Alícuota cero desde 2027, salvo productos con industrialización incentivada en la Zona Franca de Manaus (EC 132/2023 y art. 454 de la LC 214/2025). No se extingue: sigue como instrumento de protección de la ZFM." }
     ],
     "isipi": {
@@ -829,17 +837,17 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
         { "titulo": "Impuesto Selectivo (IS)", "itens": [
           { "t": "Base legal", "d": "EC 132/2023 (art. 153, VIII, de la Constitución) y LC 214/2025, que instituye el IS y lista los bienes gravados en el Anexo XVII. Incide una sola vez en la cadena y no genera crédito.", "ok": true },
           { "t": "Qué se grava", "d": "Vehículos, embarcaciones y aeronaves; cigarrillos y fumígenos; bebidas alcohólicas; bebidas azucaradas; bienes minerales; concursos de pronósticos y fantasy sport.", "ok": true },
-          { "t": "Alícuotas por medida provisional", "d": "Hacienda anunció el 03/11/2026 la MP con las alícuotas. La publicación en el DOU, el número de la MP y las alícuotas por producto están por confirmar.", "ok": false },
-          { "t": "Noventena e inicio del cobro", "d": "Entre la publicación y el cobro se exigen 90 días, por lo que el IS debería empezar en febrero de 2027. La MP vale 120 días y debe ser convertida en ley por el Congreso.", "ok": false },
-          { "t": "Calibración y recaudación", "d": "En 2027 las alícuotas deben reproducir la carga actual del IPI; los aumentos para desincentivar el consumo quedan para 2028 en adelante. El PLOA 2027 prevé R$ 41,9 mil millones.", "ok": false },
+          { "t": "MP 1.399/2026: alícuotas de 2027", "d": "Publicada en el DOU extra del 04/11/2026. Hasta el 31/12/2027 la alícuota es el IPI actual multiplicado por factores de conversión (Anexos IV y V). Bebidas azucaradas 2,6%; cerveza 4,2%; vinos 8%; destilados 20% a 24%; concursos de pronósticos 0,5%; bienes minerales 0%. Los importados pueden tener factor de ajuste (1,45 para bebidas).", "ok": true },
+          { "t": "Inicio el 02/02/2027", "d": "Por la noventena, la MP produce efectos desde el 02/02/2027, cuando el IPI de esos bienes pasa a cero. La MP vale 60 días, prorrogables por otros 60, y debe ser convertida en ley por el Congreso.", "ok": true },
+          { "t": "Calibración y 2028", "d": "En 2027 el IS reproduce la carga actual del IPI (régimen de implementación gradual). El Gobierno debe enviar al Congreso hasta el 31/05/2027 el proyecto con las alícuotas desde 2028. El PLOA 2027 prevé R$ 41,9 mil millones.", "ok": true },
           { "t": "PLP 42/2026", "d": "Proyecto de diputados del partido Novo propone limitar las alícuotas del IS entre 0% y 5%. En trámite, sin aprobación.", "ok": true },
-          { "t": "Impacto en el portafolio", "d": "Las bebidas hidroelectrolíticas como Suerox entran en el IS si se encuadran como bebidas azucaradas (NCM 2202). Las versiones sin azúcar tienden a quedar fuera.", "ok": false }
+          { "t": "Impacto en el portafolio", "d": "Suerox: IS del 2,6% si se clasifica como bebida azucarada (NCM 2202.10.00), desde el 02/02/2027. Las versiones sin azúcar añadido tienden a quedar fuera; confirmar la NCM de cada SKU.", "ok": false }
         ] },
         { "titulo": "IPI", "itens": [
           { "t": "Alícuota cero en 2027", "d": "La EC 132/2023 (ADCT, art. 126) reduce a cero las alícuotas del IPI desde 2027, salvo productos con industrialización incentivada en la Zona Franca de Manaus.", "ok": true },
           { "t": "Criterio de la LC 214/2025 (art. 454)", "d": "Pasan a cero los productos con alícuota inferior al 6,5% en la TIPI del 31/12/2023, observadas condiciones ligadas a la ZFM (industrialización en la ZFM en 2024 o proyecto aprobado por Suframa). Parte de la doctrina ve conflicto entre ese corte y el texto constitucional.", "ok": false },
           { "t": "Decreto con la lista de productos", "d": "Anunciado el 25/08/2026 para divulgar qué productos pasan a cero y cuáles siguen gravados (art. 454, §3). Publicación por confirmar.", "ok": false },
-          { "t": "PEC para enero de 2027", "d": "En estudio: mantener el IPI en enero de 2027 solo en los sectores sujetos al IS, cubriendo el intervalo hasta el inicio del cobro del IS.", "ok": false },
+          { "t": "PEC para enero de 2027", "d": "Anunciada junto con la MP 1.399/2026: prorroga el IPI sobre los bienes sujetos al IS hasta el 02/02/2027, cubriendo enero. Depende de aprobación del Congreso.", "ok": false },
           { "t": "Créditos acumulados", "d": "No hay regla de transición específica para saldos acreedores de IPI, a diferencia del PIS/Cofins. Evaluar su aprovechamiento antes de 2027.", "ok": false },
           { "t": "Impacto en el portafolio", "d": "Los medicamentos ya tienen, en general, IPI cero. Ítems de higiene y cosméticos con alícuota de 6,5% o más en la TIPI pueden seguir gravados si compiten con producción de la ZFM; verificar NCM por NCM cuando se publique la lista.", "ok": false }
         ] }
@@ -865,7 +873,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
         { "categoria": "OTC / MIP", "exemplos": "Antigripales, antiácidos, antimicóticos y analgésicos registrados como medicamento", "enquadramento": "Reducción del 60% de IBS y CBS", "base": "LC 214/2025, art. 133", "texto": "La reducción solo aplica si el producto sigue el sistema de precios de la CMED o si la empresa firma un compromiso con la Unión y el CGIBS (art. 133, §2). Los MIP con precio liberado necesitan ese compromiso; sin él, pagan alícuota plena. La alícuota cero (art. 146, modificado por la LC 227/2026) se limita a líneas terapéuticas específicas y compras públicas, algo improbable para OTC.", "cbs": "≈ 4,5%", "is": "No incide", "status": "confirmado", "urgencia": 95 },
         { "categoria": "Dermocosméticos", "exemplos": "Líneas de skincare, antiacné, cuidado de la piel", "enquadramento": "Alícuota plena", "base": "Fuera del Anexo VIII de la LC 214/2025", "texto": "Cosméticos y perfumería no tienen reducción. Ítems registrados en Anvisa como medicamento pueden tener el 60% (validar SKU por SKU). El PIS/Cofins monofásico termina en 2027, y el ICMS-ST de higiene y cosméticos ya terminó en SP y otros 7 estados desde el 01/04/2026, con recuperación del ST de inventarios en 12 cuotas.", "cbs": "≈ 11,3%", "is": "No incide", "status": "confirmado", "urgencia": 80 },
         { "categoria": "Jabones en barra e higiene básica", "exemplos": "Jabones de tocador y en barra, dentífricos, cepillos dentales, pañales", "enquadramento": "Reducción del 60% de IBS y CBS", "base": "LC 214/2025, art. 136 y Anexo VIII", "texto": "Exige coincidencia exacta entre la NCM (jabón de tocador 3401.11.90; jabón en barra 3401.19.00), la descripción comercial y el texto del anexo. Cualquier diferencia lleva a la alícuota plena. Los jabones líquidos y versiones fuera de esas NCM tienden a la alícuota plena (por confirmar).", "cbs": "≈ 4,5%", "is": "No incide", "status": "parcial", "urgencia": 70 },
-        { "categoria": "Hidroelectrolíticos (Suerox)", "exemplos": "Bebidas de rehidratación con electrolitos", "enquadramento": "Alícuota plena, con riesgo de Impuesto Selectivo", "base": "Sin reducción prevista; IS: LC 214/2025, Anexo XVII", "texto": "Clasificado como bebida (NCM 2202), no tiene reducción. Si se encuadra como bebida azucarada, entra en el Impuesto Selectivo, cuyas alícuotas aún no se definieron. Las versiones sin azúcar tienden a quedar fuera del IS (por confirmar según la NCM). Un producto registrado en Anvisa como medicamento, como las sales de rehidratación oral, podría tener la reducción del 60%.", "cbs": "≈ 11,3%", "is": "Riesgo, si es azucarado", "status": "parcial", "urgencia": 85 },
+        { "categoria": "Hidroelectrolíticos (Suerox)", "exemplos": "Bebidas de rehidratación con electrolitos", "enquadramento": "Alícuota plena + Impuesto Selectivo del 2,6% si es bebida azucarada", "base": "IS: MP 1.399/2026 (Anexo IV) y LC 214/2025, Anexo XVII", "texto": "Clasificado como bebida (NCM 2202), no tiene reducción de IBS/CBS. La MP 1.399/2026 fijó el IS del 2,6% para bebidas azucaradas de la NCM 2202.10.00, desde el 02/02/2027 (las importadas pueden tener un factor de ajuste mayor). Las versiones sin azúcar añadido tienden a quedar fuera del IS; confirmar la NCM de cada SKU. Un producto registrado en Anvisa como medicamento, como las sales de rehidratación oral, podría tener la reducción del 60%.", "cbs": "≈ 11,3%", "is": "2,6% (NCM 2202.10.00)", "status": "parcial", "urgencia": 85 },
         { "categoria": "Fórmulas infantiles (Novamil)", "exemplos": "Fórmulas para lactantes y de continuación", "enquadramento": "Alícuota cero (Canasta Básica Nacional)", "base": "LC 214/2025, Anexo I, ítem 4", "texto": "Exige conformidad con la legislación sanitaria específica y NCM 1901.10.10, 1901.10.90 o 2106.90.90. Las fórmulas para errores innatos del metabolismo tienen reducción del 60% (art. 133, §1). Genomma anunció en 2025 el plan de lanzar Novamil en Brasil; la situación actual está por confirmar.", "cbs": "0%", "is": "No incide", "status": "parcial", "urgencia": 50 }
       ],
       "transversais": [
@@ -967,22 +975,25 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
     "tagd": { "n": "TAGD Advogados (IS/IPI)", "u": "https://tagdlaw.com.br/governo-prepara-aliquotas-do-imposto-seletivo-e-estuda-manter-ipi-em-janeiro-de-2027/" },
     "tribuna_is": { "n": "Tribuna do Sertão (MP do IS)", "u": "https://www.tribunadosertao.com.br/financas/2026/11/03/1012710-governo-adia-medida-provisoria-com-aliquotas-do-imposto-seletivo" },
     "contmatic_ipi": { "n": "Contmatic (IPI 2027)", "u": "https://simplifique.contmatic.com.br/blogs/ipi-zerado-2027-decreto-governo-o-que-muda" },
+    "mp1399": { "n": "MP 1.399/2026", "u": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/mpv/mpv1399.htm" },
+    "casacivil_is": { "n": "Casa Civil (MP do IS)", "u": "https://www.gov.br/casacivil/pt-br/assuntos/noticias/2026/outubro/governo-federal-define-aliquotas-do-imposto-seletivo-para-2027-por-meio-de-medida-provisoria" },
+    "infomoney_is": { "n": "InfoMoney (alíquotas do IS)", "u": "https://www.infomoney.com.br/politica/confira-as-aliquotas-do-imposto-seletivo-que-entrarao-em-vigor-em-fevereiro/" },
     "plp42": { "n": "PLP 42/2026 (PDF)", "u": "https://www.reformatributaria.com/wp-content/uploads/2026/03/PLP-42-2026.pdf" }
   },
   "fontesItens": {
     "kpis.0": ["dec12955", "contabeis_dec"], "kpis.1": ["res6", "taxgroup"], "kpis.2": ["senado_tcu"], "kpis.3": ["radar_is419"], "kpis.4": ["mercado_sn", "cgibs_sn"], "kpis.5": ["ec132", "lc214"],
-    "aliquotas.0": ["dec12955", "senado_tcu"], "aliquotas.1": ["res6", "lc214"], "aliquotas.2": ["tagd", "crcsp_is"], "aliquotas.3": ["ec132", "lc214"], "aliquotas.4": ["ec132", "contmatic_ipi"], "aliquotas.5": ["lc214", "iob_cesta"],
-    "cronograma.0": ["ac4", "dec12955", "comsefaz"], "cronograma.1": ["senado_tcu", "ec132", "tagd", "contabeis_split"], "cronograma.2": ["contabeis_split"], "cronograma.3": ["ec132", "lc214"], "cronograma.4": ["ec132"],
-    "tributos.0": ["dec12955", "lc214"], "tributos.1": ["res6", "lc227"], "tributos.2": ["ec132", "lc214", "tagd"], "tributos.3": ["ec132", "lc214", "contmatic_ipi"],
+    "aliquotas.0": ["dec12955", "senado_tcu"], "aliquotas.1": ["res6", "lc214"], "aliquotas.2": ["mp1399", "infomoney_is"], "aliquotas.3": ["ec132", "lc214"], "aliquotas.4": ["ec132", "contmatic_ipi"], "aliquotas.5": ["lc214", "iob_cesta"],
+    "cronograma.0": ["ac4", "dec12955", "comsefaz"], "cronograma.1": ["senado_tcu", "ec132", "mp1399", "contabeis_split"], "cronograma.2": ["contabeis_split"], "cronograma.3": ["ec132", "lc214"], "cronograma.4": ["ec132"],
+    "tributos.0": ["dec12955", "lc214"], "tributos.1": ["res6", "lc227"], "tributos.2": ["ec132", "lc214", "mp1399"], "tributos.3": ["ec132", "lc214", "contmatic_ipi"],
     "mecanismos.0": ["ac2", "comsefaz"], "mecanismos.1": ["lc214"], "mecanismos.2": ["ec132", "lc214"], "mecanismos.3": ["lc214", "cashback"], "mecanismos.4": ["lc214", "iob_cesta"], "mecanismos.5": ["lc214"],
     "impactos.0": ["ac4", "atc10", "taxcel"], "impactos.1": ["cgibs_sn", "receita_cgsn"], "impactos.2": ["lc214", "senado_tcu"], "impactos.3": ["coad_coop", "ec132"],
-    "genomma.0": ["lc214", "lc227", "simtax_med", "medicinasa", "sindusfarma"], "genomma.1": ["abihpec", "lc214"], "genomma.2": ["abihpec", "lc214"], "genomma.3": ["radar_is", "lc214"], "genomma.4": ["lc214", "iob_cesta", "elceo"],
+    "genomma.0": ["lc214", "lc227", "simtax_med", "medicinasa", "sindusfarma"], "genomma.1": ["abihpec", "lc214"], "genomma.2": ["abihpec", "lc214"], "genomma.3": ["mp1399", "infomoney_is", "lc214"], "genomma.4": ["lc214", "iob_cesta", "elceo"],
     "transv.0": ["cmed_gt", "sindusfarma"], "transv.1": ["abihpec"], "transv.2": ["lc214", "abihpec"], "transv.3": ["contabeis_split"], "transv.4": ["medicinasa", "dec12955"],
     "comex.0.0": ["fazcomex", "ac4"], "comex.0.1": ["fazcomex"], "comex.0.2": ["conjur_imp", "lc214"], "comex.0.3": ["lc214", "conjur_imp"], "comex.0.4": ["conjur_imp"], "comex.0.5": ["lc214"],
     "comex.1.0": ["lc214", "simtax_exp"], "comex.1.1": ["simtax_exp"], "comex.1.2": ["lc214", "barbieri_exp"], "comex.1.3": ["barbieri_exp"],
     "comex.2.0": ["conjur_imp", "apet_reg"], "comex.2.1": ["apet_reg"], "comex.2.2": ["ec132", "abihpec"],
-    "isipi.0.0": ["ec132", "lc214"], "isipi.0.1": ["lc214", "radar_is"], "isipi.0.2": ["tagd", "tribuna_is"], "isipi.0.3": ["tagd"], "isipi.0.4": ["tagd", "radar_is419"], "isipi.0.5": ["plp42"], "isipi.0.6": ["radar_is"],
-    "isipi.1.0": ["ec132"], "isipi.1.1": ["lc214", "contmatic_ipi"], "isipi.1.2": ["contmatic_ipi"], "isipi.1.3": ["tagd"], "isipi.1.4": ["contmatic_ipi"], "isipi.1.5": ["contmatic_ipi"]
+    "isipi.0.0": ["ec132", "lc214"], "isipi.0.1": ["lc214", "radar_is"], "isipi.0.2": ["mp1399", "infomoney_is"], "isipi.0.3": ["mp1399", "casacivil_is"], "isipi.0.4": ["mp1399", "casacivil_is", "radar_is419"], "isipi.0.5": ["plp42"], "isipi.0.6": ["mp1399", "infomoney_is"],
+    "isipi.1.0": ["ec132"], "isipi.1.1": ["lc214", "contmatic_ipi"], "isipi.1.2": ["contmatic_ipi"], "isipi.1.3": ["casacivil_is"], "isipi.1.4": ["contmatic_ipi"], "isipi.1.5": ["contmatic_ipi"]
   },
   "prioridades": {
     "impactos.0": { "p": "alta", "prazo": "2026-11-16", "marco": { "pt": "Produção das NTs da NF-e", "es": "Producción de las NT de la NF-e" } },
@@ -992,7 +1003,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
     "genomma.0": { "p": "alta", "prazo": "2027-01-01", "marco": { "pt": "CBS plena: compromisso CMED para MIPs com preço liberado", "es": "CBS plena: compromiso CMED para MIP con precio liberado" } },
     "genomma.1": { "p": "media", "prazo": "2027-01-01", "marco": { "pt": "Fim do PIS/Cofins monofásico", "es": "Fin del PIS/Cofins monofásico" } },
     "genomma.2": { "p": "media", "prazo": "2026-12-31", "marco": { "pt": "Validar NCM contra o Anexo VIII", "es": "Validar NCM frente al Anexo VIII" } },
-    "genomma.3": { "p": "alta", "prazo": "2027-02-01", "marco": { "pt": "Início previsto do Imposto Seletivo (a confirmar)", "es": "Inicio previsto del Impuesto Selectivo (por confirmar)" } },
+    "genomma.3": { "p": "alta", "prazo": "2027-02-02", "marco": { "pt": "Início do Imposto Seletivo (MP 1.399/2026)", "es": "Inicio del Impuesto Selectivo (MP 1.399/2026)" } },
     "genomma.4": { "p": "baixa", "prazo": "2027-01-01", "marco": { "pt": "Início da CBS (alíquota zero)", "es": "Inicio de la CBS (alícuota cero)" } }
   },
   "glossario": [
@@ -1089,8 +1100,8 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
     { "g": "atc", "num": "Ato Técnico Conjunto nº 3/2026", "data": "2026-09-02", "url": "https://www.cgibs.gov.br/upload/arquivos/202609/04223716-ato-tecnico-conjunto-n-3-dere.pdf", "desc": { "pt": "Documentação técnica da DeRE.", "es": "Documentación técnica de la DeRE." } },
     { "g": "atc", "num": "Ato Técnico Conjunto nº 2/2026", "data": "2026-08-21", "url": "https://www.cgibs.gov.br/upload/arquivos/202608/24185346-20260821-ato-tecnico-conjunto-n-2-assinado-cgibs.pdf", "desc": { "pt": "Documentação técnica de DF-e (ementa não verificada; consultar a íntegra).", "es": "Documentación técnica de DF-e (resumen no verificado; consultar el texto completo)." } },
     { "g": "atc", "num": "Ato Técnico Conjunto nº 1/2026", "data": "2026-07-31", "url": "https://www.cgibs.gov.br/upload/arquivos/202608/01153321-am-ato-tecnico-conjunto-rfb-e-cgibs-ratificacao-nts-dfes-revisao-assinado.pdf", "desc": { "pt": "Ratifica as NTs dos DF-e e suspende a rejeição de documentos emitidos sem IBS/CBS, mantida a obrigação de preenchimento.", "es": "Ratifica las NT de los DF-e y suspende el rechazo de documentos emitidos sin IBS/CBS, manteniendo la obligación de completarlos." } },
-    { "g": "proj", "num": "Medida provisória do Imposto Seletivo", "data": "2026-11-03", "url": "https://tagdlaw.com.br/governo-prepara-aliquotas-do-imposto-seletivo-e-estuda-manter-ipi-em-janeiro-de-2027/", "desc": { "pt": "Anunciada pela Fazenda para fixar as alíquotas do IS (cobrança prevista a partir de fev/2027). Número e publicação no DOU a confirmar.", "es": "Anunciada por Hacienda para fijar las alícuotas del IS (cobro previsto desde feb/2027). Número y publicación en el DOU por confirmar." } },
-    { "g": "proj", "num": "PEC do IPI em janeiro de 2027", "data": "2026-11-03", "url": "https://tagdlaw.com.br/governo-prepara-aliquotas-do-imposto-seletivo-e-estuda-manter-ipi-em-janeiro-de-2027/", "desc": { "pt": "Em estudo: manter o IPI em janeiro de 2027 nos setores sujeitos ao IS.", "es": "En estudio: mantener el IPI en enero de 2027 en los sectores sujetos al IS." } },
+    { "g": "mp", "num": "Medida Provisória nº 1.399/2026", "data": "2026-11-04", "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/mpv/mpv1399.htm", "desc": { "pt": "Alíquotas do Imposto Seletivo para 2027 em regime de implementação gradual (IPI atual × fatores de conversão), com efeitos a partir de 02/02/2027. Bebidas açucaradas 2,6%; prognósticos 0,5%; minerais zero até 31/12/2027. Projeto das alíquotas de 2028 até 31/05/2027. Depende de conversão em lei pelo Congresso.", "es": "Alícuotas del Impuesto Selectivo para 2027 en régimen de implementación gradual (IPI actual × factores de conversión), con efectos desde el 02/02/2027. Bebidas azucaradas 2,6%; pronósticos 0,5%; minerales cero hasta el 31/12/2027. Proyecto de las alícuotas de 2028 hasta el 31/05/2027. Depende de su conversión en ley por el Congreso." } },
+    { "g": "proj", "num": "PEC do IPI até o início do IS", "data": "2026-11-04", "url": "https://tagdlaw.com.br/governo-prepara-aliquotas-do-imposto-seletivo-e-estuda-manter-ipi-em-janeiro-de-2027/", "desc": { "pt": "Em estudo: manter o IPI em janeiro de 2027 nos setores sujeitos ao IS.", "es": "En estudio: mantener el IPI en enero de 2027 en los sectores sujetos al IS." } },
     { "g": "proj", "num": "Decreto da lista do IPI zerado (art. 454, §3º, LC 214/2025)", "data": "2026-08-25", "url": "https://simplifique.contmatic.com.br/blogs/ipi-zerado-2027-decreto-governo-o-que-muda", "desc": { "pt": "Anunciado em 25/08/2026 para divulgar os produtos com IPI zero e os mantidos por concorrência com a ZFM. Publicação a confirmar.", "es": "Anunciado el 25/08/2026 para divulgar los productos con IPI cero y los mantenidos por competir con la ZFM. Publicación por confirmar." } },
     { "g": "proj", "num": "PLP 42/2026", "data": "2026-03-01", "url": "https://www.reformatributaria.com/wp-content/uploads/2026/03/PLP-42-2026.pdf", "desc": { "pt": "Projeto que limita as alíquotas do Imposto Seletivo entre 0% e 5%. Em tramitação.", "es": "Proyecto que limita las alícuotas del Impuesto Selectivo entre 0% y 5%. En trámite." } }
   ]
@@ -1210,7 +1221,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
 
   function legislacao(ui){
     var f = filtroLegis.toLowerCase().trim();
-    var ordem = ['ec','lc','dec','res','ac','atc','proj'];
+    var ordem = ['ec','lc','mp','dec','res','ac','atc','proj'];
     var html = ordem.map(function(g){
       var itens = LEG.filter(function(l){
         if (l.g !== g) return false;
@@ -1323,6 +1334,7 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
     ['fontesLbl','legisIntro','legisBusca','legisVazio','legisGrupos','legisN','prio','proxPrazo','faltam','hoje','vencido','statusOpts','prioLegenda','linksTit','aConfirmar'].forEach(function(k){ if (ui[k] === undefined) ui[k] = D.pt.ui[k]; });
     document.documentElement.lang = L.meta.lang;
     document.title = L.meta.titulo;
+    if (ui.logo) { $('logo1').textContent = ui.logo[0]; $('logo2').textContent = ui.logo[1]; }
     document.querySelectorAll('.lang button').forEach(function(b){ b.classList.toggle('on', b.dataset.l === lang); });
 
     $('nav-links').innerHTML = ui.nav.map(function(t,i){ return '<li><a href="#' + ids[i] + '">' + esc(t) + '</a></li>'; }).join('');
