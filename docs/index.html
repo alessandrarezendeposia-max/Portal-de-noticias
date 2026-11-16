@@ -3648,8 +3648,8 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
     {
       "g": "dec",
       "num": "Decreto nº 13.075/2026",
-      "data": "2026-07-22",
-      "url": "https://www.coad.com.br/home/noticias-detalhe/138806/emissao-do-cnpj-e-de-documentos-fiscais-por-pessoas-fisicas-contribuintes-da-cbs-comecara-em-1-de-janeiro-de-2027",
+      "data": "2026-07-21",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/D13075.htm",
       "desc": {
         "pt": "Altera o regulamento da CBS: CNPJ e emissão de documentos fiscais por pessoas físicas contribuintes e produtores rurais passam para 01/01/2027.",
         "es": "Modifica el reglamento de la CBS: CNPJ y emisión de documentos fiscales por personas físicas contribuyentes y productores rurales pasan al 01/01/2027."
@@ -3908,6 +3908,17 @@ footer .mono{font-size:.75rem;margin-top:10px;font-weight:600;color:#fff}
 
     document.querySelectorAll('[data-s]').forEach(function(h){ h.textContent = ui.secoes[h.dataset.s]; });
 
+    var MESES = {jan:0,fev:1,feb:1,mar:2,abr:3,apr:3,mai:4,may:4,jun:5,jul:6,ago:7,aug:7,set:8,sep:8,out:9,oct:9,nov:10,dez:11,dic:11,dec:11,ene:0};
+    function chaveData(s){
+      var m = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(s || '');
+      if (m) return +m[3] * 10000 + +m[2] * 100 + +m[1];
+      m = /^([A-Za-z]{3})[a-z.]*\/(\d{4})$/.exec(s || '');
+      if (m && MESES[m[1].toLowerCase()] !== undefined) return +m[2] * 10000 + (MESES[m[1].toLowerCase()] + 1) * 100;
+      return 0;
+    }
+    L.novidades = L.novidades.map(function(n, i){ return { n: n, i: i }; })
+      .sort(function(x, y){ return (chaveData(y.n.data) - chaveData(x.n.data)) || (x.i - y.i); })
+      .map(function(o){ return o.n; });
     var mq = L.novidades.map(function(n){ return '<span>' + esc(n.data + ' · ' + n.titulo) + '</span>'; }).join('');
     $('marquee').innerHTML = mq + mq;
 
