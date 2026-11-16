@@ -1,0 +1,710 @@
+{
+  "pt": {
+    "meta": {
+      "lang": "pt-BR",
+      "titulo": "Portal de Notícias — Reforma Tributária Genomma",
+      "atualizacao": "16/11/2026",
+      "ultimaPublicacao": "Ato Conjunto RFB/CGIBS nº 7/2026 (DOU 13/11/2026)",
+      "marco": { "data": "2027-01-01T00:00:00-03:00", "rotulo": "Início da cobrança efetiva da CBS e extinção do PIS/Cofins", "fonte": "EC 132/2023 e LC 214/2025" },
+      "marcoSecundario": { "data": "2026-12-15T00:00:00-03:00", "rotulo": "Prazo do Senado para a alíquota da CBS e 1ª entrega mensal da DeRE (15/12)" }
+    },
+    "ui": {
+      "nav": ["Genomma", "Novidades", "IS e IPI", "Cronograma", "Tributos", "Impactos", "Comex", "Legislação", "Glossário", "Checklist", "Fontes"],
+      "logo": ["Portal de Notícias", "Reforma Tributária Genomma"],
+      "heroKicker": "Atualizado em {data} · IBS · CBS · IS · IPI",
+      "heroLinhas": ["Reforma", "Tributária", "do Consumo"],
+      "heroTexto": "Panorama consolidado das normas, prazos e impactos da transição para o IVA dual brasileiro, atualizado até 16/11/2026.",
+      "contagemRotulo": "Faltam para o marco crítico",
+      "contagemUnid": ["dias", "horas", "min", "seg"],
+      "contagemPassou": "Marco atingido",
+      "secoes": {
+        "kpis": "Indicadores-chave",
+        "novidades": "Últimas novidades",
+        "cronograma": "Cronograma de transição",
+        "aliquotas": "Alíquotas e parâmetros",
+        "tributos": "Os novos tributos",
+        "mecanismos": "Pilares do novo modelo",
+        "impactos": "Impactos por segmento",
+        "checklist": "Checklist de conformidade",
+        "fontes": "Fontes consultadas",
+        "genomma": "Impacto no portfólio Genomma",
+        "transversais": "Pontos que valem para todo o portfólio",
+        "comex": "Importação e exportação",
+        "entidades": "Fontes setoriais monitoradas",
+        "isipi": "Imposto Seletivo e IPI",
+        "legislacao": "Legislação",
+        "glossario": "Glossário de siglas"
+      },
+      "glossIntro": "Siglas e termos usados neste dossiê. No texto, as siglas sublinhadas com pontos mostram o significado ao passar o mouse ou tocar.",
+      "g": { "cbs": "CBS 2027 estimada", "is": "Imposto Seletivo", "exemplos": "Exemplos", "status": { "confirmado": "Regra confirmada", "parcial": "Parte a confirmar" } },
+      "aConfirmar": "a confirmar",
+      "acompanhar": "O que acompanhar",
+      "acessar": "Acessar",
+      "linksTit": { "oficial": "Publicação oficial", "fonte": "Fonte / análise" },
+      "fontesLbl": "Fontes",
+      "isipiTit": "Imposto Seletivo e IPI",
+      "legisTit": "Legislação",
+      "legisIntro": "Normas da reforma agrupadas por tipo, da mais recente para a mais antiga. Clique no número para abrir o texto integral.",
+      "legisBusca": "Filtrar por número, assunto ou palavra-chave…",
+      "legisVazio": "Nenhuma norma encontrada para este filtro.",
+      "legisGrupos": { "ec": "Emendas Constitucionais", "lc": "Leis Complementares", "mp": "Medidas Provisórias", "dec": "Decretos", "res": "Resoluções", "ac": "Atos Conjuntos RFB/CGIBS", "atc": "Atos Técnicos Conjuntos RFB/SUFIS/CGIBS", "proj": "Projetos e medidas em tramitação" },
+      "legisN": "{n} normas",
+      "legisN1": "1 norma",
+      "prio": { "alta": "Prioridade alta", "media": "Prioridade média", "baixa": "Prioridade baixa" },
+      "proxPrazo": "Próximo prazo",
+      "faltam": "faltam {d} dias",
+      "hoje": "vence hoje",
+      "vencido": "prazo passou há {d} dias",
+      "statusOpts": ["Não iniciado", "Em andamento", "Concluído"],
+      "prioLegenda": "Como ler: a prioridade combina impacto financeiro/operacional e proximidade do prazo (avaliação editorial deste dossiê). A barra enche à medida que o próximo prazo se aproxima (janela de 180 dias; cheia = vence hoje) e muda de cor: verde (mais de 90 dias), laranja (30 a 90) e rosa (menos de 30). Clique no status para registrar o andamento da sua equipe — fica salvo neste navegador.",
+      "novo": "NOVO",
+      "atual": "ATUAL",
+      "urgencia": "Urgência",
+      "prazo": "Prazo",
+      "contador": "{x} / {n} itens concluídos",
+      "tabela": ["Item", "2026", "2027", "Observação"],
+      "imprimir": "Imprimir",
+      "citacao": "A alíquota de referência é um parâmetro, e não necessariamente a alíquota que será cobrada.",
+      "citacaoAutor": "Tribunal de Contas da União — cálculo da CBS 2027 (paráfrase)",
+      "disclaimer": "Material informativo elaborado a partir de fontes públicas e notícias especializadas. Itens marcados como \"a confirmar\" dependem de publicação oficial. Não constitui parecer jurídico ou contábil.",
+      "rodapeAtualizacao": "Atualizado em"
+    },
+    "kpis": [
+      { "valor": "0,9%", "rotulo": "CBS em 2026 (teste)", "nota": "Recolhimento dispensado com obrigações acessórias cumpridas" },
+      { "valor": "0,1%", "rotulo": "IBS em 2026 (teste)", "nota": "Alíquota estadual de teste, compensável" },
+      { "valor": "11,3%", "rotulo": "CBS 2027 — referência TCU", "nota": "TCU (Acórdão 2.933/2026); Senado decide até 15/12/2026" },
+      { "valor": "R$ 41,9 bi", "rotulo": "IS previsto no PLOA 2027", "nota": "Alíquotas ainda não definidas" },
+      { "valor": "+1 milhão", "rotulo": "Optantes do regime regular", "nota": "Empresas do Simples, janela encerrada em 30/10/2026" },
+      { "valor": "2033", "rotulo": "Fim da transição", "nota": "Extinção de ICMS e ISS" }
+    ],
+    "novidades": [
+      { "data": "13/11/2026", "titulo": "Ato Conjunto 7/2026 adia a NFS-e com IBS/CBS e a 1ª entrega da DeRE", "resumo": "Altera o Ato Conjunto 4/2026: a obrigatoriedade da NFS-e prevista para 01/12/2026 passa para 01/01/2027 na maioria dos serviços e para 01/03/2027 em plataformas digitais, software/dados e transporte de passageiros. NFGas e NFAg vão para 01/01/2027 e NF-e ABI para 01/03/2027. A 1ª entrega mensal da DeRE passa para 15/12/2026 (referente a novembro). Para o Simples Nacional, 01/01 ou 01/03/2027 conforme o caso.", "ato": "Ato Conjunto RFB/CGIBS nº 7/2026", "novo": true, "links": [
+        { "tipo": "oficial", "rotulo": "Ato Conjunto RFB/CGIBS nº 7/2026 — íntegra (PDF, CGIBS)", "url": "https://www.cgibs.gov.br/upload/arquivos/202611/13061456-ato-conjunto-7-rfb-cgibs-alteracao-ato-4.pdf" },
+        { "tipo": "oficial", "rotulo": "Lista de Atos Conjuntos (CGIBS)", "url": "https://cgibs.gov.br/atos-conjuntos" },
+        { "tipo": "fonte", "rotulo": "Fenacon — novas datas da NFS-e", "url": "https://fenacon.org.br/reforma-tributaria/ato-conjunto-rfb-cgibs-no-7-2026-atualiza-o-cronograma-de-obrigatoriedade-de-emissao-da-nfs-e-para-ibs-e-cbs/" } ] },
+      { "data": "12/11/2026", "titulo": "Publicada a documentação técnica da DUIMP e da DIR com IBS/CBS", "resumo": "Os Atos Técnicos Conjuntos nº 11 e nº 12/2026 aprovam a documentação técnica da Declaração Única de Importação (DUIMP) e da Declaração de Importação de Remessa (DIR) para informar IBS e CBS na importação, cuja cobrança começa em 01/01/2027.", "ato": "Atos Técnicos Conjuntos nº 11 e 12/2026", "novo": true, "links": [
+        { "tipo": "oficial", "rotulo": "Ato Técnico Conjunto nº 11/2026 (DUIMP) — íntegra (PDF, CGIBS)", "url": "https://www.cgibs.gov.br/upload/arquivos/202611/12145422-ato-tecnico-conjunto-11-duimp.pdf" },
+        { "tipo": "oficial", "rotulo": "Ato Técnico Conjunto nº 12/2026 (DIR) — íntegra (PDF, CGIBS)", "url": "https://www.cgibs.gov.br/upload/arquivos/202611/12154837-ato-tecnico-conjunto-12-dir.pdf" } ] },
+      { "data": "11/11/2026", "titulo": "MP do Imposto Seletivo recebe 179 emendas; comissão mista designada", "resumo": "O prazo de emendas à MP 1.399/2026 terminou em 10/11 com 179 emendas; a comissão mista foi designada em 09/11 e ainda precisa ser instalada. Análises apontam que a MP deve ser convertida em lei até 31/12/2026 para produzir efeitos em 2027. Há ações no STF contra a MP, sem decisão.", "ato": "MP nº 1.399/2026 (tramitação)", "novo": true, "links": [
+        { "tipo": "oficial", "rotulo": "Congresso Nacional — tramitação da MPV 1.399/2026", "url": "https://www.congressonacional.leg.br/materias/medidas-provisorias/-/mpv/176208" },
+        { "tipo": "fonte", "rotulo": "Migalhas — o relógio de 31 de dezembro", "url": "https://www.migalhas.com.br/depeso/468048/mp-do-imposto-seletivo-o-espelho-do-ipi-e-o-relogio-de-31-de-dezembro" } ] },
+      { "data": "10/11/2026", "titulo": "CGIBS aprova ajustes à versão 2 do regulamento do IBS", "resumo": "O Conselho Superior do CGIBS aprovou ajustes em três artigos do setor financeiro e o texto da versão 2 do regulamento (publicação ainda pendente), além de dispensar de CNPJ produtores rurais pessoas físicas e transportadores autônomos de 2027 a 2028. A Receita indicou que a versão 2.0 dos regulamentos sai em breve.", "ato": "Regulamento do IBS — versão 2 (a publicar)", "novo": true, "links": [
+        { "tipo": "oficial", "rotulo": "Sefaz-RS — CGIBS aprova ajustes ao regulamento", "url": "https://fazenda.rs.gov.br/cgibs-aprova-ajustes-ao-regulamento-e-prorroga-a-dere-por-um-mes" },
+        { "tipo": "oficial", "rotulo": "Resolução CGIBS nº 6/2026 — versão vigente (PDF)", "url": "https://www.cgibs.gov.br/upload/arquivos/202604/30084927-res-cgibs-n-6-30-abr-2026-regulamenta-o-ibs.pdf" } ] },
+      { "data": "10/11/2026", "titulo": "Alíquota da CBS: TCU envia acórdão ao Senado; Eduardo Braga é o relator", "resumo": "O TCU encaminhou ao Senado o Acórdão 2.933/2026 com a alíquota de referência de 11,3% e o redutor de compras públicas. O senador Eduardo Braga relata a resolução, com debates na CAE a partir de 11/11. Sem votação até 15/12/2026, vale o número do TCU.", "ato": "Acórdão TCU 2.933/2026", "novo": true, "links": [
+        { "tipo": "fonte", "rotulo": "Atlas Público — TCU envia o Acórdão 2.933/2026 ao Senado", "url": "https://atlaspublico.com.br/senado/noticias/tcu-envia-ao-senado-o-acordao-2933-2026-sobre-a-aliquota-da-99363" },
+        { "tipo": "fonte", "rotulo": "Canal Rural — Eduardo Braga relatará a CBS", "url": "https://www.canalrural.com.br/economia/eduardo-braga-relatara-projeto-que-fixa-aliquota-de-referencia-da-cbs-no-senado/" } ] },      { "data": "04/11/2026", "titulo": "Publicada a MP 1.399/2026 com as alíquotas do Imposto Seletivo", "resumo": "A Medida Provisória nº 1.399/2026 (DOU extra de 04/11) fixa as alíquotas do IS para 2027, com efeitos a partir de 02/02/2027, quando o IPI desses bens vai a zero. Até 31/12/2027 as alíquotas reproduzem o IPI atual, multiplicado por fatores de conversão. Bebidas açucaradas (NCM 2202.10.00): 2,6%. Cerveja: 4,2%. Destilados: 20% a 24%. Concursos de prognósticos: 0,5%. Bens minerais: zero. O governo deve enviar até 31/05/2027 o projeto com as alíquotas de 2028. A MP precisa ser aprovada pelo Congresso.", "ato": "Medida Provisória nº 1.399/2026", "novo": true, "links": [
+        { "tipo": "oficial", "rotulo": "MP nº 1.399/2026 — íntegra (Planalto)", "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/mpv/mpv1399.htm" },
+        { "tipo": "oficial", "rotulo": "Casa Civil — governo define alíquotas do IS por MP", "url": "https://www.gov.br/casacivil/pt-br/assuntos/noticias/2026/outubro/governo-federal-define-aliquotas-do-imposto-seletivo-para-2027-por-meio-de-medida-provisoria" },
+        { "tipo": "fonte", "rotulo": "InfoMoney — alíquotas do IS por produto", "url": "https://www.infomoney.com.br/politica/confira-as-aliquotas-do-imposto-seletivo-que-entrarao-em-vigor-em-fevereiro/" } ] },
+      { "data": "04/11/2026", "titulo": "Governo apresentará PEC para manter o IPI até o IS valer plenamente", "resumo": "Junto com a MP 1.399/2026, o governo anunciou uma PEC para prorrogar o IPI sobre os bens sujeitos ao IS até o início pleno do novo imposto (02/02/2027), evitando um mês sem tributação em janeiro de 2027. Depende de aprovação no Congresso.", "ato": "PEC (a apresentar)", "novo": true, "links": [
+        { "tipo": "oficial", "rotulo": "Casa Civil — MP do IS e PEC do IPI", "url": "https://www.gov.br/casacivil/pt-br/assuntos/noticias/2026/outubro/governo-federal-define-aliquotas-do-imposto-seletivo-para-2027-por-meio-de-medida-provisoria" },
+        { "tipo": "fonte", "rotulo": "TAGD Advogados — governo estuda manter IPI em janeiro", "url": "https://tagdlaw.com.br/governo-prepara-aliquotas-do-imposto-seletivo-e-estuda-manter-ipi-em-janeiro-de-2027/" },
+        { "tipo": "oficial", "rotulo": "EC 132/2023 — texto integral (Planalto)", "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm" } ] },
+      { "data": "29/10/2026", "titulo": "Ato Técnico Conjunto 10/2026 aprova NTs e fixa produção em 16/11", "resumo": "Aprova documentação técnica de dez modelos de DF-e e unifica em 16/11/2026 a produção das NTs 2025.002 v1.53 e 2026.005 a 2026.008 da NF-e/NFC-e (antes previstas para 03/11).", "ato": "Ato Técnico Conjunto RFB/SUFIS/CGIBS nº 10/2026", "novo": false, "links": [
+        { "tipo": "oficial", "rotulo": "Ato Técnico Conjunto nº 10/2026 — íntegra (PDF, CGIBS)", "url": "https://www.cgibs.gov.br/upload/arquivos/202610/30102301-atc-10-vf-assinado-assinado-261030-102245.pdf" },
+        { "tipo": "oficial", "rotulo": "Lista de Atos Técnicos Conjuntos (CGIBS)", "url": "https://cgibs.gov.br/atos-tecnicos-conjuntos" },
+        { "tipo": "fonte", "rotulo": "DFS Pro — resumo das datas", "url": "https://www.dfspro.com.br/blog/noticias-3/ato-tecnico-conjunto-10-2026-nts-da-nf-e-vao-de-03-11-a-16-11-218" } ] },
+      { "data": "28/10/2026", "titulo": "TCU calcula alíquota de referência da CBS 2027 em 11,3%", "resumo": "Cálculo (11,3468%, arredondado) supera a estimativa anterior de 9,21%. O Senado deve fixar a alíquota por resolução até dezembro; sem deliberação, vale o número do TCU.", "ato": "TC 006.529/2026-7", "novo": false, "links": [
+        { "tipo": "oficial", "rotulo": "Senado Notícias — TCU calcula CBS em 11,3%", "url": "https://www12.senado.leg.br/noticias/materias/2026/10/28/reforma-tributaria-tcu-calcula-aliquota-da-cbs-em-11-3-para-2027" },
+        { "tipo": "oficial", "rotulo": "Senado Notícias — próximos passos da alíquota", "url": "https://www12.senado.leg.br/noticias/materias/2026/11/03/senado-deve-receber-calculo-da-cbs-na-proxima-terca-para-definir-aliquota" },
+        { "tipo": "fonte", "rotulo": "Mattos Filho — análise", "url": "https://www.mattosfilho.com.br/unico/tcu-aliquota-cbs-2027/" } ] },
+      { "data": "29/10/2026", "titulo": "Cooperativas: prazo do regime específico pode ir a 30/11", "resumo": "Receita e CGIBS discutem prorrogar de 31/10 para 30/11/2026 a opção pelo regime específico das cooperativas. Prorrogação a confirmar até publicação do ato.", "ato": "A confirmar", "novo": false, "links": [
+        { "tipo": "fonte", "rotulo": "COAD — Receita e CGIBS discutem prorrogação", "url": "https://coad.com.br/home/noticias-detalhe/140524/receita-federal-e-cgibs-discutem-ampliacao-do-prazo-de-opcao-pelo-regime-especifico-da-cbs-e-do-ibs-para-as-cooperativas-ate-30-de-novembro" } ] },
+      { "data": "30/10/2026", "titulo": "Encerrada a opção do Simples pelo regime regular de IBS/CBS", "resumo": "Mais de 1 milhão de optantes. A opção pode ser cancelada, de forma irretratável, até o fim de novembro/2026. Nova janela prevista para 2027.", "ato": "Resolução CGSN nº 194/2026", "novo": false, "links": [
+        { "tipo": "oficial", "rotulo": "CGIBS — novos prazos de opção para 2027", "url": "https://www.cgibs.gov.br/embora-os-periodos-sejam-parecidos-tratam-de-escolhas-diferentes-por-isso-e-importante-entender-cada-situacao" },
+        { "tipo": "oficial", "rotulo": "Receita Federal — Manual da opção pelo regime regular (PDF)", "url": "https://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/Manual%20op%C3%A7%C3%A3o%20regime%20regular%20IBS%20e%20CBS%20no%20Simples%20Nacional.pdf" },
+        { "tipo": "fonte", "rotulo": "NetCPA — Resolução CGSN nº 194/2026", "url": "https://netcpa.com.br/colunas/resolucao-cgsn-no-1942026-altera-a-resolucao-cgsn-no-18626-que-dispoe-sobre-os-prazos-e-condicoes-para-o-exercicio-de-opcao-pelo-simples-nacional/28455" } ] },
+      { "data": "Set/2026", "titulo": "Siscomex: sem cobrança de IBS/CBS na importação antes de 2027", "resumo": "Na importação, os campos de IBS/CBS existem só na DUIMP e a cobrança começa em 01/01/2027. Em 2026, PIS/Cofins-Importação seguem devidos integralmente.", "ato": "Notícia Siscomex · Ato Conjunto RFB/CGIBS nº 4/2026", "novo": false, "links": [
+        { "tipo": "oficial", "rotulo": "Ato Conjunto RFB/CGIBS nº 4/2026 — íntegra (PDF, CGIBS)", "url": "https://www.cgibs.gov.br/upload/arquivos/202607/31091735-20260730-16h30-ato-conjunto-rfb-cgibs-na-c2-ba-4-260731-090909.pdf" },
+        { "tipo": "fonte", "rotulo": "Fazcomex — DI e DUIMP na reforma", "url": "https://www.fazcomex.com.br/npi/preenchimento-da-di-e-duimp-para-a-reforma-tributaria-do-consumo-rtc-em-2026/" } ] },
+      { "data": "01/10/2026", "titulo": "Novo DANFE com blocos de IBS, CBS e IS", "resumo": "NT 2026.010 inclui totais de CBS, IBS UF, IBS Município e IS, além do CRT e do cClassTrib por item. Produção prevista para 01/12/2026 (a confirmar).", "ato": "Ato Técnico Conjunto nº 8/2026", "novo": false, "links": [
+        { "tipo": "oficial", "rotulo": "Ato Técnico Conjunto nº 8/2026 — íntegra (PDF, CGIBS)", "url": "https://www.cgibs.gov.br/upload/arquivos/202610/01120217-nfe-nfc-cte-notas-faturas-e-demais-atc-rfb-sufis-cgibs-diretoria-executiva-n-8-de-29-de-setembro-de-2026.pdf" },
+        { "tipo": "fonte", "rotulo": "DFS Pro — o que muda no DANFE", "url": "https://www.dfspro.com.br/blog/noticias-3/ato-tecnico-conjunto-8-2026-novo-danfe-com-ibs-cbs-e-is-215" } ] },
+      { "data": "15/10/2026", "titulo": "Split payment entra em testes", "resumo": "Testes de integração da Plataforma Pública em ambiente controlado. Uso facultativo e gradual previsto para o 2º semestre de 2027; obrigatoriedade B2B prevista para 2028.", "ato": "Ato Conjunto RFB/CGIBS nº 2/2026", "novo": false, "links": [
+        { "tipo": "oficial", "rotulo": "Ato Conjunto RFB/CGIBS nº 2/2026 — íntegra (PDF, CGIBS)", "url": "https://www.cgibs.gov.br/upload/arquivos/202606/03111600-ato-conjunto-rfb-e-cibs-2827-05-29-assinado.pdf" },
+        { "tipo": "fonte", "rotulo": "Comsefaz — split payment em testes", "url": "https://comsefaz.org.br/novo/split-payment-entra-em-fase-de-testes-a-partir-de-15-de-outubro-saiba-o-que-muda/" } ] },
+      { "data": "25/08/2026", "titulo": "Governo anuncia decreto com a lista do IPI zerado em 2027", "resumo": "O decreto não cria a alíquota zero (prevista na EC 132/2023 e no art. 454 da LC 214/2025): apenas divulga a lista de produtos que zeram e dos que seguem tributados por concorrerem com a Zona Franca de Manaus. Publicação a confirmar.", "ato": "Decreto (a publicar)", "novo": false, "links": [
+        { "tipo": "oficial", "rotulo": "LC 214/2025 — art. 454 (Planalto)", "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm" } ] },
+      { "data": "18/08/2026", "titulo": "ABIHPEC publica guia de CBS/IBS para cosméticos e HPPC", "resumo": "Redução de 60% só para os itens do Anexo VIII (sabonetes, dentifrícios, escovas, fraldas etc.), com NCM e descrição exatas. Cosméticos e perfumaria ficam com alíquota cheia. O guia traz checklist de ERP, ICMS-ST e caixa.", "ato": "LC 214/2025, art. 136 e Anexo VIII", "novo": false, "links": [
+        { "tipo": "oficial", "rotulo": "ABIHPEC — guia completo", "url": "https://abihpec.org.br/cbs-ibs-empresas-cosmeticos-2026/" },
+        { "tipo": "oficial", "rotulo": "LC 214/2025 — texto compilado (Planalto)", "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm" } ] }
+    ],
+    "cronograma": [
+      { "ano": "2026", "titulo": "Ano de teste", "tags": ["Teste", "DF-e"], "itens": ["CBS 0,9% e IBS 0,1%, compensáveis", "Campos IBS/CBS obrigatórios na NF-e desde 03/08", "Regulamentos publicados em 30/04", "Split payment em testes desde 15/10"] },
+      { "ano": "2027", "titulo": "CBS plena e Imposto Seletivo", "tags": ["CBS", "IS", "Extinção"], "itens": ["Cobrança da CBS com alíquota de referência (TCU: 11,3%)", "Extinção de PIS/Cofins", "IPI zerado, exceto produtos com industrialização na ZFM", "Início do IS em 02/02/2027 (MP 1.399/2026), com IPI zerado nos mesmos bens", "NFS-e e outros documentos com IBS/CBS obrigatórios em 01/01 ou 01/03/2027 (Ato Conjunto RFB/CGIBS nº 7/2026)", "Cashback da CBS para famílias do CadÚnico", "Split payment facultativo no 2º semestre"] },
+      { "ano": "2028", "titulo": "Consolidação", "tags": ["Split payment"], "itens": ["Split payment obrigatório nas operações B2B (previsão)", "IBS segue em 0,1% (teste)"] },
+      { "ano": "2029–2032", "titulo": "Transição ICMS/ISS → IBS", "tags": ["IBS", "ICMS", "ISS"], "itens": ["Redução gradual de ICMS e ISS (90%, 80%, 70%, 60% das alíquotas)", "Aumento proporcional do IBS", "Cashback do IBS a partir de 2029"] },
+      { "ano": "2033", "titulo": "Modelo definitivo", "tags": ["IVA dual"], "itens": ["Extinção de ICMS e ISS", "IBS e CBS integralmente vigentes"] }
+    ],
+    "aliquotas": [
+      ["CBS", "0,9% (teste)", "11,3% (referência TCU, a fixar pelo Senado)", "Recolhimento dispensado em 2026 com obrigações acessórias"],
+      ["IBS (UF + Município)", "0,1% (teste)", "0,1% (teste)", "Alíquota cheia gradual a partir de 2029"],
+      ["Imposto Seletivo", "—", "Desde 02/02/2027: bebidas açucaradas 2,6%; cerveja 4,2%; destilados 20–24%; prognósticos 0,5%; minerais 0%", "MP 1.399/2026; demais itens = IPI atual × fatores de conversão"],
+      ["PIS/Cofins", "Vigentes", "Extintos", "Substituídos pela CBS"],
+      ["IPI", "Vigente", "Zerado (exceto ZFM)", "Mantido para proteger a ZFM"],
+      ["Cesta Básica Nacional", "—", "Alíquota zero", "Anexo I da LC 214/2025"]
+    ],
+    "tributos": [
+      { "sigla": "CBS", "nome": "Contribuição sobre Bens e Serviços", "esfera": "Federal (Receita Federal)", "texto": "Substitui PIS e Cofins. Não cumulativa, base ampla, crédito financeiro. Regulamentada pelo Decreto 12.955/2026." },
+      { "sigla": "IBS", "nome": "Imposto sobre Bens e Serviços", "esfera": "Estados e Municípios (CGIBS)", "texto": "Substitui ICMS e ISS. Cobrança no destino, administração pelo Comitê Gestor criado pela LC 227/2026. Regulamentado pela Resolução CGIBS 6/2026." },
+      { "sigla": "IS", "nome": "Imposto Seletivo", "esfera": "Federal", "texto": "Incide uma única vez sobre bens prejudiciais à saúde ou ao meio ambiente, sem gerar crédito. Instituído pela EC 132/2023 e pela LC 214/2025. Alíquotas de 2027 fixadas pela MP 1.399/2026, com efeitos a partir de 02/02/2027." },
+      { "sigla": "IPI", "nome": "Imposto sobre Produtos Industrializados", "esfera": "Federal (residual)", "texto": "Alíquota zero a partir de 2027, exceto para produtos com industrialização incentivada na Zona Franca de Manaus (EC 132/2023 e art. 454 da LC 214/2025). Não é extinto: segue como instrumento de proteção da ZFM." }
+    ],
+    "isipi": {
+      "intro": "O Imposto Seletivo entra em 2027 no lugar de parte da arrecadação do IPI, que é zerado para a maioria dos produtos. Os dois movimentos estão ligados: o governo quer que o IS reproduza em 2027 a carga atual do IPI nos setores atingidos.",
+      "blocos": [
+        { "titulo": "Imposto Seletivo (IS)", "itens": [
+          { "t": "Base legal", "d": "EC 132/2023 (art. 153, VIII, da Constituição) e LC 214/2025, que institui o IS e lista os bens tributados no Anexo XVII. Incide uma única vez na cadeia e não gera crédito.", "ok": true },
+          { "t": "O que é tributado", "d": "Veículos, embarcações e aeronaves; cigarros e fumígenos; bebidas alcoólicas; bebidas açucaradas; bens minerais; concursos de prognósticos e fantasy sport.", "ok": true },
+          { "t": "MP 1.399/2026: alíquotas de 2027", "d": "Publicada no DOU extra de 04/11/2026. Até 31/12/2027 a alíquota é o IPI atual multiplicado por fatores de conversão (Anexos IV e V). Bebidas açucaradas 2,6%; cerveja 4,2%; vinhos 8%; destilados 20% a 24%; concursos de prognósticos 0,5%; bens minerais 0%. Importados podem ter fator de ajuste (1,45 para bebidas).", "ok": true },
+          { "t": "Início em 02/02/2027", "d": "Pela noventena, a MP produz efeitos a partir de 02/02/2027, quando o IPI desses bens vai a zero. A MP vale 60 dias, prorrogáveis por mais 60, e precisa ser convertida em lei pelo Congresso — análises apontam o prazo de 31/12/2026 para valer em 2027. Recebeu 179 emendas; a comissão mista foi designada em 09/11.", "ok": true },
+          { "t": "Calibragem e 2028", "d": "Em 2027 o IS reproduz a carga atual do IPI (regime de implementação gradual). O governo deve enviar ao Congresso até 31/05/2027 o projeto com as alíquotas a partir de 2028. O PLOA 2027 prevê R$ 41,9 bilhões.", "ok": true },
+          { "t": "PLP 42/2026", "d": "Projeto de deputados do Novo propõe limitar as alíquotas do IS entre 0% e 5%. Em tramitação, sem aprovação.", "ok": true },
+          { "t": "Impacto no portfólio", "d": "Sorox (NCM 2202.99.00, sem açúcar) fica fora do IS: a MP 1.399/2026 e o Anexo XVII da LC 214/2025 alcançam só a NCM 2202.10.00. Acompanhar o projeto das alíquotas de 2028 e propostas que possam incluir a 2202.99.00.", "ok": true }
+        ] },
+        { "titulo": "IPI", "itens": [
+          { "t": "Alíquota zero em 2027", "d": "A EC 132/2023 (ADCT, art. 126) reduz a zero as alíquotas do IPI a partir de 2027, exceto para produtos com industrialização incentivada na Zona Franca de Manaus.", "ok": true },
+          { "t": "Critério da LC 214/2025 (art. 454)", "d": "Zeram os produtos com alíquota inferior a 6,5% na TIPI de 31/12/2023, observadas condições ligadas à ZFM (industrialização na ZFM em 2024 ou projeto aprovado pela Suframa). Parte da doutrina vê conflito entre esse corte e o texto constitucional.", "ok": false },
+          { "t": "Decreto com a lista de produtos", "d": "Anunciado em 25/08/2026 para divulgar quais produtos zeram e quais seguem tributados (art. 454, §3º). Publicação a confirmar.", "ok": false },
+          { "t": "PEC para janeiro de 2027", "d": "Anunciada junto com a MP 1.399/2026: prorroga o IPI sobre os bens sujeitos ao IS até 02/02/2027, cobrindo janeiro. Depende de aprovação no Congresso.", "ok": false },
+          { "t": "Créditos acumulados", "d": "Não há regra de transição específica para saldos credores de IPI, diferente do que existe para PIS/Cofins. Avaliar o aproveitamento antes de 2027.", "ok": false },
+          { "t": "Impacto no portfólio", "d": "Medicamentos já têm, em geral, IPI zero. Itens de HPPC com alíquota de 6,5% ou mais na TIPI podem seguir tributados se concorrerem com produção da ZFM — conferir NCM a NCM quando a lista for publicada.", "ok": false }
+        ] }
+      ]
+    },
+    "mecanismos": [
+      { "titulo": "Split Payment", "texto": "Separação automática do tributo no momento do pagamento. Testes desde 15/10/2026." },
+      { "titulo": "Não cumulatividade plena", "texto": "Crédito de todo tributo pago nas aquisições, condicionado ao recolhimento." },
+      { "titulo": "Cobrança no destino", "texto": "IBS pertence ao ente onde ocorre o consumo." },
+      { "titulo": "Cashback", "texto": "Devolução a famílias do CadÚnico: CBS a partir de 2027, IBS a partir de 2029." },
+      { "titulo": "Cesta Básica Nacional", "texto": "Itens essenciais com alíquota zero de IBS e CBS." },
+      { "titulo": "DeRE e regimes específicos", "texto": "Declaração própria para regimes específicos (financeiro, seguros, imóveis etc.). Detalhes operacionais a confirmar." }
+    ],
+    "impactos": [
+      { "titulo": "Regime Regular", "texto": "Lucro Real e Presumido devem preencher IBS/CBS nos DF-e desde 03/08/2026 e ajustar ERPs às NTs com produção em 16/11/2026.", "urgencia": 90 },
+      { "titulo": "Simples Nacional", "texto": "Janela de opção pelo regime regular encerrada em 30/10. Cancelamento possível até o fim de novembro. Avaliar efeito no crédito dado aos clientes.", "urgencia": 75 },
+      { "titulo": "Financeiro e Seguros", "texto": "Regimes específicos com base própria; acompanhar DeRE e a alíquota de referência de 2027 para precificação.", "urgencia": 60 },
+      { "titulo": "Agro, ZFM e ICMS", "texto": "Cooperativas: prazo do regime específico possivelmente até 30/11 (a confirmar). ZFM mantém IPI como diferencial. ICMS só começa a cair em 2029.", "urgencia": 70 }
+    ],
+    "genomma": {
+      "intro": "Leitura preliminar do enquadramento das principais categorias comercializadas pela Genomma Lab no Brasil. O tratamento final depende da NCM, do registro na Anvisa e da descrição comercial de cada SKU. A CBS de 2027 foi estimada a partir da alíquota de referência calculada pelo TCU (11,3%), ainda pendente de resolução do Senado.",
+      "itens": [
+        { "categoria": "OTC / MIPs", "exemplos": "Antigripais, antiácidos, antimicóticos e analgésicos registrados como medicamento", "enquadramento": "Redução de 60% de IBS e CBS", "base": "LC 214/2025, art. 133", "texto": "A redução só vale se o produto seguir a sistemática de preços da CMED ou se a empresa firmar compromisso com a União e o CGIBS (art. 133, §2º). MIPs com preço liberado precisam desse compromisso; sem ele, pagam alíquota cheia. A alíquota zero (art. 146, alterado pela LC 227/2026) é restrita a linhas terapêuticas específicas e a compras públicas, o que é improvável para OTC.", "cbs": "≈ 4,5%", "is": "Não incide", "status": "confirmado", "urgencia": 95 },
+        { "categoria": "Dermocosméticos", "exemplos": "Linhas de skincare, antiacne, cuidados com a pele", "enquadramento": "Alíquota cheia", "base": "Fora do Anexo VIII da LC 214/2025", "texto": "Cosméticos e perfumaria não têm redução. Itens registrados na Anvisa como medicamento podem ter os 60% (validar SKU a SKU). O PIS/Cofins monofásico acaba em 2027, e o ICMS-ST de HPPC já foi encerrado em SP e em outros 7 estados desde 01/04/2026, com recuperação do ST de estoques em 12 parcelas.", "cbs": "≈ 11,3%", "is": "Não incide", "status": "confirmado", "urgencia": 80 },
+        { "categoria": "Sabonetes em barra e higiene básica", "exemplos": "Sabonetes de toucador e em barra, dentifrícios, escovas de dente, fraldas", "enquadramento": "Redução de 60% de IBS e CBS", "base": "LC 214/2025, art. 136 e Anexo VIII", "texto": "Exige coincidência exata entre a NCM (sabonete de toucador 3401.11.90; sabão em barra 3401.19.00), a descrição comercial e o texto do anexo. Qualquer divergência leva à alíquota cheia. Sabonetes líquidos e versões fora dessas NCMs tendem à alíquota cheia (a confirmar).", "cbs": "≈ 4,5%", "is": "Não incide", "status": "parcial", "urgencia": 70 },
+        { "categoria": "Hidroeletrolíticos (Sorox)", "exemplos": "Bebida de reidratação com eletrólitos, sem açúcar — NCM 2202.99.00", "enquadramento": "Alíquota cheia de IBS/CBS, sem Imposto Seletivo", "base": "NCM 2202.99.00 — fora do Anexo XVII da LC 214/2025 e do Anexo IV da MP 1.399/2026", "texto": "O Sorox é classificado na NCM 2202.99.00 (outras bebidas não alcoólicas) e não tem açúcar. Não há redução de IBS/CBS para essa NCM, então paga a alíquota cheia. O Imposto Seletivo sobre bebidas açucaradas alcança só a NCM 2202.10.00 (2,6% pela MP 1.399/2026), e a lista de bens do IS é fechada: o Sorox fica fora. Ponto de atenção: o projeto de lei com as alíquotas do IS para 2028 (prazo de envio: 31/05/2027) e propostas como o PLP 34/2025, que chegou a incluir a NCM 2202.99.00, podem ampliar a lista.", "cbs": "≈ 11,3%", "is": "Não incide", "status": "confirmado", "urgencia": 85 },
+        { "categoria": "Fórmulas infantis (Novamil)", "exemplos": "Fórmulas para lactentes e de seguimento", "enquadramento": "Alíquota zero (Cesta Básica Nacional)", "base": "LC 214/2025, Anexo I, item 4", "texto": "Exige conformidade com a legislação sanitária específica e NCM 1901.10.10, 1901.10.90 ou 2106.90.90. Fórmulas para erros inatos do metabolismo têm redução de 60% (art. 133, §1º). A Genomma anunciou em 2025 o plano de lançar Novamil no Brasil; a situação atual está a confirmar.", "cbs": "0%", "is": "Não incide", "status": "parcial", "urgencia": 50 }
+      ],
+      "transversais": [
+        "Preço CMED: o novo modelo calcula CBS e IBS fora do preço-fábrica e os destaca na nota; as listas passam a mostrar o preço com e sem tributo. O Sindusfarma retomou com a CMED o grupo de trabalho da reforma.",
+        "Fim do PIS/Cofins monofásico em 2027: revisar CST e cClassTrib de todo o cadastro no ERP.",
+        "Crédito amplo nas compras, inclusive insumos importados, com ressarcimento de saldo credor. O crédito depende do recolhimento pelo fornecedor.",
+        "Split payment reduz o capital de giro a partir de 2027–2028: revisar prazos com redes de farmácia, atacado e distribuidores.",
+        "Amostras grátis sem contraprestação não são operação tributável (Decreto 12.955/2026, art. 6º, §4º)."
+      ]
+    },
+    "comex": {
+      "intro": "Principais mudanças para quem importa insumos e produtos acabados ou exporta. Na importação, a cobrança de IBS/CBS começa em 01/01/2027.",
+      "blocos": [
+        { "titulo": "Importação", "itens": [
+          { "t": "Cobrança a partir de 01/01/2027", "d": "Em 2026 não há recolhimento de IBS/CBS na importação. PIS/Cofins-Importação seguem devidos integralmente até a extinção.", "ok": true },
+          { "t": "IBS/CBS só na DUIMP", "d": "Os campos de IBS/CBS existem apenas na DUIMP; a DI não terá esses campos. A documentação técnica da DUIMP com IBS/CBS foi aprovada pelo Ato Técnico Conjunto nº 11/2026 (e a da Declaração de Importação de Remessa pelo nº 12/2026). Desligamento da DI previsto em etapas (31/08 e 01/12/2026) — a confirmar.", "ok": false },
+          { "t": "Mesma alíquota do produto nacional", "d": "Tratamento nacional: o importado paga a mesma alíquota da operação interna, inclusive as reduções (ex.: 60% para medicamentos).", "ok": true },
+          { "t": "Base de cálculo", "d": "Valor aduaneiro acrescido de II, Imposto Seletivo, taxas e encargos aduaneiros. Se IPI e ICMS entram ou não na base é ponto em que as fontes divergem.", "ok": false },
+          { "t": "Momento do pagamento", "d": "Até a entrega da mercadoria despachada para consumo, com antecipação possível no registro da declaração. Operadores OEA podem pagar depois, nas hipóteses do regulamento.", "ok": true },
+          { "t": "Créditos", "d": "O importador do regime regular credita o IBS/CBS pago. Há crédito presumido de CBS sobre PIS/Cofins-Importação de estoques (apuração até jun/2027, em 12 parcelas).", "ok": false }
+        ] },
+        { "titulo": "Exportação", "itens": [
+          { "t": "Imunidade com manutenção de créditos", "d": "Exportações de bens e serviços não sofrem IBS/CBS, e os créditos das etapas anteriores são mantidos, para compensação ou ressarcimento (LC 214/2025, art. 79).", "ok": true },
+          { "t": "IBS e CBS segregados", "d": "Crédito de IBS não compensa débito de CBS, e vice-versa. Controlar os saldos separadamente.", "ok": true },
+          { "t": "Comercial exportadora", "d": "Suspensão na venda à trading, convertida em alíquota zero após a exportação. Exige requisitos cumulativos, como certificação OEA e patrimônio líquido mínimo (art. 82).", "ok": true },
+          { "t": "Exportação indireta em disputa", "d": "Decisão de 1ª instância (TJDFT, 08/05/2026, mandado de segurança do CECIEX) afastou os requisitos do art. 82 para o IBS. Não é definitiva.", "ok": false }
+        ] },
+        { "titulo": "Regimes aduaneiros especiais", "itens": [
+          { "t": "Drawback, Recof, Repetro, ZPE e ZFM", "d": "Incorporados pelo Decreto 12.955/2026 e pela Resolução CGIBS 6/2026, com suspensão de IBS/CBS como mecanismo de neutralidade, condicionada a controle e rastreabilidade.", "ok": true },
+          { "t": "Drawback suspensão", "d": "Há leituras divergentes sobre a extensão da suspensão ao IBS/CBS. Confirmar no regulamento antes de planejar operações.", "ok": false },
+          { "t": "Zona Franca de Manaus", "d": "IPI mantido para produtos industrializados na ZFM. Empresas na ZFM devem informar o número do processo Suframa na NF-e.", "ok": true }
+        ] }
+      ]
+    },
+    "entidades": [
+      { "nome": "Sindusfarma", "papel": "Indústria farmacêutica", "texto": "Grupo de trabalho com a CMED sobre a adaptação dos preços à reforma; nova Resolução CMED nº 3/25 em vigor desde 29/04/2026.", "url": "https://sindusfarma.org.br/noticias/indice/exibir/27681-nova-resolucao-da-cmed-e-reforma-tributaria-sindusfarma-reune-industria-para-esclarecer-regras-e-impactos" },
+      { "nome": "ABIHPEC", "papel": "Higiene pessoal, perfumaria e cosméticos", "texto": "Guia de CBS/IBS para HPPC (18/08/2026): Anexo VIII, fim do ICMS-ST, checklist de ERP e caixa.", "url": "https://abihpec.org.br/cbs-ibs-empresas-cosmeticos-2026/" },
+      { "nome": "ACESSA", "papel": "Autocuidado em saúde e MIPs", "texto": "Nenhum posicionamento público sobre a reforma foi localizado no site até 03/11/2026. Acompanhar a seção MIP & Autocuidado, especialmente o compromisso exigido para MIPs com preço liberado.", "url": "https://acessa.org.br/mip-autocuidado" },
+      { "nome": "Rayes & Fagundes", "papel": "Escritório de advocacia tributária", "texto": "Informativo sobre medicamentos: IBS/CBS na base do ICMS, PMC, ICMS-ST, compras públicas e contratos. Visto em publicação no LinkedIn; o texto original não pôde ser acessado automaticamente (a confirmar).", "url": "https://www.rayesfagundes.com.br" },
+      { "nome": "CMED / Anvisa", "papel": "Regulação de preços de medicamentos", "texto": "GT de Reforma Tributária: apresentação de 03/07/2026 com a proposta do novo modelo de preço-fábrica e escalonamento 2027/2029/2033.", "url": "https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/informes/ApresentaoGTdeReformaTributria03dejulhode2026.pdf" }
+    ],
+    "checklist": [
+      { "texto": "Homologar NF-e com NT 2025.002 v1.53 (regras de devolução)", "prazo": "09/11/2026" },
+      { "texto": "Entrar em produção com NTs 2026.005 a 2026.008", "prazo": "16/11/2026" },
+      { "texto": "Revisar as novas datas da NFS-e com IBS/CBS (Ato Conjunto 7/2026) para serviços prestados e contratados", "prazo": "01/01/2027" },
+      { "texto": "Mapear NCM, registro Anvisa e cClassTrib de cada SKU (OTC, dermo, higiene, Sorox, Novamil)", "prazo": "Nov/2026" },
+      { "texto": "Cooperativas: formalizar opção pelo regime específico (prazo a confirmar)", "prazo": "30/11/2026" },
+      { "texto": "Simples: revisar/cancelar opção pelo regime regular, se necessário", "prazo": "30/11/2026" },
+      { "texto": "Adequar emissão ao novo DANFE (NT 2026.010) — data a confirmar", "prazo": "01/12/2026" },
+      { "texto": "Migrar todas as importações da DI para a DUIMP — data a confirmar", "prazo": "01/12/2026" },
+      { "texto": "OTC com preço liberado: avaliar compromisso com União/CGIBS para manter a redução de 60%", "prazo": "Dez/2026" },
+      { "texto": "Sabonetes em barra: validar NCM e descrição contra o Anexo VIII", "prazo": "Dez/2026" },
+      { "texto": "Sorox (NCM 2202.99.00): acompanhar se o projeto do IS para 2028 amplia a lista de bebidas", "prazo": "31/05/2027" },
+      { "texto": "Acompanhar resolução do Senado sobre a alíquota da CBS 2027", "prazo": "Dez/2026" },
+      { "texto": "Inventariar estoques em 31/12/2026 para crédito presumido de CBS", "prazo": "31/12/2026" },
+      { "texto": "Atualizar precificação e contratos para a CBS plena", "prazo": "01/01/2027" },
+      { "texto": "Apurar crédito presumido de CBS sobre PIS/Cofins-Importação de estoques", "prazo": "Jun/2027" },
+      { "texto": "Exportações: estruturar controle e pedido de ressarcimento de créditos", "prazo": "2027" },
+      { "texto": "Preparar tesouraria e sistemas para o split payment", "prazo": "2º sem./2027" }
+    ],
+    "fontes": [
+      { "titulo": "Receita Federal — CGSN define prazos de opção para 2027", "url": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/abril/cgsn-define-prazos-de-opcao-pelo-simples-nacional-e-pelo-regime-regular-do-ibs-e-da-cbs-para-2027" },
+      { "titulo": "CGIBS — Novos prazos de opção Simples / regime regular", "url": "https://www.cgibs.gov.br/embora-os-periodos-sejam-parecidos-tratam-de-escolhas-diferentes-por-isso-e-importante-entender-cada-situacao" },
+      { "titulo": "CGIBS — Ato Conjunto RFB/CGIBS nº 4/2026 (PDF)", "url": "https://www.cgibs.gov.br/upload/arquivos/202607/31091735-20260730-16h30-ato-conjunto-rfb-cgibs-na-c2-ba-4-260731-090909.pdf" },
+      { "titulo": "Senado Notícias — TCU calcula CBS em 11,3% para 2027", "url": "https://www12.senado.leg.br/noticias/materias/2026/10/28/reforma-tributaria-tcu-calcula-aliquota-da-cbs-em-11-3-para-2027" },
+      { "titulo": "Senado Notícias — Senado deve receber cálculo da CBS", "url": "https://www12.senado.leg.br/noticias/materias/2026/11/03/senado-deve-receber-calculo-da-cbs-na-proxima-terca-para-definir-aliquota" },
+      { "titulo": "Câmara — Lei Complementar nº 227/2026", "url": "https://www2.camara.leg.br/legin/fed/leicom/2026/leicomplementar-227-13-janeiro-2026-798657-norma-pl.html" },
+      { "titulo": "Normas Legais — Decreto nº 12.955/2026", "url": "https://www.normaslegais.com.br/legislacao/decreto12955-2026.htm" },
+      { "titulo": "Mattos Filho — Regulamentos do IBS e da CBS", "url": "https://www.mattosfilho.com.br/unico/regulamentos-ibs-cbs/" },
+      { "titulo": "DFS Pro — Ato Técnico Conjunto 10/2026", "url": "https://www.dfspro.com.br/blog/noticias-3/ato-tecnico-conjunto-10-2026-nts-da-nf-e-vao-de-03-11-a-16-11-218" },
+      { "titulo": "DFS Pro — Ato Técnico Conjunto 8/2026 (novo DANFE)", "url": "https://www.dfspro.com.br/blog/noticias-3/ato-tecnico-conjunto-8-2026-novo-danfe-com-ibs-cbs-e-is-215" },
+      { "titulo": "Comsefaz — Split payment em testes a partir de 15/10", "url": "https://comsefaz.org.br/novo/split-payment-entra-em-fase-de-testes-a-partir-de-15-de-outubro-saiba-o-que-muda/" },
+      { "titulo": "COAD — Prazo das cooperativas até 30/11 em discussão", "url": "https://coad.com.br/home/noticias-detalhe/140524/receita-federal-e-cgibs-discutem-ampliacao-do-prazo-de-opcao-pelo-regime-especifico-da-cbs-e-do-ibs-para-as-cooperativas-ate-30-de-novembro" },
+      { "titulo": "CRCSP — Imposto Seletivo com alíquotas indefinidas", "url": "https://crcsp.org.br/portal/noticias/noticia.asp?c=11012" },
+      { "titulo": "Taxcel — IBS/CBS na NF-e: obrigatório desde agosto, rejeição suspensa", "url": "https://taxcel.com.br/ibs-cbs-nota-fiscal-2026-obrigatorio-rejeicao" },
+      { "titulo": "Sindusfarma — Nova resolução da CMED e reforma tributária", "url": "https://sindusfarma.org.br/noticias/indice/exibir/27681-nova-resolucao-da-cmed-e-reforma-tributaria-sindusfarma-reune-industria-para-esclarecer-regras-e-impactos" },
+      { "titulo": "ABIHPEC — CBS e IBS para cosméticos: o que muda", "url": "https://abihpec.org.br/cbs-ibs-empresas-cosmeticos-2026/" },
+      { "titulo": "ACESSA — MIP & Autocuidado", "url": "https://acessa.org.br/mip-autocuidado" },
+      { "titulo": "Rayes & Fagundes Advogados", "url": "https://www.rayesfagundes.com.br" },
+      { "titulo": "Anvisa/CMED — Apresentação do GT de Reforma Tributária (03/07/2026)", "url": "https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/informes/ApresentaoGTdeReformaTributria03dejulhode2026.pdf" },
+      { "titulo": "Medicina S/A — Nova tributação dos medicamentos pelo IBS e pela CBS", "url": "https://medicinasa.com.br/seletividade-terapeutica/" },
+      { "titulo": "Simtax — Redução de 60% para medicamentos: quem entra e quem fica fora", "url": "https://simtax.com.br/reducao-60-medicamentos-ibs-cbs/" },
+      { "titulo": "IOB — Isenção da Cesta Básica (fórmulas infantis no Anexo I)", "url": "https://noticias.iob.com.br/reforma-tributaria-isencao-cesta-basica/" },
+      { "titulo": "El CEO — Genomma Lab: Suerox, Cicatricure e plano para Novamil", "url": "https://elceo.com/negocios/de-suerox-a-cicatricure-rodrigo-herrera-afina-la-formula-de-genomma-lab-para-crecer/" },
+      { "titulo": "ConJur — Importação, IBS e CBS: o que revela a regulamentação", "url": "https://www.conjur.com.br/2026-jun-16/importacao-ibs-e-cbs-o-que-revela-a-regulamentacao-da-reforma-tributaria/" },
+      { "titulo": "Fazcomex — Preenchimento da DI e DUIMP para a reforma em 2026", "url": "https://www.fazcomex.com.br/npi/preenchimento-da-di-e-duimp-para-a-reforma-tributaria-do-consumo-rtc-em-2026/" },
+      { "titulo": "Simtax — Imunidade do IBS e da CBS nas exportações", "url": "https://simtax.com.br/imunidade-ibs-cbs-exportacoes/" },
+      { "titulo": "Barbieri Advogados — Exportação indireta no IBS e na CBS", "url": "https://www.barbieriadvogados.com/exportacao-indireta/" },
+      { "titulo": "Planalto — Lei Complementar nº 214/2025 (texto compilado)", "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm" }
+    ]
+  },
+  "es": {
+    "meta": {
+      "lang": "es",
+      "titulo": "Portal de Noticias — Reforma Tributaria Genomma",
+      "atualizacao": "16/11/2026",
+      "ultimaPublicacao": "Acto Conjunto RFB/CGIBS n.º 7/2026 (DOU 13/11/2026)",
+      "marco": { "data": "2027-01-01T00:00:00-03:00", "rotulo": "Inicio del cobro efectivo de la CBS y extinción del PIS/Cofins", "fonte": "EC 132/2023 y LC 214/2025" },
+      "marcoSecundario": { "data": "2026-12-15T00:00:00-03:00", "rotulo": "Plazo del Senado para la alícuota de la CBS y 1.ª entrega mensual de la DeRE (15/12)" }
+    },
+    "ui": {
+      "nav": ["Genomma", "Novedades", "IS e IPI", "Cronograma", "Tributos", "Impactos", "Comex", "Legislación", "Glosario", "Checklist", "Fuentes"],
+      "logo": ["Portal de Noticias", "Reforma Tributaria Genomma"],
+      "heroKicker": "Actualizado el {data} · IBS · CBS · IS · IPI",
+      "heroLinhas": ["Reforma", "Tributaria", "del Consumo"],
+      "heroTexto": "Panorama consolidado de normas, plazos e impactos de la transición al IVA dual brasileño, actualizado al 16/11/2026.",
+      "contagemRotulo": "Faltan para el hito crítico",
+      "contagemUnid": ["días", "horas", "min", "seg"],
+      "contagemPassou": "Hito alcanzado",
+      "secoes": {
+        "kpis": "Indicadores clave",
+        "novidades": "Últimas novedades",
+        "cronograma": "Cronograma de transición",
+        "aliquotas": "Alícuotas y parámetros",
+        "tributos": "Los nuevos tributos",
+        "mecanismos": "Pilares del nuevo modelo",
+        "impactos": "Impactos por segmento",
+        "checklist": "Checklist de cumplimiento",
+        "fontes": "Fuentes consultadas",
+        "genomma": "Impacto en el portafolio Genomma",
+        "transversais": "Puntos que aplican a todo el portafolio",
+        "comex": "Importación y exportación",
+        "entidades": "Fuentes sectoriales monitoreadas",
+        "isipi": "Impuesto Selectivo e IPI",
+        "legislacao": "Legislación",
+        "glossario": "Glosario de siglas"
+      },
+      "glossIntro": "Siglas y términos usados en este dossier. En el texto, las siglas subrayadas con puntos muestran su significado al pasar el mouse o tocar.",
+      "g": { "cbs": "CBS 2027 estimada", "is": "Impuesto Selectivo", "exemplos": "Ejemplos", "status": { "confirmado": "Regla confirmada", "parcial": "Parte por confirmar" } },
+      "aConfirmar": "por confirmar",
+      "acompanhar": "Qué seguir",
+      "acessar": "Acceder",
+      "linksTit": { "oficial": "Publicación oficial", "fonte": "Fuente / análisis" },
+      "fontesLbl": "Fuentes",
+      "legisIntro": "Normas de la reforma agrupadas por tipo, de la más reciente a la más antigua. Haga clic en el número para abrir el texto completo.",
+      "legisBusca": "Filtrar por número, asunto o palabra clave…",
+      "legisVazio": "Ninguna norma encontrada para este filtro.",
+      "legisGrupos": { "ec": "Enmiendas Constitucionales", "lc": "Leyes Complementarias", "mp": "Medidas Provisionales", "dec": "Decretos", "res": "Resoluciones", "ac": "Actos Conjuntos RFB/CGIBS", "atc": "Actos Técnicos Conjuntos RFB/SUFIS/CGIBS", "proj": "Proyectos y medidas en trámite" },
+      "legisN": "{n} normas",
+      "legisN1": "1 norma",
+      "prio": { "alta": "Prioridad alta", "media": "Prioridad media", "baixa": "Prioridad baja" },
+      "proxPrazo": "Próximo plazo",
+      "faltam": "faltan {d} días",
+      "hoje": "vence hoy",
+      "vencido": "plazo vencido hace {d} días",
+      "statusOpts": ["Sin iniciar", "En curso", "Concluido"],
+      "prioLegenda": "Cómo leer: la prioridad combina el impacto financiero/operativo y la cercanía del plazo (evaluación editorial de este dossier). La barra se llena a medida que se acerca el próximo plazo (ventana de 180 días; llena = vence hoy) y cambia de color: verde (más de 90 días), naranja (30 a 90) y rosa (menos de 30). Haga clic en el estado para registrar el avance de su equipo; queda guardado en este navegador.",
+      "novo": "NUEVO",
+      "atual": "ACTUAL",
+      "urgencia": "Urgencia",
+      "prazo": "Plazo",
+      "contador": "{x} / {n} ítems completados",
+      "tabela": ["Ítem", "2026", "2027", "Observación"],
+      "imprimir": "Imprimir",
+      "citacao": "La alícuota de referencia es un parámetro y no necesariamente la alícuota que se cobrará.",
+      "citacaoAutor": "Tribunal de Cuentas de la Unión — cálculo de la CBS 2027 (paráfrasis)",
+      "disclaimer": "Material informativo elaborado a partir de fuentes públicas y noticias especializadas. Los ítems marcados como \"por confirmar\" dependen de publicación oficial. No constituye dictamen jurídico ni contable.",
+      "rodapeAtualizacao": "Actualizado el"
+    },
+    "kpis": [
+      { "valor": "0,9%", "rotulo": "CBS en 2026 (prueba)", "nota": "Pago dispensado si se cumplen las obligaciones accesorias" },
+      { "valor": "0,1%", "rotulo": "IBS en 2026 (prueba)", "nota": "Alícuota estadual de prueba, compensable" },
+      { "valor": "11,3%", "rotulo": "CBS 2027 — referencia TCU", "nota": "TCU (Acórdão 2.933/2026); el Senado decide hasta el 15/12/2026" },
+      { "valor": "R$ 41,9 mil M", "rotulo": "IS previsto en el PLOA 2027", "nota": "Alícuotas aún no definidas" },
+      { "valor": "+1 millón", "rotulo": "Optantes del régimen regular", "nota": "Empresas del Simples, ventana cerrada el 30/10/2026" },
+      { "valor": "2033", "rotulo": "Fin de la transición", "nota": "Extinción del ICMS y del ISS" }
+    ],
+    "novidades": [
+      { "data": "13/11/2026", "titulo": "El Acto Conjunto 7/2026 aplaza la NFS-e con IBS/CBS y la 1.ª entrega de la DeRE", "resumo": "Modifica el Acto Conjunto 4/2026: la obligatoriedad de la NFS-e prevista para el 01/12/2026 pasa al 01/01/2027 en la mayoría de los servicios y al 01/03/2027 en plataformas digitales, software/datos y transporte de pasajeros. NFGas y NFAg pasan al 01/01/2027 y NF-e ABI al 01/03/2027. La 1.ª entrega mensual de la DeRE pasa al 15/12/2026 (referida a noviembre). Para el Simples Nacional, 01/01 o 01/03/2027 según el caso.", "ato": "Acto Conjunto RFB/CGIBS n.º 7/2026", "novo": true, "links": [
+        { "tipo": "oficial", "rotulo": "Acto Conjunto RFB/CGIBS n.º 7/2026 — texto completo (PDF, CGIBS)", "url": "https://www.cgibs.gov.br/upload/arquivos/202611/13061456-ato-conjunto-7-rfb-cgibs-alteracao-ato-4.pdf" },
+        { "tipo": "oficial", "rotulo": "Lista de Actos Conjuntos (CGIBS)", "url": "https://cgibs.gov.br/atos-conjuntos" },
+        { "tipo": "fonte", "rotulo": "Fenacon — nuevas fechas de la NFS-e", "url": "https://fenacon.org.br/reforma-tributaria/ato-conjunto-rfb-cgibs-no-7-2026-atualiza-o-cronograma-de-obrigatoriedade-de-emissao-da-nfs-e-para-ibs-e-cbs/" } ] },
+      { "data": "12/11/2026", "titulo": "Publicada la documentación técnica de la DUIMP y de la DIR con IBS/CBS", "resumo": "Los Actos Técnicos Conjuntos n.º 11 y n.º 12/2026 aprueban la documentación técnica de la Declaración Única de Importación (DUIMP) y de la Declaración de Importación de Envíos (DIR) para informar IBS y CBS en la importación, cuyo cobro empieza el 01/01/2027.", "ato": "Actos Técnicos Conjuntos n.º 11 y 12/2026", "novo": true, "links": [
+        { "tipo": "oficial", "rotulo": "Acto Técnico Conjunto n.º 11/2026 (DUIMP) — texto completo (PDF, CGIBS)", "url": "https://www.cgibs.gov.br/upload/arquivos/202611/12145422-ato-tecnico-conjunto-11-duimp.pdf" },
+        { "tipo": "oficial", "rotulo": "Acto Técnico Conjunto n.º 12/2026 (DIR) — texto completo (PDF, CGIBS)", "url": "https://www.cgibs.gov.br/upload/arquivos/202611/12154837-ato-tecnico-conjunto-12-dir.pdf" } ] },
+      { "data": "11/11/2026", "titulo": "La MP del Impuesto Selectivo recibe 179 enmiendas; comisión mixta designada", "resumo": "El plazo de enmiendas a la MP 1.399/2026 terminó el 10/11 con 179 enmiendas; la comisión mixta fue designada el 09/11 y aún debe instalarse. Los análisis señalan que la MP debe convertirse en ley hasta el 31/12/2026 para producir efectos en 2027. Hay acciones en el STF contra la MP, sin decisión.", "ato": "MP n.º 1.399/2026 (trámite)", "novo": true, "links": [
+        { "tipo": "oficial", "rotulo": "Congreso Nacional — trámite de la MPV 1.399/2026", "url": "https://www.congressonacional.leg.br/materias/medidas-provisorias/-/mpv/176208" },
+        { "tipo": "fonte", "rotulo": "Migalhas — el reloj del 31 de diciembre", "url": "https://www.migalhas.com.br/depeso/468048/mp-do-imposto-seletivo-o-espelho-do-ipi-e-o-relogio-de-31-de-dezembro" } ] },
+      { "data": "10/11/2026", "titulo": "El CGIBS aprueba ajustes a la versión 2 del reglamento del IBS", "resumo": "El Consejo Superior del CGIBS aprobó ajustes en tres artículos del sector financiero y el texto de la versión 2 del reglamento (publicación aún pendiente), además de eximir de CNPJ a productores rurales personas físicas y transportistas autónomos de 2027 a 2028. La Receita indicó que la versión 2.0 de los reglamentos saldrá pronto.", "ato": "Reglamento del IBS — versión 2 (por publicar)", "novo": true, "links": [
+        { "tipo": "oficial", "rotulo": "Sefaz-RS — el CGIBS aprueba ajustes al reglamento", "url": "https://fazenda.rs.gov.br/cgibs-aprova-ajustes-ao-regulamento-e-prorroga-a-dere-por-um-mes" },
+        { "tipo": "oficial", "rotulo": "Resolución CGIBS n.º 6/2026 — versión vigente (PDF)", "url": "https://www.cgibs.gov.br/upload/arquivos/202604/30084927-res-cgibs-n-6-30-abr-2026-regulamenta-o-ibs.pdf" } ] },
+      { "data": "10/11/2026", "titulo": "Alícuota de la CBS: el TCU envía su acórdão al Senado; Eduardo Braga es el relator", "resumo": "El TCU remitió al Senado el Acórdão 2.933/2026 con la alícuota de referencia del 11,3% y el reductor de compras públicas. El senador Eduardo Braga es relator de la resolución, con debates en la CAE desde el 11/11. Sin votación hasta el 15/12/2026, rige la cifra del TCU.", "ato": "Acórdão TCU 2.933/2026", "novo": true, "links": [
+        { "tipo": "fonte", "rotulo": "Atlas Público — el TCU envía el Acórdão 2.933/2026 al Senado", "url": "https://atlaspublico.com.br/senado/noticias/tcu-envia-ao-senado-o-acordao-2933-2026-sobre-a-aliquota-da-99363" },
+        { "tipo": "fonte", "rotulo": "Canal Rural — Eduardo Braga será relator de la CBS", "url": "https://www.canalrural.com.br/economia/eduardo-braga-relatara-projeto-que-fixa-aliquota-de-referencia-da-cbs-no-senado/" } ] },      { "data": "04/11/2026", "titulo": "Publicada la MP 1.399/2026 con las alícuotas del Impuesto Selectivo", "resumo": "La Medida Provisional n.º 1.399/2026 (DOU extra del 04/11) fija las alícuotas del IS para 2027, con efectos desde el 02/02/2027, cuando el IPI de esos bienes pasa a cero. Hasta el 31/12/2027 las alícuotas reproducen el IPI actual, multiplicado por factores de conversión. Bebidas azucaradas (NCM 2202.10.00): 2,6%. Cerveza: 4,2%. Destilados: 20% a 24%. Concursos de pronósticos: 0,5%. Bienes minerales: cero. El Gobierno debe enviar hasta el 31/05/2027 el proyecto con las alícuotas de 2028. La MP debe ser aprobada por el Congreso.", "ato": "Medida Provisional n.º 1.399/2026", "novo": true, "links": [
+        { "tipo": "oficial", "rotulo": "MP n.º 1.399/2026 — texto completo (Planalto)", "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/mpv/mpv1399.htm" },
+        { "tipo": "oficial", "rotulo": "Casa Civil — el Gobierno define las alícuotas del IS por MP", "url": "https://www.gov.br/casacivil/pt-br/assuntos/noticias/2026/outubro/governo-federal-define-aliquotas-do-imposto-seletivo-para-2027-por-meio-de-medida-provisoria" },
+        { "tipo": "fonte", "rotulo": "InfoMoney — alícuotas del IS por producto", "url": "https://www.infomoney.com.br/politica/confira-as-aliquotas-do-imposto-seletivo-que-entrarao-em-vigor-em-fevereiro/" } ] },
+      { "data": "04/11/2026", "titulo": "El Gobierno presentará una PEC para mantener el IPI hasta que el IS rija plenamente", "resumo": "Junto con la MP 1.399/2026, el Gobierno anunció una PEC para prorrogar el IPI sobre los bienes sujetos al IS hasta el inicio pleno del nuevo impuesto (02/02/2027), evitando un mes sin tributación en enero de 2027. Depende de aprobación del Congreso.", "ato": "PEC (por presentar)", "novo": true, "links": [
+        { "tipo": "oficial", "rotulo": "Casa Civil — MP del IS y PEC del IPI", "url": "https://www.gov.br/casacivil/pt-br/assuntos/noticias/2026/outubro/governo-federal-define-aliquotas-do-imposto-seletivo-para-2027-por-meio-de-medida-provisoria" },
+        { "tipo": "fonte", "rotulo": "TAGD Advogados — el Gobierno estudia mantener el IPI en enero", "url": "https://tagdlaw.com.br/governo-prepara-aliquotas-do-imposto-seletivo-e-estuda-manter-ipi-em-janeiro-de-2027/" },
+        { "tipo": "oficial", "rotulo": "EC 132/2023 — texto completo (Planalto)", "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm" } ] },
+      { "data": "29/10/2026", "titulo": "Acto Técnico Conjunto 10/2026 aprueba NT y fija producción el 16/11", "resumo": "Aprueba documentación técnica de diez modelos de DF-e y unifica el 16/11/2026 la producción de las NT 2025.002 v1.53 y 2026.005 a 2026.008 de NF-e/NFC-e (antes previstas para el 03/11).", "ato": "Acto Técnico Conjunto RFB/SUFIS/CGIBS n.º 10/2026", "novo": false, "links": [
+        { "tipo": "oficial", "rotulo": "Acto Técnico Conjunto n.º 10/2026 — texto completo (PDF, CGIBS)", "url": "https://www.cgibs.gov.br/upload/arquivos/202610/30102301-atc-10-vf-assinado-assinado-261030-102245.pdf" },
+        { "tipo": "oficial", "rotulo": "Lista de Actos Técnicos Conjuntos (CGIBS)", "url": "https://cgibs.gov.br/atos-tecnicos-conjuntos" },
+        { "tipo": "fonte", "rotulo": "DFS Pro — resumen de fechas", "url": "https://www.dfspro.com.br/blog/noticias-3/ato-tecnico-conjunto-10-2026-nts-da-nf-e-vao-de-03-11-a-16-11-218" } ] },
+      { "data": "28/10/2026", "titulo": "El TCU calcula la alícuota de referencia de la CBS 2027 en 11,3%", "resumo": "El cálculo (11,3468%, redondeado) supera la estimación anterior de 9,21%. El Senado debe fijarla por resolución hasta diciembre; sin deliberación, rige la cifra del TCU.", "ato": "TC 006.529/2026-7", "novo": false, "links": [
+        { "tipo": "oficial", "rotulo": "Senado Notícias — el TCU calcula la CBS en 11,3%", "url": "https://www12.senado.leg.br/noticias/materias/2026/10/28/reforma-tributaria-tcu-calcula-aliquota-da-cbs-em-11-3-para-2027" },
+        { "tipo": "oficial", "rotulo": "Senado Notícias — próximos pasos de la alícuota", "url": "https://www12.senado.leg.br/noticias/materias/2026/11/03/senado-deve-receber-calculo-da-cbs-na-proxima-terca-para-definir-aliquota" },
+        { "tipo": "fonte", "rotulo": "Mattos Filho — análisis", "url": "https://www.mattosfilho.com.br/unico/tcu-aliquota-cbs-2027/" } ] },
+      { "data": "29/10/2026", "titulo": "Cooperativas: plazo del régimen específico podría ir al 30/11", "resumo": "Receita y CGIBS discuten prorrogar del 31/10 al 30/11/2026 la opción por el régimen específico de las cooperativas. Prórroga por confirmar hasta la publicación del acto.", "ato": "Por confirmar", "novo": false, "links": [
+        { "tipo": "fonte", "rotulo": "COAD — Receita y CGIBS discuten la prórroga", "url": "https://coad.com.br/home/noticias-detalhe/140524/receita-federal-e-cgibs-discutem-ampliacao-do-prazo-de-opcao-pelo-regime-especifico-da-cbs-e-do-ibs-para-as-cooperativas-ate-30-de-novembro" } ] },
+      { "data": "30/10/2026", "titulo": "Cerrada la opción del Simples por el régimen regular de IBS/CBS", "resumo": "Más de 1 millón de optantes. La opción puede cancelarse, de forma irretractable, hasta fines de noviembre/2026. Nueva ventana prevista para 2027.", "ato": "Resolución CGSN n.º 194/2026", "novo": false, "links": [
+        { "tipo": "oficial", "rotulo": "CGIBS — nuevos plazos de opción para 2027", "url": "https://www.cgibs.gov.br/embora-os-periodos-sejam-parecidos-tratam-de-escolhas-diferentes-por-isso-e-importante-entender-cada-situacao" },
+        { "tipo": "oficial", "rotulo": "Receita Federal — Manual de opción por el régimen regular (PDF)", "url": "https://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/Manual%20op%C3%A7%C3%A3o%20regime%20regular%20IBS%20e%20CBS%20no%20Simples%20Nacional.pdf" },
+        { "tipo": "fonte", "rotulo": "NetCPA — Resolución CGSN n.º 194/2026", "url": "https://netcpa.com.br/colunas/resolucao-cgsn-no-1942026-altera-a-resolucao-cgsn-no-18626-que-dispoe-sobre-os-prazos-e-condicoes-para-o-exercicio-de-opcao-pelo-simples-nacional/28455" } ] },
+      { "data": "Sep/2026", "titulo": "Siscomex: sin cobro de IBS/CBS en la importación antes de 2027", "resumo": "En la importación, los campos de IBS/CBS existen solo en la DUIMP y el cobro empieza el 01/01/2027. En 2026, el PIS/Cofins-Importación sigue siendo debido íntegramente.", "ato": "Noticia Siscomex · Acto Conjunto RFB/CGIBS n.º 4/2026", "novo": false, "links": [
+        { "tipo": "oficial", "rotulo": "Acto Conjunto RFB/CGIBS n.º 4/2026 — texto completo (PDF, CGIBS)", "url": "https://www.cgibs.gov.br/upload/arquivos/202607/31091735-20260730-16h30-ato-conjunto-rfb-cgibs-na-c2-ba-4-260731-090909.pdf" },
+        { "tipo": "fonte", "rotulo": "Fazcomex — DI y DUIMP en la reforma", "url": "https://www.fazcomex.com.br/npi/preenchimento-da-di-e-duimp-para-a-reforma-tributaria-do-consumo-rtc-em-2026/" } ] },
+      { "data": "01/10/2026", "titulo": "Nuevo DANFE con bloques de IBS, CBS e IS", "resumo": "La NT 2026.010 incluye totales de CBS, IBS UF, IBS Municipio e IS, además del CRT y el cClassTrib por ítem. Producción prevista para el 01/12/2026 (por confirmar).", "ato": "Acto Técnico Conjunto n.º 8/2026", "novo": false, "links": [
+        { "tipo": "oficial", "rotulo": "Acto Técnico Conjunto n.º 8/2026 — texto completo (PDF, CGIBS)", "url": "https://www.cgibs.gov.br/upload/arquivos/202610/01120217-nfe-nfc-cte-notas-faturas-e-demais-atc-rfb-sufis-cgibs-diretoria-executiva-n-8-de-29-de-setembro-de-2026.pdf" },
+        { "tipo": "fonte", "rotulo": "DFS Pro — qué cambia en el DANFE", "url": "https://www.dfspro.com.br/blog/noticias-3/ato-tecnico-conjunto-8-2026-novo-danfe-com-ibs-cbs-e-is-215" } ] },
+      { "data": "15/10/2026", "titulo": "El split payment entra en pruebas", "resumo": "Pruebas de integración de la Plataforma Pública en ambiente controlado. Uso facultativo y gradual previsto para el 2.º semestre de 2027; obligatoriedad B2B prevista para 2028.", "ato": "Acto Conjunto RFB/CGIBS n.º 2/2026", "novo": false, "links": [
+        { "tipo": "oficial", "rotulo": "Acto Conjunto RFB/CGIBS n.º 2/2026 — texto completo (PDF, CGIBS)", "url": "https://www.cgibs.gov.br/upload/arquivos/202606/03111600-ato-conjunto-rfb-e-cibs-2827-05-29-assinado.pdf" },
+        { "tipo": "fonte", "rotulo": "Comsefaz — split payment en pruebas", "url": "https://comsefaz.org.br/novo/split-payment-entra-em-fase-de-testes-a-partir-de-15-de-outubro-saiba-o-que-muda/" } ] },
+      { "data": "25/08/2026", "titulo": "El Gobierno anuncia decreto con la lista del IPI en cero en 2027", "resumo": "El decreto no crea la alícuota cero (prevista en la EC 132/2023 y en el art. 454 de la LC 214/2025): solo divulga la lista de productos que pasan a cero y de los que siguen gravados por competir con la Zona Franca de Manaus. Publicación por confirmar.", "ato": "Decreto (por publicar)", "novo": false, "links": [
+        { "tipo": "oficial", "rotulo": "LC 214/2025 — art. 454 (Planalto)", "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm" } ] },
+      { "data": "18/08/2026", "titulo": "ABIHPEC publica guía de CBS/IBS para cosméticos e higiene personal", "resumo": "Reducción del 60% solo para los ítems del Anexo VIII (jabones, dentífricos, cepillos, pañales, etc.), con NCM y descripción exactas. Cosméticos y perfumería quedan con alícuota plena. La guía incluye checklist de ERP, ICMS-ST y caja.", "ato": "LC 214/2025, art. 136 y Anexo VIII", "novo": false, "links": [
+        { "tipo": "oficial", "rotulo": "ABIHPEC — guía completa", "url": "https://abihpec.org.br/cbs-ibs-empresas-cosmeticos-2026/" },
+        { "tipo": "oficial", "rotulo": "LC 214/2025 — texto compilado (Planalto)", "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm" } ] }
+    ],
+    "cronograma": [
+      { "ano": "2026", "titulo": "Año de prueba", "tags": ["Prueba", "DF-e"], "itens": ["CBS 0,9% e IBS 0,1%, compensables", "Campos IBS/CBS obligatorios en la NF-e desde el 03/08", "Reglamentos publicados el 30/04", "Split payment en pruebas desde el 15/10"] },
+      { "ano": "2027", "titulo": "CBS plena e Impuesto Selectivo", "tags": ["CBS", "IS", "Extinción"], "itens": ["Cobro de la CBS con alícuota de referencia (TCU: 11,3%)", "Extinción del PIS/Cofins", "IPI en cero, salvo productos industrializados en la ZFM", "Inicio del IS el 02/02/2027 (MP 1.399/2026), con IPI en cero en los mismos bienes", "NFS-e y otros documentos con IBS/CBS obligatorios el 01/01 o el 01/03/2027 (Acto Conjunto RFB/CGIBS n.º 7/2026)", "Cashback de la CBS para familias del CadÚnico", "Split payment facultativo en el 2.º semestre"] },
+      { "ano": "2028", "titulo": "Consolidación", "tags": ["Split payment"], "itens": ["Split payment obligatorio en operaciones B2B (previsión)", "IBS sigue en 0,1% (prueba)"] },
+      { "ano": "2029–2032", "titulo": "Transición ICMS/ISS → IBS", "tags": ["IBS", "ICMS", "ISS"], "itens": ["Reducción gradual de ICMS e ISS (90%, 80%, 70%, 60% de las alícuotas)", "Aumento proporcional del IBS", "Cashback del IBS desde 2029"] },
+      { "ano": "2033", "titulo": "Modelo definitivo", "tags": ["IVA dual"], "itens": ["Extinción del ICMS y del ISS", "IBS y CBS plenamente vigentes"] }
+    ],
+    "aliquotas": [
+      ["CBS", "0,9% (prueba)", "11,3% (referencia TCU, a fijar por el Senado)", "Pago dispensado en 2026 con obligaciones accesorias"],
+      ["IBS (Estado + Municipio)", "0,1% (prueba)", "0,1% (prueba)", "Alícuota plena gradual desde 2029"],
+      ["Impuesto Selectivo", "—", "Desde el 02/02/2027: bebidas azucaradas 2,6%; cerveza 4,2%; destilados 20–24%; pronósticos 0,5%; minerales 0%", "MP 1.399/2026; demás ítems = IPI actual × factores de conversión"],
+      ["PIS/Cofins", "Vigentes", "Extinguidos", "Sustituidos por la CBS"],
+      ["IPI", "Vigente", "En cero (salvo ZFM)", "Se mantiene para proteger la ZFM"],
+      ["Canasta Básica Nacional", "—", "Alícuota cero", "Anexo I de la LC 214/2025"]
+    ],
+    "tributos": [
+      { "sigla": "CBS", "nome": "Contribución sobre Bienes y Servicios", "esfera": "Federal (Receita Federal)", "texto": "Sustituye al PIS y la Cofins. No acumulativa, base amplia, crédito financiero. Reglamentada por el Decreto 12.955/2026." },
+      { "sigla": "IBS", "nome": "Impuesto sobre Bienes y Servicios", "esfera": "Estados y Municipios (CGIBS)", "texto": "Sustituye al ICMS y al ISS. Cobro en destino, administrado por el Comité Gestor creado por la LC 227/2026. Reglamentado por la Resolución CGIBS 6/2026." },
+      { "sigla": "IS", "nome": "Impuesto Selectivo", "esfera": "Federal", "texto": "Grava una sola vez bienes perjudiciales para la salud o el medio ambiente, sin generar crédito. Instituido por la EC 132/2023 y la LC 214/2025. Alícuotas de 2027 fijadas por la MP 1.399/2026, con efectos desde el 02/02/2027." },
+      { "sigla": "IPI", "nome": "Impuesto sobre Productos Industrializados", "esfera": "Federal (residual)", "texto": "Alícuota cero desde 2027, salvo productos con industrialización incentivada en la Zona Franca de Manaus (EC 132/2023 y art. 454 de la LC 214/2025). No se extingue: sigue como instrumento de protección de la ZFM." }
+    ],
+    "isipi": {
+      "intro": "El Impuesto Selectivo entra en 2027 en lugar de parte de la recaudación del IPI, que pasa a cero para la mayoría de los productos. Ambos movimientos están ligados: el Gobierno quiere que el IS reproduzca en 2027 la carga actual del IPI en los sectores alcanzados.",
+      "blocos": [
+        { "titulo": "Impuesto Selectivo (IS)", "itens": [
+          { "t": "Base legal", "d": "EC 132/2023 (art. 153, VIII, de la Constitución) y LC 214/2025, que instituye el IS y lista los bienes gravados en el Anexo XVII. Incide una sola vez en la cadena y no genera crédito.", "ok": true },
+          { "t": "Qué se grava", "d": "Vehículos, embarcaciones y aeronaves; cigarrillos y fumígenos; bebidas alcohólicas; bebidas azucaradas; bienes minerales; concursos de pronósticos y fantasy sport.", "ok": true },
+          { "t": "MP 1.399/2026: alícuotas de 2027", "d": "Publicada en el DOU extra del 04/11/2026. Hasta el 31/12/2027 la alícuota es el IPI actual multiplicado por factores de conversión (Anexos IV y V). Bebidas azucaradas 2,6%; cerveza 4,2%; vinos 8%; destilados 20% a 24%; concursos de pronósticos 0,5%; bienes minerales 0%. Los importados pueden tener factor de ajuste (1,45 para bebidas).", "ok": true },
+          { "t": "Inicio el 02/02/2027", "d": "Por la noventena, la MP produce efectos desde el 02/02/2027, cuando el IPI de esos bienes pasa a cero. La MP vale 60 días, prorrogables por otros 60, y debe ser convertida en ley por el Congreso; los análisis señalan el plazo del 31/12/2026 para regir en 2027. Recibió 179 enmiendas; la comisión mixta fue designada el 09/11.", "ok": true },
+          { "t": "Calibración y 2028", "d": "En 2027 el IS reproduce la carga actual del IPI (régimen de implementación gradual). El Gobierno debe enviar al Congreso hasta el 31/05/2027 el proyecto con las alícuotas desde 2028. El PLOA 2027 prevé R$ 41,9 mil millones.", "ok": true },
+          { "t": "PLP 42/2026", "d": "Proyecto de diputados del partido Novo propone limitar las alícuotas del IS entre 0% y 5%. En trámite, sin aprobación.", "ok": true },
+          { "t": "Impacto en el portafolio", "d": "Suerox (NCM 2202.99.00, sin azúcar) queda fuera del IS: la MP 1.399/2026 y el Anexo XVII de la LC 214/2025 alcanzan solo la NCM 2202.10.00. Seguir el proyecto de las alícuotas de 2028 y propuestas que puedan incluir la 2202.99.00.", "ok": true }
+        ] },
+        { "titulo": "IPI", "itens": [
+          { "t": "Alícuota cero en 2027", "d": "La EC 132/2023 (ADCT, art. 126) reduce a cero las alícuotas del IPI desde 2027, salvo productos con industrialización incentivada en la Zona Franca de Manaus.", "ok": true },
+          { "t": "Criterio de la LC 214/2025 (art. 454)", "d": "Pasan a cero los productos con alícuota inferior al 6,5% en la TIPI del 31/12/2023, observadas condiciones ligadas a la ZFM (industrialización en la ZFM en 2024 o proyecto aprobado por Suframa). Parte de la doctrina ve conflicto entre ese corte y el texto constitucional.", "ok": false },
+          { "t": "Decreto con la lista de productos", "d": "Anunciado el 25/08/2026 para divulgar qué productos pasan a cero y cuáles siguen gravados (art. 454, §3). Publicación por confirmar.", "ok": false },
+          { "t": "PEC para enero de 2027", "d": "Anunciada junto con la MP 1.399/2026: prorroga el IPI sobre los bienes sujetos al IS hasta el 02/02/2027, cubriendo enero. Depende de aprobación del Congreso.", "ok": false },
+          { "t": "Créditos acumulados", "d": "No hay regla de transición específica para saldos acreedores de IPI, a diferencia del PIS/Cofins. Evaluar su aprovechamiento antes de 2027.", "ok": false },
+          { "t": "Impacto en el portafolio", "d": "Los medicamentos ya tienen, en general, IPI cero. Ítems de higiene y cosméticos con alícuota de 6,5% o más en la TIPI pueden seguir gravados si compiten con producción de la ZFM; verificar NCM por NCM cuando se publique la lista.", "ok": false }
+        ] }
+      ]
+    },
+    "mecanismos": [
+      { "titulo": "Split Payment", "texto": "Separación automática del tributo en el momento del pago. Pruebas desde el 15/10/2026." },
+      { "titulo": "No acumulatividad plena", "texto": "Crédito de todo tributo pagado en las adquisiciones, condicionado a su recaudación." },
+      { "titulo": "Cobro en destino", "texto": "El IBS pertenece al ente donde ocurre el consumo." },
+      { "titulo": "Cashback", "texto": "Devolución a familias del CadÚnico: CBS desde 2027, IBS desde 2029." },
+      { "titulo": "Canasta Básica Nacional", "texto": "Productos esenciales con alícuota cero de IBS y CBS." },
+      { "titulo": "DeRE y regímenes específicos", "texto": "Declaración propia para regímenes específicos (financiero, seguros, inmuebles, etc.). Detalles operativos por confirmar." }
+    ],
+    "impactos": [
+      { "titulo": "Régimen Regular", "texto": "Lucro Real y Presumido deben informar IBS/CBS en los DF-e desde el 03/08/2026 y ajustar ERP a las NT con producción el 16/11/2026.", "urgencia": 90 },
+      { "titulo": "Simples Nacional", "texto": "Ventana de opción por el régimen regular cerrada el 30/10. Cancelación posible hasta fines de noviembre. Evaluar el efecto en el crédito transferido a clientes.", "urgencia": 75 },
+      { "titulo": "Financiero y Seguros", "texto": "Regímenes específicos con base propia; seguir la DeRE y la alícuota de referencia de 2027 para la fijación de precios.", "urgencia": 60 },
+      { "titulo": "Agro, ZFM e ICMS", "texto": "Cooperativas: plazo del régimen específico posiblemente hasta el 30/11 (por confirmar). La ZFM mantiene el IPI como diferencial. El ICMS solo empieza a bajar en 2029.", "urgencia": 70 }
+    ],
+    "genomma": {
+      "intro": "Lectura preliminar del encuadre de las principales categorías que Genomma Lab comercializa en Brasil. El tratamiento final depende de la NCM, del registro en Anvisa y de la descripción comercial de cada SKU. La CBS 2027 se estimó con la alícuota de referencia calculada por el TCU (11,3%), aún pendiente de resolución del Senado.",
+      "itens": [
+        { "categoria": "OTC / MIP", "exemplos": "Antigripales, antiácidos, antimicóticos y analgésicos registrados como medicamento", "enquadramento": "Reducción del 60% de IBS y CBS", "base": "LC 214/2025, art. 133", "texto": "La reducción solo aplica si el producto sigue el sistema de precios de la CMED o si la empresa firma un compromiso con la Unión y el CGIBS (art. 133, §2). Los MIP con precio liberado necesitan ese compromiso; sin él, pagan alícuota plena. La alícuota cero (art. 146, modificado por la LC 227/2026) se limita a líneas terapéuticas específicas y compras públicas, algo improbable para OTC.", "cbs": "≈ 4,5%", "is": "No incide", "status": "confirmado", "urgencia": 95 },
+        { "categoria": "Dermocosméticos", "exemplos": "Líneas de skincare, antiacné, cuidado de la piel", "enquadramento": "Alícuota plena", "base": "Fuera del Anexo VIII de la LC 214/2025", "texto": "Cosméticos y perfumería no tienen reducción. Ítems registrados en Anvisa como medicamento pueden tener el 60% (validar SKU por SKU). El PIS/Cofins monofásico termina en 2027, y el ICMS-ST de higiene y cosméticos ya terminó en SP y otros 7 estados desde el 01/04/2026, con recuperación del ST de inventarios en 12 cuotas.", "cbs": "≈ 11,3%", "is": "No incide", "status": "confirmado", "urgencia": 80 },
+        { "categoria": "Jabones en barra e higiene básica", "exemplos": "Jabones de tocador y en barra, dentífricos, cepillos dentales, pañales", "enquadramento": "Reducción del 60% de IBS y CBS", "base": "LC 214/2025, art. 136 y Anexo VIII", "texto": "Exige coincidencia exacta entre la NCM (jabón de tocador 3401.11.90; jabón en barra 3401.19.00), la descripción comercial y el texto del anexo. Cualquier diferencia lleva a la alícuota plena. Los jabones líquidos y versiones fuera de esas NCM tienden a la alícuota plena (por confirmar).", "cbs": "≈ 4,5%", "is": "No incide", "status": "parcial", "urgencia": 70 },
+        { "categoria": "Hidroelectrolíticos (Suerox)", "exemplos": "Bebida de rehidratación con electrolitos, sin azúcar — NCM 2202.99.00", "enquadramento": "Alícuota plena de IBS/CBS, sin Impuesto Selectivo", "base": "NCM 2202.99.00 — fuera del Anexo XVII de la LC 214/2025 y del Anexo IV de la MP 1.399/2026", "texto": "Suerox se clasifica en la NCM 2202.99.00 (otras bebidas no alcohólicas) y no tiene azúcar. No hay reducción de IBS/CBS para esa NCM, por lo que paga la alícuota plena. El Impuesto Selectivo sobre bebidas azucaradas alcanza solo la NCM 2202.10.00 (2,6% por la MP 1.399/2026), y la lista de bienes del IS es cerrada: Suerox queda fuera. Punto de atención: el proyecto de ley con las alícuotas del IS para 2028 (plazo de envío: 31/05/2027) y propuestas como el PLP 34/2025, que llegó a incluir la NCM 2202.99.00, podrían ampliar la lista.", "cbs": "≈ 11,3%", "is": "No incide", "status": "confirmado", "urgencia": 85 },
+        { "categoria": "Fórmulas infantiles (Novamil)", "exemplos": "Fórmulas para lactantes y de continuación", "enquadramento": "Alícuota cero (Canasta Básica Nacional)", "base": "LC 214/2025, Anexo I, ítem 4", "texto": "Exige conformidad con la legislación sanitaria específica y NCM 1901.10.10, 1901.10.90 o 2106.90.90. Las fórmulas para errores innatos del metabolismo tienen reducción del 60% (art. 133, §1). Genomma anunció en 2025 el plan de lanzar Novamil en Brasil; la situación actual está por confirmar.", "cbs": "0%", "is": "No incide", "status": "parcial", "urgencia": 50 }
+      ],
+      "transversais": [
+        "Precio CMED: el nuevo modelo calcula CBS e IBS fuera del precio de fábrica y los destaca en la factura; las listas muestran el precio con y sin tributo. Sindusfarma retomó con la CMED el grupo de trabajo de la reforma.",
+        "Fin del PIS/Cofins monofásico en 2027: revisar CST y cClassTrib de todo el catastro en el ERP.",
+        "Crédito amplio en las compras, incluidos insumos importados, con resarcimiento del saldo acreedor. El crédito depende de la recaudación por el proveedor.",
+        "El split payment reduce el capital de trabajo desde 2027–2028: revisar plazos con cadenas de farmacias, mayoristas y distribuidores.",
+        "Las muestras gratuitas sin contraprestación no son operación gravada (Decreto 12.955/2026, art. 6, §4)."
+      ]
+    },
+    "comex": {
+      "intro": "Principales cambios para quien importa insumos y productos terminados o exporta. En la importación, el cobro de IBS/CBS empieza el 01/01/2027.",
+      "blocos": [
+        { "titulo": "Importación", "itens": [
+          { "t": "Cobro desde el 01/01/2027", "d": "En 2026 no hay pago de IBS/CBS en la importación. El PIS/Cofins-Importación sigue siendo debido íntegramente hasta su extinción.", "ok": true },
+          { "t": "IBS/CBS solo en la DUIMP", "d": "Los campos de IBS/CBS existen solo en la DUIMP; la DI no los tendrá. La documentación técnica de la DUIMP con IBS/CBS fue aprobada por el Acto Técnico Conjunto n.º 11/2026 (y la de la Declaración de Importación de Envíos por el n.º 12/2026). Apagado de la DI previsto por etapas (31/08 y 01/12/2026), por confirmar.", "ok": false },
+          { "t": "Misma alícuota que el producto nacional", "d": "Trato nacional: el importado paga la misma alícuota de la operación interna, incluidas las reducciones (ej.: 60% para medicamentos).", "ok": true },
+          { "t": "Base de cálculo", "d": "Valor aduanero más II, Impuesto Selectivo, tasas y cargos aduaneros. Si el IPI y el ICMS integran o no la base es un punto en que las fuentes divergen.", "ok": false },
+          { "t": "Momento del pago", "d": "Hasta la entrega de la mercadería despachada para consumo, con anticipación posible en el registro de la declaración. Los operadores OEA pueden pagar después, en los casos del reglamento.", "ok": true },
+          { "t": "Créditos", "d": "El importador del régimen regular acredita el IBS/CBS pagado. Hay crédito presunto de CBS sobre el PIS/Cofins-Importación de inventarios (cálculo hasta jun/2027, en 12 cuotas).", "ok": false }
+        ] },
+        { "titulo": "Exportación", "itens": [
+          { "t": "Inmunidad con mantenimiento de créditos", "d": "Las exportaciones de bienes y servicios no soportan IBS/CBS, y se mantienen los créditos de etapas anteriores para compensación o resarcimiento (LC 214/2025, art. 79).", "ok": true },
+          { "t": "IBS y CBS segregados", "d": "El crédito de IBS no compensa débito de CBS, y viceversa. Controlar los saldos por separado.", "ok": true },
+          { "t": "Comercializadora exportadora", "d": "Suspensión en la venta a la trading, convertida en alícuota cero tras la exportación. Exige requisitos acumulativos, como certificación OEA y patrimonio neto mínimo (art. 82).", "ok": true },
+          { "t": "Exportación indirecta en disputa", "d": "Decisión de primera instancia (TJDFT, 08/05/2026, mandado de seguridad del CECIEX) apartó los requisitos del art. 82 para el IBS. No es definitiva.", "ok": false }
+        ] },
+        { "titulo": "Regímenes aduaneros especiales", "itens": [
+          { "t": "Drawback, Recof, Repetro, ZPE y ZFM", "d": "Incorporados por el Decreto 12.955/2026 y la Resolución CGIBS 6/2026, con suspensión de IBS/CBS como mecanismo de neutralidad, condicionada a control y trazabilidad.", "ok": true },
+          { "t": "Drawback suspensión", "d": "Hay lecturas divergentes sobre la extensión de la suspensión al IBS/CBS. Confirmar en el reglamento antes de planificar operaciones.", "ok": false },
+          { "t": "Zona Franca de Manaus", "d": "IPI mantenido para productos industrializados en la ZFM. Las empresas en la ZFM deben informar el número de proceso Suframa en la NF-e.", "ok": true }
+        ] }
+      ]
+    },
+    "entidades": [
+      { "nome": "Sindusfarma", "papel": "Industria farmacéutica", "texto": "Grupo de trabajo con la CMED sobre la adaptación de precios a la reforma; nueva Resolución CMED n.º 3/25 vigente desde el 29/04/2026.", "url": "https://sindusfarma.org.br/noticias/indice/exibir/27681-nova-resolucao-da-cmed-e-reforma-tributaria-sindusfarma-reune-industria-para-esclarecer-regras-e-impactos" },
+      { "nome": "ABIHPEC", "papel": "Higiene personal, perfumería y cosméticos", "texto": "Guía de CBS/IBS para el sector (18/08/2026): Anexo VIII, fin del ICMS-ST, checklist de ERP y caja.", "url": "https://abihpec.org.br/cbs-ibs-empresas-cosmeticos-2026/" },
+      { "nome": "ACESSA", "papel": "Autocuidado en salud y MIP", "texto": "No se localizó posicionamiento público sobre la reforma en el sitio hasta el 03/11/2026. Seguir la sección MIP & Autocuidado, en especial el compromiso exigido para MIP con precio liberado.", "url": "https://acessa.org.br/mip-autocuidado" },
+      { "nome": "Rayes & Fagundes", "papel": "Despacho de abogados tributarios", "texto": "Boletín sobre medicamentos: IBS/CBS en la base del ICMS, PMC, ICMS-ST, compras públicas y contratos. Visto en una publicación de LinkedIn; el texto original no pudo consultarse automáticamente (por confirmar).", "url": "https://www.rayesfagundes.com.br" },
+      { "nome": "CMED / Anvisa", "papel": "Regulación de precios de medicamentos", "texto": "GT de Reforma Tributaria: presentación del 03/07/2026 con la propuesta del nuevo modelo de precio de fábrica y escalonamiento 2027/2029/2033.", "url": "https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/informes/ApresentaoGTdeReformaTributria03dejulhode2026.pdf" }
+    ],
+    "checklist": [
+      { "texto": "Homologar NF-e con la NT 2025.002 v1.53 (reglas de devolución)", "prazo": "09/11/2026" },
+      { "texto": "Pasar a producción con las NT 2026.005 a 2026.008", "prazo": "16/11/2026" },
+      { "texto": "Revisar las nuevas fechas de la NFS-e con IBS/CBS (Acto Conjunto 7/2026) para servicios prestados y contratados", "prazo": "01/01/2027" },
+      { "texto": "Mapear NCM, registro Anvisa y cClassTrib de cada SKU (OTC, dermo, higiene, Suerox, Novamil)", "prazo": "Nov/2026" },
+      { "texto": "Cooperativas: formalizar opción por el régimen específico (plazo por confirmar)", "prazo": "30/11/2026" },
+      { "texto": "Simples: revisar/cancelar la opción por el régimen regular, si corresponde", "prazo": "30/11/2026" },
+      { "texto": "Adecuar la emisión al nuevo DANFE (NT 2026.010) — fecha por confirmar", "prazo": "01/12/2026" },
+      { "texto": "Migrar todas las importaciones de la DI a la DUIMP — fecha por confirmar", "prazo": "01/12/2026" },
+      { "texto": "OTC con precio liberado: evaluar compromiso con la Unión/CGIBS para mantener la reducción del 60%", "prazo": "Dic/2026" },
+      { "texto": "Jabones en barra: validar NCM y descripción frente al Anexo VIII", "prazo": "Dic/2026" },
+      { "texto": "Suerox (NCM 2202.99.00): seguir si el proyecto del IS para 2028 amplía la lista de bebidas", "prazo": "31/05/2027" },
+      { "texto": "Seguir la resolución del Senado sobre la alícuota de la CBS 2027", "prazo": "Dic/2026" },
+      { "texto": "Inventariar existencias al 31/12/2026 para crédito presunto de CBS", "prazo": "31/12/2026" },
+      { "texto": "Actualizar precios y contratos para la CBS plena", "prazo": "01/01/2027" },
+      { "texto": "Calcular el crédito presunto de CBS sobre el PIS/Cofins-Importación de inventarios", "prazo": "Jun/2027" },
+      { "texto": "Exportaciones: estructurar el control y la solicitud de resarcimiento de créditos", "prazo": "2027" },
+      { "texto": "Preparar tesorería y sistemas para el split payment", "prazo": "2.º sem./2027" }
+    ],
+    "fontes": []
+  },
+  "refs": {
+    "ec132": { "n": "EC 132/2023", "u": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm" },
+    "lc214": { "n": "LC 214/2025", "u": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm" },
+    "lc227": { "n": "LC 227/2026", "u": "https://www2.camara.leg.br/legin/fed/leicom/2026/leicomplementar-227-13-janeiro-2026-798657-norma-pl.html" },
+    "dec12955": { "n": "Decreto 12.955/2026", "u": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/D12955.htm" },
+    "res6": { "n": "Resolução CGIBS 6/2026", "u": "https://www.cgibs.gov.br/upload/arquivos/202604/30084927-res-cgibs-n-6-30-abr-2026-regulamenta-o-ibs.pdf" },
+    "ac2": { "n": "Ato Conjunto 2/2026", "u": "https://www.cgibs.gov.br/upload/arquivos/202606/03111600-ato-conjunto-rfb-e-cibs-2827-05-29-assinado.pdf" },
+    "ac4": { "n": "Ato Conjunto 4/2026", "u": "https://www.cgibs.gov.br/upload/arquivos/202607/31091735-20260730-16h30-ato-conjunto-rfb-cgibs-na-c2-ba-4-260731-090909.pdf" },
+    "atc1": { "n": "Ato Técnico Conjunto 1/2026", "u": "https://www.cgibs.gov.br/upload/arquivos/202608/01153321-am-ato-tecnico-conjunto-rfb-e-cgibs-ratificacao-nts-dfes-revisao-assinado.pdf" },
+    "atc8": { "n": "Ato Técnico Conjunto 8/2026", "u": "https://www.cgibs.gov.br/upload/arquivos/202610/01120217-nfe-nfc-cte-notas-faturas-e-demais-atc-rfb-sufis-cgibs-diretoria-executiva-n-8-de-29-de-setembro-de-2026.pdf" },
+    "atc10": { "n": "Ato Técnico Conjunto 10/2026", "u": "https://www.cgibs.gov.br/upload/arquivos/202610/30102301-atc-10-vf-assinado-assinado-261030-102245.pdf" },
+    "senado_tcu": { "n": "Senado Notícias (TCU)", "u": "https://www12.senado.leg.br/noticias/materias/2026/10/28/reforma-tributaria-tcu-calcula-aliquota-da-cbs-em-11-3-para-2027" },
+    "cgibs_sn": { "n": "CGIBS (Simples)", "u": "https://www.cgibs.gov.br/embora-os-periodos-sejam-parecidos-tratam-de-escolhas-diferentes-por-isso-e-importante-entender-cada-situacao" },
+    "receita_cgsn": { "n": "Receita Federal (CGSN)", "u": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/abril/cgsn-define-prazos-de-opcao-pelo-simples-nacional-e-pelo-regime-regular-do-ibs-e-da-cbs-para-2027" },
+    "mercado_sn": { "n": "Mercado & Consumo", "u": "https://mercadoeconsumo.com.br/30/10/2026/economia/opcao-por-regime-regular-de-ibs-e-cbs-para-pequenas-empresas-termina-nesta-sexta-feira/" },
+    "coad_coop": { "n": "COAD", "u": "https://coad.com.br/home/noticias-detalhe/140524/receita-federal-e-cgibs-discutem-ampliacao-do-prazo-de-opcao-pelo-regime-especifico-da-cbs-e-do-ibs-para-as-cooperativas-ate-30-de-novembro" },
+    "abihpec": { "n": "ABIHPEC", "u": "https://abihpec.org.br/cbs-ibs-empresas-cosmeticos-2026/" },
+    "sindusfarma": { "n": "Sindusfarma", "u": "https://sindusfarma.org.br/noticias/indice/exibir/27681-nova-resolucao-da-cmed-e-reforma-tributaria-sindusfarma-reune-industria-para-esclarecer-regras-e-impactos" },
+    "cmed_gt": { "n": "CMED/Anvisa (GT)", "u": "https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/informes/ApresentaoGTdeReformaTributria03dejulhode2026.pdf" },
+    "medicinasa": { "n": "Medicina S/A", "u": "https://medicinasa.com.br/seletividade-terapeutica/" },
+    "simtax_med": { "n": "Simtax (medicamentos)", "u": "https://simtax.com.br/reducao-60-medicamentos-ibs-cbs/" },
+    "crcsp_is": { "n": "CRCSP (IS)", "u": "https://crcsp.org.br/portal/noticias/noticia.asp?c=11012" },
+    "iob_cesta": { "n": "IOB (Cesta Básica)", "u": "https://noticias.iob.com.br/reforma-tributaria-isencao-cesta-basica/" },
+    "cashback": { "n": "Valor Final (cashback)", "u": "https://valorfinal.com.br/guia/reforma-tributaria-cesta-basica-e-cashback" },
+    "elceo": { "n": "El CEO (Genomma)", "u": "https://elceo.com/negocios/de-suerox-a-cicatricure-rodrigo-herrera-afina-la-formula-de-genomma-lab-para-crecer/" },
+    "conjur_imp": { "n": "ConJur (importação)", "u": "https://www.conjur.com.br/2026-jun-16/importacao-ibs-e-cbs-o-que-revela-a-regulamentacao-da-reforma-tributaria/" },
+    "fazcomex": { "n": "Fazcomex (DUIMP)", "u": "https://www.fazcomex.com.br/npi/preenchimento-da-di-e-duimp-para-a-reforma-tributaria-do-consumo-rtc-em-2026/" },
+    "simtax_exp": { "n": "Simtax (exportação)", "u": "https://simtax.com.br/imunidade-ibs-cbs-exportacoes/" },
+    "barbieri_exp": { "n": "Barbieri (exportação indireta)", "u": "https://www.barbieriadvogados.com/exportacao-indireta/" },
+    "apet_reg": { "n": "APET (regimes aduaneiros)", "u": "https://apet.org.br/?p=135208" },
+    "comsefaz": { "n": "Comsefaz (split payment)", "u": "https://comsefaz.org.br/novo/split-payment-entra-em-fase-de-testes-a-partir-de-15-de-outubro-saiba-o-que-muda/" },
+    "contabeis_split": { "n": "Contábeis (cronograma split)", "u": "https://www.contabeis.com.br/noticias/80411/split-payment-comeca-a-ser-implementado-em-2027-veja-o-cronograma/" },
+    "contabeis_dec": { "n": "Contábeis (CBS 2026)", "u": "https://www.contabeis.com.br/noticias/76470/cbs-e-regulamentada-e-preve-dispensa-de-recolhimento-em-2026/" },
+    "taxgroup": { "n": "Tax Group (guia 2026)", "u": "https://www.taxgroup.com.br/intelligence/reforma-tributaria-2026-guia-completo-sobre-o-que-muda-e-a-transicao/" },
+    "taxcel": { "n": "Taxcel (NF-e)", "u": "https://taxcel.com.br/ibs-cbs-nota-fiscal-2026-obrigatorio-rejeicao" },
+    "tagd": { "n": "TAGD Advogados (IS/IPI)", "u": "https://tagdlaw.com.br/governo-prepara-aliquotas-do-imposto-seletivo-e-estuda-manter-ipi-em-janeiro-de-2027/" },
+    "tribuna_is": { "n": "Tribuna do Sertão (MP do IS)", "u": "https://www.tribunadosertao.com.br/financas/2026/11/03/1012710-governo-adia-medida-provisoria-com-aliquotas-do-imposto-seletivo" },
+    "mp1399": { "n": "MP 1.399/2026", "u": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/mpv/mpv1399.htm" },
+    "casacivil_is": { "n": "Casa Civil (MP do IS)", "u": "https://www.gov.br/casacivil/pt-br/assuntos/noticias/2026/outubro/governo-federal-define-aliquotas-do-imposto-seletivo-para-2027-por-meio-de-medida-provisoria" },
+    "infomoney_is": { "n": "InfoMoney (alíquotas do IS)", "u": "https://www.infomoney.com.br/politica/confira-as-aliquotas-do-imposto-seletivo-que-entrarao-em-vigor-em-fevereiro/" },
+    "ncm_is": { "n": "Buscador NCM (bens do IS)", "u": "https://buscadorncm.com.br/reforma/imposto-seletivo" },
+    "folhas_is": { "n": "Brasil em Folhas (MP do IS)", "u": "https://brasilemfolhas.com.br/2026/11/governo-publica-medida-que-define-aliquotas-do-imposto-seletivo/" },
+    "ac7": { "n": "Ato Conjunto 7/2026", "u": "https://www.cgibs.gov.br/upload/arquivos/202611/13061456-ato-conjunto-7-rfb-cgibs-alteracao-ato-4.pdf" },
+    "atc11": { "n": "Ato Técnico Conjunto 11/2026 (DUIMP)", "u": "https://www.cgibs.gov.br/upload/arquivos/202611/12145422-ato-tecnico-conjunto-11-duimp.pdf" },
+    "congresso_mp": { "n": "Congresso (MPV 1.399)", "u": "https://www.congressonacional.leg.br/materias/medidas-provisorias/-/mpv/176208" },
+    "migalhas_mp": { "n": "Migalhas (MP do IS)", "u": "https://www.migalhas.com.br/depeso/468048/mp-do-imposto-seletivo-o-espelho-do-ipi-e-o-relogio-de-31-de-dezembro" },
+    "plp42": { "n": "PLP 42/2026 (PDF)", "u": "https://www.reformatributaria.com/wp-content/uploads/2026/03/PLP-42-2026.pdf" }
+  },
+  "fontesItens": {
+    "kpis.0": ["dec12955", "contabeis_dec"], "kpis.1": ["res6", "taxgroup"], "kpis.2": ["senado_tcu"], "kpis.3": ["folhas_is"], "kpis.4": ["mercado_sn", "cgibs_sn"], "kpis.5": ["ec132", "lc214"],
+    "aliquotas.0": ["dec12955", "senado_tcu"], "aliquotas.1": ["res6", "lc214"], "aliquotas.2": ["mp1399", "infomoney_is"], "aliquotas.3": ["ec132", "lc214"], "aliquotas.4": ["ec132", "lc214"], "aliquotas.5": ["lc214", "iob_cesta"],
+    "cronograma.0": ["ac4", "dec12955", "comsefaz"], "cronograma.1": ["senado_tcu", "ec132", "mp1399", "ac7", "contabeis_split"], "cronograma.2": ["contabeis_split"], "cronograma.3": ["ec132", "lc214"], "cronograma.4": ["ec132"],
+    "tributos.0": ["dec12955", "lc214"], "tributos.1": ["res6", "lc227"], "tributos.2": ["ec132", "lc214", "mp1399"], "tributos.3": ["ec132", "lc214"],
+    "mecanismos.0": ["ac2", "comsefaz"], "mecanismos.1": ["lc214"], "mecanismos.2": ["ec132", "lc214"], "mecanismos.3": ["lc214", "cashback"], "mecanismos.4": ["lc214", "iob_cesta"], "mecanismos.5": ["lc214"],
+    "impactos.0": ["ac4", "atc10", "taxcel"], "impactos.1": ["cgibs_sn", "receita_cgsn"], "impactos.2": ["lc214", "senado_tcu"], "impactos.3": ["coad_coop", "ec132"],
+    "genomma.0": ["lc214", "lc227", "simtax_med", "medicinasa", "sindusfarma"], "genomma.1": ["abihpec", "lc214"], "genomma.2": ["abihpec", "lc214"], "genomma.3": ["mp1399", "lc214", "ncm_is"], "genomma.4": ["lc214", "iob_cesta", "elceo"],
+    "transv.0": ["cmed_gt", "sindusfarma"], "transv.1": ["abihpec"], "transv.2": ["lc214", "abihpec"], "transv.3": ["contabeis_split"], "transv.4": ["medicinasa", "dec12955"],
+    "comex.0.0": ["fazcomex", "ac4"], "comex.0.1": ["atc11", "fazcomex"], "comex.0.2": ["conjur_imp", "lc214"], "comex.0.3": ["lc214", "conjur_imp"], "comex.0.4": ["conjur_imp"], "comex.0.5": ["lc214"],
+    "comex.1.0": ["lc214", "simtax_exp"], "comex.1.1": ["simtax_exp"], "comex.1.2": ["lc214", "barbieri_exp"], "comex.1.3": ["barbieri_exp"],
+    "comex.2.0": ["conjur_imp", "apet_reg"], "comex.2.1": ["apet_reg"], "comex.2.2": ["ec132", "abihpec"],
+    "isipi.0.0": ["ec132", "lc214"], "isipi.0.1": ["lc214", "mp1399"], "isipi.0.2": ["mp1399", "infomoney_is"], "isipi.0.3": ["mp1399", "congresso_mp", "migalhas_mp"], "isipi.0.4": ["mp1399", "casacivil_is", "folhas_is"], "isipi.0.5": ["plp42"], "isipi.0.6": ["mp1399", "lc214", "ncm_is"],
+    "isipi.1.0": ["ec132"], "isipi.1.1": ["lc214"], "isipi.1.2": ["lc214"], "isipi.1.3": ["casacivil_is"], "isipi.1.4": ["lc214"], "isipi.1.5": ["ec132", "lc214"]
+  },
+  "glossario": [
+    { "t": "PLOA", "pt": "Projeto de Lei Orçamentária Anual — proposta de orçamento federal do ano seguinte, enviada pelo governo ao Congresso.", "es": "Proyecto de Ley de Presupuesto Anual — propuesta de presupuesto federal del año siguiente que el Gobierno envía al Congreso." },
+    { "t": "CBS", "pt": "Contribuição sobre Bens e Serviços — tributo federal sobre o consumo que substitui PIS e Cofins (parte federal do IVA dual).", "es": "Contribución sobre Bienes y Servicios — tributo federal al consumo que sustituye al PIS y la Cofins (parte federal del IVA dual)." },
+    { "t": "IBS", "pt": "Imposto sobre Bens e Serviços — tributo de estados e municípios que substitui ICMS e ISS (parte subnacional do IVA dual).", "es": "Impuesto sobre Bienes y Servicios — tributo de estados y municipios que sustituye al ICMS y al ISS (parte subnacional del IVA dual)." },
+    { "t": "IS", "pt": "Imposto Seletivo — tributo federal sobre bens prejudiciais à saúde ou ao meio ambiente (\"imposto do pecado\"). Cobrado uma única vez, sem crédito.", "es": "Impuesto Selectivo — tributo federal sobre bienes perjudiciales para la salud o el medio ambiente (\"impuesto al pecado\"). Se cobra una sola vez, sin crédito." },
+    { "t": "IPI", "pt": "Imposto sobre Produtos Industrializados — tributo federal sobre a indústria. Zerado em 2027, exceto para proteger a Zona Franca de Manaus.", "es": "Impuesto sobre Productos Industrializados — tributo federal a la industria. En cero desde 2027, salvo para proteger la Zona Franca de Manaus." },
+    { "t": "ICMS-ST", "pt": "Substituição tributária do ICMS — um elo da cadeia (geralmente a indústria) recolhe antecipadamente o ICMS das etapas seguintes.", "es": "Sustitución tributaria del ICMS — un eslabón de la cadena (normalmente la industria) paga por anticipado el ICMS de las etapas siguientes." },
+    { "t": "ICMS", "pt": "Imposto sobre Circulação de Mercadorias e Serviços — tributo estadual sobre o consumo; extinto gradualmente até 2033.", "es": "Impuesto sobre Circulación de Mercaderías y Servicios — tributo estatal al consumo; se extingue gradualmente hasta 2033." },
+    { "t": "ISS", "pt": "Imposto sobre Serviços — tributo municipal; extinto gradualmente até 2033.", "es": "Impuesto sobre Servicios — tributo municipal; se extingue gradualmente hasta 2033." },
+    { "t": "ST", "pt": "Substituição tributária — regime em que um contribuinte recolhe o imposto devido pelos demais elos da cadeia.", "es": "Sustitución tributaria — régimen en el que un contribuyente paga el impuesto debido por los demás eslabones de la cadena." },
+    { "t": "PIS", "pt": "Programa de Integração Social — contribuição federal sobre o faturamento; extinta em 2027 e substituída pela CBS.", "es": "Programa de Integración Social — contribución federal sobre la facturación; se extingue en 2027 y la sustituye la CBS." },
+    { "t": "Cofins", "pt": "Contribuição para o Financiamento da Seguridade Social — contribuição federal sobre o faturamento; extinta em 2027 e substituída pela CBS.", "es": "Contribución para el Financiamiento de la Seguridad Social — contribución federal sobre la facturación; se extingue en 2027 y la sustituye la CBS." },
+    { "t": "IVA", "pt": "Imposto sobre Valor Agregado — tributo sobre o consumo com crédito em cada etapa. No Brasil, \"IVA dual\": CBS (federal) + IBS (estados e municípios).", "es": "Impuesto al Valor Agregado — tributo al consumo con crédito en cada etapa. En Brasil, \"IVA dual\": CBS (federal) + IBS (estados y municipios)." },
+    { "t": "II", "pt": "Imposto de Importação — tributo federal aduaneiro sobre bens importados.", "es": "Impuesto de Importación — tributo aduanero federal sobre bienes importados." },
+    { "t": "TCU", "pt": "Tribunal de Contas da União — órgão federal de controle externo; calcula a alíquota de referência da CBS.", "es": "Tribunal de Cuentas de la Unión — órgano federal de control externo; calcula la alícuota de referencia de la CBS." },
+    { "t": "CGIBS", "pt": "Comitê Gestor do IBS — entidade de estados e municípios que regulamenta, arrecada e distribui o IBS.", "es": "Comité Gestor del IBS — entidad de estados y municipios que reglamenta, recauda y distribuye el IBS." },
+    { "t": "RFB", "pt": "Receita Federal do Brasil — administração tributária federal (agência fiscal nacional).", "es": "Receita Federal de Brasil — administración tributaria federal (agencia fiscal nacional)." },
+    { "t": "SUFIS", "pt": "Subsecretaria de Fiscalização da Receita Federal — área que coassina os atos técnicos dos documentos fiscais.", "es": "Subsecretaría de Fiscalización de la Receita Federal — área que cofirma los actos técnicos de los documentos fiscales." },
+    { "t": "CGSN", "pt": "Comitê Gestor do Simples Nacional — define as regras do regime simplificado das pequenas empresas.", "es": "Comité Gestor del Simples Nacional — define las reglas del régimen simplificado de las pequeñas empresas." },
+    { "t": "Simples Nacional", "pt": "Regime tributário simplificado para micro e pequenas empresas, com pagamento unificado em uma guia.", "es": "Régimen tributario simplificado para micro y pequeñas empresas, con pago unificado en una sola guía." },
+    { "t": "LC", "pt": "Lei Complementar — lei que regulamenta a Constituição e exige maioria absoluta no Congresso.", "es": "Ley Complementaria — ley que reglamenta la Constitución y exige mayoría absoluta en el Congreso." },
+    { "t": "EC", "pt": "Emenda Constitucional — alteração do texto da Constituição Federal.", "es": "Enmienda Constitucional — modificación del texto de la Constitución Federal." },
+    { "t": "PEC", "pt": "Proposta de Emenda à Constituição — projeto que, se aprovado, vira Emenda Constitucional.", "es": "Propuesta de Enmienda a la Constitución — proyecto que, si se aprueba, se convierte en Enmienda Constitucional." },
+    { "t": "MP", "pt": "Medida Provisória — norma com força de lei editada pelo Presidente; vale 120 dias e precisa ser aprovada pelo Congresso.", "es": "Medida Provisional — norma con fuerza de ley dictada por el Presidente; vale 120 días y debe ser aprobada por el Congreso." },
+    { "t": "PLP", "pt": "Projeto de Lei Complementar — proposta em tramitação no Congresso.", "es": "Proyecto de Ley Complementaria — propuesta en trámite en el Congreso." },
+    { "t": "DOU", "pt": "Diário Oficial da União — publicação oficial onde as normas federais passam a valer.", "es": "Diario Oficial de la Unión — publicación oficial donde las normas federales entran en vigor." },
+    { "t": "ADCT", "pt": "Ato das Disposições Constitucionais Transitórias — parte da Constituição com regras de transição.", "es": "Acto de las Disposiciones Constitucionales Transitorias — parte de la Constitución con reglas de transición." },
+    { "t": "ADE", "pt": "Ato Declaratório Executivo — ato administrativo da Receita que declara ou interpreta uma situação.", "es": "Acto Declaratorio Ejecutivo — acto administrativo de la Receita que declara o interpreta una situación." },
+    { "t": "TIPI", "pt": "Tabela de Incidência do IPI — lista das alíquotas do IPI por código NCM.", "es": "Tabla de Incidencia del IPI — lista de alícuotas del IPI por código NCM." },
+    { "t": "NCM", "pt": "Nomenclatura Comum do Mercosul — código de 8 dígitos que classifica mercadorias (baseado no Sistema Harmonizado). Define o tratamento tributário do produto.", "es": "Nomenclatura Común del Mercosur — código de 8 dígitos que clasifica mercaderías (basado en el Sistema Armonizado). Define el tratamiento tributario del producto." },
+    { "t": "NFC-e", "pt": "Nota Fiscal de Consumidor eletrônica — versão da NF-e para vendas no varejo ao consumidor final.", "es": "Factura electrónica al Consumidor — versión de la NF-e para ventas minoristas al consumidor final." },
+    { "t": "NFS-e", "pt": "Nota Fiscal de Serviços eletrônica — documento fiscal digital da prestação de serviços.", "es": "Factura electrónica de Servicios — documento fiscal digital de la prestación de servicios." },
+    { "t": "NF-e", "pt": "Nota Fiscal eletrônica — documento fiscal digital obrigatório na venda de mercadorias entre empresas.", "es": "Factura electrónica — documento fiscal digital obligatorio en la venta de mercaderías entre empresas." },
+    { "t": "CT-e", "pt": "Conhecimento de Transporte eletrônico — documento fiscal do frete.", "es": "Conocimiento de Transporte electrónico — documento fiscal del flete." },
+    { "t": "DF-e", "pt": "Documentos Fiscais eletrônicos — termo genérico para NF-e, NFC-e, CT-e e similares.", "es": "Documentos Fiscales electrónicos — término genérico para NF-e, NFC-e, CT-e y similares." },
+    { "t": "DANFE", "pt": "Documento Auxiliar da NF-e — versão impressa ou em PDF da nota fiscal eletrônica.", "es": "Documento Auxiliar de la NF-e — versión impresa o en PDF de la factura electrónica." },
+    { "t": "NT", "pt": "Nota Técnica — especificação do layout e das regras de validação dos documentos fiscais eletrônicos.", "es": "Nota Técnica — especificación del formato y de las reglas de validación de los documentos fiscales electrónicos." },
+    { "t": "cClassTrib", "pt": "Código de Classificação Tributária — código informado na nota que indica o tratamento de IBS/CBS do item (ex.: redução de 60%).", "es": "Código de Clasificación Tributaria — código informado en la factura que indica el tratamiento de IBS/CBS del ítem (ej.: reducción del 60%)." },
+    { "t": "CST", "pt": "Código de Situação Tributária — código que indica na nota como o item é tributado.", "es": "Código de Situación Tributaria — código que indica en la factura cómo se grava el ítem." },
+    { "t": "CRT", "pt": "Código de Regime Tributário — indica na nota se o emissor é do Simples Nacional ou do regime normal.", "es": "Código de Régimen Tributario — indica en la factura si el emisor es del Simples Nacional o del régimen normal." },
+    { "t": "CNPJ", "pt": "Cadastro Nacional da Pessoa Jurídica — número de registro das empresas no Brasil.", "es": "Registro Nacional de Personas Jurídicas — número de registro de las empresas en Brasil." },
+    { "t": "DUIMP", "pt": "Declaração Única de Importação — nova declaração aduaneira eletrônica que substitui a DI; é onde IBS/CBS da importação serão informados.", "es": "Declaración Única de Importación — nueva declaración aduanera electrónica que sustituye a la DI; allí se informarán el IBS/CBS de la importación." },
+    { "t": "DI", "pt": "Declaração de Importação — declaração aduaneira antiga, em processo de desligamento.", "es": "Declaración de Importación — declaración aduanera antigua, en proceso de desactivación." },
+    { "t": "Siscomex", "pt": "Sistema Integrado de Comércio Exterior — portal do governo para registrar importações e exportações.", "es": "Sistema Integrado de Comercio Exterior — portal del Gobierno para registrar importaciones y exportaciones." },
+    { "t": "OEA", "pt": "Operador Econômico Autorizado — certificação aduaneira de empresas confiáveis (equivalente ao AEO internacional).", "es": "Operador Económico Autorizado — certificación aduanera de empresas confiables (equivalente al AEO internacional)." },
+    { "t": "ZFM", "pt": "Zona Franca de Manaus — área de livre comércio com incentivos fiscais no estado do Amazonas.", "es": "Zona Franca de Manaos — área de libre comercio con incentivos fiscales en el estado de Amazonas." },
+    { "t": "Suframa", "pt": "Superintendência da Zona Franca de Manaus — órgão que administra os incentivos da ZFM.", "es": "Superintendencia de la Zona Franca de Manaos — órgano que administra los incentivos de la ZFM." },
+    { "t": "ZPE", "pt": "Zona de Processamento de Exportação — área com tributos suspensos para empresas exportadoras.", "es": "Zona de Procesamiento de Exportación — área con tributos suspendidos para empresas exportadoras." },
+    { "t": "Recof", "pt": "Regime aduaneiro que suspende tributos na importação de insumos por indústrias com controle informatizado.", "es": "Régimen aduanero que suspende tributos en la importación de insumos por industrias con control informatizado." },
+    { "t": "Repetro", "pt": "Regime aduaneiro especial para bens usados na exploração de petróleo e gás.", "es": "Régimen aduanero especial para bienes usados en la exploración de petróleo y gas." },
+    { "t": "Drawback", "pt": "Regime que suspende ou isenta tributos na compra de insumos usados em produtos exportados.", "es": "Régimen que suspende o exime tributos en la compra de insumos usados en productos exportados." },
+    { "t": "drawback", "pt": "Regime que suspende ou isenta tributos na compra de insumos usados em produtos exportados.", "es": "Régimen que suspende o exime tributos en la compra de insumos usados en productos exportados." },
+    { "t": "noventena", "pt": "Prazo mínimo de 90 dias entre a publicação de norma que cria ou aumenta tributo e o início da cobrança.", "es": "Plazo mínimo de 90 días entre la publicación de una norma que crea o aumenta un tributo y el inicio del cobro." },
+    { "t": "CMED", "pt": "Câmara de Regulação do Mercado de Medicamentos — órgão que fixa os preços máximos dos medicamentos no Brasil.", "es": "Cámara de Regulación del Mercado de Medicamentos — órgano que fija los precios máximos de los medicamentos en Brasil." },
+    { "t": "Anvisa", "pt": "Agência Nacional de Vigilância Sanitária — registra e fiscaliza medicamentos, cosméticos e alimentos.", "es": "Agencia Nacional de Vigilancia Sanitaria — registra y fiscaliza medicamentos, cosméticos y alimentos." },
+    { "t": "PMC", "pt": "Preço Máximo ao Consumidor — teto de preço de cada medicamento, definido pela CMED.", "es": "Precio Máximo al Consumidor — techo de precio de cada medicamento, definido por la CMED." },
+    { "t": "MIP", "pt": "Medicamento Isento de Prescrição — vendido sem receita médica (equivalente a OTC).", "es": "Medicamento de venta libre (sin receta) — equivalente a OTC." },
+    { "t": "OTC", "pt": "Over the counter — medicamentos vendidos sem receita médica.", "es": "Over the counter — medicamentos de venta libre, sin receta." },
+    { "t": "HPPC", "pt": "Higiene Pessoal, Perfumaria e Cosméticos — setor representado pela ABIHPEC.", "es": "Higiene Personal, Perfumería y Cosméticos — sector representado por ABIHPEC." },
+    { "t": "ABIHPEC", "pt": "Associação Brasileira da Indústria de Higiene Pessoal, Perfumaria e Cosméticos.", "es": "Asociación Brasileña de la Industria de Higiene Personal, Perfumería y Cosméticos." },
+    { "t": "Sindusfarma", "pt": "Sindicato da Indústria de Produtos Farmacêuticos — principal entidade da indústria farmacêutica no Brasil.", "es": "Sindicato de la Industria de Productos Farmacéuticos — principal entidad de la industria farmacéutica en Brasil." },
+    { "t": "ACESSA", "pt": "Associação Brasileira da Indústria de Produtos para o Autocuidado em Saúde — representa fabricantes de MIPs.", "es": "Asociación Brasileña de la Industria de Productos para el Autocuidado en Salud — representa a fabricantes de MIP." },
+    { "t": "CadÚnico", "pt": "Cadastro Único — registro federal de famílias de baixa renda, usado em programas sociais e no cashback.", "es": "Registro Único — registro federal de familias de bajos ingresos, usado en programas sociales y en el cashback." },
+    { "t": "DeRE", "pt": "Declaração de Regimes Específicos — obrigação acessória de setores com regras próprias (financeiro, seguros, imóveis etc.).", "es": "Declaración de Regímenes Específicos — obligación accesoria de sectores con reglas propias (financiero, seguros, inmuebles, etc.)." },
+    { "t": "ERP", "pt": "Enterprise Resource Planning — sistema de gestão da empresa que emite notas e calcula tributos.", "es": "Enterprise Resource Planning — sistema de gestión de la empresa que emite facturas y calcula tributos." },
+    { "t": "B2B", "pt": "Business to business — operações entre empresas.", "es": "Business to business — operaciones entre empresas." },
+    { "t": "UF", "pt": "Unidade da Federação — estado brasileiro (ex.: \"IBS UF\" é a parcela estadual do IBS).", "es": "Unidad de la Federación — estado brasileño (ej.: \"IBS UF\" es la parte estatal del IBS)." },
+    { "t": "DIR", "pt": "Declaração de Importação de Remessa — declaração simplificada para remessas internacionais (encomendas e e-commerce).", "es": "Declaración de Importación de Envíos — declaración simplificada para envíos internacionales (encomiendas y comercio electrónico)." },
+    { "t": "CAE", "pt": "Comissão de Assuntos Econômicos do Senado — analisa a resolução que fixa a alíquota de referência da CBS.", "es": "Comisión de Asuntos Económicos del Senado — analiza la resolución que fija la alícuota de referencia de la CBS." },
+    { "t": "STF", "pt": "Supremo Tribunal Federal — corte constitucional do Brasil.", "es": "Supremo Tribunal Federal — corte constitucional de Brasil." },
+    { "t": "TJDFT", "pt": "Tribunal de Justiça do Distrito Federal e Territórios.", "es": "Tribunal de Justicia del Distrito Federal y Territorios." }
+  ],
+  "legislacao": [
+    { "g": "ac", "num": "Ato Conjunto RFB/CGIBS nº 7/2026", "data": "2026-11-11", "url": "https://www.cgibs.gov.br/upload/arquivos/202611/13061456-ato-conjunto-7-rfb-cgibs-alteracao-ato-4.pdf", "desc": { "pt": "Altera o Ato Conjunto 4/2026: adia a NFS-e com IBS/CBS para 01/01 ou 01/03/2027 (conforme o serviço), NFGas/NFAg para 01/01/2027, NF-e ABI para 01/03/2027 e a 1ª entrega mensal da DeRE para 15/12/2026. Publicado no DOU de 13/11/2026.", "es": "Modifica el Acto Conjunto 4/2026: aplaza la NFS-e con IBS/CBS al 01/01 o al 01/03/2027 (según el servicio), NFGas/NFAg al 01/01/2027, NF-e ABI al 01/03/2027 y la 1.ª entrega mensual de la DeRE al 15/12/2026. Publicado en el DOU del 13/11/2026." } },
+    { "g": "atc", "num": "Ato Técnico Conjunto nº 12/2026", "data": "2026-11-10", "url": "https://www.cgibs.gov.br/upload/arquivos/202611/12154837-ato-tecnico-conjunto-12-dir.pdf", "desc": { "pt": "Documentação técnica da Declaração de Importação de Remessa (DIR) com IBS/CBS.", "es": "Documentación técnica de la Declaración de Importación de Envíos (DIR) con IBS/CBS." } },
+    { "g": "atc", "num": "Ato Técnico Conjunto nº 11/2026", "data": "2026-11-10", "url": "https://www.cgibs.gov.br/upload/arquivos/202611/12145422-ato-tecnico-conjunto-11-duimp.pdf", "desc": { "pt": "Documentação técnica da Declaração Única de Importação (DUIMP) com IBS/CBS.", "es": "Documentación técnica de la Declaración Única de Importación (DUIMP) con IBS/CBS." } },    { "g": "ec", "num": "Emenda Constitucional nº 132/2023", "data": "2023-12-20", "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm", "desc": { "pt": "Reforma tributária do consumo: cria IBS, CBS e Imposto Seletivo; extingue PIS, Cofins, ICMS e ISS ao longo da transição e reduz o IPI a zero a partir de 2027, exceto ZFM.", "es": "Reforma tributaria del consumo: crea IBS, CBS e Impuesto Selectivo; extingue PIS, Cofins, ICMS e ISS durante la transición y reduce el IPI a cero desde 2027, salvo ZFM." } },
+    { "g": "lc", "num": "Lei Complementar nº 227/2026", "data": "2026-01-13", "url": "https://www2.camara.leg.br/legin/fed/leicom/2026/leicomplementar-227-13-janeiro-2026-798657-norma-pl.html", "desc": { "pt": "Institui o Comitê Gestor do IBS (CGIBS) e o contencioso administrativo; altera a LC 214/2025 (alíquota zero de medicamentos por destinação terapêutica, regimes aduaneiros).", "es": "Instituye el Comité Gestor del IBS (CGIBS) y el contencioso administrativo; modifica la LC 214/2025 (alícuota cero de medicamentos por destino terapéutico, regímenes aduaneros)." } },
+    { "g": "lc", "num": "Lei Complementar nº 214/2025", "data": "2025-01-16", "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm", "desc": { "pt": "Institui IBS, CBS e IS: regras gerais, créditos, split payment, regimes diferenciados (medicamentos art. 133, higiene Anexo VIII, cesta básica Anexo I), importação/exportação, IS (Anexo XVII) e transição, incluindo o IPI (art. 454).", "es": "Instituye IBS, CBS e IS: reglas generales, créditos, split payment, regímenes diferenciados (medicamentos art. 133, higiene Anexo VIII, canasta básica Anexo I), importación/exportación, IS (Anexo XVII) y transición, incluido el IPI (art. 454)." } },
+    { "g": "dec", "num": "Decreto nº 12.955/2026", "data": "2026-04-29", "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/decreto/D12955.htm", "desc": { "pt": "Regulamento da CBS. Dispensa o recolhimento em 2026 para quem cumprir as obrigações acessórias; trata de créditos, estoques, regimes específicos, importação, exportação e regimes aduaneiros.", "es": "Reglamento de la CBS. Dispensa el pago en 2026 a quien cumpla las obligaciones accesorias; trata créditos, inventarios, regímenes específicos, importación, exportación y regímenes aduaneros." } },
+    { "g": "res", "num": "Resolução CGSN nº 194/2026", "data": "2026-09-28", "url": "https://netcpa.com.br/colunas/resolucao-cgsn-no-1942026-altera-a-resolucao-cgsn-no-18626-que-dispoe-sobre-os-prazos-e-condicoes-para-o-exercicio-de-opcao-pelo-simples-nacional/28455", "desc": { "pt": "Altera a Resolução CGSN 186/2026: opção pelo regime regular de IBS/CBS no Simples até 30/10/2026 (texto via NetCPA; íntegra no DOU).", "es": "Modifica la Resolución CGSN 186/2026: opción por el régimen regular de IBS/CBS en el Simples hasta el 30/10/2026 (texto vía NetCPA; íntegro en el DOU)." } },
+    { "g": "res", "num": "Resolução CGIBS nº 6/2026", "data": "2026-04-30", "url": "https://www.cgibs.gov.br/upload/arquivos/202604/30084927-res-cgibs-n-6-30-abr-2026-regulamenta-o-ibs.pdf", "desc": { "pt": "Regulamento do IBS, com estrutura espelhada ao da CBS e livro de normas comuns aos dois tributos.", "es": "Reglamento del IBS, con estructura espejo del de la CBS y libro de normas comunes a ambos tributos." } },
+    { "g": "res", "num": "Resolução CMED nº 3/2025", "data": "2026-04-29", "url": "https://sindusfarma.org.br/noticias/indice/exibir/27681-nova-resolucao-da-cmed-e-reforma-tributaria-sindusfarma-reune-industria-para-esclarecer-regras-e-impactos", "desc": { "pt": "Novas regras de precificação de medicamentos (vigência em 29/04/2026), base para a adaptação dos preços à reforma (link: resumo do Sindusfarma).", "es": "Nuevas reglas de fijación de precios de medicamentos (vigencia el 29/04/2026), base para la adaptación de precios a la reforma (enlace: resumen de Sindusfarma)." } },
+    { "g": "res", "num": "Resolução CGSN nº 186/2026", "data": "2026-04-01", "url": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/abril/cgsn-define-prazos-de-opcao-pelo-simples-nacional-e-pelo-regime-regular-do-ibs-e-da-cbs-para-2027", "desc": { "pt": "Prazos e condições de opção pelo Simples Nacional e, excepcionalmente, pelo regime regular de IBS/CBS para 2027 (link: notícia da Receita; data aproximada: abril/2026).", "es": "Plazos y condiciones de opción por el Simples Nacional y, excepcionalmente, por el régimen regular de IBS/CBS para 2027 (enlace: noticia de la Receita; fecha aproximada: abril/2026)." } },
+    { "g": "ac", "num": "Ato Conjunto RFB/CGIBS nº 6/2026", "data": "2026-08-28", "url": "https://www.cgibs.gov.br/upload/arquivos/202608/28193542-ade-rfb-cgibs-n-6-28-8-2026-com-paragrafo-unico-assinado.pdf", "desc": { "pt": "Dispensa de inscrição com identificação única (via CNPJ) e de emissão de documentos fiscais previstas nos regulamentos. Publicado em formato de Ato Declaratório (ADE).", "es": "Dispensa de inscripción con identificación única (vía CNPJ) y de emisión de documentos fiscales previstas en los reglamentos. Publicado en formato de Acto Declaratorio (ADE)." } },
+    { "g": "ac", "num": "Ato Conjunto RFB/CGIBS nº 5/2026", "data": "2026-08-12", "url": "https://www.cgibs.gov.br/upload/arquivos/202608/13065932-ato-conjunto-rfb-cgibs-n-c2-ba-5-2026-regulamenta-o-programa-nacional-de-conformidade-tributaria-docx-assinado.pdf", "desc": { "pt": "Regulamenta o Programa Nacional de Conformidade Tributária em 2026.", "es": "Reglamenta el Programa Nacional de Cumplimiento Tributario en 2026." } },
+    { "g": "ac", "num": "Ato Conjunto RFB/CGIBS nº 4/2026", "data": "2026-07-30", "url": "https://www.cgibs.gov.br/upload/arquivos/202607/31091735-20260730-16h30-ato-conjunto-rfb-cgibs-na-c2-ba-4-260731-090909.pdf", "desc": { "pt": "Datas de início da obrigatoriedade de IBS/CBS nos documentos fiscais eletrônicos (NF-e a partir de 03/08/2026; importação na DUIMP em 2027).", "es": "Fechas de inicio de la obligatoriedad de IBS/CBS en los documentos fiscales electrónicos (NF-e desde el 03/08/2026; importación en la DUIMP en 2027)." } },
+    { "g": "ac", "num": "Ato Conjunto RFB/CGIBS nº 3/2026", "data": "2026-06-19", "url": "https://www.cgibs.gov.br/upload/arquivos/202606/22083423-ato-conjunto-nro-3-dere.pdf", "desc": { "pt": "Autoriza a publicação da documentação técnica da Declaração de Regimes Específicos (DeRE).", "es": "Autoriza la publicación de la documentación técnica de la Declaración de Regímenes Específicos (DeRE)." } },
+    { "g": "ac", "num": "Ato Conjunto RFB/CGIBS nº 2/2026", "data": "2026-05-27", "url": "https://www.cgibs.gov.br/upload/arquivos/202606/03111600-ato-conjunto-rfb-e-cibs-2827-05-29-assinado.pdf", "desc": { "pt": "Autoriza a publicação do Manual de Integração e do Swagger da Plataforma Pública do Split Payment.", "es": "Autoriza la publicación del Manual de Integración y del Swagger de la Plataforma Pública del Split Payment." } },
+    { "g": "ac", "num": "Ato Conjunto RFB/CGIBS nº 1/2025", "data": "2025-12-22", "url": "https://www.cgibs.gov.br/upload/arquivos/202609/09104120-ato-conjunto-rfb-cgibs-n-1-de-22-de-dezembro-de-2025.pdf", "desc": { "pt": "Obrigações acessórias para as informações de apuração de IBS e CBS em 2026 (ano de teste).", "es": "Obligaciones accesorias para la información de apuración de IBS y CBS en 2026 (año de prueba)." } },
+    { "g": "atc", "num": "Ato Técnico Conjunto nº 10/2026", "data": "2026-10-29", "url": "https://www.cgibs.gov.br/upload/arquivos/202610/30102301-atc-10-vf-assinado-assinado-261030-102245.pdf", "desc": { "pt": "Aprova documentação técnica de 10 modelos de DF-e e fixa em 16/11/2026 a produção das NTs 2025.002 v1.53 e 2026.005 a 2026.008 da NF-e/NFC-e.", "es": "Aprueba documentación técnica de 10 modelos de DF-e y fija el 16/11/2026 la producción de las NT 2025.002 v1.53 y 2026.005 a 2026.008 de NF-e/NFC-e." } },
+    { "g": "atc", "num": "Ato Técnico Conjunto nº 9/2026", "data": "2026-10-20", "url": "https://www.cgibs.gov.br/upload/arquivos/202610/26090508-20261019-atc-rfb-cgibs-nba-9-2026-assinado-29-as-261026-090221.pdf", "desc": { "pt": "Documentação técnica de DF-e (ementa não verificada; consultar a íntegra).", "es": "Documentación técnica de DF-e (resumen no verificado; consultar el texto completo)." } },
+    { "g": "atc", "num": "Ato Técnico Conjunto nº 8/2026", "data": "2026-09-29", "url": "https://www.cgibs.gov.br/upload/arquivos/202610/01120217-nfe-nfc-cte-notas-faturas-e-demais-atc-rfb-sufis-cgibs-diretoria-executiva-n-8-de-29-de-setembro-de-2026.pdf", "desc": { "pt": "NF-e, NFC-e, CT-e e demais DF-e; aprova a NT 2026.010 (novo DANFE com IBS, CBS e IS, produção prevista em 01/12/2026).", "es": "NF-e, NFC-e, CT-e y demás DF-e; aprueba la NT 2026.010 (nuevo DANFE con IBS, CBS e IS, producción prevista el 01/12/2026)." } },
+    { "g": "atc", "num": "Ato Técnico Conjunto nº 7/2026", "data": "2026-09-28", "url": "https://www.cgibs.gov.br/upload/arquivos/202610/01120218-nfse-e-nfsevia-atc-rfb-sufis-cgibs-diretoria-executiva-n-7-de-28-de-setembro-de-2026.pdf", "desc": { "pt": "Documentação técnica da NFS-e e da NFS-e Via.", "es": "Documentación técnica de la NFS-e y la NFS-e Via." } },
+    { "g": "atc", "num": "Ato Técnico Conjunto nº 6/2026", "data": "2026-09-28", "url": "https://www.cgibs.gov.br/upload/arquivos/202610/01120219-dere-atc-rfb-sufis-cgibs-diretoria-executiva-n-6-de-28-de-setembro-de-2026.pdf", "desc": { "pt": "Documentação técnica da DeRE (Declaração de Regimes Específicos).", "es": "Documentación técnica de la DeRE (Declaración de Regímenes Específicos)." } },
+    { "g": "atc", "num": "Ato Técnico Conjunto nº 5/2026", "data": "2026-09-22", "url": "https://www.cgibs.gov.br/upload/arquivos/202609/24094106-ato-tecnico-conjunto-5-rfb-cgibs-assinado-assinado.pdf", "desc": { "pt": "Documentação técnica (ementa não verificada; consultar a íntegra).", "es": "Documentación técnica (resumen no verificado; consultar el texto completo)." } },
+    { "g": "atc", "num": "Ato Técnico Conjunto nº 4/2026", "data": "2026-08-28", "url": "https://www.cgibs.gov.br/upload/arquivos/202609/08090150-minuta-ato-tecnico-conjunto-nba-4-split-assinado-assinado-assinado-1.pdf", "desc": { "pt": "Documentação técnica do split payment.", "es": "Documentación técnica del split payment." } },
+    { "g": "atc", "num": "Ato Técnico Conjunto nº 3/2026", "data": "2026-09-02", "url": "https://www.cgibs.gov.br/upload/arquivos/202609/04223716-ato-tecnico-conjunto-n-3-dere.pdf", "desc": { "pt": "Documentação técnica da DeRE.", "es": "Documentación técnica de la DeRE." } },
+    { "g": "atc", "num": "Ato Técnico Conjunto nº 2/2026", "data": "2026-08-21", "url": "https://www.cgibs.gov.br/upload/arquivos/202608/24185346-20260821-ato-tecnico-conjunto-n-2-assinado-cgibs.pdf", "desc": { "pt": "Documentação técnica de DF-e (ementa não verificada; consultar a íntegra).", "es": "Documentación técnica de DF-e (resumen no verificado; consultar el texto completo)." } },
+    { "g": "atc", "num": "Ato Técnico Conjunto nº 1/2026", "data": "2026-07-31", "url": "https://www.cgibs.gov.br/upload/arquivos/202608/01153321-am-ato-tecnico-conjunto-rfb-e-cgibs-ratificacao-nts-dfes-revisao-assinado.pdf", "desc": { "pt": "Ratifica as NTs dos DF-e e suspende a rejeição de documentos emitidos sem IBS/CBS, mantida a obrigação de preenchimento.", "es": "Ratifica las NT de los DF-e y suspende el rechazo de documentos emitidos sin IBS/CBS, manteniendo la obligación de completarlos." } },
+    { "g": "mp", "num": "Medida Provisória nº 1.399/2026", "data": "2026-11-04", "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/mpv/mpv1399.htm", "desc": { "pt": "Alíquotas do Imposto Seletivo para 2027 em regime de implementação gradual (IPI atual × fatores de conversão), com efeitos a partir de 02/02/2027. Bebidas açucaradas 2,6%; prognósticos 0,5%; minerais zero até 31/12/2027. Projeto das alíquotas de 2028 até 31/05/2027. Depende de conversão em lei pelo Congresso.", "es": "Alícuotas del Impuesto Selectivo para 2027 en régimen de implementación gradual (IPI actual × factores de conversión), con efectos desde el 02/02/2027. Bebidas azucaradas 2,6%; pronósticos 0,5%; minerales cero hasta el 31/12/2027. Proyecto de las alícuotas de 2028 hasta el 31/05/2027. Depende de su conversión en ley por el Congreso." } },
+    { "g": "proj", "num": "PEC do IPI até o início do IS", "data": "2026-11-04", "url": "https://tagdlaw.com.br/governo-prepara-aliquotas-do-imposto-seletivo-e-estuda-manter-ipi-em-janeiro-de-2027/", "desc": { "pt": "Em estudo: manter o IPI em janeiro de 2027 nos setores sujeitos ao IS.", "es": "En estudio: mantener el IPI en enero de 2027 en los sectores sujetos al IS." } },
+    { "g": "proj", "num": "Decreto da lista do IPI zerado (art. 454, §3º, LC 214/2025)", "data": "2026-08-25", "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm", "desc": { "pt": "Anunciado em 25/08/2026 para divulgar os produtos com IPI zero e os mantidos por concorrência com a ZFM. Publicação a confirmar.", "es": "Anunciado el 25/08/2026 para divulgar los productos con IPI cero y los mantenidos por competir con la ZFM. Publicación por confirmar." } },
+    { "g": "proj", "num": "PLP 42/2026", "data": "2026-03-01", "url": "https://www.reformatributaria.com/wp-content/uploads/2026/03/PLP-42-2026.pdf", "desc": { "pt": "Projeto que limita as alíquotas do Imposto Seletivo entre 0% e 5%. Em tramitação.", "es": "Proyecto que limita las alícuotas del Impuesto Selectivo entre 0% y 5%. En trámite." } }
+  ]
+}

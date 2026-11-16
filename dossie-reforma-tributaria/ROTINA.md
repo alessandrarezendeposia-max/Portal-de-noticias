@@ -11,9 +11,14 @@ Instruções para o agente agendado (dias úteis, 08:00 BRT). Objetivo: manter o
 ## Passo a passo
 
 1. Pegue o `dados-*.json` mais recente desta pasta. Leia `pt.meta.atualizacao` (data da última atualização) e o conteúdo atual.
-2. Pesquise com WebSearch/WebFetch o que foi publicado **desde essa data** nas fontes abaixo. Se um site bloquear acesso automatizado, use os resultados de busca e portais oficiais espelho; não tente contornar bloqueios.
-3. Se **nada relevante mudou**, não crie arquivos nem commit. Encerre informando "sem novidades".
-4. Se houve mudança, copie o JSON para `dados-<HOJE>.json` (data de hoje, fuso America/Sao_Paulo) e edite **somente esse novo arquivo**:
+2. **Pesquisa obrigatória e completa** (não encerre antes de cumprir todos os itens; uma rodada normal leva vários minutos):
+   a. Para **cada** fonte da lista "Fontes a verificar", faça pelo menos uma busca (WebSearch) restrita ao período desde a última atualização — no mínimo **15 buscas** no total, cobrindo também cada tema prioritário.
+   b. Abra com WebFetch as páginas oficiais de listas: https://cgibs.gov.br/atos-tecnicos-conjuntos, https://cgibs.gov.br/atos-conjuntos, a pasta de MPs do Planalto e as notícias da Receita e da Casa Civil. Compare **número a número** com `legislacao`: todo ato que não estiver lá é novidade.
+   c. Leia o texto integral (PDF/página oficial) de cada ato novo antes de resumi-lo.
+   d. Se o WebFetch falhar por domínio não liberado ("allowed network domains"), **não desista**: use os resultados do WebSearch e outras fontes oficiais acessíveis, e liste no resumo final os domínios bloqueados.
+   e. Revise os prazos: qualquer data de `meta.marco`, `meta.marcoSecundario`, `checklist` ou `cronograma` que já passou deve ser atualizada para o próximo marco.
+3. **Sempre** gere a versão do dia, mesmo sem novidades: o site mostra "Atualizado em <data>" para indicar que a verificação foi feita. Sem novidades, apenas atualize as datas (passo 4, primeiro item) e os prazos vencidos.
+4. Copie o JSON mais recente para `dados-<HOJE>.json` (data de hoje, fuso America/Sao_Paulo) e edite **somente esse novo arquivo**:
    - `pt.meta.atualizacao` e `es.meta.atualizacao` = hoje (DD/MM/AAAA); atualize também a data em `pt.ui.heroTexto` e `es.ui.heroTexto` e `meta.ultimaPublicacao` (não altere o marcador `{data}` de `ui.heroKicker`: ele é preenchido automaticamente com `meta.atualizacao`).
    - **Novidades**: inclua as novas no topo de `pt.novidades` e `es.novidades` (mesma ordem e quantidade nos dois idiomas), com `novo: true` e `links` (o primeiro link `oficial` deve ser o **texto integral** do ato: PDF do cgibs.gov.br, Planalto, DOU, Receita). Mude para `novo: false` as que tiverem mais de 15 dias. Mantenha no máximo 16 novidades (remova as mais antigas).
    - **Legislação** (`legislacao`): inclua toda norma nova (grupo `ec|lc|mp|dec|res|ac|atc|proj` — `mp` = Medidas Provisórias, `num`, `data` AAAA-MM-DD, `url` do texto integral, `desc.pt` e `desc.es`). Quando uma medida "em tramitação" (`proj`) for publicada, mova-a para o grupo certo com o link oficial.
@@ -26,8 +31,8 @@ Instruções para o agente agendado (dias úteis, 08:00 BRT). Objetivo: manter o
    - Não invente dados. Parafraseie, não copie textos longos. Mantenha PT e ES equivalentes.
    - Nomes de marca: a bebida hidroeletrolítica da Genomma se chama **Sorox** no Brasil (use em `pt`) e **Suerox** em espanhol (use em `es`). Títulos de matérias externas mantêm o nome original.
 5. Rode `python3 dossie-reforma-tributaria/build.py`. Se falhar, corrija o JSON e rode de novo até passar.
-6. Faça commit apenas de `dossie-reforma-tributaria/dados-<HOJE>.json`, `dossie-reforma-tributaria/dossie-reforma-tributaria-<HOJE>.html`, `dossie-reforma-tributaria/dossie-reforma-tributaria-ATUAL.html` e `docs/` com a mensagem `Dossiê: atualização de <HOJE>` e um resumo das novidades no corpo. Envie (push) para a branch `main`.
-7. Termine com um resumo curto: novidades incluídas, normas novas, itens "a confirmar" resolvidos e prazos alterados.
+6. Faça commit apenas de `dossie-reforma-tributaria/dados-<HOJE>.json`, `dossie-reforma-tributaria/dossie-reforma-tributaria-<HOJE>.html`, `dossie-reforma-tributaria/dossie-reforma-tributaria-ATUAL.html` e `docs/` com a mensagem `Dossiê: atualização de <HOJE>` (ou `Dossiê: verificação de <HOJE> — sem novidades`) e um resumo no corpo. Envie (push) para a branch `main` e confirme que o push foi aceito.
+7. Termine com um resumo curto: novidades incluídas, normas novas, itens "a confirmar" resolvidos, prazos alterados e domínios que não puderam ser acessados.
 
 ## Fontes a verificar
 
