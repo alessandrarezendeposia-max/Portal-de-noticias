@@ -167,6 +167,25 @@
     ],
     "novidades": [
       {
+        "data": "16/11/2026",
+        "titulo": "CAE do Senado adia para 17 e 18/11 as audiências sobre a alíquota da CBS",
+        "resumo": "As audiências públicas sobre o cálculo do TCU (11,3%), previstas para a semana de 10/11, foram remarcadas para 17 e 18/11/2026 por conflito de agendas. A votação do projeto de resolução precisa ocorrer até 15/12; sem ela, vale provisoriamente o percentual do TCU.",
+        "ato": "Projeto de Resolução da alíquota da CBS (CAE/Senado)",
+        "novo": true,
+        "links": [
+          {
+            "tipo": "fonte",
+            "rotulo": "Congresso em Foco — Senado ouvirá Durigan e Vital do Rêgo",
+            "url": "https://www.congressoemfoco.com.br/noticia/131494/cbs-senado-ouvira-durigan-e-vital-do-rego-na-proxima-semana"
+          },
+          {
+            "tipo": "fonte",
+            "rotulo": "Fenacon — Senado recebe acórdão do TCU",
+            "url": "https://fenacon.org.br/?p=56160"
+          }
+        ]
+      },
+      {
         "data": "11/11/2026",
         "titulo": "Receita promete sem multas da CBS em 2027 para quem agir de boa-fé e propõe regra opcional de transição",
         "resumo": "Em coletiva de 11/11, a Receita Federal afirmou que contribuintes de boa-fé, que não omitam dados, não serão multados pela CBS em 2027. O governo também pretende enviar ao Congresso uma regra de transição opcional em 2027 para a apuração da CBS (depende do Legislativo) e indicou que a versão 2 do regulamento de IBS/CBS sairia na semana. As informações vêm da imprensa especializada; o ato oficial ainda não foi localizado (a confirmar).",
@@ -306,25 +325,20 @@
       },
       {
         "data": "04/11/2026",
-        "titulo": "Governo apresentará PEC para manter o IPI até o IS valer plenamente",
-        "resumo": "Junto com a MP 1.399/2026, o governo anunciou uma PEC para prorrogar o IPI sobre os bens sujeitos ao IS até o início pleno do novo imposto (02/02/2027), evitando um mês sem tributação em janeiro de 2027. Depende de aprovação no Congresso.",
-        "ato": "PEC (a apresentar)",
+        "titulo": "Governo envia à Câmara a PEC 22/2026 para manter o IPI até o IS valer",
+        "resumo": "O Executivo protocolou a PEC 22/2026 (Mensagem 829, 04–05/11) para manter o IPI sobre veículos, embarcações, aeronaves, fumígenos e bebidas alcoólicas/açucaradas até o início pleno do IS (02/02/2027). Ainda depende de votação no Congresso; sem notícia de tramitação.",
+        "ato": "PEC 22/2026",
         "novo": true,
         "links": [
           {
             "tipo": "oficial",
-            "rotulo": "Casa Civil — MP do IS e PEC do IPI",
-            "url": "https://www.gov.br/casacivil/pt-br/assuntos/noticias/2026/outubro/governo-federal-define-aliquotas-do-imposto-seletivo-para-2027-por-meio-de-medida-provisoria"
+            "rotulo": "PEC 22/2026 — texto (PDF)",
+            "url": "https://www.reformatributaria.com/wp-content/uploads/2026/11/PEC-22-2026.pdf"
           },
           {
             "tipo": "fonte",
-            "rotulo": "TAGD Advogados — governo estuda manter IPI em janeiro",
-            "url": "https://tagdlaw.com.br/governo-prepara-aliquotas-do-imposto-seletivo-e-estuda-manter-ipi-em-janeiro-de-2027/"
-          },
-          {
-            "tipo": "oficial",
-            "rotulo": "EC 132/2023 — texto integral (Planalto)",
-            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm"
+            "rotulo": "Atlas Público — governo envia a PEC à Câmara",
+            "url": "https://atlaspublico.com.br/camara/noticias/governo-envia-a-camara-pec-que-mantem-o-ipi-sobre-produtos-99286"
           }
         ]
       },
@@ -393,7 +407,7 @@
       {
         "data": "30/10/2026",
         "titulo": "Encerrada a opção do Simples pelo regime regular de IBS/CBS",
-        "resumo": "Mais de 1 milhão de optantes. A opção pode ser cancelada, de forma irretratável, até o fim de novembro/2026. Nova janela prevista para 2027.",
+        "resumo": "Mais de 1 milhão de optantes. A opção pode ser cancelada, de forma irretratável, entre 03/11 e 20/12/2026 (janela da Res. CGSN 194/2026, segundo fontes secundárias; confirmar no texto oficial). Nova janela prevista para 2027.",
         "ato": "Resolução CGSN nº 194/2026",
         "novo": false,
         "links": [
@@ -468,20 +482,6 @@
             "tipo": "fonte",
             "rotulo": "Comsefaz — split payment em testes",
             "url": "https://comsefaz.org.br/novo/split-payment-entra-em-fase-de-testes-a-partir-de-15-de-outubro-saiba-o-que-muda/"
-          }
-        ]
-      },
-      {
-        "data": "25/08/2026",
-        "titulo": "Governo anuncia decreto com a lista do IPI zerado em 2027",
-        "resumo": "O decreto não cria a alíquota zero (prevista na EC 132/2023 e no art. 454 da LC 214/2025): apenas divulga a lista de produtos que zeram e dos que seguem tributados por concorrerem com a Zona Franca de Manaus. Publicação a confirmar.",
-        "ato": "Decreto (a publicar)",
-        "novo": false,
-        "links": [
-          {
-            "tipo": "oficial",
-            "rotulo": "LC 214/2025 — art. 454 (Planalto)",
-            "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm"
           }
         ]
       }
@@ -934,8 +934,8 @@
     ],
     "checklist": [
       {
-        "texto": "Homologar NF-e com NT 2025.002 v1.53 (regras de devolução)",
-        "prazo": "09/11/2026"
+        "texto": "Homologar NF-e com NT 2025.002 v1.53 (regras de devolução) — prazo de 09/11 vencido; confirmar conclusão",
+        "prazo": "16/11/2026"
       },
       {
         "texto": "Entrar em produção com NTs 2026.005 a 2026.008",
@@ -955,7 +955,7 @@
       },
       {
         "texto": "Simples: revisar/cancelar opção pelo regime regular, se necessário",
-        "prazo": "30/11/2026"
+        "prazo": "20/12/2026"
       },
       {
         "texto": "Adequar emissão ao novo DANFE (NT 2026.010) — data a confirmar",
@@ -1283,6 +1283,25 @@
     ],
     "novidades": [
       {
+        "data": "16/11/2026",
+        "titulo": "La CAE del Senado aplaza al 17 y 18/11 las audiencias sobre la alícuota de la CBS",
+        "resumo": "Las audiencias públicas sobre el cálculo del TCU (11,3%), previstas para la semana del 10/11, se reprogramaron al 17 y 18/11/2026 por conflicto de agendas. El proyecto de resolución debe votarse antes del 15/12; sin votación, rige provisionalmente el porcentaje del TCU.",
+        "ato": "Proyecto de Resolución de la alícuota de la CBS (CAE/Senado)",
+        "novo": true,
+        "links": [
+          {
+            "tipo": "fonte",
+            "rotulo": "Congresso em Foco — el Senado oirá a Durigan y Vital do Rêgo",
+            "url": "https://www.congressoemfoco.com.br/noticia/131494/cbs-senado-ouvira-durigan-e-vital-do-rego-na-proxima-semana"
+          },
+          {
+            "tipo": "fonte",
+            "rotulo": "Fenacon — Senado recebe acórdão do TCU",
+            "url": "https://fenacon.org.br/?p=56160"
+          }
+        ]
+      },
+      {
         "data": "11/11/2026",
         "titulo": "La Receita promete no aplicar multas de la CBS en 2027 a quien actúe de buena fe y propone una regla opcional de transición",
         "resumo": "En la rueda de prensa del 11/11, la Receita Federal afirmó que los contribuyentes de buena fe, que no omitan datos, no serán multados por la CBS en 2027. El gobierno también pretende enviar al Congreso una regla de transición opcional en 2027 para la determinación de la CBS (depende del Legislativo) e indicó que la versión 2 del reglamento de IBS/CBS saldría en la semana. La información proviene de la prensa especializada; el acto oficial aún no fue localizado (por confirmar).",
@@ -1422,25 +1441,20 @@
       },
       {
         "data": "04/11/2026",
-        "titulo": "El Gobierno presentará una PEC para mantener el IPI hasta que el IS rija plenamente",
-        "resumo": "Junto con la MP 1.399/2026, el Gobierno anunció una PEC para prorrogar el IPI sobre los bienes sujetos al IS hasta el inicio pleno del nuevo impuesto (02/02/2027), evitando un mes sin tributación en enero de 2027. Depende de aprobación del Congreso.",
-        "ato": "PEC (por presentar)",
+        "titulo": "El Gobierno envía a la Cámara la PEC 22/2026 para mantener el IPI hasta que rija el IS",
+        "resumo": "El Ejecutivo presentó la PEC 22/2026 (Mensaje 829, 04–05/11) para mantener el IPI sobre vehículos, embarcaciones, aeronaves, fumígenos y bebidas alcohólicas/azucaradas hasta el inicio pleno del IS (02/02/2027). Aún depende de votación en el Congreso; sin noticias de tramitación.",
+        "ato": "PEC 22/2026",
         "novo": true,
         "links": [
           {
             "tipo": "oficial",
-            "rotulo": "Casa Civil — MP del IS y PEC del IPI",
-            "url": "https://www.gov.br/casacivil/pt-br/assuntos/noticias/2026/outubro/governo-federal-define-aliquotas-do-imposto-seletivo-para-2027-por-meio-de-medida-provisoria"
+            "rotulo": "PEC 22/2026 — texto (PDF)",
+            "url": "https://www.reformatributaria.com/wp-content/uploads/2026/11/PEC-22-2026.pdf"
           },
           {
             "tipo": "fonte",
-            "rotulo": "TAGD Advogados — el Gobierno estudia mantener el IPI en enero",
-            "url": "https://tagdlaw.com.br/governo-prepara-aliquotas-do-imposto-seletivo-e-estuda-manter-ipi-em-janeiro-de-2027/"
-          },
-          {
-            "tipo": "oficial",
-            "rotulo": "EC 132/2023 — texto completo (Planalto)",
-            "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm"
+            "rotulo": "Atlas Público — el Gobierno envía la PEC a la Cámara",
+            "url": "https://atlaspublico.com.br/camara/noticias/governo-envia-a-camara-pec-que-mantem-o-ipi-sobre-produtos-99286"
           }
         ]
       },
@@ -1509,7 +1523,7 @@
       {
         "data": "30/10/2026",
         "titulo": "Cerrada la opción del Simples por el régimen regular de IBS/CBS",
-        "resumo": "Más de 1 millón de optantes. La opción puede cancelarse, de forma irretractable, hasta fines de noviembre/2026. Nueva ventana prevista para 2027.",
+        "resumo": "Más de 1 millón de optantes. La opción puede cancelarse, de forma irretractable, entre el 03/11 y el 20/12/2026 (ventana de la Res. CGSN 194/2026, según fuentes secundarias; confirmar en el texto oficial). Nueva ventana prevista para 2027.",
         "ato": "Resolución CGSN n.º 194/2026",
         "novo": false,
         "links": [
@@ -1584,20 +1598,6 @@
             "tipo": "fonte",
             "rotulo": "Comsefaz — split payment en pruebas",
             "url": "https://comsefaz.org.br/novo/split-payment-entra-em-fase-de-testes-a-partir-de-15-de-outubro-saiba-o-que-muda/"
-          }
-        ]
-      },
-      {
-        "data": "25/08/2026",
-        "titulo": "El Gobierno anuncia decreto con la lista del IPI en cero en 2027",
-        "resumo": "El decreto no crea la alícuota cero (prevista en la EC 132/2023 y en el art. 454 de la LC 214/2025): solo divulga la lista de productos que pasan a cero y de los que siguen gravados por competir con la Zona Franca de Manaus. Publicación por confirmar.",
-        "ato": "Decreto (por publicar)",
-        "novo": false,
-        "links": [
-          {
-            "tipo": "oficial",
-            "rotulo": "LC 214/2025 — art. 454 (Planalto)",
-            "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm"
           }
         ]
       }
@@ -2050,8 +2050,8 @@
     ],
     "checklist": [
       {
-        "texto": "Homologar NF-e con la NT 2025.002 v1.53 (reglas de devolución)",
-        "prazo": "09/11/2026"
+        "texto": "Homologar NF-e con la NT 2025.002 v1.53 (reglas de devolución) — plazo del 09/11 vencido; confirmar conclusión",
+        "prazo": "16/11/2026"
       },
       {
         "texto": "Pasar a producción con las NT 2026.005 a 2026.008",
@@ -2071,7 +2071,7 @@
       },
       {
         "texto": "Simples: revisar/cancelar la opción por el régimen regular, si corresponde",
-        "prazo": "30/11/2026"
+        "prazo": "20/12/2026"
       },
       {
         "texto": "Adecuar la emisión al nuevo DANFE (NT 2026.010) — fecha por confirmar",
@@ -3210,12 +3210,12 @@
     },
     {
       "g": "proj",
-      "num": "PEC do IPI até o início do IS",
+      "num": "PEC 22/2026 (manutenção do IPI até o IS)",
       "data": "2026-11-04",
-      "url": "https://tagdlaw.com.br/governo-prepara-aliquotas-do-imposto-seletivo-e-estuda-manter-ipi-em-janeiro-de-2027/",
+      "url": "https://www.reformatributaria.com/wp-content/uploads/2026/11/PEC-22-2026.pdf",
       "desc": {
-        "pt": "Em estudo: manter o IPI em janeiro de 2027 nos setores sujeitos ao IS.",
-        "es": "En estudio: mantener el IPI en enero de 2027 en los sectores sujetos al IS."
+        "pt": "Protocolada na Câmara em 04–05/11/2026: mantém o IPI sobre os bens do IS até 02/02/2027. Em tramitação.",
+        "es": "Presentada en la Cámara el 04–05/11/2026: mantiene el IPI sobre los bienes del IS hasta el 02/02/2027. En trámite."
       }
     },
     {
@@ -3236,6 +3236,26 @@
       "desc": {
         "pt": "Projeto que limita as alíquotas do Imposto Seletivo entre 0% e 5%. Em tramitação.",
         "es": "Proyecto que limita las alícuotas del Impuesto Selectivo entre 0% y 5%. En trámite."
+      }
+    },
+    {
+      "g": "dec",
+      "num": "Decreto nº 13.075/2026",
+      "data": "2026-07-22",
+      "url": "https://www.coad.com.br/home/noticias-detalhe/138806/emissao-do-cnpj-e-de-documentos-fiscais-por-pessoas-fisicas-contribuintes-da-cbs-comecara-em-1-de-janeiro-de-2027",
+      "desc": {
+        "pt": "Altera o regulamento da CBS: CNPJ e emissão de documentos fiscais por pessoas físicas contribuintes e produtores rurais passam para 01/01/2027.",
+        "es": "Modifica el reglamento de la CBS: CNPJ y emisión de documentos fiscales por personas físicas contribuyentes y productores rurales pasan al 01/01/2027."
+      }
+    },
+    {
+      "g": "res",
+      "num": "Resolução CGIBS nº 13/2026",
+      "data": "2026-07-22",
+      "url": "https://cgibs.gov.br/upload/arquivos/202607/22121010-resolucao-cgibs-n-13-de-22-de-julho-de-2026.pdf",
+      "desc": {
+        "pt": "Equivalente do IBS ao Decreto 13.075/2026: adia para 01/01/2027 o CNPJ e os documentos fiscais de pessoas físicas contribuintes.",
+        "es": "Equivalente del IBS al Decreto 13.075/2026: aplaza al 01/01/2027 el CNPJ y los documentos fiscales de personas físicas contribuyentes."
       }
     }
   ]
